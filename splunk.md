@@ -30,3 +30,8 @@ Stupidly, splunk doesn't support ISO date format by default (in the version I'm 
 See also:
 - http://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf
 - http://answers.splunk.com/answers/140493/timestamp-contain-t-between-date-and-time.html#answer-140495
+
+### Count of kernel versions
+Assuming you have a report that sends `kernel_version=$(uname -r)`:
+
+    kernel_version | stats count(kernel_version) by kernel_version
