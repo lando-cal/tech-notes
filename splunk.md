@@ -8,7 +8,7 @@ Enterprise log consumption and analysis.
     source="/var/log/messages" OR source="udp:514" "Starting CFEngine" earliest="-1w" | rex "Starting CFEngine (?<version>3.[0-9]+.[0-9]+).*" | timechart span=4h usenull=0 dc(host) by version
 
 ### Strip domain from hostname for consistent UQDNs
-    rex mode=sed field=host "s/\.foo\.example\.com//"`
+    rex mode=sed field=host "s/\.foo\.example\.com//"
 
 ### Count of records per hour by host
 
