@@ -136,7 +136,9 @@ This shows an entire dataset up to the given snapshot
 ## Complex examples
 
 ### Create a raidz called z3
-    Create a raidz pool from 4 disks and set some properties:
+
+Create a raidz pool from 4 disks and set some properties:
+
     pool=z3
     zpool create -f "${pool}" raidz /dev/disk/by-id/scsi-SATA_HGST_HDN724040A_PK2338P4H*-part1 -o ashift=12
     zfs set dedup=on "${pool}"
