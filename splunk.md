@@ -23,6 +23,9 @@ Enterprise log consumption and analysis.
     earliest="-1d" source="/var/log/messages" OR source="udp:10514" OR source="udp:514" | timechart count by source
 
 ### Count of records per splunk server for a given time period
-Stupidly, splunk doesn't support ISO date format...
+Stupidly, splunk doesn't support ISO date format by default (in the version I'm using).
 
     earliest="06/19/2015:3:0:0" latest="06/19/2015:3:3:0" | timechart count(_raw) by splunk_server
+
+See also:
+- http://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf
