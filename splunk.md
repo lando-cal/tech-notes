@@ -34,4 +34,4 @@ See also:
 ### Count of kernel versions
 Assuming you have a report that sends `kernel_version=$(uname -r)`:
 
-    kernel_version | stats count(kernel_version) by kernel_version
+    kernel_version | stats count(kernel_version) by kernel_version, host
