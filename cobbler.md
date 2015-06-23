@@ -2,8 +2,9 @@
 
 ## Notes
 - Versions prior to 2.6.9 can no longer auto-download loaders
-- Newer than epel CentOS 6 packages found here: http://download.opensuse.org/repositories/home:/libertas-ict:/cobbler26/CentOS_CentOS-6/noarch/
 
 ## Links
-- http://cobbler.github.io/
+- https://cobbler.github.io/
 - https://cobbler.github.io/manuals/quickstart/
+- https://download.opensuse.org/repositories/home:/libertas-ict:/cobbler26/CentOS_CentOS-6/noarch/ - Newer than epel CentOS 6 rpms
+- https://github.com/rhinstaller/pykickstart
