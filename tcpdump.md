@@ -54,9 +54,11 @@ Or capture all SYN packets going only to two ethernet destinations:
     sudo tcpdump -n 'host 216.200.102.84' -s 1500 -l -w - | tee logcopy.pcap | tcpdump -r -
 
 ### Write a circular buffer of traffic
-This will write 5 files 1 mb each and loop through them as the destination for writing traffic. That is, the filenames do not indicate chronology.
+This will write 5 files 1 mb each and loop through them as the destination for writing traffic. That is, the filenames do not indicate chronology. The files will be named foo.cap[0-4]
 
     sudo tcpdump -C 1 -W 5 -w foo.cap
+
+You can reassemble thees files chronologically with `mergecap -w merged.cap foo.cap*`
 
 ## Links
 - http://www.danielmiessler.com/study/tcpdump/
