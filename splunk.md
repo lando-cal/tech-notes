@@ -26,7 +26,6 @@ Enterprise log consumption and analysis.
 Stupidly, splunk doesn't support ISO date format by default (in the version I'm using).
 
     earliest="06/19/2015:3:0:0" latest="06/19/2015:3:3:0" | timechart count(_raw) by splunk_server
-    earliest="06/30/2015:15:59:59" latest="06/30/2015:16:00:00" | stats count(date_second) by date_second # leap second view
 
 See also:
 - http://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf
