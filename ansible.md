@@ -1,3 +1,4 @@
 - https://docs.ansible.com/playbooks_best_practices.html
 - https://galaxy.ansible.com
 - http://www.azavea.com/blogs/labs/2014/10/creating-ansible-roles-from-scratch-part-1
+- http://ryandlane.com/blog/2014/08/04/moving-away-from-puppet-saltstack-or-ansible/
