@@ -37,5 +37,5 @@ Or exclude multiple processes
 -  https://github.com/draios/sysdig/wiki
 -  https://github.com/draios/sysdig/wiki/Sysdig%20Examples
 -  http://man7.org/linux/man-pages/man8/sysdig.8.html
--  [https://www.youtube.com/watch?v=TX6Y8E9ijkk Getting Started With Sysdig]
--  [https://www.youtube.com/watch?v=UJ4wVrbP-Q8 Getting Started With Csysdig]
+-  [Getting Started With Sysdig](https://www.youtube.com/watch?v=TX6Y8E9ijkk)
+-  [Getting Started With Csysdig](https://www.youtube.com/watch?v=UJ4wVrbP-Q8)
