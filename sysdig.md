@@ -3,6 +3,8 @@ An awesome host inspection tool, with tcpdump like tool and an interface similar
 -  http://www.sysdig.org/
 
 # Installation - CentOS
+- https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux
+
 Their shell script installs epel from a 3rd party source, so it's best to use this method instead:
 
     rpm --import https://s3.amazonaws.com/download.draios.com/DRAIOS-GPG-KEY.public && \
