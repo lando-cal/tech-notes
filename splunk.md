@@ -1,5 +1,6 @@
 Enterprise log consumption and analysis.
 - http://www.splunk.com/
+- http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Sort
 
 # Examples
 
@@ -26,6 +27,10 @@ Enterprise log consumption and analysis.
 Stupidly, splunk doesn't support ISO date format by default (in the version I'm using).
 
     earliest="06/19/2015:3:0:0" latest="06/19/2015:3:3:0" | timechart count(_raw) by splunk_server
+
+## Order number of hits for a given string by an extracted IP address
+
+    earliest="7/6/2015:9:30:0" "verifying pingback from" | rex "verifying pingback from (?<pingback_source_ip>[0-9\.]*)\"" | stats count(_raw) as pingback_source_ip_total by pingback_source_ip | sort pingback_source_ip_total desc
 
 See also:
 - http://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf
