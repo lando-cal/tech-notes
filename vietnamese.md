@@ -15,3 +15,6 @@ giống nhau = same
 khác nhau = different
 cùng màu = same color
 khác màu = different colors
+
+đóng = closed
+mở = open
