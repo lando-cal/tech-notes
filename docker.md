@@ -70,6 +70,11 @@ This is safe to run as long as valuable containers are running, as it won't dele
 
 https://docs.docker.com/reference/commandline/cli/#rmi
 
+## Show processes running inside all docker containers
+On hosts without cgroup integration, run:
+
+    pstree $(pgrep docker)
+
 # See Also
 - https://www.docker.io - Main page
 - http://dockerfile.github.io - Trusted builds of FOSS software
