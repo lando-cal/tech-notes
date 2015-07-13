@@ -33,7 +33,11 @@ Stupidly, splunk doesn't support ISO date format by default (in the version I'm 
     earliest="7/6/2015:9:30:0" "verifying pingback from" | rex "verifying pingback from (?<pingback_source_ip>[0-9\.]*)\"" | stats count(_raw) as pingback_source_ip_total by pingback_source_ip | sort pingback_source_ip_total desc
 
 ## Order an RPM report
-Given a report where RPM fields are exported as field="value"
+Given a report where RPM fields are exported as field="value", such as:
+
+    rpm -qa --queryformat 'report="rpm", name="%{NAME}", release="%{RELEASE}", version="%{VERSION}", packager="%{PACKAGER}", url="%{URL}", installtime="%{INSTALLTIME}"\n'
+
+This search in splunk will show a useful table:
 
     earliest="-1d" report="rpm" | dedup name | eval install_timestamp = strftime(installtime, "%F %T.%3N") | sort installtime desc | table host,name,version,release,install_timestamp
 
