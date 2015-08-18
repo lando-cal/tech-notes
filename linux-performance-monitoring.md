@@ -21,4 +21,4 @@ Notes from the Linux Performance Monitoring talk at Velocity 2015 - [Part 1](htt
 - sar -n TCP,ETCP,DEV 1
 - collectl
 - dstat
-- strace 2>&1 | head -n 100
+- strace 2>&1 | head -n 100 # since there's no strace -c N
