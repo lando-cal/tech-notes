@@ -24,9 +24,9 @@ Captures all pop3 traffic and all traffic to or from the specified host on the f
 
 
 ## Capture all traffic not a mac address
-Captures all traffic not from the host 00:1b:63:cd:83:2e, useful for filtering out your own traffic.
+Captures all traffic not from the host 00:1b:63:ce:83:2e, useful for filtering out your own traffic.
 
-    tcpdump -i en1 not ether src 00:1b:63:cd:83:2e
+    tcpdump -i en1 not ether src 00:1b:63:ce:83:2e
 
 ## Capture LLDP traffic
 This matches 2 bytes starting at the 12th byte against 88cc
