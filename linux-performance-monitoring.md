@@ -1,11 +1,13 @@
 Notes from the Linux Performance Monitoring talk at Velocity 2015 - [Part 1](http://www.youtube.com/watch?v=FJW8nGV4jxY), [Part 2](http://www.youtube.com/watch?v=zrr2nUln9Kk)
 
+http://www.brendangregg.com/linuxperf.html
+
 # USE
 - Utilization
 - Saturation
 - Errors
 
-# Tools
+# Observability Tools
 - atop / htop
 - vmstat -Sm 1
 - iostat -xmdz 1
@@ -22,3 +24,41 @@ Notes from the Linux Performance Monitoring talk at Velocity 2015 - [Part 1](htt
 - collectl
 - dstat
 - strace 2>&1 | head -n 100 # since there's no strace -c N
+- ss
+- iptraf
+- slabtop
+- pcstat
+- perf
+- tiptop
+- rdmsr
+- perf-tools/execsnoop
+
+# Benchmarking tools
+- unixbench
+- imbench
+- sysbench
+- lmbench
+- fio
+- pchar
+- iperf
+
+# Tuning tools
+- sysctl
+- ulimit
+- chcpu
+- 
+
+# Static tools
+
+# Tracing
+- ftrace
+- iosnoop
+- iolatency
+- opensnoop
+- tpoint
+- funccount
+- funcgraph
+- kprobe
+- bytehist
+- stap
+
