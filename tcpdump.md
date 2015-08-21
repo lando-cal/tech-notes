@@ -58,7 +58,7 @@ This will write 5 files 1 mb each and loop through them as the destination for w
 
     sudo tcpdump -C 1 -W 5 -w foo.cap
 
-You can reassemble thees files chronologically with `mergecap -w merged.cap foo.cap*`
+You can reassemble these files chronologically with `mergecap -w merged.cap foo.cap*`
 
 # Links
 - http://www.danielmiessler.com/study/tcpdump/
