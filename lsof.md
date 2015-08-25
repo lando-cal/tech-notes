@@ -10,6 +10,10 @@ Since everything in unix is a file, including network sockets, you can list open
 
     lsof -iTCP -sTCP:LISTEN
 
+## Show a sorted list of processes by listening port
+
+    lsof -iTCP -sTCP:LISTEN -P | sort -k2 -t: -n
+
 ## show what process is using port 1900 with port numbers
 
     # -P makes lsof not resolve service names for port numbers. -iTCP shows IP TCP sockets.
