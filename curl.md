@@ -12,10 +12,12 @@ curl is a tool to transfer data from or to a server, using one of the supported 
     curl -I http://whatever
 
 ## Show the HTTP code for a given request
+This downloads 1 byte from the remote URI and shows the HTTP code, so it's a quick way to discover HTTP codes.
 
     curl --max-filesize 1 -s -w "%{http_code}\n" -o /dev/null http://www.example.com/
 
 ## Request a specific vhost from a server
+This is useful for testing production code on non-production multi-tennant name based virtual hosts.
 
     curl -H www.domain.com http://example.com
 
