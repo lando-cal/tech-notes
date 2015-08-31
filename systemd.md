@@ -6,36 +6,36 @@
 * sysvinit to chkconfig - https://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet
 * systemd for upstart users - https://wiki.ubuntu.com/SystemdForUpstartUsers
 
-# Tips ==
-## Init file locations ===
+# Tips
+## Init file locations
 
     /usr/lib/systemd/system
     /etc/systemd/system # has precedence
 
-## Show the full systemd journal ===
+## Show the full systemd journal
 The systemd journal is syslog and more.
 
     journalctl --full
 
-## Show units ===
+## Show units
 Units are things that are handled by systemd, including services.
     systemctl list-units
 
-## Show dependencies ===
+## Show dependencies
 This works on any .target or .service
 
     systemctl list-dependencies network.service
 
-## Enable a service ===
+## Enable a service
 This behavior replaces chkconfig
 
     systemctl enable docker.service
 
-## Check the status of a service and show 20 lines ===
+## Check the status of a service and show 20 lines
 
     systemctl -n 20 status nodejs
 
-## Per-user services ===
+## Per-user services
 https://wiki.archlinux.org/index.php/Systemd/User
 
     /usr/lib/systemd/user/ - where services provided by installed packages go.
