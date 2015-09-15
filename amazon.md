@@ -1,1 +1,2 @@
 - http://iserialized.com/amazon-web-services-abbreviations/
+- https://github.com/cloudtools/troposphere
