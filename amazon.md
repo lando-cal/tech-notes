@@ -6,13 +6,13 @@
 # Terms and Acronyms
 
 | Term | Definition |
-|:-------:|---------- |
+|:----:|------------|
 | S3  | Simple Storage Service |
 | AMI | Amazon Machine Images |
 | ASG | Auto-Scaling Group.  Auto Scaling can automatically increase the number of Amazon EC2 instances during demand spikes to maintain performance and decrease capacity during lulls to reduce costs. |
 | AWS | Amazon Web Services |
 | Route 53 | A highly available and scalable cloud Domain Name System (DNS) web service. |
-| AZ  |  Data centers. Amazon Availability Zones. |
+| AZ  | Data centers. Amazon Availability Zones. |
 | EBS | Elastic Block Storage. Provides persistent block-level storage volumes for EC2. |
 | EC2 | Elastic Compute Cloud |
 | ELB | Elastic Load Balancing |
