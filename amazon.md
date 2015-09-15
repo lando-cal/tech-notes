@@ -1,0 +1,1 @@
+- http://iserialized.com/amazon-web-services-abbreviations/
