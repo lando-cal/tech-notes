@@ -3,7 +3,7 @@
 - Vagrantfile syntax is ruby
 - https://atlas.hashicorp.com
 
-# Shell tweaks
+# OS X Shell tweaks
 
     brew tap homebrew/completions
     brew install vagrant-completion
