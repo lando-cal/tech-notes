@@ -175,12 +175,12 @@ Create a raidz pool from 4 disks and set some properties:
 ### Reinstalling when things fail
     #!/bin/bash -x
     yum install kernel-devel-$(uname -r)
-    dkms remove -m zfs -v 0.6.4.1 --all
-    dkms remove -m spl -v 0.6.4.1 --all
-    dkms add -m spl -v 0.6.4.1
-    dkms add -m zfs -v 0.6.4.1
-    dkms install -m spl -v 0.6.4.1
-    dkms install -m zfs -v 0.6.4.1
+    dkms remove -m zfs -v 0.6.5.1 --all
+    dkms remove -m spl -v 0.6.5.1 --all
+    dkms add -m spl -v 0.6.5.1
+    dkms add -m zfs -v 0.6.5.1
+    dkms install -m spl -v 0.6.5.1
+    dkms install -m zfs -v 0.6.5.1
 
 ### Inspect the rpm for what scripts it runs
 This is useful for debugging failures after kernel upgrade.
