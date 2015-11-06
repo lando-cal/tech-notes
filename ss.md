@@ -2,18 +2,23 @@
 
 This tool shows all sockets, not just networking sockets.
 
-## Examples
-
+# Examples
 Options can be concatenated, so `ss -t -n -l -p` can be `ss -tnlp`
 
-### Show all established connections, don't resolve service names
+## Show all established connections, don't resolve service names
 
-    ss -n
+```
+ss -n
+```
 
-### Show all listening sockets
+## Show all listening sockets
 
-    ss -l
+```
+ss -l
+```
 
-### Display all TCP sockets
+## Display all TCP sockets
 
-    ss -t -a
+```
+ss -t -a
+```

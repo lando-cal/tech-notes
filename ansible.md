@@ -1,6 +1,6 @@
-- https://docs.ansible.com/playbooks_best_practices.html
-- http://docs.ansible.com/intro_inventory.html
-- http://docs.ansible.com/ansible/modules_core.html
-- https://galaxy.ansible.com
-- http://www.azavea.com/blogs/labs/2014/10/creating-ansible-roles-from-scratch-part-1
-- http://ryandlane.com/blog/2014/08/04/moving-away-from-puppet-saltstack-or-ansible/
+- [https://docs.ansible.com/playbooks_best_practices.html](https://docs.ansible.com/playbooks_best_practices.html)
+- [http://docs.ansible.com/intro_inventory.html](http://docs.ansible.com/intro_inventory.html)
+- [http://docs.ansible.com/ansible/modules_core.html](http://docs.ansible.com/ansible/modules_core.html)
+- [https://galaxy.ansible.com](https://galaxy.ansible.com)
+- [http://www.azavea.com/blogs/labs/2014/10/creating-ansible-roles-from-scratch-part-1](http://www.azavea.com/blogs/labs/2014/10/creating-ansible-roles-from-scratch-part-1)
+- [http://ryandlane.com/blog/2014/08/04/moving-away-from-puppet-saltstack-or-ansible/](http://ryandlane.com/blog/2014/08/04/moving-away-from-puppet-saltstack-or-ansible/)

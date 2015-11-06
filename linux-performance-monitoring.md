@@ -1,6 +1,6 @@
 Notes from the Linux Performance Monitoring talk at Velocity 2015 - [Part 1](http://www.youtube.com/watch?v=FJW8nGV4jxY), [Part 2](http://www.youtube.com/watch?v=zrr2nUln9Kk)
 
-http://www.brendangregg.com/linuxperf.html
+[http://www.brendangregg.com/linuxperf.html](http://www.brendangregg.com/linuxperf.html)
 
 # USE
 - Utilization
@@ -46,10 +46,8 @@ http://www.brendangregg.com/linuxperf.html
 - sysctl
 - ulimit
 - chcpu
-- 
 
 # Static tools
-
 # Tracing
 - ftrace
 - iosnoop
@@ -61,4 +59,3 @@ http://www.brendangregg.com/linuxperf.html
 - kprobe
 - bytehist
 - stap
-
