@@ -7,3 +7,6 @@
 
     sys.path.append('/Users/username/code/somedir')
     import module # from somedir
+
+# Decorators
+- https://wiki.python.org/moin/PythonDecoratorLibrary
