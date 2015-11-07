@@ -256,7 +256,7 @@ sudo yum install zfs -y
 ```
 #!/bin/bash -x
 yum install kernel-devel-$(uname -r)
-zfs_version=0.6.5.1
+zfs_version=0.6.5.3
 dkms remove -m zfs -v "${zfs_version}" --all
 dkms remove -m spl -v "${zfs_version}" --all
 dkms add -m spl -v "${zfs_version}"
