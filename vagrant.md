@@ -1,7 +1,8 @@
-- [https://www.vagrantup.com](https://www.vagrantup.com)
-- [http://docs.vagrantup.com/v2](http://docs.vagrantup.com/v2)
 - Vagrantfile syntax is ruby
+- [https://www.vagrantup.com](https://www.vagrantup.com)
+- [https://docs.vagrantup.com/v2](http://docs.vagrantup.com/v2)
 - [https://atlas.hashicorp.com](https://atlas.hashicorp.com)
+- Examples: [https://github.com/patrickdlee/vagrant-examples](https://github.com/patrickdlee/vagrant-examples)
 
 # OS X Shell tweaks
 
