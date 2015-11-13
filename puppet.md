@@ -1,0 +1,2 @@
+- https://docs.puppetlabs.com/puppet/
+- https://docs.vagrantup.com/v2/provisioning/puppet_apply.html
