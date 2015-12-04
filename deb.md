@@ -48,3 +48,6 @@ apt-cache dumpavail
 ```
 apt-cache show coreutils
 ```
+
+# Links
+- https://wiki.debian.org/RPM
