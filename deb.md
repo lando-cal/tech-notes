@@ -42,3 +42,9 @@ dpkg -S /bin/bash
 ```
 apt-cache dumpavail
 ```
+
+## Show information about a package
+
+```
+apt-cache show coreutils
+```
