@@ -36,3 +36,9 @@ dpkg --list
 ```
 dpkg -S /bin/bash
 ```
+
+## List packages available in the repository
+
+```
+apt-cache dumpavail
+```
