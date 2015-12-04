@@ -24,3 +24,15 @@ dpkg -c package.deb
 ```
 apt-file list package_name
 ```
+
+## Show a list of installed packages
+
+```
+dpkg --list
+```
+
+## Show which package a file came from
+
+```
+dpkg -S /bin/bash
+```
