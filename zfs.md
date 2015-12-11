@@ -228,6 +228,19 @@ for X in {1..50} ; do mkfile -n 2g ${pool}.$X ; done ;
 sudo zpool create -O casesensitivity=insensitive ${pool} raidz3 /Users/danielh/Desktop/Stuff/${pool}/${pool}.{1..50}
 ```
 
+# Troubleshooting
+## Mount a pool that is giving you Trouble
+
+```
+zpool import -o failmode=continue -o readonly=on zpool_name
+```
+
+This helped me get read access to a pool that was kernel panicking with the following error when I tried to import it normally:
+
+```
+Dec  7 14:48:40 localhost kernel: PANIC: blkptr at ffff8803fddb4200 DVA 0 has invalid OFFSET 294940902907904
+```
+
 # ZFS on Mac OS X
 - [http://openzfsonosx.org](http://openzfsonosx.org)
 
