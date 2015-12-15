@@ -25,6 +25,12 @@ dpkg -c package.deb
 apt-file list package_name
 ```
 
+## Find a file available inside packages that are available in configured repositories
+
+```
+apt-file find libmysqlclient.so
+```
+
 ## Show a list of installed packages
 
 ```
@@ -50,4 +56,4 @@ apt-cache show coreutils
 ```
 
 # Links
-- https://wiki.debian.org/RPM
+- [https://wiki.debian.org/RPM](https://wiki.debian.org/RPM)
