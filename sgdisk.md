@@ -66,5 +66,6 @@ sgdisk /dev/sdz -N 4
 ## Grab the name of a partition
 
 ```
-sgdisk /dev/sdk -i 1 | grep '^Partition name' | awk '{print $NF}' | sed "s/'//g" # sloppy, doesn't handle spaces or single quotes
+# sloppy, doesn't handle spaces or single quotes
+sgdisk /dev/sdk -i 1 | grep '^Partition name' | awk '{print $NF}' | sed "s/'//g"
 ```
