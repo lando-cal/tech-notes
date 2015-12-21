@@ -31,6 +31,9 @@ mco inventory fqdn.example.com
 "Hiera is a key/value lookup tool for configuration data, built to make Puppet better and let you set node-specific data without repeating yourself."
 - [http://docs.puppetlabs.com/hiera/latest/](http://docs.puppetlabs.com/hiera/latest/)
 
-# Videos
+# Tests
+- http://rspec-puppet.com/matchers/
+
+# Videos and links
 - [PuppetConf 2015](https://www.youtube.com/playlist?list=PLV86BgbREluUDlJW_jAqnWPj0THx7eXBA)
 - [Designing Puppet: Roles/Profiles Pattern](https://www.youtube.com/watch?v=ZpHtOnlSGNY) - based on the blog post [Designing Puppet – Roles and Profiles](http://www.craigdunn.org/2012/05/239/)
