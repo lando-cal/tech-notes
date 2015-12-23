@@ -6,6 +6,18 @@
 
 # Puppet
 ## Examples
+### Show how puppet interacts with a resource
+
+```
+puppet describe cron
+```
+
+### Show available puppet types
+
+```
+puppet resource --types
+```
+
 ### Show the puppet code that will create a resource
 
 ```
