@@ -25,3 +25,16 @@ fi
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-hosts
 ```
+
+# Usage Examples
+## List which boxes you have stored locally
+
+```
+vagrant box List
+```
+
+## Remove an old version of a vagrant box
+
+```
+vagrant box remove ubuntu/trusty64 --box-version 20151201.0.0
+```
