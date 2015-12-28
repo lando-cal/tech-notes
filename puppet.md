@@ -3,6 +3,7 @@
 - [Function Reference](https://docs.puppetlabs.com/references/latest/function.html)
 - [Language: Basics](https://docs.puppetlabs.com/puppet/latest/reference/lang_summary.html)
 - [Vagrant Docs - Puppet Apply Provisioner](https://docs.vagrantup.com/v2/provisioning/puppet_apply.html)
+- [Downloads](https://puppetlabs.com/misc/download-options-get)
 
 # Puppet
 ## Examples
@@ -55,6 +56,18 @@ mco ping
 
 ```
 mco inventory fqdn.example.com
+```
+
+### Find nodes with certain facts
+
+```
+mco find --with-fact lsbdistdescription="Ubuntu 10.04.1 LTS"
+```
+
+### Show the classes for a given host
+
+```
+sort /var/lib/puppet/state/classes.txt
 ```
 
 # Hiera
