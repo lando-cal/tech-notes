@@ -65,6 +65,7 @@ rsync --remove-source-files -aPiv --bwlimit 20000 --exclude="**$(date -d "1 mont
 ```
 
 ## Reduce time precision during comparison
+This is useful for rsyncing to FAT filesystems where time precision is 2 seconds.
 
 ```
 rsync --modify-window=1 # allow 1 second of difference in timestamps
