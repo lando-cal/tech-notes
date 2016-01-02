@@ -61,7 +61,14 @@ done ;
 This relies on gnu date, so use gdate if used on OS X.
 
 ```
-rsync --remove-source-files -aPiv --bwlimit 20000 --exclude="**$(date -d "1 month ago" "+%Y-%m")**" --exclude="**$(date "+%Y-%m")**"  --no-links /srv/backups/scribe/* root@10.2.17.7:/srv/backups/scribe-sea/
+rsync -aPiv \
+  --remove-source-files \
+  --bwlimit 20000 \
+  --exclude="**$(date -d "1 month ago" "+%Y-%m")**" \
+  --exclude="**$(date "+%Y-%m")**" \
+  --no-links \
+  /srv/backups/scribe/* \
+  root@10.2.17.7:/srv/backups/scribe-sea/
 ```
 
 ## Reduce time precision during comparison
