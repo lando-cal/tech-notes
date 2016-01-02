@@ -1,38 +1,39 @@
 Great way to sync one location to another, local or remote.  Note that this does not mean full synchronization, two commands with reversed source and destinations are required to accomplish that.
 
-## Syntax Examples
+# Syntax Examples
+## Giving additional ssh options
 
-### Giving additional ssh options
-    rsync -e 'ssh -o ConnectTimeout=10 -o PasswordAuthentication=no' -Rai /home target:/
+```
+rsync -e 'ssh -o ConnectTimeout=10 -o PasswordAuthentication=no' -Rai /home target:/
+```
 
-### Exclude Filters
-
+## Exclude Filters
 Exclude filters are kinda weird.
 - They're case sensitive and there's no way to be case insensitive.
 - They are relative to the root of the source URI. EG, `rsync --exclude="Desktop/" ~/ remotehost:~/`
 
 Here is an example of what to use in --exclude-from=file.txt
 
-    **Cache
-    **Caches
-    **cache
-    **caches
-    **/.dropbox
-    **Previews.lrdata
-    **/Library/Application\ Support/Google/Chrome
+```
+**Cache
+**Caches
+**cache
+**caches
+**/.dropbox
+**Previews.lrdata
+**/Library/Application\ Support/Google/Chrome
+```
 
-
-### Long and Partial Transfers
-
+## Long and Partial Transfers
 If you're doing transfers which you'd like to monitor and risk being cut off, use this syntax:
 
-```rsync -e ssh -az --partial --progress ./foo remotehost:~/bar/```
+`rsync -e ssh -az --partial --progress ./foo remotehost:~/bar/`
 
 This will resume broken file transfers where they were left off, and give you completion statistics with transfer rate, percent complete and estimated time left.
 
-### Recursively symlink src to dst
-
+## Recursively symlink src to dst
 Slashes are really really important here; this won't work if you get them wrong. Absolute paths must be given, thus ${PWD} and ${HOME} vs ~
+
 ```
 rsync -aP --link-dest="${PWD}/src" ./src/ dst #recursively symlink ./src to dst
 ```
@@ -43,7 +44,7 @@ This will create the directory `${HOME}/temp/some_dir` and hard link all the fil
 rsync -aivv --link-dest="${HOME}/Dropbox" ${HOME}/Dropbox/some_dir ${HOME}/temp/
 ```
 
-### Move files to another server in small batches
+## Move files to another server in small batches
 This is useful if you want to gradually clear up disk space rather than waiting until the end of a transfer of a large number of files to clear up disk space in one large operation.
 
 ```
@@ -56,21 +57,20 @@ echo md5 of files ${#files} is $(echo ${files} | md5sum) ;
 done ;
 ```
 
-### Move all datestamped files older than the beginning of the previous month, excluding symlinks
-
+## Move all datestamped files older than the beginning of the previous month, excluding symlinks
 This relies on gnu date, so use gdate if used on OS X.
 
 ```
 rsync --remove-source-files -aPiv --bwlimit 20000 --exclude="**$(date -d "1 month ago" "+%Y-%m")**" --exclude="**$(date "+%Y-%m")**"  --no-links /srv/backups/scribe/* root@10.2.17.7:/srv/backups/scribe-sea/
 ```
 
-### Reduce time precision during comparison
+## Reduce time precision during comparison
 
 ```
 rsync --modify-window=1 # allow 1 second of difference in timestamps
 ```
 
-## See Also
+# See Also
 - prsync
 - pssh
 - pscp
