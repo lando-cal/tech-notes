@@ -18,6 +18,12 @@ docker run -i -t node bash
 
 [https://docs.docker.com/reference/commandline/cli/#run](https://docs.docker.com/reference/commandline/cli/#run)
 
+## Get a bash terminal on a running docker container
+
+```
+docker exec -i -t container_name bash
+```
+
 ## Run a docker image and assign it a hostname, and a docker name
 
 ```
