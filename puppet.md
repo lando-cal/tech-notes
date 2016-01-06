@@ -7,6 +7,13 @@
 
 # Puppet
 ## Examples
+
+### Show variables about the host that puppet knows (facts)
+
+```
+facter
+```
+
 ### Show how puppet interacts with a resource
 
 ```
