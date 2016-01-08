@@ -6,11 +6,9 @@
 
 Term     | Definition
 :------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-S3       | Simple Storage Service
 AMI      | Amazon Machine Images
 ASG      | Auto-Scaling Group.  Auto Scaling can automatically increase the number of Amazon EC2 instances during demand spikes to maintain performance and decrease capacity during lulls to reduce costs.
 AWS      | Amazon Web Services
-Route 53 | A highly available and scalable cloud Domain Name System (DNS) web service.
 AZ       | Data centers. Amazon Availability Zones.
 EBS      | Elastic Block Storage. Provides persistent block-level storage volumes for EC2.
 EC2      | Elastic Compute Cloud
@@ -24,6 +22,8 @@ KMS      | Key Management Service
 MFA      | Amazon Web Services Multi-Factor Authentication is a simple best practice that adds an extra layer of protection on top of your user name and password.
 RDS      | Relational Database Service
 RI       | Reserved Instance. EC2 instances for which there is a 1 or 3 year contract with AWS to achieve lower hourly run costs.
+Route 53 | A highly available and scalable cloud Domain Name System (DNS) web service.
+S3       | Simple Storage Service
 SES      | Simple Email Service. Provides bulk and transactional email sending.
 SG       | Security Group. Security Groups in AWS are akin to firewalls.
 SNS      | Simple Notification Service. Provides a hosted multiprotocol “push” messaging for applications.
