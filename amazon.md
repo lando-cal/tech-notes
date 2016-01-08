@@ -1,5 +1,6 @@
 # Links
 - [https://github.com/cloudtools/troposphere](https://github.com/cloudtools/troposphere)
+- [https://console.aws.amazon.com/console/home](https://console.aws.amazon.com/console/home)
 
 # Terms and Acronyms
 
