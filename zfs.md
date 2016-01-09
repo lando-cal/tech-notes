@@ -188,6 +188,12 @@ zfs send -v -D -R bigdisk@20120907-oldest | zfs receive -F -v z2
 - -F enables deletion of any snapshots on the target that don't exist on the sender
 - -v enables verbose mode
 
+## recursively zfs send a filesystem to a remote host and recieve it as a new dataset
+
+```
+zfs send -v -D -R z1@20120907-oldest | ssh otherhost zfs receive -v z2/z1
+```
+
 ## Show summary of what would be sent
 This shows an entire dataset up to the given snapshot
 
