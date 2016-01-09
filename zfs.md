@@ -37,11 +37,11 @@ ZFS is the Zetabyte File System.
 Good explanation: [https://blogs.oracle.com/brendan/entry/test](https://blogs.oracle.com/brendan/entry/test)
 
 # zdb
+## Show the potential savings of turning on dedupe on zpool bigdisk
+[http://hub.opensolaris.org/bin/view/Community+Group+zfs/dedup](http://hub.opensolaris.org/bin/view/Community+Group+zfs/dedup)
 
 ```
-# show the potential savings of turning on dedupe on zpool bigdisk
-# http://hub.opensolaris.org/bin/view/Community+Group+zfs/dedup
-zdb -S bigdisk 
+zdb -S bigdisk
 ```
 
 # zpool
