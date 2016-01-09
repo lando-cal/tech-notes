@@ -39,7 +39,9 @@ Good explanation: [https://blogs.oracle.com/brendan/entry/test](https://blogs.or
 # zdb
 
 ```
-zdb -S bigdisk # show the potential savings of turning on dedupe on zpool bigdisk [http://hub.opensolaris.org/bin/view/Community+Group+zfs/dedup]
+# show the potential savings of turning on dedupe on zpool bigdisk
+# http://hub.opensolaris.org/bin/view/Community+Group+zfs/dedup
+zdb -S bigdisk 
 ```
 
 # zpool
