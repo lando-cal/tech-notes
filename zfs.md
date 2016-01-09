@@ -257,10 +257,11 @@ mdutil -i off /Volumes/backups1 # required on MacZFS since spotlight does not fu
 - If you get module errors: `modprobe zfs ; ldconfig`
 - If you get permission denied, check selinux settings
 
-## CentOS Repository
+## CentOS 6 Repository
 
 ```
-sudo yum localinstall -y --nogpgcheck http://archive.zfsonlinux.org/epel/zfs-release-1-2.el6.noarch.rpm
+sudo yum install -y epel-release # assumes later CentOS 6 where epel is provided upstream
+sudo yum localinstall --nogpgcheck http://archive.zfsonlinux.org/epel/zfs-release.el6.noarch.rpm
 sudo yum install zfs -y
 ```
 
@@ -268,8 +269,8 @@ sudo yum install zfs -y
 
 ```
 #!/bin/bash -x
-yum install kernel-devel-$(uname -r)
-zfs_version=0.6.5.3
+yum install -y kernel-devel-$(uname -r)
+zfs_version=0.6.5.4
 dkms remove -m zfs -v "${zfs_version}" --all
 dkms remove -m spl -v "${zfs_version}" --all
 dkms add -m spl -v "${zfs_version}"
