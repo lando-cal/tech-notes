@@ -7,12 +7,6 @@ curl is a tool to transfer data from or to a server, using one of the supported 
 curl -L http://whatever
 ```
 
-## Dump only headers
-
-```
-curl -I http://whatever
-```
-
 ## Show the HTTP code for a given request
 This downloads 1 byte from the remote URI and shows the HTTP code, so it's a quick way to discover HTTP codes.
 
