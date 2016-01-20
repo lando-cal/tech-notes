@@ -212,20 +212,21 @@ git config --global merge.ff false
 ### Add a remote
 
 ```
-git remote add g https://g.zoosk.com/danielh/cfengine
+git remote add upstream https://github.com/danielhoherd/homepass
 ```
 
 ### Push to a specific remote
 
 ```
-git push g master # push to the remote g's master branch
+# push to the master branch of the remote named upstream
+git push upstream master
 ```
 
 ### Alter the source of origin
 If you move your repo to another location, use this command to change the upstream URL:
 
 ```
-git remote set-url origin https://danielh@g.zoosk.com/Ops/ops-bin # or whatever the new checkout URL is.
+git remote set-url origin https://user@newhost/newpath/reponame
 ```
 
 ## git reset
@@ -263,7 +264,19 @@ git clean -f -d
 ### Refresh all Git repos in a path
 
 ```
-find /var/www/html/mediawiki/ -name .git | while read -r X ; do pushd "$(dirname "${X}")" && [ $(git remote -v | wc -l) -gt 0 ] && git pull && popd ; done ;
+find /var/www/html/mediawiki/ -name .git | while read -r X ; do
+  pushd "$(dirname "${X}")" && \
+  [ $(git remote -v | wc -l) -gt 0 ] && \
+  git pull && \
+  popd ;
+done ;
+```
+
+### Show a numbered list of remote branches sorted by last commit date
+
+```
+git branch -r | grep -v HEAD | xargs -r -n1 git log -1 \
+--pretty=format:'%ad %h%d %an | %s %n' --date=iso -1 | sort | nl -ba
 ```
 
 ### Branch cleanup
