@@ -24,7 +24,7 @@ curl --max-filesize 1 -s -w "%{http_code}\n" -o /dev/null http://www.example.com
 This is useful for testing production code on non-production multi-tennant name based virtual hosts.
 
 ```
-curl -H www.domain.com http://example.com
+curl -H 'Host: www.domain.com' http://example.com
 ```
 
 ## Get the length of the file to be downloaded
