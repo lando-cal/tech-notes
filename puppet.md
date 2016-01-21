@@ -7,7 +7,6 @@
 
 # Puppet
 ## Examples
-
 ### Show variables about the host that puppet knows (facts)
 
 ```
@@ -59,6 +58,12 @@ mco find -1
 mco ping
 ```
 
+### Show stats about which OSes you have
+
+```
+mco facts lsbdistdescription
+```
+
 ### Show detailed info about a node
 
 ```
@@ -69,6 +74,12 @@ mco inventory fqdn.example.com
 
 ```
 mco find --with-fact lsbdistdescription="Ubuntu 10.04.1 LTS"
+```
+
+### Find nodes that match a config management class
+
+```
+mco find -C role::awsadmin
 ```
 
 ### Show the classes for a given host
