@@ -1,4 +1,4 @@
-ddrescue is a replacement for dd and dcfldd with a bunch of additional features.  There are actually two versions of this: dd_rescue and gddrescue.  gddrescue is the best.
+ddrescue is a replacement for dd and dcfldd with a bunch of additional features.  There are actually two tools called ddrescue: dd_rescue and gddrescue.  gddrescue is the best.
 - Software home page - [http://www.gnu.org/software/ddrescue/](http://www.gnu.org/software/ddrescue/)
 - Instruction Manual - [http://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html](http://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html)
 
