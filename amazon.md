@@ -1,6 +1,7 @@
 # Links
-- [https://github.com/cloudtools/troposphere](https://github.com/cloudtools/troposphere)
-- [https://console.aws.amazon.com/console/home](https://console.aws.amazon.com/console/home)
+- [Github - Troposphere](https://github.com/cloudtools/troposphere)
+- [AWS Console](https://console.aws.amazon.com/console/home)
+- [Amazon EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/)
 
 # Terms and Acronyms
 
