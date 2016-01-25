@@ -4,7 +4,7 @@ Software Defined Radio
 SDR is dominated by windows software, so this is going to leave all that out and deal with Linux and Mac OS software.
 
 # Links
-
-- NOAA weather by state - http://www.nws.noaa.gov/nwr/coverage/ccov.php
-- Good scanning software - http://gqrx.dk/
-- https://www.radioreference.com/
+- NOAA weather by state - [http://www.nws.noaa.gov/nwr/coverage/ccov.php](http://www.nws.noaa.gov/nwr/coverage/ccov.php)
+- Good scanning software - [http://gqrx.dk/](http://gqrx.dk/)
+- [https://www.radioreference.com/](https://www.radioreference.com/)
+- [http://www.sigidwiki.com/](http://www.sigidwiki.com/)
