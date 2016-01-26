@@ -64,6 +64,12 @@ mco ping
 mco facts lsbdistdescription
 ```
 
+### Find all machines that have a fact
+
+```
+mco facts role --with-fact lsbdistcodename=lucid
+```
+
 ### Show detailed info about a node
 
 ```
@@ -86,6 +92,12 @@ mco find -C role::awsadmin
 
 ```
 sort /var/lib/puppet/state/classes.txt
+```
+
+### Show the status and puppet policy about a package on all hosts
+
+```
+mco rpc package status package=openssh-client --discovery-timeout 60 --json
 ```
 
 # Hiera
