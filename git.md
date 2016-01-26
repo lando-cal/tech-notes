@@ -257,7 +257,7 @@ git reset --hard origin/master
 This is useful after your reset to a prior state.  It deletes all files and directories that show up in the untracked section of `git status`
 
 ```
-git clean -f -d
+git clean -ffdx
 ```
 
 ## Misc tricks
