@@ -64,7 +64,13 @@ mco ping
 mco facts lsbdistdescription
 ```
 
-### Find all machines that have a fact
+### Find machines that have a certain fact
+
+```
+mco find --with-fact lsbdistcodename=lucid
+```
+
+### Find all facts on machines that have a fact
 
 ```
 mco facts role --with-fact lsbdistcodename=lucid
