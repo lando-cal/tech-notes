@@ -3,6 +3,12 @@ Enterprise log consumption and analysis.
 - [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Sort](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Sort)
 
 # Examples
+## Get a list of indexes
+
+```
+| REST /services/data/indexes | dedup title | table title
+```
+
 ## CFEngine runs per hour by version
 
 ```
