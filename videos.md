@@ -1,4 +1,5 @@
 # Tech videos
+- [Sensu @ Yelp part 1](https://vimeo.com/92770954), [Sensu @ Yelp part 2](https://vimeo.com/92838680)
 - [Theory of PaaSes talk from Box SRE Hour](https://youtu.be/YFDwdRVTg4g?t=33m11s)
 - [Working Theory of Monitoring](https://www.usenix.org/conference/lisa13/working-theory-monitoring)
 - [Using Swagger to tame HTTP/JSON interfaces](https://www.youtube.com/watch?v=ybGrm73dXow)
