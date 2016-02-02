@@ -1,5 +1,5 @@
-[nfs](nfs "wikilink") is the Network File System.
-- Configured in [linux](linux "wikilink") at /etc/exports
+nfs is the Network File System.
+- Configured in linux at /etc/exports
 - Great info here: [http://nfs.sourceforge.net/](http://nfs.sourceforge.net/)
 
 # Tips and Tricks
@@ -28,6 +28,8 @@ If you have a mount point within an NFS share, you must have a separate entry in
 # OS X Tips and Tricks
 ## Create persistent NFS mount in OS X 10.8
 
+This is not bulletproof. Modern OS X 10.9+ version are switching away from NFS to CIFS.
+
 ```
 sudo mkdir /mnt # OS X doesn't like you playing with /Volumes, it may delete your dirs
 sudo dscl . -create /Mounts/z4
@@ -46,5 +48,3 @@ sudo dscl . -list /Mounts
 
 sudo dscl . -delete /Mounts opal:/z4/iTunes
 ```
-
-<Category:Nix> <Category:Network>
