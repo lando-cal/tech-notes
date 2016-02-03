@@ -1,7 +1,7 @@
 Linux Logical Volume Manager.
-- Tutorial [http://linuxconfig.org/Linux_lvm_-_Logical_Volume_Manager](http://linuxconfig.org/Linux_lvm_-_Logical_Volume_Manager)
-- Overview - [http://www.centos.org/docs/5/html/Cluster_Logical_Volume_Manager/LVM_definition.html](http://www.centos.org/docs/5/html/Cluster_Logical_Volume_Manager/LVM_definition.html)
-- Managing - [http://www.centos.org/docs/5/html/Cluster_Logical_Volume_Manager/VG_admin.html](http://www.centos.org/docs/5/html/Cluster_Logical_Volume_Manager/VG_admin.html)
+- [Tutorial](http://linuxconfig.org/Linux_lvm_-_Logical_Volume_Manager)
+- [Overview](http://www.centos.org/docs/5/html/Cluster_Logical_Volume_Manager/LVM_definition.html)
+- [Managing](http://www.centos.org/docs/5/html/Cluster_Logical_Volume_Manager/VG_admin.html)
 
 Physical volumes (pv) are grouped into volume groups (vg). Volume groups are sliced up into logical volumes (lv).
 
@@ -44,7 +44,17 @@ This creates a specifically named logical volume on a volume group named vg_data
 `vgs -o vg_free_count`
 
 ## Extend a volume group to 1TB
-`lvextend -L 1T /dev/vgroot/lv_srv && resize2fs /dev/mapper/vgroot-lv_srv && df -h /srv`
+
+```
+lvextend -L 1T /dev/vgroot/lv_srv && \
+resize2fs /dev/mapper/vgroot-lv_srv && \
+df -h /srv
+```
 
 ## Extend a volume group to its max
-`lvextend -l +100%FREE /dev/vgroot/lv_srv && resize2fs /dev/mapper/vgroot-lv_srv && df -h /srv`
+
+```
+lvextend -l +100%FREE /dev/vgroot/lv_srv && \
+resize2fs /dev/mapper/vgroot-lv_srv && \
+df -h /srv
+```
