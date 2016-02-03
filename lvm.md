@@ -3,7 +3,18 @@ Linux Logical Volume Manager.
 - [Overview](http://www.centos.org/docs/5/html/Cluster_Logical_Volume_Manager/LVM_definition.html)
 - [Managing](http://www.centos.org/docs/5/html/Cluster_Logical_Volume_Manager/VG_admin.html)
 
-Physical volumes (pv) are grouped into volume groups (vg). Volume groups are sliced up into logical volumes (lv).
+# General flow
+
+Physical volumes (pv) are grouped into volume groups (vg). Volume groups are sliced up into logical volumes (lv). Because of that, the general flow is something like:
+
+```
+# Partitioning is not necessary, so no need for fdisk or sgdisk
+pvcreate /dev/sd{x..z}
+vgcreate vg_scratch /dev/sd{x..z}
+lvcreate -l 95%FREE -n lv_scratch vg_scratch
+mkfs.ext4 /dev/vg_scratch/lv_scratch
+```
+
 
 # Examples
 ## Show a bunch of info
