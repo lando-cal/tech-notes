@@ -20,7 +20,7 @@ ip -f inet addr
 This shows information about eth0 and all the virtual interfaces brought up on the physical interface.
 
 ```
-ip addr show dev eth0
+ip addr show eth0
 ```
 
 ## Monitor IP changes
