@@ -31,18 +31,22 @@ If you're doing transfers which you'd like to monitor and risk being cut off, us
 
 This will resume broken file transfers where they were left off, and give you completion statistics with transfer rate, percent complete and estimated time left.
 
-## Recursively symlink src to dst
+## Recursively link src to dst
+rsync can be used to create a hard linked local copy of a whole tree. This is useful if you don't have GNU cp where the same could be done with simply `cp -lrp`. On OS X with [homebrew](http://brew.sh), GNU cp can be installed via `brew install coreutils` and accessed via `gcp`. See also `ls -la /usr/local/opt/coreutils/bin/`.
+
 Slashes are really really important here; this won't work if you get them wrong. Absolute paths must be given, thus ${PWD} and ${HOME} vs ~
 
 ```
-rsync -aP --link-dest="${PWD}/src" ./src/ dst #recursively symlink ./src to dst
+rsync -aP --link-dest="${PWD}/src" ./src/ dst #recursively hard link ./src to dst
 ```
 
-This will create the directory `${HOME}/temp/some_dir` and hard link all the files from the source into the destination.  It should only take a few seconds.  Lines with 'hf' indicate a hard linked file.  Lines with 'cd' indicate 'created directory'.
+For example:
 
 ```
 rsync -aivv --link-dest="${HOME}/Dropbox" ${HOME}/Dropbox/some_dir ${HOME}/temp/
 ```
+
+This will create the directory `${HOME}/temp/some_dir` and hard link all the files from the source into the destination.  It should only take a few seconds.  Lines with 'hf' indicate a hard linked file.  Lines with 'cd' indicate 'created directory'.
 
 ## Move files to another server in small batches
 This is useful if you want to gradually clear up disk space rather than waiting until the end of a transfer of a large number of files to clear up disk space in one large operation.
