@@ -279,12 +279,12 @@ sudo yum install zfs -y
 #!/bin/bash -x
 yum install -y kernel-devel-$(uname -r)
 zfs_version=0.6.5.4
-dkms remove -m zfs -v "${zfs_version}" --all
-dkms remove -m spl -v "${zfs_version}" --all
-dkms add -m spl -v "${zfs_version}"
-dkms add -m zfs -v "${zfs_version}"
-dkms install -m spl -v "${zfs_version}"
-dkms install -m zfs -v "${zfs_version}"
+dkms remove  -m zfs -v "${zfs_version}" --all
+dkms remove  -m spl -v "${zfs_version}" --all
+dkms add     -m spl -v "${zfs_version}" --force
+dkms add     -m zfs -v "${zfs_version}" --force
+dkms install -m spl -v "${zfs_version}" --force
+dkms install -m zfs -v "${zfs_version}" --force
 ```
 
 ### Inspect the rpm for what scripts it runs
