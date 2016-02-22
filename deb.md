@@ -55,5 +55,17 @@ apt-cache dumpavail
 apt-cache show coreutils
 ```
 
+## Show reverse dependencies of a package
+
+```
+apt-cache rdepends ec2-api-tools
+```
+
+### Show reverse dependencies of installed package
+
+```
+aptitude why openjdk-7-jre-headless
+```
+
 # Links
 - [https://wiki.debian.org/RPM](https://wiki.debian.org/RPM)
