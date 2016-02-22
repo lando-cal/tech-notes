@@ -1,57 +1,46 @@
-Tips
-----
+sed is the stream editor.
 
-### OSX Pitfalls
+# Tips
+## OSX Pitfalls
+Beware that BSD sed -i requires a mandatory flag for the backup file. You can use -i '' to have no backup file.
 
-Beware that BSD sed -i requires a mandatory flag for the backup file.
-You can use -i '' to have no backup file.
+Also, OS X sed doesn't support case insensitivity! WTF?! We have to use `perl -pe 's/foo/bar/i' foo.txt` or homebrew's `gsed`.
 
-Also, OS X sed doesn't support case insensitivity! WTF?! We have to use
-[`perl`](perl "wikilink") `-pe` `'s/foo/bar/i'` `foo.txt`
-
-### Only print a specific line
-
+## Only print a specific line
 This will print only the second line of the file
 
-`sed -n ' 2{p;q;}' foo.txt`
+`sed -n ' 2{p;q;}' foo.txt`
 
-### Only print if match
+## Only print if match
+`sed -n 's/.*`$[0-9]{3}$`.sfo2.zoosk.com/\1/p' <<< sfo2-dev-vmbuild999.sfo2.zoosk.com`
 
-`sed -n 's/.*`$[0-9]\{3\}$`.sfo2.zoosk.com/\1/p' <<< sfo2-dev-vmbuild999.sfo2.zoosk.com`
+## Add a new line with content after a match
+Since sed can't insert things like \n, this has to take place on multiple lines, so it's a bit funky looking but still functional.
 
-### Add a new line with content after a match
+```
+sed -i "" -e '/respawn/a\
+respawn limit 10 5' zoosk_worker_*.conf
+```
 
-Since sed can't insert things like \\n, this has to take place on
-multiple lines, so it's a bit funky looking but still functional.
+## Uncomment a line that matches a regex
+This removes the comment and adds wheel to the [sudoers](sudo "wikilink") list
 
-`sed -i "" -e '/respawn/a\`\
-`respawn limit 10 5' zoosk_worker_*.conf`
+`/bin/sed -i '/^#\s\+%wheel\s\+ALL=(ALL)\s\+ALL$/s/^#\s*//' /etc/sudoers`
 
-### Uncomment a line that matches a regex
+## Delete lines containing a string
+`sed -i -e '/root/d' asdf.txt`
 
-This removes the comment and adds wheel to the
-[sudoers](sudo "wikilink") list
-
-`/bin/sed -i '/^#\s\+%wheel\s\+ALL=(ALL)\s\+ALL$/s/^#\s*//' /etc/sudoers`
-
-### Delete lines containing a string
-
-`sed -i -e '/root/d' asdf.txt`
-
-### Delete lines not containing a string
-
-`sed -i '/foo/!d' wy.txt`
+## Delete lines not containing a string
+`sed -i '/foo/!d' wy.txt`
 
 Or not containing a MAC address:
 
-`sed -i '' -E '/[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}/!d' *`
+`sed -i '' -E '/[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}/!d' *`
 
-### Do a replacement on all files in a dir
+## Do a replacement on all files in a dir
+`sed -i "s/foo/bar/g" /etc/apache2/sites-available/*`
 
-`sed -i "s/foo/bar/g" /etc/apache2/sites-available/*`
-
-### Word boundaries
-
+## Word boundaries
 Normally, word boundaries look like this:
 
 `/\bMyWord\b/`
@@ -62,14 +51,14 @@ or
 
 But in OS X, you have to do them like this:
 
-`/`[`:<:MyWord`](:<: "wikilink")[`:>:`](:>: "wikilink")`/`
+```
+/[[:<:]]MyWord[[:>:]]/
+```
 
-### Add a bell to [tail](tail "wikilink") -f
+Which is just ridiculous, so use homebrew's `gsed` if you can.
 
-`tail -n 0 -f /var/log/messages | sed 's/$/\a'`
+## Add a bell to [tail](tail "wikilink") -f
+`tail -n 0 -f /var/log/messages | sed 's/$/\a'`
 
-See Also
---------
-
--   Some great sed tips - <http://www-rohan.sdsu.edu/doc/sed.html>
-
+## See Also
+- Some great sed tips - [http://www-rohan.sdsu.edu/doc/sed.html](http://www-rohan.sdsu.edu/doc/sed.html)
