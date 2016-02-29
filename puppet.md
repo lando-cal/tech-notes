@@ -106,10 +106,10 @@ sort /var/lib/puppet/state/classes.txt
 mco rpc package status package=openssh-client --discovery-timeout 60 --json
 ```
 
-### Show breakdown of libdist by role
+### Show breakdown of hosts by OS version by role
 
 ```
-mco facts -v --wc role::mon lsbdistcodename
+mco facts -v --wc role::mon lsbdistdescription
 ```
 
 # Hiera
