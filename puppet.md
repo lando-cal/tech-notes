@@ -106,6 +106,12 @@ sort /var/lib/puppet/state/classes.txt
 mco rpc package status package=openssh-client --discovery-timeout 60 --json
 ```
 
+### Show breakdown of libdist by role
+
+```
+mco facts -v --wc role::mon lsbdistcodename
+```
+
 # Hiera
 "Hiera is a key/value lookup tool for configuration data, built to make Puppet better and let you set node-specific data without repeating yourself."
 - [http://docs.puppetlabs.com/hiera/latest/](http://docs.puppetlabs.com/hiera/latest/)
