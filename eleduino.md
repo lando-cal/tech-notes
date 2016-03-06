@@ -39,3 +39,13 @@ consoleblank=0 \
 fbtft_device.fps=50 \
 fbtft_device.rotate=270/" /boot/cmdline.txt
 ```
+
+## Sort and unique /boot/cmdline.txt
+
+```
+cat /boot/cmdline.txt | \
+tee /root/cmdline.txt-$(date +%s) | \
+tr " " "\n" | \
+sort -u | \
+tr "\n" " " > /boot/cmdline.txt
+```
