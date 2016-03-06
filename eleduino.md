@@ -1,5 +1,5 @@
 # Eleduino SpotPear touchscreen
-Taken from [https://github.com/notro/rpi-firmware/issues/6#issuecomment-63180647](https://github.com/notro/rpi-firmware/issues/6#issuecomment-63180647)
+Taken from [https://github.com/notro/rpi-firmware/issues/6#issuecomment-63180647](https://github.com/notro/rpi-firmware/issues/6#issuecomment-63180647), this is tested to work on Raspbian 7 (wheezy) and 8 (jessie).
 
 ## update the firmware to support FBTFT
 
