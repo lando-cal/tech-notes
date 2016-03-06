@@ -37,5 +37,5 @@ dma.dmachans=0x7f35 \
 console=tty1 \
 consoleblank=0 \
 fbtft_device.fps=50 \
-fbtft_device.rotate=270" /boot/cmdline.txt
+fbtft_device.rotate=270/" /boot/cmdline.txt
 ```
