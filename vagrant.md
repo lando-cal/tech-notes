@@ -1,8 +1,8 @@
 - Vagrantfile syntax is ruby
-- [https://www.vagrantup.com](https://www.vagrantup.com)
+- <https://www.vagrantup.com>
 - [https://docs.vagrantup.com/v2](http://docs.vagrantup.com/v2)
-- [https://atlas.hashicorp.com](https://atlas.hashicorp.com)
-- Examples: [https://github.com/patrickdlee/vagrant-examples](https://github.com/patrickdlee/vagrant-examples)
+- <https://atlas.hashicorp.com>
+- Examples: <https://github.com/patrickdlee/vagrant-examples>
 
 # OS X Shell tweaks
 
@@ -27,6 +27,7 @@ vagrant plugin install vagrant-hosts
 ```
 
 # Usage Examples
+
 ## List which boxes you have stored locally
 
 ```
