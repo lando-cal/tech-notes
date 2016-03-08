@@ -1,8 +1,10 @@
 Enterprise log consumption and analysis.
-- [http://www.splunk.com/](http://www.splunk.com/)
-- [http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Sort](http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Sort)
+
+- <http://www.splunk.com/>
+- <http://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Sort>
 
 # Examples
+
 ## Get a list of indexes
 
 ```
@@ -40,6 +42,7 @@ earliest="-1d" source="/var/log/messages" OR source="udp:10514" OR source="udp:5
 ```
 
 ## Count of records per splunk server for a given time period
+
 Stupidly, splunk doesn't support ISO date format by default (in the version I'm using).
 
 ```
@@ -53,6 +56,7 @@ earliest="7/6/2015:9:30:0" "verifying pingback from" | rex "verifying pingback f
 ```
 
 ## Order an RPM report
+
 Given a report where RPM fields are exported as field="value", such as:
 
 ```
@@ -66,10 +70,12 @@ earliest="-1d" report="rpm" | dedup name | eval install_timestamp = strftime(ins
 ```
 
 See also:
-- [http://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf](http://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf)
-- [http://answers.splunk.com/answers/140493/timestamp-contain-t-between-date-and-time.html#answer-140495](http://answers.splunk.com/answers/140493/timestamp-contain-t-between-date-and-time.html#answer-140495)
+
+- <http://docs.splunk.com/Documentation/Splunk/latest/Admin/Propsconf>
+- <http://answers.splunk.com/answers/140493/timestamp-contain-t-between-date-and-time.html#answer-140495>
 
 ## Count of kernel versions
+
 Assuming you have a report that sends `kernel_version=$(uname -r)`:
 
 ```

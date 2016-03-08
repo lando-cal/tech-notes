@@ -1,16 +1,19 @@
 [Security Enhanced Linux](http://en.wikipedia.org/wiki/Security-Enhanced_Linux)
 
 # Notes
-- Tutorial Video: [https://www.youtube.com/watch?v=MxjenQ31b70](https://www.youtube.com/watch?v=MxjenQ31b70)
-- CentOS HowTo: [http://wiki.centos.org/HowTos/SELinux](http://wiki.centos.org/HowTos/SELinux)
+
+- Tutorial Video: <https://www.youtube.com/watch?v=MxjenQ31b70>
+- CentOS HowTo: <http://wiki.centos.org/HowTos/SELinux>
 - Labels are in user:role:type:level(optional)
 - Logs go in /var/log/audit/audit.log and /var/log/messages
 - Additional tools:
+
   - semanage and more are included in CentOS package `policycoreutils`
   - `setroubleshoot` has a bunch of tools included. Lots of prerequisites
   - `setroubleshoot-server` has a bunch of tools included. Lots of prerequisites
 
 # Examples
+
 ## Show status of selinux
 
 ```
@@ -67,6 +70,7 @@ chcon --reference /file/or/dir/to/reference /target/file
 ```
 
 ## Restore default contexts
+
 This command restores the contexts as referenced in /etc/selinux/targeted/contexts/files/file_contexts
 
 ```
@@ -75,6 +79,7 @@ restorecon -vR /path/to/broken/dir
 ```
 
 ## Restore defaults context automatically at system reboot
+
 This should take roughly the same amount of time as a fsck would.
 
 ```
