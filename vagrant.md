@@ -38,3 +38,13 @@ vagrant box List
 ```
 vagrant box remove ubuntu/trusty64 --box-version 20151201.0.0
 ```
+
+## Script box updates
+
+This may fail in some circumstances, I haven't tested it exhaustively.
+
+```
+vagrant box outdated --machine-readable | \
+awk -F, '$4 == "warn" {print; exit 1}' || \
+vagrant box update
+```
