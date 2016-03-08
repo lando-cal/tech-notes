@@ -1,50 +1,58 @@
 ZFS is the Zetabyte File System.
 
 # Links
+
 - Example zpool errors - Zpool errors
-- OpenZFS - [http://open-zfs.org](http://open-zfs.org)
-- Tuning Guide - [http://www.solarisinternals.com/wiki/index.php/ZFS_Evil_Tuning_Guide](http://www.solarisinternals.com/wiki/index.php/ZFS_Evil_Tuning_Guide)
-- Hardware recommendations - [http://blog.zorinaq.com/?e=10](http://blog.zorinaq.com/?e=10)
-- Mac ZFS - [http://code.google.com/p/maczfs/](http://code.google.com/p/maczfs/)
-- Shadow migration feature - [http://docs.oracle.com/cd/E23824_01/html/821-1448/gkkud.html](http://docs.oracle.com/cd/E23824_01/html/821-1448/gkkud.html)
-- Speed tuning - [http://icesquare.com/wordpress/how-to-improve-zfs-performance/](http://icesquare.com/wordpress/how-to-improve-zfs-performance/)
-- ZFS RAID levels - [http://www.zfsbuild.com/2010/05/26/zfs-raid-levels/](http://www.zfsbuild.com/2010/05/26/zfs-raid-levels/)
-- [http://en.wikipedia.org/wiki/ZFS](http://en.wikipedia.org/wiki/ZFS)
-- [http://wiki.freebsd.org/ZFSQuickStartGuide](http://wiki.freebsd.org/ZFSQuickStartGuide)
-- [http://www.solarisinternals.com/wiki/index.php/ZFS_Best_Practices_Guide](http://www.solarisinternals.com/wiki/index.php/ZFS_Best_Practices_Guide)
-- [http://zfsguru.com](http://zfsguru.com)
-- [http://zfsonlinux.org/faq.html](http://zfsonlinux.org/faq.html)
-- [http://www.oracle.com/technetwork/articles/servers-storage-admin/o11-113-size-zfs-dedup-1354231.html](http://www.oracle.com/technetwork/articles/servers-storage-admin/o11-113-size-zfs-dedup-1354231.html)
-- [http://wiki.freebsd.org/ZFSTuningGuide#Deduplication](http://wiki.freebsd.org/ZFSTuningGuide#Deduplication)
+- OpenZFS - <http://open-zfs.org>
+- Tuning Guide - <http://www.solarisinternals.com/wiki/index.php/ZFS_Evil_Tuning_Guide>
+- Hardware recommendations - <http://blog.zorinaq.com/?e=10>
+- Mac ZFS - <http://code.google.com/p/maczfs/>
+- Shadow migration feature - <http://docs.oracle.com/cd/E23824_01/html/821-1448/gkkud.html>
+- Speed tuning - <http://icesquare.com/wordpress/how-to-improve-zfs-performance/>
+- ZFS RAID levels - <http://www.zfsbuild.com/2010/05/26/zfs-raid-levels/>
+- <http://en.wikipedia.org/wiki/ZFS>
+- <http://wiki.freebsd.org/ZFSQuickStartGuide>
+- <http://www.solarisinternals.com/wiki/index.php/ZFS_Best_Practices_Guide>
+- <http://zfsguru.com>
+- <http://zfsonlinux.org/faq.html>
+- <http://www.oracle.com/technetwork/articles/servers-storage-admin/o11-113-size-zfs-dedup-1354231.html>
+- <http://wiki.freebsd.org/ZFSTuningGuide#Deduplication>
 
 # Tips
+
 ## Memory
+
 - For normal operation, 1gb of memory per tb of disk space is suitable.
 - For dedupe operation, 5gb of memory per tb of usable disk space is suitable.
 
 ## Log devices
+
 - Use a log device if you have lots of writes.
 - Mirror it, because if you lose it you lose the whole volume.
 - Speed and latency are most important, not size.  Log flushes every 5 seconds.
 - Get SLC if possible, otherwise MLC
 
 ## Cache devices
+
 - Use if you have lots of reads
 - Size does matter, with big devices more data can be cached for faster reads of more data.
 - Speed and latency matter
 - Mirror does not matter because if it fails, reads come from the spinning disks
 
-Good explanation: [https://blogs.oracle.com/brendan/entry/test](https://blogs.oracle.com/brendan/entry/test)
+Good explanation: <https://blogs.oracle.com/brendan/entry/test>
 
 # zdb
+
 ## Show the potential savings of turning on dedupe on zpool bigdisk
-[http://hub.opensolaris.org/bin/view/Community+Group+zfs/dedup](http://hub.opensolaris.org/bin/view/Community+Group+zfs/dedup)
+
+<http://hub.opensolaris.org/bin/view/Community+Group+zfs/dedup>
 
 ```
 zdb -S bigdisk
 ```
 
 # zpool
+
 ## Create a zpool and its base filesystem
 
 ```
@@ -94,6 +102,7 @@ zpool replace -f z3 /dev/disk/by-id/ata-ST3000DM001-9YN166_W1F09CW9 /dev/disk/by
 ```
 
 # zfs
+
 ## show differences between filesystem and snapshot
 
 ```
@@ -179,6 +188,7 @@ zfs destroy z3@20130413-weekly,20130420-weekly,20130428-weekly,20130505-weekly
 ```
 
 ## zfs send / receive
+
 Replicate a zpool (use the latest snapshot name as the source) to a blank zpool:
 
 ```
@@ -197,6 +207,7 @@ zfs send -v -D -R z1@20120907-oldest | ssh otherhost zfs receive -v z2/z1
 ```
 
 ## Show summary of what would be sent
+
 This shows an entire dataset up to the given snapshot
 
 ```
@@ -216,7 +227,9 @@ zfs list -o name | grep 'z3@.*monthly' | while read -r X ; do [[ ! $a =~ .*month
 ```
 
 # Complex examples
+
 ## Create a raidz called z3
+
 Create a raidz pool from 4 disks and set some properties:
 
 ```
@@ -237,6 +250,7 @@ sudo zpool create -O casesensitivity=insensitive ${pool} raidz3 /Users/danielh/D
 ```
 
 # Troubleshooting
+
 ## Mount a pool that is giving you Trouble
 
 ```
@@ -250,7 +264,8 @@ Dec  7 14:48:40 localhost kernel: PANIC: blkptr at ffff8803fddb4200 DVA 0 has in
 ```
 
 # ZFS on Mac OS X
-- [http://openzfsonosx.org](http://openzfsonosx.org)
+
+- <http://openzfsonosx.org>
 
 ## Create a ZFS partition on /dev/disk3
 
@@ -262,6 +277,7 @@ mdutil -i off /Volumes/backups1 # required on MacZFS since spotlight does not fu
 ```
 
 # ZFS on Linux
+
 - If you get module errors: `modprobe zfs ; ldconfig`
 - If you get permission denied, check selinux settings
 
@@ -288,6 +304,7 @@ dkms install -m zfs -v "${zfs_version}" --force
 ```
 
 ### Inspect the rpm for what scripts it runs
+
 This is useful for debugging failures after kernel upgrade.
 
 ```

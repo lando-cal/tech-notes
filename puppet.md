@@ -6,7 +6,9 @@
 - [Downloads](https://puppetlabs.com/misc/download-options-get)
 
 # Puppet
+
 ## Examples
+
 ### Show variables about the host that puppet knows (facts)
 
 ```
@@ -42,10 +44,11 @@ file { '/etc/hosts':
 ```
 
 # Marionette Collective
-"The Marionette Collective, also known as MCollective, is a framework for building server orchestration or parallel job-execution systems. Most users programmatically execute administrative tasks on clusters of servers."
-- [http://docs.puppetlabs.com/mcollective/](http://docs.puppetlabs.com/mcollective/)
+
+"The Marionette Collective, also known as MCollective, is a framework for building server orchestration or parallel job-execution systems. Most users programmatically execute administrative tasks on clusters of servers." - <http://docs.puppetlabs.com/mcollective/>
 
 ## mco
+
 ### Find a random node in the cluster
 
 ```
@@ -113,12 +116,14 @@ mco facts -v --wc role::mon lsbdistdescription
 ```
 
 # Hiera
-"Hiera is a key/value lookup tool for configuration data, built to make Puppet better and let you set node-specific data without repeating yourself."
-- [http://docs.puppetlabs.com/hiera/latest/](http://docs.puppetlabs.com/hiera/latest/)
+
+"Hiera is a key/value lookup tool for configuration data, built to make Puppet better and let you set node-specific data without repeating yourself." - <http://docs.puppetlabs.com/hiera/latest/>
 
 # Tests
-- [http://rspec-puppet.com/matchers/](http://rspec-puppet.com/matchers/)
+
+- <http://rspec-puppet.com/matchers/>
 
 # Videos and links
+
 - [PuppetConf 2015](https://www.youtube.com/playlist?list=PLV86BgbREluUDlJW_jAqnWPj0THx7eXBA)
 - [Designing Puppet: Roles/Profiles Pattern](https://www.youtube.com/watch?v=ZpHtOnlSGNY) - based on the blog post [Designing Puppet – Roles and Profiles](http://www.craigdunn.org/2012/05/239/)
