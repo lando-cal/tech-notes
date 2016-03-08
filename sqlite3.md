@@ -1,8 +1,9 @@
-- CLI Shell info: [http://www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html)
-- Better CLI tutorial: [http://souptonuts.sourceforge.net/readme_sqlite_tutorial.html](http://souptonuts.sourceforge.net/readme_sqlite_tutorial.html)
-- FAQ - [http://www.sqlite.org/faq.html](http://www.sqlite.org/faq.html)
+- CLI Shell info: <http://www.sqlite.org/sqlite.html>
+- Better CLI tutorial: <http://souptonuts.sourceforge.net/readme_sqlite_tutorial.html>
+- FAQ - <http://www.sqlite.org/faq.html>
 
 # Syntax Examples
+
 ## Exit the CLI
 
 ```
@@ -34,6 +35,7 @@ sqlite3 foo.db "insert into baz values ('50','some text');"
 ```
 
 ## Output rows via the unix shell
+
 This outputs as columns, but csv, html line, and list exist too.
 
 ```

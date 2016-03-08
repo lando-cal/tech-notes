@@ -1,6 +1,7 @@
 Lightweight Directory Access Protocol
 
 # Acronyms and stuff
+
 - o=organization
 - c=country
 - dn=distinguished_name
@@ -10,7 +11,9 @@ Lightweight Directory Access Protocol
 - uid=user_id
 
 # Tricks
+
 ## Show the whole ldap database
+
 From the LDAP server
 
 ```
@@ -42,6 +45,7 @@ ldapsearch -x -h 127.0.0.1 -p 3389 -b "dc=example,dc=com"
 ```
 
 ## Run a search while authenticated
+
 This logs in as danielh and searches for a record with uid=robertc
 
 ```
@@ -55,6 +59,7 @@ nscd -i passwd ; nscd -i group ; /etc/init.d/lldpad restart ; /etc/init.d/nslcd 
 ```
 
 # See Also
-- Apache Directory Studio graphical interface for LDAP: [https://directory.apache.org/studio/](https://directory.apache.org/studio/)
-- A great series of articles on LDAP:  [http://www.ldapman.org/articles/](http://www.ldapman.org/articles/)
-- Ubuntu Server LDAP integration:  [https://help.ubuntu.com/community/LDAPClientAuthentication](https://help.ubuntu.com/community/LDAPClientAuthentication)
+
+- Apache Directory Studio graphical interface for LDAP: <https://directory.apache.org/studio/>
+- A great series of articles on LDAP:  <http://www.ldapman.org/articles/>
+- Ubuntu Server LDAP integration:  <https://help.ubuntu.com/community/LDAPClientAuthentication>

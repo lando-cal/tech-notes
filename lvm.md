@@ -1,4 +1,5 @@
 Linux Logical Volume Manager.
+
 - [Tutorial](http://linuxconfig.org/Linux_lvm_-_Logical_Volume_Manager)
 - [Overview](http://www.centos.org/docs/5/html/Cluster_Logical_Volume_Manager/LVM_definition.html)
 - [Managing](http://www.centos.org/docs/5/html/Cluster_Logical_Volume_Manager/VG_admin.html)
@@ -15,8 +16,8 @@ lvcreate -l 95%FREE -n lv_scratch vg_scratch
 mkfs.ext4 /dev/vg_scratch/lv_scratch
 ```
 
-
 # Examples
+
 ## Show a bunch of info
 
 ```
@@ -30,28 +31,35 @@ vgs -a -o +devices
 ```
 
 ## Show system disks and if they are in an LVM
+
 `lvmdiskscan`
 
 ## Show all logical volumes
+
 `lvs`
 
 ## Activate all volume groups
+
 `vgchange -a y`
 
 ## Create a physical volume
+
 physical volumes are groups of physical disks that can be used to create logical volumes
 
 `pvcreate pv_name /dev/sdb2 /dev/sdc2`
 
 ## Create a logical volume
+
 This creates a specifically named logical volume on a volume group named vg_data
 
 `lvcreate -L 10G -n lv_name vg_data`
 
 ## Show how each logical volume is set up
+
 `lvdisplay`
 
 ## Show free extents
+
 `vgs -o vg_free_count`
 
 ## Extend a volume group to 1TB
