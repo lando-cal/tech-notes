@@ -1,8 +1,8 @@
-An awesome host inspection tool, with tcpdump like tool and an interface similar to [[top]] et al.
-- [http://www.sysdig.org/](http://www.sysdig.org/)
+An awesome host inspection tool, with tcpdump like tool and an interface similar to [[top]] et al. - <http://www.sysdig.org/>
 
 # Installation - CentOS
-- [https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux](https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux)
+
+- <https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux>
 
 Their shell script installs epel from a 3rd party source, so it's best to use this method instead:
 
@@ -14,6 +14,7 @@ yum -y install sysdig
 ```
 
 # Examples
+
 ## Simple usage
 
 ```
@@ -69,8 +70,9 @@ csysdig
 ```
 
 # Links
-- [https://github.com/draios/sysdig/wiki](https://github.com/draios/sysdig/wiki)
-- [https://github.com/draios/sysdig/wiki/Sysdig%20Examples](https://github.com/draios/sysdig/wiki/Sysdig%20Examples)
-- [http://man7.org/linux/man-pages/man8/sysdig.8.html](http://man7.org/linux/man-pages/man8/sysdig.8.html)
+
+- <https://github.com/draios/sysdig/wiki>
+- <https://github.com/draios/sysdig/wiki/Sysdig%20Examples>
+- <http://man7.org/linux/man-pages/man8/sysdig.8.html>
 - [Getting Started With Sysdig](https://www.youtube.com/watch?v=TX6Y8E9ijkk)
 - [Getting Started With Csysdig](https://www.youtube.com/watch?v=UJ4wVrbP-Q8)
