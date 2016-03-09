@@ -73,10 +73,10 @@ mco facts lsbdistdescription
 mco find --with-fact lsbdistcodename=lucid
 ```
 
-### Find all facts on machines that have a fact
+### Show a fact on machines that have a specific fact
 
 ```
-mco facts role --with-fact lsbdistcodename=lucid
+mco facts role --with-fact lsbdistcodename=lucid -v
 ```
 
 ### Show detailed info about a node
