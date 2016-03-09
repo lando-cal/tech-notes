@@ -10,6 +10,12 @@ Parallel [SSH](SSH "wikilink") tools for running commands on multiple system sim
 pssh -h hostnames.txt -i some_command some_arg
 ```
 
+## Run commands and view results on many hosts
+
+```
+o=$(date +%F-%T) ; pssh -o "$o" -h hosts.txt uname -a ; grep -r . $o ;
+```
+
 ## Run two commands on many hosts using bash expansion for host list
 
 ```
