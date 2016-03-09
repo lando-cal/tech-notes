@@ -17,6 +17,7 @@ ZFS is the Zetabyte File System.
 - <http://zfsonlinux.org/faq.html>
 - <http://www.oracle.com/technetwork/articles/servers-storage-admin/o11-113-size-zfs-dedup-1354231.html>
 - <http://wiki.freebsd.org/ZFSTuningGuide#Deduplication>
+- Corruption / failure to import - <https://github.com/zfsonlinux/zfs/issues/2457>
 
 # Tips
 
