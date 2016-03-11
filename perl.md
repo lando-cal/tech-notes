@@ -60,7 +60,13 @@ perl -i -pe 'if ($_ =~ m/string to remove/ ){$_ = "";}' filename.txt
 See [bash](bash "wikilink") for a bash-only way
 
 ```
-echo -n "whiskey tango foxtrot " | perl -e '$/=" "; @foo = <STDIN>; print (sort(@foo)); print "\n";'
+echo -n "whiskey tango foxtrot " \
+| perl -e '
+  $/=" " ;
+  @foo = <STDIN> ;
+  print (sort(@foo)) ;
+  print "\n" ;
+'
 ```
 
 ## Sort records in a file that are separated by a blank line
@@ -73,18 +79,35 @@ my @input = (<STDIN>) ;
 my @sorted = sort { lc($a) cmp lc($b) } @input ;
 
 foreach (@sorted) {
-    if (length($_) > 10) { print "$_"; }
+  if (length($_) > 10) { print "$_"; }
 }
 ```
 
 ## Subtract two from the last octet of a MAC address
 
 ```
-for X in 24:b6:fd:ff:b7:f{{a..f},{0..9}} ; do echo -n "${X} - 2 = " ; echo ${X} | perl -ne '@foo = split(":",$_); $foo[5] = sprintf("%02x", (hex($foo[5]) - 2)) ; $new = join(":",@foo); print "$new\n";' ; done ;
+for X in 24:b6:fd:ff:b7:f{{a..f},{0..9}} ; do
+  echo -n "${X} - 2 = " ;
+  echo ${X} \
+  | perl -ne '
+    @foo = split(":",$_) ;
+    $foo[5] = sprintf("%02x", (hex($foo[5]) - 2)) ;
+    $new = join(":",@foo) ;
+    print "$new\n" ;
+  ' ;
+done ;
 ```
 
 ## Add one to the last octet of a MAC address
 
 ```
-for X in 24:b6:fd:ff:b7:c{{a..f},{0..9}} ; do echo ${X} | perl -ne '@foo = split(":",$_); $foo[5] = sprintf("%02x", (hex($foo[5]) + 1)) ; $new = join(":",@foo); print "$new\n";' ; done ;
+for X in 24:b6:fd:ff:b7:c{{a..f},{0..9}} ; do
+  echo ${X} \
+  | perl -ne '
+    @foo = split(":",$_) ;
+    $foo[5] = sprintf("%02x", (hex($foo[5]) + 1)) ;
+    $new = join(":",@foo) ;
+    print "$new\n";
+  ' ;
+done ;
 ```
