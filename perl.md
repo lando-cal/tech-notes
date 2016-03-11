@@ -2,8 +2,8 @@ Practical Extraction and Reporting Language
 
 # Special Variables
 
-- "That thing": \$_
-- Record Separator: \$/
+- "That thing": `$_`
+- Record Separator: `$/`
 
 # Techniques
 
