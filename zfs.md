@@ -53,6 +53,8 @@ zdb -S bigdisk
 
 ## Show transactions and human readable dates in the zdb history
 
+Use `zdb -e` for pools that are not mounted.
+
 ```
 zdb -hh tank \
 | egrep 'txg|time' \
