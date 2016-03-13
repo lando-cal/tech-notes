@@ -58,11 +58,11 @@ Use `zdb -e` for pools that are not mounted.
 ```
 zdb -hh tank \
 | egrep 'txg|time' \
-| while read -r a b c ; do
-  if [ "$b" == "time:" ] ; then
-    date -d @$c "+$a $b %F %T" ;
+| while read -r _ a b ; do
+  if [ "$a" == "time:" ] ; then
+    date -d @$b "+$a %F %T" ;
   else
-    echo "$a $b $c" ;
+    echo "$a  $b" ;
   fi ;
 done
 ```
