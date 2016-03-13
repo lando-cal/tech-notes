@@ -51,6 +51,20 @@ Good explanation: <https://blogs.oracle.com/brendan/entry/test>
 zdb -S bigdisk
 ```
 
+## Show transactions and human readable dates in the zdb history
+
+```
+zdb -hh tank \
+| egrep 'txg|time' \
+| while read -r a b c ; do
+  if [ "$b" == "time:" ] ; then
+    date -d @$c "+$a $b %F %T" ;
+  else
+    echo "$a $b $c" ;
+  fi ;
+done
+```
+
 # zpool
 
 ## Create a zpool and its base filesystem
