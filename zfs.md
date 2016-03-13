@@ -2,7 +2,6 @@ ZFS is the Zetabyte File System.
 
 # Links
 
-- Example zpool errors - Zpool errors
 - OpenZFS - <http://open-zfs.org>
 - Tuning Guide - <http://www.solarisinternals.com/wiki/index.php/ZFS_Evil_Tuning_Guide>
 - Hardware recommendations - <http://blog.zorinaq.com/?e=10>
