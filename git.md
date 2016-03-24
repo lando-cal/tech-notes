@@ -172,6 +172,12 @@ git log
 git log -1
 ```
 
+### Show logs for a given dir in the last 3 days
+
+```
+git log --since=3.days modules/profile_sensu
+```
+
 ### Show raw log history for 5 most recent commits
 
 Useful for seeing TZ settings.
