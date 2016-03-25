@@ -1,10 +1,3 @@
-- [Puppet Documentation Index](https://docs.puppetlabs.com/puppet/)
-- [Introduction to Puppet](https://docs.puppetlabs.com/guides/introduction.html)
-- [Function Reference](https://docs.puppetlabs.com/references/latest/function.html)
-- [Language: Basics](https://docs.puppetlabs.com/puppet/latest/reference/lang_summary.html)
-- [Vagrant Docs - Puppet Apply Provisioner](https://docs.vagrantup.com/v2/provisioning/puppet_apply.html)
-- [Downloads](https://puppetlabs.com/misc/download-options-get)
-
 # Puppet
 
 ## Examples
@@ -125,5 +118,12 @@ mco facts -v --wc role::mon lsbdistdescription
 
 # Videos and links
 
+- [Puppet Documentation Index](https://docs.puppetlabs.com/puppet/)
+- [Introduction to Puppet](https://docs.puppetlabs.com/guides/introduction.html)
+- [Function Reference](https://docs.puppetlabs.com/references/latest/function.html)
+- [Language: Basics](https://docs.puppetlabs.com/puppet/latest/reference/lang_summary.html)
+- [Style Guide](https://docs.puppetlabs.com/guides/style_guide.html)
+- [Vagrant Docs - Puppet Apply Provisioner](https://docs.vagrantup.com/v2/provisioning/puppet_apply.html)
+- [Downloads](https://puppetlabs.com/misc/download-options-get)
 - [PuppetConf 2015](https://www.youtube.com/playlist?list=PLV86BgbREluUDlJW_jAqnWPj0THx7eXBA)
 - [Designing Puppet: Roles/Profiles Pattern](https://www.youtube.com/watch?v=ZpHtOnlSGNY) - based on the blog post [Designing Puppet – Roles and Profiles](http://www.craigdunn.org/2012/05/239/)
