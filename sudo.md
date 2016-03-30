@@ -9,6 +9,12 @@ super user do
 
 This line is in some sudoers files, and is not a comment. #includedir is a configuration directive. This directory does not like to have .conf files, so they should be flatly named. eg: 00_default
 
+## Check sudoers for errors
+
+```
+visudo -c
+```
+
 ## Show sudo rules that match for the given user
 
 ```
