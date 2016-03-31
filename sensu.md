@@ -11,3 +11,4 @@
 
 - [Uchiwa - Open source dashboard for Sensu.](https://uchiwa.io/)
 - [Puppet + Sensu = Love; Infrastructure as Code and Monitoring, Sharing the Same Development Workflow](https://puppetlabs.com/presentations/puppet-sensu-love-infrastructure-code-and-monitoring-sharing-same-development-workflow)
+- SF DevOps Meetup: Kyle Anderson, Sensu @ Yelp [Part 1](https://vimeo.com/92770954), [Part 2](https://vimeo.com/92838680)
