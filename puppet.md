@@ -40,6 +40,8 @@ file { '/etc/hosts':
 
 "The Marionette Collective, also known as MCollective, is a framework for building server orchestration or parallel job-execution systems. Most users programmatically execute administrative tasks on clusters of servers." - <http://docs.puppetlabs.com/mcollective/>
 
+* Cheatsheet: https://coderwall.com/p/ig9mxa/mcollective-mco-cheat-sheet
+
 ## mco
 
 ### Find a random node in the cluster
