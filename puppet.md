@@ -113,7 +113,8 @@ mco facts -v --wc role::mon lsbdistdescription
 ## Use mco to find packages of a certain version on a certain OS
 
 ```
-mco rpc package status package=apt -j -F lsbdistcodename=trusty | jq -c '.[] | select(.data.ensure == "1.0.1ubuntu2") | { version: .data.ensure, hostname: .sender }'
+mco rpc package status package=apt -j -F lsbdistcodename=trusty > cache.json
+cat cache.json | jq -c '.[] | select(.data.ensure == "1.0.1ubuntu2") | { version: .data.ensure, hostname: .sender }'
 ```
 
 
