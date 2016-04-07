@@ -13,6 +13,12 @@ cat foo.json | jq .
 cat foo.json | jq -s '.[0] | {timestamp}'
 ```
 
+## Use mco to find packages of a certain version on a certain OS
+
+```
+mco rpc package status package=apt -j -F lsbdistcodename=trusty | jq -c '.[] | select(.data.ensure == "1.0.1ubuntu2") | { version: .data.ensure, hostname: .sender }'
+```
+
 ## Other misc examples
 
 ```
