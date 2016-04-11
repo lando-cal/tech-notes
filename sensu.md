@@ -7,6 +7,10 @@
 - [Filters](https://sensuapp.org/docs/latest/getting-started-with-filters) - for filtering (removing) events destined for one or more event handlers
 - [Mutators](https://sensuapp.org/docs/latest/getting-started-with-mutators) - transform event data for handlers
 
+# Checks
+- standalone checks are scheduled to run periodically on the client (eg: all hosts need to check disks every 15 minutes)
+- subscription checks are requested by the server to hosts with a given tag (eg: all web hosts need to run check_http)
+
 # See Also
 
 - [Uchiwa - Open source dashboard for Sensu.](https://uchiwa.io/)
