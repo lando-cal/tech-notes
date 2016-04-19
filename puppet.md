@@ -1,5 +1,7 @@
 # Puppet
 
+- `puppet apply /path/to/manifests` works, or you can specify a .pp file
+
 ## Examples
 
 ### Show variables about the host that puppet knows (facts)
