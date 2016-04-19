@@ -36,7 +36,7 @@ The `nohide` option allows you to mount nested zfs datasets, instead of requirin
 
 # OS X Tips and Tricks
 ## Create persistent NFS mount in OS X 10.8
-This is not bulletproof. Modern OS X 10.9+ version are switching away from NFS to CIFS.
+This is not bulletproof. Modern OS X 10.9+ version are switching away from NFS to CIFS. The NFS client on OS X is pretty weak. For instance it might crash your machine if the share has 0 bytes free but is mounted RW. Use at your own risk.
 
 ```
 sudo mkdir /mnt # OS X doesn't like you playing with /Volumes, it may delete your dirs
