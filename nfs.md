@@ -25,6 +25,16 @@ If you have a mount point within an NFS share, you must have a separate entry in
 ## Show which versions of NFS your NFS server supports
 `rpcinfo -p`
 
+## Allow an OS X client to mount nfs4 nested zfs data sets
+
+OS X has problems with the privileged port default requirement in nfs4, so the `insecure` option is required.
+
+The `nohide` option allows you to mount nested zfs datasets, instead of requiring a separate export for each dataset.
+
+```
+/z4 *.local(rw,async,no_subtree_check,insecure,nohide)
+```
+
 # OS X Tips and Tricks
 ## Create persistent NFS mount in OS X 10.8
 
