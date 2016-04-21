@@ -124,6 +124,9 @@ cat cache.json | jq -c '.[] | select(.data.ensure == "1.0.1ubuntu2") | { version
 
 "Hiera is a key/value lookup tool for configuration data, built to make Puppet better and let you set node-specific data without repeating yourself." - <http://docs.puppetlabs.com/hiera/latest/>
 
+- https://github.com/puppetlabs/hiera
+- http://www.craigdunn.org/2011/10/puppet-configuration-variables-and-hiera/
+
 # Tests
 
 - <http://rspec-puppet.com/matchers/>
