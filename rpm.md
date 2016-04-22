@@ -51,7 +51,7 @@ rpm -qf /usr/bin/wget
 rpm -ql wget
 ```
 
-## Show all files in a package that isn't yet installed
+## Show all files in a package that is not yet installed
 
 ```
 rpm -qpl ~/downloads/wget-1.10.2-78.i586.rpm
