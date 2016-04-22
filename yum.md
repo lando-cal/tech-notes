@@ -26,7 +26,11 @@ yum list available | grep jre
 ```
 
 ## Show all duplicates in a search
-This is a good way to get a complete list of packages that are available that match a certain string     yum --showduplicates search thrift
+This is a good way to get a complete list of packages that are available that match a certain string
+
+```
+yum --showduplicates search thrift
+```
 
 ## Query available packages in a given repository
 
