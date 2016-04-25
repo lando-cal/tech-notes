@@ -64,6 +64,15 @@ mco ping
 mco facts lsbdistdescription
 ```
 
+### Show a report about uptimes over a year
+
+```
+mco facts uptime -F 'uptime_days>365' \
+| awk '$2 == "days" {print}' \
+| sort -n -k1 \
+| column -t
+```
+
 ### Find machines that have a certain fact
 
 ```
@@ -116,7 +125,7 @@ mco facts -v --wc role::mon lsbdistdescription
 
 ```
 mco rpc package status package=apt -j -F lsbdistcodename=trusty > cache.json
-cat cache.json | jq -c '.[] | select(.data.ensure == "1.0.1ubuntu2") | { version: .data.ensure, hostname: .sender }'
+jq -c '.[] | select(.data.ensure == "1.0.1ubuntu2") | { version: .data.ensure, hostname: .sender }' cache.json
 ```
 
 
