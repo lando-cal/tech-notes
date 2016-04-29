@@ -37,7 +37,7 @@ rpm -qi wget
 rpm -qa --queryformat "%{NAME} %{PACKAGER} %{URL}\n" tomcat7
 ```
 
-More info on queryformat: [http://www.rpm.org/max-rpm/ch-queryformat-tags.html](http://www.rpm.org/max-rpm/ch-queryformat-tags.html)
+More info on queryformat: <http://www.rpm.org/max-rpm/ch-queryformat-tags.html>
 
 ## Show which package installed a file
 
