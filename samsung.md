@@ -1,0 +1,1 @@
+- http://www.sammobile.com/firmwares/database/SM-T700/
