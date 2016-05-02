@@ -1,8 +1,12 @@
 # Puppet
 
-- `puppet apply /path/to/manifests` works, or you can specify a .pp file
+- [Overview of Puppet's architecture](https://docs.puppet.com/puppet/4.4/reference/architecture.html)
 
 ## Examples
+
+## Standalone mode
+
+- `puppet apply /path/to/manifests` works, or you can specify a .pp file
 
 ### Show variables about the host that puppet knows (facts)
 
@@ -42,7 +46,7 @@ file { '/etc/hosts':
 
 "The Marionette Collective, also known as MCollective, is a framework for building server orchestration or parallel job-execution systems. Most users programmatically execute administrative tasks on clusters of servers." - <http://docs.puppetlabs.com/mcollective/>
 
-* Cheatsheet: https://coderwall.com/p/ig9mxa/mcollective-mco-cheat-sheet
+- Cheatsheet: <https://coderwall.com/p/ig9mxa/mcollective-mco-cheat-sheet>
 
 ## mco
 
@@ -128,13 +132,12 @@ mco rpc package status package=apt -j -F lsbdistcodename=trusty > cache.json
 jq -c '.[] | select(.data.ensure == "1.0.1ubuntu2") | { version: .data.ensure, hostname: .sender }' cache.json
 ```
 
-
 # Hiera
 
 "Hiera is a key/value lookup tool for configuration data, built to make Puppet better and let you set node-specific data without repeating yourself." - <http://docs.puppetlabs.com/hiera/latest/>
 
-- https://github.com/puppetlabs/hiera
-- http://www.craigdunn.org/2011/10/puppet-configuration-variables-and-hiera/
+- <https://github.com/puppetlabs/hiera>
+- <http://www.craigdunn.org/2011/10/puppet-configuration-variables-and-hiera/>
 
 # Tests
 
