@@ -8,7 +8,7 @@ lsof -u username
 ```
 
 ## show listening TCP sockets
-Since everything in unix is a file, including network sockets, you can list open sockets and the programs that have them open.
+Since everything in unix is a file, including network sockets, you can list open sockets and the programs that have them open. However, this is notably unreliable in Docker, so don't trust this completely. When in doubt, double check against `ss -l`.
 
 ```
 lsof -iTCP -sTCP:LISTEN
