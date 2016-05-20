@@ -48,6 +48,7 @@ file { '/etc/hosts':
 
 - Cheatsheet: <https://coderwall.com/p/ig9mxa/mcollective-mco-cheat-sheet>
 - Vagrant demo: <https://github.com/ripienaar/mcollective-vagrant>
+- [Overview of MCollective Components and Configuration](https://docs.puppet.com/mcollective/overview_components.html)
 
 ## mco
 
