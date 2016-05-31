@@ -150,7 +150,13 @@ This is not regex, just a simple string replacement.
 
 ## Subtract two from a MAC address
 
-`printf -v dec "%d" 0x$(echo 00:25:9c:52:1c:2a | sed 's/://g') ; let dec=${dec}-2 ; printf "%012X" ${dec} | sed -E 's/(..)(..)(..)(..)(..)(..)/\1:\2:\3:\4:\5:\6/g'`
+```
+# printf -v defines a variable instead of printing to stdout
+printf -v dec "%d" 0x$(echo 00:25:9c:52:1c:2a | sed 's/://g') ;
+let dec=${dec}-2 ;
+printf "%012X" ${dec} \
+| sed -E 's/(..)(..)(..)(..)(..)(..)/\1:\2:\3:\4:\5:\6/g'
+```
 
 ## Print the last for chars of a variable
 
@@ -166,6 +172,18 @@ This is not regex, just a simple string replacement.
 This can even be recursively done...
 
 - `echo ${foo:-${bar:-foo and bar are not assigned}}`
+
+## Print every third number starting with 1 and ending with 30
+
+`echo {1..30..3}`
+
+## Print every 5th letter of the alphabet
+
+`echo {a..z..5}`
+
+## Make a directory structure of every combination of /adjective/noun
+
+`mkdir -p {red,green,blue}/{fish,bird,flower}`
 
 ## Generate a zero padded random 2 byte hex number
 
