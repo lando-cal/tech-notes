@@ -37,9 +37,7 @@ Alternatively, use the timeout command if it's available
 
 ## Test if a variable is empty
 
-```
-if [[ -z "$var" ]]
-```
+`if [[ -z "$var" ]]`
 
 ## Date
 
@@ -59,7 +57,15 @@ For date stuff, see date, because it's different depending on platform.
 
 ## Show size of each user's home folder
 
-`getent passwd | while IFS=: read -r user n uid n n home n ; do if [[ $uid -ge 500 ]] ; then printf "$user " ; du -sh $home ; fi ; done`
+```
+getent passwd \
+| while IFS=: read -r user _ uid _ _ home _ ; do
+  if [[ $uid -ge 500 ]] ; then
+    printf "$user " ;
+    sudo du -sh $home ;
+  fi ;
+done
+```
 
 ## Previous command's args
 
@@ -146,7 +152,11 @@ echo $sorted
 
 This is not regex, just a simple string replacement.
 
-`${VAR//search/replace} # does all replacements`\ `${VAR/search/replace} # does only the first`\ `echo "Paths in your path: ${PATH//:/ }"`
+```
+# ${VAR/search/replace} does only the first
+# ${VAR//search/replace} does all replacements
+echo "Paths in your path: ${PATH//:/ }"
+```
 
 ## Subtract two from a MAC address
 
