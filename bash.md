@@ -47,7 +47,7 @@ For date stuff, see date, because it's different depending on platform.
 
 ## Show RANDOM statistics
 
-`for X in {0..9999} ; do echo $(($RANDOM % 5 + 1)) ; done | sort |  uniq -c`
+`for X in {0..9999} ; do echo $(($RANDOM % 5 + 1)) ; done | sort | uniq -c`
 
 ## named pipes
 
@@ -114,7 +114,13 @@ Taken from <http://mywiki.wooledge.org/BashFAQ/073>
 
 ## Rename files to a sequence and change their extension at the same time
 
-`ls | while read -r line ; do stub=${line%.*} ; (( i += 1 )) ; mv "${line}" "${i}-${stub}.txt3" ; done ;`
+```
+ls | while read -r line ; do
+  stub=${line%.*} ;
+  (( i += 1 )) ;
+  mv "${line}" "${i}-${stub}.txt3" ;
+done ;
+```
 
 ```
 FullPath=/path/to/name4afile-00809.ext   # result:   #   /path/to/name4afile-00809.ext
@@ -126,9 +132,11 @@ FileExt=${Filename#"$FileStub"}                      #   .ext
 
 ## Sort a line by spaces
 
-See [perl](perl "wikilink") for how to do it with only pipes
-
-:   `s=( whiskey tango foxtrot ); sorted=$(printf "%s\n"`     `${s[@]}|sort); echo $sorted`
+```
+s=( whiskey tango foxtrot );
+sorted=$(printf "%s\n"` `${s[@]}|sort);
+echo $sorted
+```
 
 ## Calculate the difference between two dates
 
@@ -165,11 +173,33 @@ This can even be recursively done...
 
 ## grep many log files and sort output by date
 
-`sudo grep cron /var/log/* | sed 's/:/ /' | while read file month day hour line ; do echo $(date --rfc-3339=seconds -d $month\ $day\ $hour) ${file} ${line} ; done | sort`
+```
+sudo grep cron /var/log/* \
+| sed 's/:/ /' \
+| while read file month day hour line ; do
+  date -d "$month $day $hour" "+%F %T%z ${file} ${line}" ;
+done \
+| sort
+```
 
 ## Get command line switches
 
-`while getopts p:l:t: opt; do`\ `case $opt in`\ `p)`\ `pages=$OPTARG`\ `;;`\ `l)`\ `length=$OPTARG`\ `;;`\ `t)`\ `time=$OPTARG`\ `;;`\ `esac`\ `done`\ \ `shift $((OPTIND - 1))`\ \ `echo "pages is ${pages}"`\ `echo "length is ${length}"`\ `echo "time is ${time}"`\ `echo "\$1 is $1"`\ `echo "\$2 is $2"`
+```
+while getopts p:l:t: opt; do
+  case $opt in
+    p) pages=$OPTARG ;;
+    l) length=$OPTARG ;;
+    t) time=$OPTARG ;;
+  esac
+done
+
+shift $((OPTIND - 1))
+echo "pages is ${pages}"
+echo "length is ${length}"
+echo "time is ${time}"
+echo "\$1 is $1"
+echo "\$2 is $2"
+```
 
 Call this script as `./foo.sh -p "this is p" -l llll -t this\ is\ t foo bar`
 
@@ -177,87 +207,27 @@ Call this script as `./foo.sh -p "this is p" -l llll -t this\ is\ t foo bar`
 
 These files can change the behavior of bash.
 
-## .bash\_profile
+## .bash_profile
 
-~/.bash_profile is executed every time you log into the system or initiate a shell. Define functions here instead of using stand-alone scripts if you want the changes made to persist after the termination of the script. EG: if you cd inside of a function, the CWD will stay after the function exits, but with a standalone bash script you'd keep your pre-existing CWD.
+`~/.bash_profile` is executed every time you log into the system or initiate a shell. Define functions here instead of using stand-alone scripts if you want the changes made to persist after the termination of the script. EG: if you cd inside of a function, the CWD will stay after the function exits, but with a standalone bash script you'd keep your pre-existing CWD.
 
 ```
 PS1="\u@\h:\w$ "
 TMOUT="1800" # timeout variable
 ```
 
-### Example .bash_profile file
-
-```
-# .bash_profile is executed every time you log into a shell prompt.
-
-HISTSIZE=5000
-GREP_COLOR=always
-export PATH="~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/ruby/1.9.3-p194/bin:$PATH"; export PATH;
-GZIP="-9"; export GZIP;
-EDITOR="/usr/bin/vim"; export EDITOR;
-TERM=vt100 ; export TERM;
-export PS1="\[\e[33m\][\t] \u@\[\e[0m\]\h\[\e[33m\]:\w\[\e[0m\]\n$ " ;
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='1;32'
-
-set visible-stats on
-
-
-### aliases ###
-
-alias datestamp="date +%Y-%m-%d-%H-%M-%S"
-alias apachectl="sudo apachectl"
-alias ll="ls -la"
-alias nmap="sudo nmap"
-alias mtr="sudo mtr --curses"
-alias s="screen -xR"
-
-
-### Functions ###
-
-function mysql_to_csv() { sed -E 's#^\| +#"#;s# *\| $#"#;s# *\| *#","#g' ${1:-/dev/stdin}; } # converts a mysql shell output to csv, uses stdin or a filename
-function sort_space_list { for X in ${@:-$(cat /dev/stdin)} ; do echo ${X} ; done | sort | while read -r line ; do echo -n "${line} " ; done ; echo '' ; }
-function sprunge() { curl -F 'sprunge=<-' http://sprunge.us < "${1:-/dev/stdin}"; } # usage: sprunge FILE # or some_command | sprunge
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-
-### OSX Specific Functions and Aliases ###
-if [ $(uname) == "Darwin" ] ; then
-
-    alias pbsort="pbpaste | sort -f | pbcopy"
-    alias prowl="~/bin/prowl.pl -apikey=d9b3f5f8c51c0dacd6288801f0cf682b19ff0570 -event=`hostname -s` -notification"
-    alias updatedb="sudo /usr/libexec/locate.updatedb"
-    alias ovftool="/Applications/VMware\ OVF\ Tool/ovftool"
-    alias tag_jpgs_unique="tag_images_unique.sh ~/{Dropbox/,}Pictures/Imported/*.JPG"
-    alias plistbuddy="/usr/libexec/PlistBuddy"
-    alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
-    alias move_movies_to_e-tron="rsync -aP --remove-source-files /Users/dho/{Dropbox/Pictures/linked_photos/*/*/*,{Dropbox/,}Pictures/Imported}/*.{mov,MOV,avi,AVI} plata:/Volumes/E-Tron/Home_Movies/"
-
-    function sl { mdfind "kMDItemDisplayName == '$@'wc"; }
-    function skypesearch(){ skypeusername=$1; searchstring=$2; /usr/bin/env sqlite3 ~/Library/Application\ Support/Skype/${skypeusername}/main.db "select author, datetime(timestamp,'unixepoch','localtime'), body_xml from messages where body_xml like '%${searchstring}%' ;"; }
-
-    ### Brew bash-completion
-    if [ -f $(brew --prefix)/etc/bash_completion ]; then
-        . $(brew --prefix)/etc/bash_completion
-    fi
-
-    ### Plata specific stuff ###
-    if [ $(hostname) == "plata.local" ] ; then
-        alias ss="skypesearch daniel.austin"
-        alias gpx_from_downloads_to_dropbox="mv ~/Dropbox/Downloads/*.gpx ~/Dropbox/Documents/gpx/ ; cd ~/Dropbox/Documents/gpx/ && rm -f *Z last-10-merged.gpx ; ./gpx-rename.sh "[A-Za-z]*.gpx" ; ./gpx-merge-last-10.sh "
-    fi
-
-fi
-```
-
 ## .bashrc
 
 ~/.bashrc is executed every time you open a sub-shell. It **should not** output any text, otherwise certain things (eg: [scp](ssh#scp "wikilink")) will fail.
 
-## .inputrc
+## ~/.inputrc
 
-:   `# Ignore case while completing :   set completion-ignore-case on`
+This file defines some bash behaviors. It also affects some other tools.
+
+```
+# Ignore case while completing
+set completion-ignore-case on
+```
 
 # Links
 
@@ -265,5 +235,3 @@ fi
 - Tons of BASH examples: <http://mywiki.wooledge.org/BashFAQ>
 - Bash pitfalls: <http://mywiki.wooledge.org/BashPitfalls>
 - Bash prompt howto, including colors: <http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html>
-
-<Category:CLI> <Category:Linux> <Category:Nix>
