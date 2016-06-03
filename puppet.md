@@ -64,6 +64,12 @@ mco find -1
 mco ping
 ```
 
+### Show if a file exists on each host in the cluster
+
+```
+mco filemgr -f /srv/nginx status
+```
+
 ### Show stats about which OSes you have
 
 ```
