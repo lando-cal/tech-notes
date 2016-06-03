@@ -1,7 +1,8 @@
 super user do
 
 # Examples
-## \#includedir /etc/sudoers.d
+
+## #includedir /etc/sudoers.d
 
 ```
 #includedir /etc/sudoers.d
@@ -24,6 +25,7 @@ sudo -l -U username
 The order shown is important. sudo picks the last matching rule. Rules are parsed in order from /etc/sudoers and all included files. Because of this, `#includedir /etc/sudoers.d` should be the last line in the /etc/sudoers file, and the order of the /etc/sudoers.d/ files will be important when fine tuning rules.
 
 ## Allow admins to run mtr without a password
+
 Add the following line to /etc/sudoers
 
 ```
@@ -62,4 +64,5 @@ sudo bash -c "whoami ; whoami ;"
 ```
 
 # Links
-- sudoers config - [http://ubuntuforums.org/showthread.php?t=1132821](http://ubuntuforums.org/showthread.php?t=1132821)
+
+- sudoers config - <http://ubuntuforums.org/showthread.php?t=1132821>
