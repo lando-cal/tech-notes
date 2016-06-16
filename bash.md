@@ -246,7 +246,7 @@ TMOUT="1800" # timeout variable
 
 ## .bashrc
 
-~/.bashrc is executed every time you open a sub-shell. It **should not** output any text, otherwise certain things (eg: [scp](ssh#scp "wikilink")) will fail.
+~/.bashrc is executed every time you open a sub-shell. It **should not** output any text, otherwise certain things (eg: scp) will fail.
 
 ## ~/.inputrc
 
