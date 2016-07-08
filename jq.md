@@ -25,5 +25,29 @@ mco rpc package status package=apt -j -F lsbdistcodename=trusty | jq -c '.[] | s
 jq '.[] | select(.data.ensure != "purged") | [.sender,.data.ensure]' $*
 ```
 
+## Build a json file from scratch
+
+```
+create_json() {
+  local user=$1
+  local host=$2
+  local more_stuff=$3
+  json=$(
+    jq -c -n \
+      --arg timestamp  "$(date "+%F %T%z")" \
+      --arg host       "${host}" \
+      --arg user       "${user}" \
+      --arg more_stuff "${more_stuff}" \
+      '{
+        timestamp:  $timestamp,
+        host:       $host,
+        user:       $user,
+        more_stuff: $more_stuff
+      }'
+  )
+  echo "$json"
+}
+```
+
 # See Also
 - [Tutorial](https://stedolan.github.io/jq/tutorial/)
