@@ -25,7 +25,7 @@ mco rpc package status package=apt -j -F lsbdistcodename=trusty | jq -c '.[] | s
 jq '.[] | select(.data.ensure != "purged") | [.sender,.data.ensure]' $*
 ```
 
-## Build a json file from scratch
+## Build a json entry from scratch
 
 ```
 create_json() {
