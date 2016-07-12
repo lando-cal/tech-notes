@@ -76,6 +76,12 @@ mco filemgr -f /srv/nginx status
 mco facts lsbdistdescription
 ```
 
+### Show a list of configured IP addresses in a certain range
+
+```
+mco facts all_ipaddresses -F 'all_ipaddresses=~10.56'
+```
+
 ### Show a report about uptimes over a year
 
 ```
