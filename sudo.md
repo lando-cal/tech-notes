@@ -45,12 +45,6 @@ UPSTART_USERS  ALL=(ALL)     NOPASSWD: /sbin/restart
 ## Run several commands with one sudo command
 
 ```
-sudo -s -- "whoami ; whoami ;"
-```
-
-or
-
-```
 sudo -s -- <<EOF
 whoami
 whoami
