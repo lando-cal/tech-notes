@@ -1,7 +1,9 @@
 CLI Tool to read and write image metadata for many kinds of images.
-- [http://www.sno.phy.queensu.ca/~phil/exiftool/](http://www.sno.phy.queensu.ca/~phil/exiftool/)
+
+- <http://www.sno.phy.queensu.ca/~phil/exiftool/>
 
 # Tricks
+
 ## Strip all tags
 
 ```
