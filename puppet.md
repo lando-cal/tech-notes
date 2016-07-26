@@ -170,6 +170,7 @@ jq -c '.[] | select(.data.ensure == "1.0.1ubuntu2") | { version: .data.ensure, h
 - [Puppet Documentation Index](https://docs.puppetlabs.com/puppet/)
 - [Introduction to Puppet](https://docs.puppetlabs.com/guides/introduction.html)
 - [Function Reference](https://docs.puppetlabs.com/references/latest/function.html)
+- [stdlib](https://forge.puppet.com/puppetlabs/stdlib) is another good function reference.
 - [Language: Basics](https://docs.puppetlabs.com/puppet/latest/reference/lang_summary.html)
 - [Style Guide](https://docs.puppetlabs.com/guides/style_guide.html)
 - [Vagrant Docs - Puppet Apply Provisioner](https://docs.vagrantup.com/v2/provisioning/puppet_apply.html)
