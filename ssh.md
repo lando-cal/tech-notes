@@ -12,9 +12,23 @@ scp is like cp, but it happens securely and allows host-to-host transfers. Very 
 
 A secure FTP client built into ssh. The native client sucks, try lftp or rsync if it's available.
 
+# sshd
+
+## Output effective server configuration variables
+
+`sshd -T # requires root`
+
+# ssh
+
+## Output effective client configuration variables
+
+`ssh -G user@host`
+
 # ssh config
 
 The user ssh config file, `~/.ssh/config`, lets you override default options. This makes it handy for command line stuff where the syntax is funky such as using non-standard ports.
+
+Notably, global vriables need to come at the _end_ of the file, not the beginning!
 
 ## Simple host aliasing
 
