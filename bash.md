@@ -4,6 +4,8 @@ Bash is the most common mainstream *nix shell.
 
 # Tricks and Usage
 
+## Navigating on the command line
+
 The following can be seen by running: `stty -a`
 
 - ctrl-a - move cursor to the beginning of the line
@@ -12,6 +14,15 @@ The following can be seen by running: `stty -a`
 - ctrl-r - reverse history command search
 - ctrl-t - get status of foreground process
 - ctrl-w - delete previous word
+
+## View a list of all commands, etc..
+
+- `compgen -c` will list all the commands you could run.
+- `compgen -a` will list all the aliases you could run.
+- `compgen -b` will list all the built-ins you could run.
+- `compgen -k` will list all the keywords you could run.
+- `compgen -A` function will list all the functions you could run.
+- `compgen -A` function -abck will list all the above in one go.
 
 ## Remove leading zeroes
 
