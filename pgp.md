@@ -1,0 +1,6 @@
+- <http://www.gnu.org/software/gnupg/>
+- <https://keyring.debian.org/creating-key.html>
+- <http://cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html>
+- <https://blog.hboeck.de/archives/751-How-to-create-a-PGPGPG-key-free-of-SHA-1.html>
+- <http://openpgp.quelltextlich.at/slip.html>
+- <https://github.com/jaymzh/pius/>
