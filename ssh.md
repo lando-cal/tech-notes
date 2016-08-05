@@ -161,5 +161,5 @@ In /etc/ssh/sshd_config: PermitRootLogin without-password
 - sslh - lets one accept both HTTPS and SSH connections on the same port. It makes it possible to connect to an SSH server on port 443 (e.g. from inside a corporate firewall)
 - Corkscrew - a tool for tunneling SSH through HTTP proxies
 - Putty - An SSH client for windows.
-- [<http://www.hackinglinuxexposed.com/articles/20021226.html> Passwordless SSH logins]
+- <http://www.hackinglinuxexposed.com/articles/20021226.html> Passwordless SSH logins
 - SSH server for Windows - <http://www.freesshd.com>
