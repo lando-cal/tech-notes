@@ -1,8 +1,89 @@
-# Notes about time tech
+# Notes about time technologies
+
 # Links
+
 - [Understanding and mitigating NTP-based DDoS attacks](https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-ddos-attacks/)
 
-# Quick and dirty time sync for when NTP is blocked.
+# [ISO 8601](https://en.wikipedia.org/wiki/ISO_860)
+
+ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times is an international standard covering the exchange of date and time-related data.
+
+## ISO 8601 format examples
+
+See the [ISO 8601 wikipedia page](https://en.wikipedia.org/wiki/ISO_860) for many examples. Much of the content in this section was taken from that article.
+
+One notable syntax is that the letter T should always precede times. This aids in parsing, and distinguishes between month and minute, which are both shortened to M.
+
+Another notable syntax is the use of Z to mean a timezone offset of 0 hours, or GMT.
+
+### Single points in time
+
+```
+$ for fmt in {date,hours,minutes,seconds,ns} ; do
+    bash -x -c "
+      TZ=$(
+        awk '$1 !~ /^#/ {print $3}' /usr/share/zoneinfo/zone.tab |
+        sort -R |
+        head -n 1
+      ) \
+      date --iso-8601=${fmt}
+    " ;
+  done ;
++ TZ=America/Paramaribo
++ date --iso-8601=date
+2016-08-09
++ TZ=Africa/Dakar
++ date --iso-8601=hours
+2016-08-09T21+00:00
++ TZ=Indian/Kerguelen
++ date --iso-8601=minutes
+2016-08-10T02:58+05:00
++ TZ=Pacific/Saipan
++ date --iso-8601=seconds
+2016-08-10T07:58:48+10:00
++ TZ=Pacific/Midway
++ date --iso-8601=ns
+2016-08-09T10:58:48,503878101-11:00
+```
+
+- Week: 2016-W32
+- Date with week number: 2016-W32-2
+- Month and day without year: -12-31
+
+### Durations, or ranges of time
+
+Durations are a component of time intervals and define the amount of intervening time in a time interval.
+
+#### Examples:
+
+- P10Y - a duration of ten years.
+- P5DT12H - a duration of five days and twelve hours.
+- P3Y6M4DT12H30M5S - a duration of three years, six months, four days, twelve hours, thirty minutes, and five seconds.
+- P1M - one month.
+- PT1M - one minute.
+
+### Time intervals
+
+A time interval is the intervening time between two time points. There are four ways to express a time interval:
+
+- Start and end, such as `2007-03-01T13:00:00Z/2008-05-11T15:30:00Z`
+- Start and duration, such as `2007-03-01T13:00:00Z/P1Y2M10DT2H30M`
+- Duration and end, such as `P1Y2M10DT2H30M/2008-05-11T15:30:00Z`
+- Duration only, such as `P1Y2M10DT2H30M`, with additional context information
+
+### Repeating intervals
+
+Repeating intervals are formed by adding `R[n]/` to the beginning of an interval expression. Such as `R5/2007-03-01T13:00:00Z/2008-05-11T15:30:00Z`
+
+# RFC 3339
+
+RFC 3339 is considered a profile of ISO 8601.
+
+- <https://tools.ietf.org/html/rfc3339>
+
+# Examples
+
+## Quick and dirty time sync in Linux for when NTP is blocked.
 
 ```
 date -s $(curl -s -D - google.com | sed '/Date:/s/.*Date: //p ; d')
