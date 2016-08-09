@@ -73,7 +73,7 @@ A time interval is the intervening time between two time points. There are four 
 
 ### Repeating intervals
 
-Repeating intervals are formed by adding `R[n]/` to the beginning of an interval expression. Such as `R5/2007-03-01T13:00:00Z/2008-05-11T15:30:00Z`
+Repeating intervals are formed by adding `R[n]/` to the beginning of an interval expression. Such as `R5/2007-03-01T13:00:00Z/2008-05-11T15:30:00Z`. The `n` can be omitted if the interval should repeat forever.
 
 # RFC 3339
 
