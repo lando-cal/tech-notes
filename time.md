@@ -1,16 +1,12 @@
 # Notes about time technologies
 
-# Links
-
-- [Understanding and mitigating NTP-based DDoS attacks](https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-ddos-attacks/)
-
-# [ISO 8601](https://en.wikipedia.org/wiki/ISO_860)
+# [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
 ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times is an international standard covering the exchange of date and time-related data.
 
 ## ISO 8601 format examples
 
-See the [ISO 8601 wikipedia page](https://en.wikipedia.org/wiki/ISO_860) for many examples. Much of the content in this section was taken from that article.
+See the [ISO 8601 wikipedia page](https://en.wikipedia.org/wiki/ISO_8601) for many examples. Much of the content in this section was taken from that article.
 
 One notable syntax is that the letter T should always precede times. This aids in parsing, and distinguishes between month and minute, which are both shortened to M.
 
@@ -88,3 +84,12 @@ RFC 3339 is considered a profile of ISO 8601.
 ```
 date -s $(curl -s -D - google.com | sed '/Date:/s/.*Date: //p ; d')
 ```
+
+# Links
+
+- [Understanding and mitigating NTP-based DDoS attacks](https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-ddos-attacks/)
+- <https://en.wikipedia.org/wiki/ISO_8601>
+- <https://tools.ietf.org/html/rfc3339>
+- <https://www.gnu.org/software/coreutils/manual/html_node/Examples-of-date.html>
+- <http://man7.org/linux/man-pages/man1/date.1.html>
+- <http://www.freebsd.org/cgi/man.cgi?date>
