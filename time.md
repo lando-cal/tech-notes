@@ -73,7 +73,7 @@ Repeating intervals are formed by adding `R[n]/` to the beginning of an interval
 
 # RFC 3339
 
-RFC 3339 is considered a profile of ISO 8601.
+RFC 3339 is considered a profile of ISO 8601\. It defines a profile of ISO 8601 for use in Internet protocols and standards. It explicitly excludes durations and dates before the common era. The more complex formats such as week numbers and ordinal days are not permitted.
 
 - <https://tools.ietf.org/html/rfc3339>
 
