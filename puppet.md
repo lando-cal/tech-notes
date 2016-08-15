@@ -98,10 +98,10 @@ mco find -S "fstat('/srv').mtime_seconds<$(date +%s -d '-8 hours')"
 mco facts lsbdistdescription
 ```
 
-### Show a list of configured IP addresses in a certain range
+### Show all ip addreses on all hosts where a configured IP address matches a regex
 
 ```
-mco facts all_ipaddresses -F 'all_ipaddresses=~10.56'
+mco facts all_ipaddresses -F 'all_ipaddresses=~10\.(56|29)\.'
 ```
 
 ### Show a report about uptimes over a year
