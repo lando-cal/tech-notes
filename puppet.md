@@ -70,6 +70,13 @@ mco ping
 mco filemgr -f /srv/nginx status
 ```
 
+### Use fstat and md5 to detect files needing repair
+
+```
+mco find -S "fstat('/srv/somedir/somefile').md5=/af6db18c6dfa81c294895003e13a2eef/" > files_needing_attention.txt
+pssh -h files_needing_attention.txt) 'do_something_to_the_file'
+```
+
 ### Show stats about which OSes you have
 
 ```
