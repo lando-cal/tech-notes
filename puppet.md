@@ -86,6 +86,12 @@ mco find -S "fstat('/srv/somedir/somefile').md5=/af6db18c6dfa81c294895003e13a2ee
 pssh -h files_needing_attention.txt) 'do_something_to_the_file'
 ```
 
+### Use fstat to find hosts where a directory has not been modified recently
+
+```
+mco find -S "fstat('/srv').mtime_seconds<$(date +%s -d '-8 hours')"
+```
+
 ### Show stats about which OSes you have
 
 ```
@@ -101,10 +107,10 @@ mco facts all_ipaddresses -F 'all_ipaddresses=~10.56'
 ### Show a report about uptimes over a year
 
 ```
-mco facts uptime -F 'uptime_days>365' \
-| awk '$2 == "days" {print}' \
-| sort -n -k1 \
-| column -t
+mco facts uptime -F 'uptime_days>365' |
+awk '$2 == "days" {print}' |
+sort -n -k1 |
+column -t
 ```
 
 ### Find machines that have a certain fact
