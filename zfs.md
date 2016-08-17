@@ -23,7 +23,7 @@ ZFS is the Zetabyte File System.
 ## Memory
 
 - For normal operation, 1gb of memory per tb of disk space is suitable.
-- For dedupe operation, 5gb of memory per tb of usable disk space is suitable.
+- For dedup operation, 5gb of memory per tb of addressable disk space is suitable.
 
 ## Log devices
 
