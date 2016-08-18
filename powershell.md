@@ -1,6 +1,6 @@
-PowerShell is a shell for Windows operating systems.
+PowerShell is a shell for Windows operating systems, and it was ported to Linux in 2016.
 
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+<https://github.com/PowerShell/PowerShell/>
 
 # Profile.ps1
 
@@ -63,6 +63,18 @@ Get-ChildItem
 This will only show the lines that are not common:
 
 `Compare-Object $(Get-VIPrivilege -role admin) $(Get-VIPrivilege -role member)`
+
+## Save object to a csv
+
+```
+Get-Process | Export-Csv -Encoding unicode processes.csv
+```
+
+## Load object from a csv and parse it
+
+```
+Import-Csv ./processes.csv | Where-Object { $_.Name -like "*systemd*" } | Select-Object -last 10 | Format-Table
+```
 
 ## Replacement for unix tail
 
