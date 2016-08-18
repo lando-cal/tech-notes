@@ -1,6 +1,7 @@
-"jq is a lightweight and flexible command-line JSON processor." - [https://stedolan.github.io/jq/](https://stedolan.github.io/jq/)
+"jq is a lightweight and flexible command-line JSON processor." - <https://stedolan.github.io/jq/>
 
 # Examples
+
 ## Pretty print a json file
 
 ```
@@ -23,6 +24,20 @@ mco rpc package status package=apt -j -F lsbdistcodename=trusty | jq -c '.[] | s
 
 ```
 jq '.[] | select(.data.ensure != "purged") | [.sender,.data.ensure]' $*
+```
+
+## Print only objects whose name matches a string
+
+This example uses <https://github.com/solarkennedy/uq>
+
+```
+echo "
+jobs:
+  - name: foo
+    value: foo job
+  - name: bar
+    value: bar job" |
+uq | jq '.["jobs"][] | select(type=="object") | select (.name | . and contains("bar"))'
 ```
 
 ## Build a json entry from scratch
@@ -50,4 +65,5 @@ create_json() {
 ```
 
 # See Also
+
 - [Tutorial](https://stedolan.github.io/jq/tutorial/)
