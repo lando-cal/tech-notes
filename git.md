@@ -88,8 +88,8 @@ git commit -a -m "Improve the README file"
 
 Git config checks --local, --global, --system.
 
-- Local = per-repo settings.  IE: stored in .git/config directory for the repo
-- Global = per-user settings.  IE: stored in ~/.gitconfig
+- Local = per-repo settings. IE: stored in .git/config directory for the repo
+- Global = per-user settings. IE: stored in ~/.gitconfig
 - System = per-system settings, found in /etc/ or wherever git is looking for system settings.
 
 ### Git client setup
@@ -192,6 +192,14 @@ git log --format=raw -5
 log --graph --oneline --decorate --all
 ```
 
+## git show
+
+### Show the changes from a specific sha
+
+```
+git show f73f9ec7c07e
+```
+
 ## git branches
 
 ### Create a branch
@@ -226,7 +234,7 @@ git branch -d readme-fix-branch
 
 ### disable fast-forward merges
 
-You can control how the history is kept when merging.  By default, fast-forward merges occur, which replays the commits on the branch that is being merged into.  By disabling this you can see several commits being merged from one branch into another, making it easier to roll back that whole series of commits without digging through the history to see where each commit from the branch came from.
+You can control how the history is kept when merging. By default, fast-forward merges occur, which replays the commits on the branch that is being merged into. By disabling this you can see several commits being merged from one branch into another, making it easier to roll back that whole series of commits without digging through the history to see where each commit from the branch came from.
 
 ```
 git config --global merge.ff false
@@ -283,7 +291,7 @@ git reset --hard origin/master
 
 ### Remove all untracked files and directories
 
-This is useful after your reset to a prior state.  It deletes all files and directories that show up in the untracked section of `git status`
+This is useful after your reset to a prior state. It deletes all files and directories that show up in the untracked section of `git status`
 
 ```
 git clean -ffdx
