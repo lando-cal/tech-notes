@@ -1,4 +1,4 @@
-`defaults` is a BSD command to read and write configuration files.
+`defaults` allows users to read, write, and delete Mac OS X user defaults from a command-line shell.
 
 # Examples
 
