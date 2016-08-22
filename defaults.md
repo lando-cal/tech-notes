@@ -2,6 +2,15 @@
 
 # Examples
 
+## Set some boolean values
+
+```
+defaults write NSGlobalDomain     NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain     NSAutomaticDashSubstitutionEnabled  -bool false
+defaults write com.apple.TextEdit SmartQuotes                         -bool false
+defaults write com.apple.TextEdit SmartDashes                         -bool false
+```
+
 ## Add a value (an array) to a dict
 
 ```
