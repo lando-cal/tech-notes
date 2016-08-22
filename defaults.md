@@ -15,6 +15,6 @@ defaults write com.apple.TextEdit SmartDashes                         -bool fals
 
 ```
 FILENAME="${HOME}/Library/Preferences/com.googlecode.iterm2.plist"
-defaults write ${FILENAME} "GlobalKeyMap" -dict-add "0xf703-0x280000" '{ Action = 10; Text = f; }'
-defaults write ${FILENAME} "GlobalKeyMap" -dict-add "0xf702-0x280000" '{ Action = 10; Text = b; }'
+defaults write ${FILENAME} 'GlobalKeyMap' -dict-add '0xf703-0x280000' '{ Action = 10; Text = f; }'
+defaults write ${FILENAME} 'GlobalKeyMap' -dict-add '0xf702-0x280000' '{ Action = 10; Text = b; }'
 ```
