@@ -149,6 +149,15 @@ mco find -C role::awsadmin
 sort /var/lib/puppet/state/classes.txt
 ```
 
+### Kick off a puppet run on all hosts of a certain class
+
+The following two syntaxes are essentially the same, using the same `puppet` agent of `mco`. The only differences are the use of `runall` vs `runonce`, and the method that performs parallel execution. I'm not sure what difference there is in the code path.
+
+```
+mco rpc    -C "class_boolean" -F "fact_name=fact_value" --batch 10 --agent puppet --action runonce
+mco puppet -C "class_boolean" -F "fact_name=fact_value" runall 10
+```
+
 ### Show the status and puppet policy about a package on all hosts
 
 ```
