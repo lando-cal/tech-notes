@@ -196,6 +196,10 @@ jq -c '.[] | select(.data.ensure == "1.0.1ubuntu2") | { version: .data.ensure, h
 
 - <http://rspec-puppet.com/matchers/>
 
+# r10k
+
+The suggested workflow for puppet is to use r10k on a control repo to manage the modules on your puppetmaster and the environments it provides. The general idea is that each module is represented by a puppetforge module name or a git repo listed inside of the ambiguously named `Puppetfile`. When `r10k puppetfile install -v` is run, all modules listed in this file are installed according to their definitions, and all modules that are not in this file are purged. Also, r10k will set up environments based on the git branches of the control repo. This workflow is described in detail at [Managing and deploying Puppet code](https://docs.puppet.com/pe/latest/cmgmt_managing_code.html). It assumes you are not using a `puppet apply` type setup, which makes this difficult to follow for people who are playing with this at home in a non-puppetmaster scenario, such as in vagrant or on raspberry pi's.
+
 # Videos and links
 
 - [Puppet Documentation Index](https://docs.puppetlabs.com/puppet/)
