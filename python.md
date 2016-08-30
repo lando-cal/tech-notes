@@ -14,6 +14,13 @@ sys.path.append('/Users/username/code/somedir')
 import module # from somedir
 ```
 
+## Print variables from the local scope
+
+```
+for var in dir():
+    print "Debug: {0} = {1}".format(var,eval(var))
+```
+
 ## Inspect things
 
 ```
