@@ -44,7 +44,13 @@ import module # from somedir
 
 ## Verbose environment var
 
-At your shell, run `export PYTHONVERBOSE=1`
+<https://docs.python.org/3/using/cmdline.html#envvar-PYTHONVERBOSE>
+
+```
+export PYTHONVERBOSE=1
+# or...
+python -v pip search beets
+```
 
 ## Follow the flow of a python script
 
@@ -56,9 +62,13 @@ python -m trace --trace foo.py
 
 ## Enter an interactive prompt after script ends
 
+<https://docs.python.org/3/using/cmdline.html#envvar-PYTHONINSPECT>
+
 This works when your code causes an exception, but none of your code will actually be executed, you will simply be dropped into a shell, which is not very useful.
 
 ```
+export PYTHONINSPECT=1
+# or...
 sudo python -i ./ps_mem.py
 ```
 
