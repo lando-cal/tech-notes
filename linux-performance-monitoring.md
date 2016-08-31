@@ -1,14 +1,17 @@
 Notes from the Linux Performance Monitoring talk at Velocity 2015 - [Part 1](http://www.youtube.com/watch?v=FJW8nGV4jxY), [Part 2](http://www.youtube.com/watch?v=zrr2nUln9Kk)
 
-[http://www.brendangregg.com/linuxperf.html](http://www.brendangregg.com/linuxperf.html)
+<http://www.brendangregg.com/linuxperf.html>
 
 # USE
+
 - Utilization
 - Saturation
 - Errors
 
 # Observability Tools
-- atop / htop
+
+- atop (atop uses the linux kernel event interface rather than sampling on screen updates, so it is better for viewing systems affected by short-lived processes)
+- htop
 - vmstat -Sm 1
 - iostat -xmdz 1
 - mpstat -P ALL 1
@@ -34,6 +37,7 @@ Notes from the Linux Performance Monitoring talk at Velocity 2015 - [Part 1](htt
 - perf-tools/execsnoop
 
 # Benchmarking tools
+
 - unixbench
 - imbench
 - sysbench
@@ -43,12 +47,15 @@ Notes from the Linux Performance Monitoring talk at Velocity 2015 - [Part 1](htt
 - iperf
 
 # Tuning tools
+
 - sysctl
 - ulimit
 - chcpu
 
 # Static tools
+
 # Tracing
+
 - ftrace
 - iosnoop
 - iolatency
