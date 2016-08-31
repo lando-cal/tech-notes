@@ -72,6 +72,21 @@ export PYTHONINSPECT=1
 sudo python -i ./ps_mem.py
 ```
 
+## Enter a command prompt arbitrarily
+
+<https://docs.python.org/3/library/pdb.html>
+
+```
+import pdb
+pdb.set_trace()
+```
+
+After inspecting...
+
+```
+continue
+```
+
 ## Print variables from the local scope
 
 ```

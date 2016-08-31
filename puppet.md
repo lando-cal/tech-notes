@@ -1,6 +1,23 @@
 # Puppet
 
+"Puppet is an open-source configuration management tool. It runs on many Unix-like systems as well as on Microsoft Windows, and includes its own declarative language to describe system configuration." - <https://en.wikipedia.org/wiki/Puppet_(software)>
+
+## Videos and links
+
 - [Overview of Puppet's architecture](https://docs.puppet.com/puppet/4.4/reference/architecture.html)
+- [Puppet Documentation Index](https://docs.puppetlabs.com/puppet/)
+- [Introduction to Puppet](https://docs.puppetlabs.com/guides/introduction.html)
+- [Function Reference](https://docs.puppetlabs.com/references/latest/function.html)
+- [stdlib](https://forge.puppet.com/puppetlabs/stdlib) is another good function reference.
+- [Language: Basics](https://docs.puppetlabs.com/puppet/latest/reference/lang_summary.html)
+- [Include-like vs. resource-like class instantiation](https://docs.puppet.com/puppet/4.6/reference/lang_classes.html#include-like-vs-resource-like)
+- [Style Guide](https://docs.puppetlabs.com/guides/style_guide.html)
+- [Vagrant Docs - Puppet Apply Provisioner](https://docs.vagrantup.com/v2/provisioning/puppet_apply.html)
+- [Downloads](https://puppetlabs.com/misc/download-options-get)
+- [PuppetConf 2015](https://www.youtube.com/playlist?list=PLV86BgbREluUDlJW_jAqnWPj0THx7eXBA)
+- [Designing Puppet: Roles/Profiles Pattern](https://www.youtube.com/watch?v=ZpHtOnlSGNY) - based on the blog post [Designing Puppet – Roles and Profiles](http://www.craigdunn.org/2012/05/239/)
+- [Building a Functional Puppet Workflow Part 2: Roles and Profiles](http://garylarizza.com/blog/2014/02/17/puppet-workflow-part-2/)
+- [Configuration Management as Legos](http://sysadvent.blogspot.com/2012/12/day-13-configuration-management-as-legos.html)
 
 ## Examples
 
@@ -41,6 +58,10 @@ file { '/etc/hosts':
   type    => 'file',
 }
 ```
+
+## Tests
+
+- <http://rspec-puppet.com/matchers/>
 
 # Marionette Collective
 
@@ -192,26 +213,6 @@ jq -c '.[] | select(.data.ensure == "1.0.1ubuntu2") | { version: .data.ensure, h
 - <https://github.com/puppetlabs/hiera>
 - <http://www.craigdunn.org/2011/10/puppet-configuration-variables-and-hiera/>
 
-# Tests
-
-- <http://rspec-puppet.com/matchers/>
-
 # r10k
 
 The suggested workflow for puppet is to use r10k on a control repo to manage the modules on your puppetmaster and the environments it provides. The general idea is that each module is represented by a puppetforge module name or a git repo listed inside of the ambiguously named `Puppetfile`. When `r10k puppetfile install -v` is run, all modules listed in this file are installed according to their definitions, and all modules that are not in this file are purged. Also, r10k will set up environments based on the git branches of the control repo. This workflow is described in detail at [Managing and deploying Puppet code](https://docs.puppet.com/pe/latest/cmgmt_managing_code.html). It assumes you are not using a `puppet apply` type setup, which makes this difficult to follow for people who are playing with this at home in a non-puppetmaster scenario, such as in vagrant or on raspberry pi's.
-
-# Videos and links
-
-- [Puppet Documentation Index](https://docs.puppetlabs.com/puppet/)
-- [Introduction to Puppet](https://docs.puppetlabs.com/guides/introduction.html)
-- [Function Reference](https://docs.puppetlabs.com/references/latest/function.html)
-- [stdlib](https://forge.puppet.com/puppetlabs/stdlib) is another good function reference.
-- [Language: Basics](https://docs.puppetlabs.com/puppet/latest/reference/lang_summary.html)
-- [Include-like vs. resource-like class instantiation](https://docs.puppet.com/puppet/4.6/reference/lang_classes.html#include-like-vs-resource-like)
-- [Style Guide](https://docs.puppetlabs.com/guides/style_guide.html)
-- [Vagrant Docs - Puppet Apply Provisioner](https://docs.vagrantup.com/v2/provisioning/puppet_apply.html)
-- [Downloads](https://puppetlabs.com/misc/download-options-get)
-- [PuppetConf 2015](https://www.youtube.com/playlist?list=PLV86BgbREluUDlJW_jAqnWPj0THx7eXBA)
-- [Designing Puppet: Roles/Profiles Pattern](https://www.youtube.com/watch?v=ZpHtOnlSGNY) - based on the blog post [Designing Puppet – Roles and Profiles](http://www.craigdunn.org/2012/05/239/)
-- [Building a Functional Puppet Workflow Part 2: Roles and Profiles](http://garylarizza.com/blog/2014/02/17/puppet-workflow-part-2/)
-- [Configuration Management as Legos](http://sysadvent.blogspot.com/2012/12/day-13-configuration-management-as-legos.html)
