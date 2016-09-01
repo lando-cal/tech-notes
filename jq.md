@@ -57,10 +57,10 @@ This example echoes some yaml, uses python to convert it to json, then filters m
 echo "
 data:
   - This is a string, not an object, and contains the substrings foo and bar
-  - name: foo
-    value: foo job
-  - name: bar
-    value: bar job" |
+  - name: foo_name
+    value: foo_value
+  - name: bar_name
+    value: bar_value" |
 python -c "import yaml, sys, json; print json.dumps(yaml.safe_load(sys.stdin))" |
 jq '
   .["data"][] |
