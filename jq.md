@@ -56,7 +56,7 @@ This example echoes some yaml, uses python to convert it to json, then filters m
 ```
 echo "
 data:
-  - This is a string, not an object, and contains the string foo and bar
+  - This is a string, not an object, and contains the substrings foo and bar
   - name: foo
     value: foo job
   - name: bar
