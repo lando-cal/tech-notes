@@ -49,24 +49,24 @@ mco rpc package status package=apt -j -F lsbdistcodename=trusty |
   '
 ```
 
-## Other misc examples
-
-```
-jq '.[] | select(.data.ensure != "purged") | [.sender,.data.ensure]' $*
-```
-
 ## Print only objects whose name matches a string
 
-This example uses <https://github.com/solarkennedy/uq>
+This example echoes some yaml, uses python to convert it to json, then filters matching data using `jq`:
 
 ```
 echo "
-jobs:
+data:
+  - This is a string, not an object, and contains the string foo and bar
   - name: foo
     value: foo job
   - name: bar
     value: bar job" |
-uq | jq '.["jobs"][] | select(type=="object") | select (.name | . and contains("bar"))'
+python -c "import yaml, sys, json; print json.dumps(yaml.safe_load(sys.stdin))" |
+jq '
+  .["data"][] |
+  select(type=="object") |
+  select (.name | . and contains("bar"))
+'
 ```
 
 ## Build a json entry from scratch
@@ -93,6 +93,12 @@ create_json() {
   )
   echo "$json"
 }
+```
+
+## Select matches, and print a subset of values
+
+```
+jq '.[] | select(.data.ensure != "purged") | [.sender,.data.ensure]' $*
 ```
 
 # See Also
