@@ -95,6 +95,28 @@ create_json() {
 }
 ```
 
+## Render yaml with anchors as json data
+
+This example shows how you can use python and jq to view the result of dereferenced yaml anchors, a construct that is not supported by json. This example is less about how to use `jq` syntaxes, and more about how it can be used to view data that is otherwise difficult to sort through.
+
+```
+echo "
+job1: &template
+  directory: /tmp
+  extra_parameters: nosuid,noatime
+  remote_host: 10.1.1.1
+  user: nobody
+job2:
+  <<: *template
+  remote_host: 10.2.2.2
+job3:
+  <<: *template
+  remote_host: 10.3.3.3
+" |
+python -c "import yaml, sys, json; print json.dumps(yaml.safe_load(sys.stdin))" |
+jq -S .
+```
+
 ## Select matches, and print a subset of values
 
 ```
