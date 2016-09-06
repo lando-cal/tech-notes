@@ -11,3 +11,30 @@ for file in *.m4a ; do
   AtomicParsley "${file}" --artist "Various Artists" ;
 done ;
 ```
+
+## Remove Personally Identifiable Information (pii) from files
+
+Useful if you want to remove your personal info from iTunes Match files.
+
+```
+for file in *.m4a ; do
+  AtomicParsley \
+    "$file" \
+    --DeepScan \
+    --manualAtomRemove "moov.trak.mdia.minf.stbl.mp4a.pinf" \
+    --manualAtomRemove "moov.udta.meta.ilst.----.name:[iTunMOVI]" \
+    --manualAtomRemove "moov.udta.meta.ilst.apID" \
+    --manualAtomRemove "moov.udta.meta.ilst.atID" \
+    --manualAtomRemove "moov.udta.meta.ilst.cnID" \
+    --manualAtomRemove "moov.udta.meta.ilst.cprt" \
+    --manualAtomRemove "moov.udta.meta.ilst.flvr" \
+    --manualAtomRemove "moov.udta.meta.ilst.geID" \
+    --manualAtomRemove "moov.udta.meta.ilst.plID" \
+    --manualAtomRemove "moov.udta.meta.ilst.purd" \
+    --manualAtomRemove "moov.udta.meta.ilst.rtng" \
+    --manualAtomRemove "moov.udta.meta.ilst.sfID" \
+    --manualAtomRemove "moov.udta.meta.ilst.soal" \
+    --manualAtomRemove "moov.udta.meta.ilst.stik" \
+    --manualAtomRemove "moov.udta.meta.ilst.xid" \
+done
+```
