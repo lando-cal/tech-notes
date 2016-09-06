@@ -4,6 +4,8 @@ The Avahi [mDNS/DNS-SD](https://en.wikipedia.org/wiki/Multicast_DNS) daemon impl
 
 After installing avahi-daemon it may not start. To fix this you may need to run `service messagebus start`
 
+[Service types](https://github.com/lathiat/avahi/blob/master/service-type-database/service-types) are defined in `/usr/share/avahi/service-types`
+
 # Service configs
 
 Correctly formatted and named files in `/etc/avahi/services/whatever.service` are loaded on the fly, no need to restart `avahi-daemon`. If your service doesn't immediately show up, check syslog for errors.
