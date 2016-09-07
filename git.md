@@ -172,6 +172,12 @@ git log
 git log -1
 ```
 
+### Show log entries that contain a given string
+
+```
+git log -S search_string
+```
+
 ### Show logs for a given dir in the last 3 days
 
 ```
