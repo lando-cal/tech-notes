@@ -16,20 +16,20 @@ Lego Mindstorms
 
 # Videos
 
-- Spirograph - <https://www.youtube.com/watch?v=mtbV47LTuz8>
-- Spirograph - <https://www.youtube.com/watch?v=59-osMTBQmY>
-- Spirograph - <https://www.youtube.com/watch?v=1Ihjh_F7jn0>
-- Spirograph - <https://www.youtube.com/watch?v=9AI33m26KeM>
-- Plotter - <https://www.youtube.com/watch?v=4xXCmw4Y5iA>
-- Clash of Clans player - <https://www.youtube.com/watch?v=bFgO-C2TAV8>
-- Rubik's Cube solver - <https://www.youtube.com/watch?v=WG4FyoCjgdk>
-- World Record Rubik's Cube solver - <https://www.youtube.com/watch?v=staapsj3eRQ>
-- Great Ball Contraption - <https://www.youtube.com/watch?v=qHQZcRPqUkY>
-- Line Follower - <https://www.youtube.com/watch?v=d7jXaffklVg>
-- Time Twister - mechanical digital clock - <https://www.youtube.com/watch?v=A_mA72r3ZiQ>
-- Time Twister 3 - mechanical digital clock - <https://www.youtube.com/watch?v=O9Ha6cM0RjI>
-- Steampunk walking ship - <https://www.youtube.com/watch?v=b5E-VyQOfNM>
-- Sudoku solver - <https://www.youtube.com/watch?v=Mp8Y2yjV4fU>
-- Bridge layer - <https://www.youtube.com/watch?v=cETV5WGB6kQ>
-- Complicated bridge layer - <https://www.youtube.com/watch?v=oUJ4L4kmbHw>
-- BrickPi walkthrough - <https://www.youtube.com/watch?v=2zbBCmNoaXs>
+- <https://www.youtube.com/watch?v=2zbBCmNoaXs> - BrickPi walkthrough
+- <https://www.youtube.com/watch?v=cETV5WGB6kQ> - Bridge layer
+- <https://www.youtube.com/watch?v=bFgO-C2TAV8> - Clash of Clans player
+- <https://www.youtube.com/watch?v=oUJ4L4kmbHw> - Complicated bridge layer
+- <https://www.youtube.com/watch?v=qHQZcRPqUkY> - Great Ball Contraption
+- <https://www.youtube.com/watch?v=d7jXaffklVg> - Line Follower
+- <https://www.youtube.com/watch?v=4xXCmw4Y5iA> - Plotter
+- <https://www.youtube.com/watch?v=WG4FyoCjgdk> - Rubik's Cube solver
+- <https://www.youtube.com/watch?v=1Ihjh_F7jn0> - Spirograph
+- <https://www.youtube.com/watch?v=59-osMTBQmY> - Spirograph
+- <https://www.youtube.com/watch?v=9AI33m26KeM> - Spirograph
+- <https://www.youtube.com/watch?v=mtbV47LTuz8> - Spirograph
+- <https://www.youtube.com/watch?v=b5E-VyQOfNM> - Steampunk walking ship
+- <https://www.youtube.com/watch?v=Mp8Y2yjV4fU> - Sudoku solver
+- <https://www.youtube.com/watch?v=A_mA72r3ZiQ> - Time Twister - mechanical digital clock
+- <https://www.youtube.com/watch?v=O9Ha6cM0RjI> - Time Twister 3 - mechanical digital clock
+- <https://www.youtube.com/watch?v=staapsj3eRQ> - World Record Rubik's Cube solver
