@@ -16,6 +16,7 @@ Lego Mindstorms
 
 # Videos
 
+- <https://www.youtube.com/watch?v=P6b60zf1g18> - BALANC3R and Gyro Boy, self balancing Segway style bots
 - <https://www.youtube.com/watch?v=2zbBCmNoaXs> - BrickPi walkthrough
 - <https://www.youtube.com/watch?v=cETV5WGB6kQ> - Bridge layer
 - <https://www.youtube.com/watch?v=bFgO-C2TAV8> - Clash of Clans player
