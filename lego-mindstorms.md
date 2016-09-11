@@ -13,6 +13,7 @@ Lego Mindstorms
 - [BrickPi](https://github.com/DexterInd/BrickPi) - "This project combines the brains of a Raspberry Pi with the brawn of a LEGO MINDSTORMS NXT"
 - [ev3dev](http://www.ev3dev.org/) - "ev3dev is a Debian Linux-based operating system that runs on several LEGO® MINDSTORMS compatible platforms including the LEGO® MINDSTORMS EV3 and Raspberry Pi-powered BrickPi."
 - <http://botbench.com/>
+- <http://robotsquare.com/>
 
 # Videos
 
