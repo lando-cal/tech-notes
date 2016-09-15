@@ -248,7 +248,9 @@ These files can change the behavior of bash.
 
 ## .bash_profile
 
-`~/.bash_profile` is executed every time you log into the system or initiate a shell. Define functions here instead of using stand-alone scripts if you want the changes made to persist after the termination of the script. EG: if you cd inside of a function, the CWD will stay after the function exits, but with a standalone bash script you'd keep your pre-existing CWD.
+`~/.bash_profile` is executed every time you log into the system or initiate a shell. Inclusion of things that write to stdout is allowed here.
+
+If you want to write scripts that change your interactive shell environment, such as changing your CWD, define functions here instead of using stand-alone scripts.
 
 ```
 PS1="\u@\h:\w$ "
@@ -257,7 +259,7 @@ TMOUT="1800" # timeout variable
 
 ## .bashrc
 
-~/.bashrc is executed every time you open a sub-shell. It **should not** output any text, otherwise certain things (eg: scp) will fail.
+`~/.bashrc` is executed every time you open a sub-shell. It **should not** output any text, otherwise certain things (eg: scp) will fail.
 
 ## ~/.inputrc
 
