@@ -88,8 +88,11 @@ date -s $(curl -s -D - google.com | sed '/Date:/s/.*Date: //p ; d')
 # Links
 
 - [Understanding and mitigating NTP-based DDoS attacks](https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-ddos-attacks/)
-- <https://en.wikipedia.org/wiki/ISO_8601>
-- <https://tools.ietf.org/html/rfc3339>
-- <https://www.gnu.org/software/coreutils/manual/html_node/Examples-of-date.html>
-- <http://man7.org/linux/man-pages/man1/date.1.html>
-- <http://www.freebsd.org/cgi/man.cgi?date>
+- [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+- [Date and Time on the Internet: Timestamps - RFC 3339](https://tools.ietf.org/html/rfc3339)
+- [Examples of date (GNU)](https://www.gnu.org/software/coreutils/manual/html_node/Examples-of-date.html)
+- [man date (linux)](http://man7.org/linux/man-pages/man1/date.1.html)
+- [man date (freebsd)](http://www.freebsd.org/cgi/man.cgi?date)
+- [The Problem with Time & Timezones - Computerphile](https://www.youtube.com/watch?v=-5wpm-gesOY)
+- [Falsehoods programmers believe about time](http://infiniteundo.com/post/25326999628/falsehoods-programmers-believe-about-time)
+- [More falsehoods programmers believe about time; "wisdom of the crowd" edition](http://infiniteundo.com/post/25509354022/more-falsehoods-programmers-believe-about-time)
