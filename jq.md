@@ -39,6 +39,8 @@ curl -s "https://api.flickr.com/services/rest/?"\
 
 ## Use mco to find packages of a certain version on a certain OS
 
+This example could be used as an alternative to grep, where only the value of a key/value pair is matched.
+
 ```
 mco rpc package status package=apt -j -F lsbdistcodename=trusty |
   jq -c '
@@ -51,7 +53,7 @@ mco rpc package status package=apt -j -F lsbdistcodename=trusty |
 
 ## Print only objects whose name matches a string
 
-This example echoes some yaml, uses python to convert it to json, then filters matching data using `jq`:
+This example echoes some yaml, uses python to convert it to json, then filters matching data using `jq`. It could be used as an alternative to grep, where only the key of a key/value pair is matched.
 
 ```
 echo "
@@ -65,7 +67,7 @@ python -c "import yaml, sys, json; print json.dumps(yaml.safe_load(sys.stdin))" 
 jq '
   .["data"][] |
   select(type=="object") |
-  select (.name | . and contains("bar"))
+  select (.name | . and contains("bar_n"))
 '
 ```
 
