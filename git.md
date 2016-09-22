@@ -206,6 +206,14 @@ log --graph --oneline --decorate --all
 git show f73f9ec7c07e
 ```
 
+### Show a complete file as of a given sha
+
+This is an absolute path from the git root, not relative to CWD.
+
+```
+git show f73f9ec7c07e:dir/filename.yaml
+```
+
 ## git branches
 
 ### Create a branch
