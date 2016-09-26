@@ -37,7 +37,8 @@ exiftool *.jpg -average outfile.jpg
 ## Correct EXIF time, for instance to sync with GPS time
 
 ```
-exiftool -AllDates-='Y:M:D H:M:S' (eg: exiftool -AllDates-='0:0:0 0:1:56')
+# exiftool -AllDates-='Y:M:D H:M:S'
+exiftool -AllDates+='0:0:0 0:1:56'
 ```
 
 ## Set all dates to something obviously wrong (useful for scanned images)
@@ -72,8 +73,13 @@ exiftool -d "%s" -p 'rsync -aP $filename ~/Desktop/Stuff/ # $VideoFrameRate' 201
 
 ## Rename files to their ShutterCount
 
+Assumes bash shell. Filenames will not be changed if ShutterCount field is not populated.
+
 ```
-for X in *.NEF ; do
-  cmd="$(exiftool -p 'mv $filename ${ShutterCount}.nef' "${X}")" && eval $cmd ;
+for file in *.NEF ; do
+  ext="${file#*.}"
+  exiftool -p '${ShutterCount}' "${file}" | while read -r shuttercount ; do
+    mv "$file" "$shuttercount.${ext}"
+  done
 done ;
 ```
