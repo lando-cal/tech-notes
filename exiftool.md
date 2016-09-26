@@ -73,13 +73,23 @@ exiftool -d "%s" -p 'rsync -aP $filename ~/Desktop/Stuff/ # $VideoFrameRate' 201
 
 ## Rename files to their ShutterCount
 
-Assumes bash shell. Filenames will not be changed if ShutterCount field is not populated.
+Filenames will not be changed if ShutterCount field is not populated.
 
 ```
-for file in *.NEF ; do
-  ext="${file#*.}"
-  exiftool -p '${ShutterCount}' "${file}" | while read -r shuttercount ; do
-    mv "$file" "$shuttercount.${ext}"
-  done
-done ;
+exiftool -P '-filename<${ShutterCount;}.%e' *.dng
+```
+
+## Rename files based on a set of possible names
+
+Exiftool will use the last parameter where all variables are present.
+
+```
+exiftool -P -d '%F-%H-%M-%S' \
+  '-filename<${DateTimeOriginal} - ${Make;}.%e' \
+  '-filename<${CreateDate} - ${Make;}.%e' \
+  '-filename<${DateTimeOriginal} - ${Make;} - ${Model;}.%e' \
+  '-filename<${CreateDate} - ${Make;} - ${Model;}.%e' \
+  '-filename<${DateTimeOriginal} - ${Make;} - ${Model;} - ${ShutterCount}.%e' \
+  '-filename<${CreateDate} - ${Make;} - ${Model;} - ${ShutterCount}.%e' \
+  *.dng
 ```
