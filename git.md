@@ -156,6 +156,18 @@ git diff -w
 git diff $(git rev-list -n1 --before="1 month ago" master)
 ```
 
+### Show what has changed since a point in time
+
+```
+git whatchanged --since="18 hours ago" -p
+```
+
+or...
+
+```
+git whatchanged --since="18 hours ago" --until="6 hours ago" -p
+```
+
 ## git log
 
 Shows commit history.
