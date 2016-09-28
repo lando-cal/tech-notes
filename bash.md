@@ -113,6 +113,12 @@ Or debug with a function:
 
 `echo ${#SHELL}`
 
+## Print all variables that start with the substring `SH`
+
+```
+echo ${!SH*}
+```
+
 ## Tertiary type variables
 
 `${V:-D} # means "return the value of the environment variable V or the string D if V isn't set.`
@@ -157,7 +163,9 @@ echo $sorted
 
 ## Calculate the difference between two dates
 
-`let DIFF=($(date +%s -d 20120203)-$(date +%s -d 20120115))/86400 ; echo $DIFF`
+```
+echo $(( $(gdate +%s -d 20120203) - $(gdate +%s -d 20120115) ))
+```
 
 ## substring replace a variable
 
