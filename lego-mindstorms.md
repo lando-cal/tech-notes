@@ -17,6 +17,8 @@ Lego Mindstorms
 
 # Videos
 
+- <https://www.youtube.com/watch?v=t-c6ktfzwW0> - Arm robot
+- <https://www.youtube.com/watch?v=yAtmdyyIRbE> - Arm robot on treads
 - <https://www.youtube.com/watch?v=P6b60zf1g18> - BALANC3R and Gyro Boy, self balancing Segway style bots
 - <https://www.youtube.com/watch?v=zR4BKgj9WSc> - Brick2014 EV3 6-Axis Robot Arm
 - <https://www.youtube.com/watch?v=2zbBCmNoaXs> - BrickPi walkthrough
