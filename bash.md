@@ -22,7 +22,7 @@ The following can be seen by running: `stty -a`
 - `compgen -b` will list all the built-ins you could run.
 - `compgen -k` will list all the keywords you could run.
 - `compgen -A` function will list all the functions you could run.
-- `compgen -A` function -abck will list all the above in one go.
+- `compgen -abck` will list all the above in one go.
 
 ## Remove leading zeroes
 
