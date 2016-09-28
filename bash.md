@@ -17,12 +17,12 @@ The following can be seen by running: `stty -a`
 
 ## View a list of all commands, etc..
 
-- `compgen -c` will list all the commands you could run.
-- `compgen -a` will list all the aliases you could run.
 - `compgen -b` will list all the built-ins you could run.
+- `compgen -a` will list all the aliases you could run.
+- `compgen -c` will list all the commands you could run.
 - `compgen -k` will list all the keywords you could run.
 - `compgen -A` function will list all the functions you could run.
-- `compgen -abck` will list all the above in one go.
+- `compgen -back` will list all the above in one go.
 
 ## Remove leading zeroes
 
