@@ -1,3 +1,4 @@
-These are notes I've taken on technologies that I have used. I used to keep them in a private mediawiki, but because they would be useful for other people, and because I want to have them immediately available during outages, I've moved this into a simple tree in git, mostly with markdown syntax.
+These are notes I've taken on technologies that I have used or would like to use. I used to keep them in a private mediawiki, but because they would be useful for other people, and because I want to have them immediately available during outages, I've moved this into public view.
 
-http://github.com/danielhoherd/tech-notes
+- <http://danielhoherd.github.io/tech-notes/>
+- <http://github.com/danielhoherd/tech-notes>
