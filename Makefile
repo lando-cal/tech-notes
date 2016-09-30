@@ -1,7 +1,7 @@
 all: deploy
 
 clean:
-	mkdocs gh-deploy --clean
+	git clean -fdX
 
 deploy: clean
 	mkdocs gh-deploy
