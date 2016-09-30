@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+git diff-tree -r --name-only --no-commit-id HEAD | grep -o '^docs\/'
+
+cd "$GIT_DIR/.."
+make
