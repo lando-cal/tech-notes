@@ -5,3 +5,6 @@ clean:
 
 deploy: clean
 	mkdocs gh-deploy
+
+hooks:
+	cp -f post-commit .git/hooks/
