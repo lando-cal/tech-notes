@@ -66,6 +66,20 @@ For date stuff, see date, because it's different depending on platform.
 
 `exec 3> /tmp/baz ; ps aux >&3 # sends the output of ps aux to /tmp/baz`
 
+## Redirect all output of a script into a file
+
+This is not bash specific, but works in bash.
+
+```
+#!/usr/bin/env bash
+
+exec >> /tmp/$0.log
+exec 2>&1
+
+date "+%F %T%z $0 This is stdout"
+date "+%F %T%z $0 This is stderr" >&2
+```
+
 ## Show size of each user's home folder
 
 ```
