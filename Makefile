@@ -7,4 +7,4 @@ deploy: clean
 	mkdocs gh-deploy
 
 hooks:
-	cp -f post-commit .git/hooks/
+	cp -f git-hooks/* .git/hooks/
