@@ -2,5 +2,6 @@
 - [cargo cult](https://en.wikipedia.org/wiki/Cargo_cult) - software containing elements that are included because of successful utilization elsewhere, unnecessary for the task at hand.
 - [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) - Don't Repeat Yourself. "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system"
 - [KISS](https://en.wikipedia.org/wiki/KISS_principle) - Keep It Simple, Stupid!
+- [warrant canary](https://en.wikipedia.org/wiki/Warrant_canary) - Text on a website that states the company or person has never been served with a secret government subpoena. Once the statement is removed, the users can assume the company or person has been served and has been told not to talk about it.
 - [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) - a principle that states a programmer should not add functionality until deemed necessary.
 - [yak shaving](https://en.wiktionary.org/wiki/yak_shaving) - Any apparently useless activity which, by allowing you to overcome intermediate difficulties, allows you to solve a larger problem.
