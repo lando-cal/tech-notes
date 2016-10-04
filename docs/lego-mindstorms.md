@@ -25,6 +25,7 @@ Lego Mindstorms
 - <https://www.youtube.com/watch?v=cETV5WGB6kQ> - Bridge layer
 - <https://www.youtube.com/watch?v=bFgO-C2TAV8> - Clash of Clans player
 - <https://www.youtube.com/watch?v=oUJ4L4kmbHw> - Complicated bridge layer
+- <https://www.youtube.com/watch?v=GOQENxeL4nY> - Convert rotation into [reciprocating motion](https://en.wikipedia.org/wiki/Reciprocating_motion) of a piston
 - <https://www.youtube.com/watch?v=qHQZcRPqUkY> - Great Ball Contraption
 - <https://www.youtube.com/watch?v=d7jXaffklVg> - Line Follower
 - <https://www.youtube.com/watch?v=4xXCmw4Y5iA> - Plotter
