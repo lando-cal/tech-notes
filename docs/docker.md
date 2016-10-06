@@ -31,7 +31,7 @@ docker exec -i -t container_name bash
 docker run --hostname=somehost1 --name="host1" -ti centos:centos6 bash
 ```
 
-The hostname shows up to the OS.  The docker name can be used to interact with the container:
+The hostname shows up to the OS. The docker name can be used to interact with the container:
 
 ```
 docker ps host1
@@ -122,7 +122,7 @@ docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
 On hosts without cgroup integration, run:
 
 ```
-pstree $(pgrep docker)
+pgrep docker | xargs -n1 pstree
 ```
 
 # See Also
