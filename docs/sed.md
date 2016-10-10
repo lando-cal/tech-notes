@@ -16,7 +16,11 @@ This will print only the second line of the file
 
 ## Only print if match
 
-`sed -n 's/.*`$[0-9]{3}$`.sfo2.zoosk.com/\1/p' <<< sfo2-dev-vmbuild999.sfo2.zoosk.com`
+This will perform a replacement and print the result. Use `-i` (with caution!) to edit the file at the same time.
+
+```
+sed -n 's/\(127.[0-9]\{1,3\}.[0-9]\{1,3\}.[0-9]\{1,3\}\)/\1 localhost localhost4/p' /etc/hosts
+```
 
 ## Add a new line with content after a match
 
@@ -61,7 +65,9 @@ Normally, word boundaries look like this:
 
 or
 
-`/\`<MyWord\>`/`
+```
+/\<myword\>/
+```
 
 But in OS X, you have to do them like this:
 
