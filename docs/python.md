@@ -123,4 +123,4 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 - <https://pypi.python.org/pypi/begins/> - Simplified CLI arguments
 - <https://pypi.python.org/pypi/watchdog> - cross-platform filesystem events API
 - <https://github.com/giampaolo/psutil/> - system information
-- <https://github.com/timothycrosley/hug> - simplified API creation
+- <https://github.com/timothycrosley/hug> - simplified web API creation
