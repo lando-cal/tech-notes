@@ -114,3 +114,13 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 - <https://wiki.python.org/moin/PythonDecoratorLibrary>
 - <http://stackoverflow.com/questions/739654/how-can-i-make-a-chain-of-function-decorators-in-python/1594484#1594484>
 - <http://ains.co/blog/things-which-arent-magic-flask-part-1.html>
+
+## Modules
+
+- <https://github.com/jonathanslenders/ptpython> - improved python REPL
+- <https://docs.python.org/3/library/sched.html> - cross-platform cron-like scheduler
+- <https://pypi.python.org/pypi/colorama> - cross-platform colorized terminal output
+- <https://pypi.python.org/pypi/begins/> - Simplified CLI arguments
+- <https://pypi.python.org/pypi/watchdog> - cross-platform filesystem events API
+- <https://github.com/giampaolo/psutil/> - system information
+- <https://github.com/timothycrosley/hug> - simplified API creation
