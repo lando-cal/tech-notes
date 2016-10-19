@@ -1,8 +1,17 @@
+# Links
+
+- [Google App Script](https://developers.google.com/apps-script)
+- [Extending Google Docs](https://developers.google.com/apps-script/guides/docs)
+- [Document Service](https://developers.google.com/apps-script/reference/document)
+
 # Sheets
-- Function list - [https://support.google.com/docs/table/25273?hl=en](https://support.google.com/docs/table/25273?hl=en)
+
+- Function list - <https://support.google.com/docs/table/25273?hl=en>
 
 ## Conditional Formatting
+
 ### Regex matching to color
+
 Colorize rows with conditional formatting by using an expression like this:
 
 ```
@@ -26,6 +35,7 @@ Cell references in this case are relative unless prepended by a `\$`. So, if you
 ```
 
 ## Sum lines that match a string
+
 This uses syntax similar to a glob search, but uses ~ instead of \
 
 ```
