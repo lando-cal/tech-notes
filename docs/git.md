@@ -86,7 +86,7 @@ git commit -a -m "Improve the README file"
 
 ## git config
 
-Git config checks --local, --global, --system.
+`git config` interacts with configs. There are three scopes: --local, --global, --system.
 
 - Local = per-repo settings. IE: stored in .git/config directory for the repo
 - Global = per-user settings. IE: stored in ~/.gitconfig
@@ -123,6 +123,8 @@ git config --list
 ```
 
 ## git diff
+
+Show differences between objects and stuff.
 
 ### diff between staged and committed
 
@@ -228,6 +230,8 @@ git show f73f9ec7c07e:dir/filename.yaml
 
 ## git branches
 
+Branches are an integral part of git. They allow you to work on distinct changes without mixing them all up together.
+
 ### Create a branch
 
 ```
@@ -291,13 +295,18 @@ git remote set-url origin https://user@newhost/newpath/reponame
 
 ## git reset
 
+`git reset` allows you to reset your state to what it was at a previous point.
+
+### Reset to a prior state based on what has been done locally
+
+The reflog is a log of what steps have been performed locally. You can view the reflog, then reset to a prior state.
+
 ```
 git reflog # show all HEAD changes
-git reset HEAD~10 # go back 10 changes, soft keeps the files changes
-git reset --hard HEAD~1 # will put us back where we were at the reflog command
+git reset --hard 45e0ae5 # reset all git tracked state to 45e0ae5
 ```
 
-Alternately, you can use:
+Alternately, you can use a date:
 
 ```
 git reflog --date=iso # absolute date based reflog references
