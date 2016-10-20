@@ -3,6 +3,8 @@
 - [Google App Script](https://developers.google.com/apps-script)
 - [Extending Google Docs](https://developers.google.com/apps-script/guides/docs)
 - [Document Service](https://developers.google.com/apps-script/reference/document)
+- [Web Store Developer Dashboard](https://chrome.google.com/webstore/developer/dashboard)
+- [Servcie Accounts](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#creatinganaccount)
 
 # Sheets
 
