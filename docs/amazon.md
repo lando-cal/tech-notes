@@ -3,6 +3,8 @@
 - [Github - Troposphere](https://github.com/cloudtools/troposphere)
 - [AWS Console](https://console.aws.amazon.com/console/home)
 - [Amazon EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/)
+- [EC2Instances.info Easy Amazon EC2 Instance Comparison](http://www.ec2instances.info/)
+- [s3toosl](http://s3tools.org) - Command Line S3 Client and Backup
 
 # Terms and Acronyms
 
