@@ -108,6 +108,7 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 - [How to Think Like a Computer Scientist](http://interactivepython.org/courselib/static/thinkcspy/index.html) - iPython notebook on python data science
 - [A gallery of interesting IPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks)
 - [Learn Python dot org](http://www.learnpython.org/)
+- [The Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 
 ## Decorator links
 
