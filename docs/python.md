@@ -109,6 +109,10 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 - [A gallery of interesting IPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks)
 - [Learn Python dot org](http://www.learnpython.org/)
 - [The Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+- [Google's Python Class](https://developers.google.com/edu/python/?csw=1)
+- [Code Like a Pythonista: Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
+- [Intermediate and Advanced Software Carpentry in Python](http://ivory.idyll.org/articles/advanced-swc/)
+- [The Python IAQ: Infrequently Answered Questions](http://norvig.com/python-iaq.html)
 
 ## Decorator links
 
