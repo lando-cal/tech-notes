@@ -128,6 +128,8 @@ Show differences between objects and stuff.
 
 ### diff between staged and committed
 
+This is useful when you're adding files that were not previously in the repo alongside changes to existing files, since a bare `git diff` before adding the files will only show changes to files that were already in the repo.
+
 ```
 git diff --staged
 ```
