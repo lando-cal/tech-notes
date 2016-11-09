@@ -104,14 +104,15 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 
 # Various links
 
-- [Dive Into Python 3](http://www.diveintopython3.net/)
-- [How to Think Like a Computer Scientist](http://interactivepython.org/courselib/static/thinkcspy/index.html) - iPython notebook on python data science
 - [A gallery of interesting IPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks)
-- [Learn Python dot org](http://www.learnpython.org/)
-- [The Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
-- [Google's Python Class](https://developers.google.com/edu/python/?csw=1)
 - [Code Like a Pythonista: Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
+- [Dive Into Python 3](http://www.diveintopython3.net/)
+- [Google's Python Class](https://developers.google.com/edu/python/?csw=1)
+- [How to Think Like a Computer Scientist](http://interactivepython.org/courselib/static/thinkcspy/index.html) - iPython notebook on python data science
 - [Intermediate and Advanced Software Carpentry in Python](http://ivory.idyll.org/articles/advanced-swc/)
+- [Learn Python dot org](http://www.learnpython.org/)
+- [Python Cheatsheets](https://www.pythonsheets.com)
+- [The Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 - [The Python IAQ: Infrequently Answered Questions](http://norvig.com/python-iaq.html)
 
 ## Decorator links
