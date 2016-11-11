@@ -23,8 +23,9 @@ lsof -iTCP -sTCP:LISTEN -P | sort -k2 -t: -n
 ## show what process is using port 1900 with port numbers
 
 ```
+# -n makes lsof not resolve hostnames from ip addresses
 # -P makes lsof not resolve service names for port numbers. -iTCP shows IP TCP sockets.
-lsof -P -iTCP:1900
+lsof -nP -iTCP:1900
 ```
 
 ## show the selinux context for sockets
