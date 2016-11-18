@@ -134,6 +134,12 @@ sort -n -k1 |
 column -t
 ```
 
+### Find ec2 hosts with low uptime
+
+```
+mco find -W 'is_ec2=true uptime_seconds<7200'
+```
+
 ### Find machines that have a certain fact
 
 ```
