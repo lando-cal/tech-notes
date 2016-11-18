@@ -134,10 +134,10 @@ sort -n -k1 |
 column -t
 ```
 
-### Find ec2 hosts that were launched today
+### Find ec2 hosts that were launched within 24h
 
 ```
-mco find -F is_ec2=true -F 'uptime_days<1'
+mco find -F is_ec2=true -F 'uptime_seconds<86400'
 ```
 
 ### Find machines that have a certain fact
