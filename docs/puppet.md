@@ -137,7 +137,7 @@ column -t
 ### Find ec2 hosts that were launched today
 
 ```
-mco find -F is_ec2=true -F 'uptime_days>1'
+mco find -F is_ec2=true -F 'uptime_days<1'
 ```
 
 ### Find machines that have a certain fact
