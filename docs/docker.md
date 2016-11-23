@@ -47,10 +47,10 @@ docker run -ti -p 18022:22 centos bash
 
 ## Run a container with a shared directory
 
-We are specifying :ro to make this a read-only mount
+We are specifying :ro to make this a read-only mount. Default is rw.
 
 ```
-docker run -d -v ~/www/:/var/www/html/:ro php:5.4.35-apache
+docker run -d -v "$HOME/www/:/var/www/html/:ro" php:5.4.35-apache
 ```
 
 ## Show configuration parameters for a container
@@ -87,25 +87,41 @@ docker ps -a
 
 ## Start a named container
 
+By default containers don't restart when your system restarts, so you have to start them manually.
+
 ```
-docker start host1
+docker start ttrss
 ```
 
 ## Stop a named container
 
 ```
-docker stop host1
+docker stop ttrss
 ```
 
-## delete old containers
-
-This is safe to run as long as your valuable containers are running.
+## Update the restart policy on a running container
 
 ```
-docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm
+docker update --restart=unless-stopped 3a898cb672ad
 ```
+
+## Get a shell on a running container
+
+```
+docker exec -ti ttrss bash
+```
+
+## Delete old containers
 
 <https://docs.docker.com/reference/commandline/cli/#rm>
+
+Remove `-r` from `xargs` on non-GNU systems.
+
+```
+docker ps -a --format="{{.ID}} {{.Status}}" | awk '$2 == "Exited" && $5 ~ /(days|weeks|months)/ {print $1}' | xargs -r docker rm
+```
+
+For more managed environmnets there is [Docker Custodian](https://github.com/Yelp/docker-custodian)
 
 ## delete old images
 
