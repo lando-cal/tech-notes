@@ -22,5 +22,5 @@ q               quit            exit the current menu
 - Delete e-mails older than 2012-12-01: `[shift-d] ~d 1/12/12-1/1/1 # D/M/Y. this will only delete back to 2001-01-01`
 - Delete messages where the subject matches a search: `[shift-d] ~b search\ pattern`
 - Delete messages where the subject matches a search: `[shift-d] ~s search\ pattern`
-- Delete messages older than one month: `[shift-d] ~d <1m`
-- : ''essentially this is: delete where (message date +%s) < (date -d '-1 month' +%s)''
+- Delete messages older than one month: `[shift-d] ~d >1m`
+- Delete messages older than 14 days: `[shift-d] ~d > 14d`
