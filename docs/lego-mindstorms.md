@@ -43,3 +43,6 @@ link                                          | description
 <https://www.youtube.com/watch?v=A_mA72r3ZiQ> | Time Twister - mechanical digital clock
 <https://www.youtube.com/watch?v=O9Ha6cM0RjI> | Time Twister 3 - mechanical digital clock
 <https://www.youtube.com/watch?v=staapsj3eRQ> | World Record Rubik's Cube solver
+<https://youtu.be/Ii4ElBLvp6Q> | Active differential system for RWD traction control
+<https://youtu.be/cPfPGh0yUos> | Differential gearing demonstrated with lego
+<https://youtu.be/np3qWZVyvIU> | Coin sorter
