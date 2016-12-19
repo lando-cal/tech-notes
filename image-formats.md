@@ -1,0 +1,9 @@
+- arw - Sony Alpha raw format
+- cr2 - Canon raw format
+- dng - Adobe digital negative
+- gif - Compuserve Graphics Interchange Format
+- jpg - Most common image format on the internet
+- nef - Nikon raw format
+- png - Lossless rasterized image format
+- tiff - Lossless rasterized image format
+- webp - https://en.wikipedia.org/wiki/WebP
