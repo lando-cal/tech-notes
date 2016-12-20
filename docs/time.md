@@ -97,7 +97,14 @@ date -s $(curl -s -D - google.com | sed '/Date:/s/.*Date: //p ; d')
 - [man date (freebsd)](http://www.freebsd.org/cgi/man.cgi?date)
 - [Falsehoods programmers believe about time](http://infiniteundo.com/post/25326999628/falsehoods-programmers-believe-about-time)
 - [More falsehoods programmers believe about time; "wisdom of the crowd" edition](http://infiniteundo.com/post/25509354022/more-falsehoods-programmers-believe-about-time)
+- [International Earth Rotation and Reference Systems Service](https://www.iers.org)
 
 ## Videos
 
 - [The Problem with Time & Timezones - Computerphile](https://www.youtube.com/watch?v=-5wpm-gesOY)
+
+## Leap Seconds
+
+- [Resolve Leap Second Issues in Red Hat Enterprise Linux](https://access.redhat.com/articles/15145)
+- [Google Public NTP: Leap Smear](https://developers.google.com/time/smear)
+- [Five different ways to handle leap seconds with NTP](https://developers.redhat.com/blog/2015/06/01/five-different-ways-handle-leap-seconds-ntp/)
