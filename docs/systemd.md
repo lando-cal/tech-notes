@@ -23,6 +23,12 @@ The systemd journal is syslog and more.
 journalctl --full
 ```
 
+## Show the nginx journal for today
+
+```
+journalctl -u nginx.service --since today
+```
+
 ## Show units
 
 Units are things that are handled by systemd, including services.     systemctl list-units
