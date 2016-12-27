@@ -20,30 +20,30 @@ Lego Mindstorms
 link                                          | description
 --------------------------------------------- | ------------------------------------------------------------------------------------------------------------
 <https://youtu.be/Ii4ElBLvp6Q>                | Active differential system for RWD traction control
-<https://www.youtube.com/watch?v=t-c6ktfzwW0> | Arm robot
-<https://www.youtube.com/watch?v=961IdKfa5rI> | Arm robot - 3 axis, 360 degree motion, lightweight
-<https://www.youtube.com/watch?v=yAtmdyyIRbE> | Arm robot on treads
-<https://www.youtube.com/watch?v=P6b60zf1g18> | BALANC3R and Gyro Boy, self balancing Segway style bots
-<https://www.youtube.com/watch?v=zR4BKgj9WSc> | Brick2014 EV3 6-Axis Robot Arm
-<https://www.youtube.com/watch?v=2zbBCmNoaXs> | BrickPi walkthrough
-<https://www.youtube.com/watch?v=cETV5WGB6kQ> | Bridge layer
-<https://www.youtube.com/watch?v=bFgO-C2TAV8> | Clash of Clans player
+<https://youtu.be/t-c6ktfzwW0> | Arm robot
+<https://youtu.be/961IdKfa5rI> | Arm robot - 3 axis, 360 degree motion, lightweight
+<https://youtu.be/yAtmdyyIRbE> | Arm robot on treads
+<https://youtu.be/P6b60zf1g18> | BALANC3R and Gyro Boy, self balancing Segway style bots
+<https://youtu.be/zR4BKgj9WSc> | Brick2014 EV3 6-Axis Robot Arm
+<https://youtu.be/2zbBCmNoaXs> | BrickPi walkthrough
+<https://youtu.be/cETV5WGB6kQ> | Bridge layer
+<https://youtu.be/bFgO-C2TAV8> | Clash of Clans player
 <https://youtu.be/np3qWZVyvIU>                | Coin sorter
-<https://www.youtube.com/watch?v=oUJ4L4kmbHw> | Complicated bridge layer
-<https://www.youtube.com/watch?v=GOQENxeL4nY> | Convert rotation into [reciprocating motion](https://en.wikipedia.org/wiki/Reciprocating_motion) of a piston
+<https://youtu.be/oUJ4L4kmbHw> | Complicated bridge layer
+<https://youtu.be/GOQENxeL4nY> | Convert rotation into [reciprocating motion](https://en.wikipedia.org/wiki/Reciprocating_motion) of a piston
 <https://youtu.be/cPfPGh0yUos>                | Differential gearing demonstrated with lego
-<https://www.youtube.com/watch?v=-tXY_Hf3fvU> | Gopro 3 axis pan/tilt/slide
-<https://www.youtube.com/watch?v=qHQZcRPqUkY> | Great Ball Contraption
-<https://www.youtube.com/watch?v=d7jXaffklVg> | Line Follower
-<https://www.youtube.com/watch?v=4xXCmw4Y5iA> | Plotter
-<https://www.youtube.com/watch?v=WG4FyoCjgdk> | Rubik's Cube solver
-<https://www.youtube.com/watch?v=1Ihjh_F7jn0> | Spirograph
-<https://www.youtube.com/watch?v=59-osMTBQmY> | Spirograph
-<https://www.youtube.com/watch?v=9AI33m26KeM> | Spirograph
-<https://www.youtube.com/watch?v=mtbV47LTuz8> | Spirograph
-<https://www.youtube.com/watch?v=b5E-VyQOfNM> | Steampunk walking ship
-<https://www.youtube.com/watch?v=Mp8Y2yjV4fU> | Sudoku solver
-<https://www.youtube.com/watch?v=qkhSj2cAKWg> | Telepresence
-<https://www.youtube.com/watch?v=A_mA72r3ZiQ> | Time Twister - mechanical digital clock
-<https://www.youtube.com/watch?v=O9Ha6cM0RjI> | Time Twister 3 - mechanical digital clock
-<https://www.youtube.com/watch?v=staapsj3eRQ> | World Record Rubik's Cube solver
+<https://youtu.be/-tXY_Hf3fvU> | Gopro 3 axis pan/tilt/slide
+<https://youtu.be/qHQZcRPqUkY> | Great Ball Contraption
+<https://youtu.be/d7jXaffklVg> | Line Follower
+<https://youtu.be/4xXCmw4Y5iA> | Plotter
+<https://youtu.be/WG4FyoCjgdk> | Rubik's Cube solver
+<https://youtu.be/1Ihjh_F7jn0> | Spirograph
+<https://youtu.be/59-osMTBQmY> | Spirograph
+<https://youtu.be/9AI33m26KeM> | Spirograph
+<https://youtu.be/mtbV47LTuz8> | Spirograph
+<https://youtu.be/b5E-VyQOfNM> | Steampunk walking ship
+<https://youtu.be/Mp8Y2yjV4fU> | Sudoku solver
+<https://youtu.be/qkhSj2cAKWg> | Telepresence
+<https://youtu.be/A_mA72r3ZiQ> | Time Twister - mechanical digital clock
+<https://youtu.be/O9Ha6cM0RjI> | Time Twister 3 - mechanical digital clock
+<https://youtu.be/staapsj3eRQ> | World Record Rubik's Cube solver
