@@ -69,7 +69,7 @@ exiftool "-FileModifyDate<DateTimeOriginal" *.jpg
 
 ```
 find /src_dir/ -iname '*.dng' |
-  xargs  -n8 -P2 exiftool -p '$filename,$Model,$FileSize#' 2>/dev/null |
+  xargs  exiftool -p '$filename,$Model,$FileSize#' 2>/dev/null |
   sort   -t, -k3 -n |
   column -s, -t
 ```
