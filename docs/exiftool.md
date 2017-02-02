@@ -65,6 +65,15 @@ exiftool "-FileName<CreateDate" -d "%Y%m%d-%H-%M-%S%%-c.%%le" *.jpg
 exiftool "-FileModifyDate<DateTimeOriginal" *.jpg
 ```
 
+## Generate a table of Filename, Camera Model and File Size in bytes, sorted by bytes
+
+```
+find /src_dir/ -iname '*.dng' |
+  xargs  -n8 -P2 exiftool -p '$filename,$Model,$FileSize#' 2>/dev/null |
+  sort   -t, -k3 -n |
+  column -s, -t
+```
+
 ## Generate rsync commands for files matching a string
 
 ```
