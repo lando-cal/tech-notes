@@ -30,7 +30,7 @@ exiftool \
   -LensModel='Rokinon 85mm f/1.4' \
   -FocalLength='85' \
   -LongFocal='85' \
-  -ShortFocal='85' 
+  -ShortFocal='85' \
   filename.dng
 ```
 
