@@ -22,10 +22,16 @@ exiftool -S filename.jpg
 exiftool -a -u -G1 filename
 ```
 
-## Fix incorrect lens data on Rokinon 85mm
+## Add missing lens data on Rokinon 85mm
 
 ```
-exiftool -overwrite_original -LensModel='Rokinon 85mm f/1.4' -FocalLength='85' -LongFocal='85' -ShortFocal='85' filename.dng
+exiftool \
+  -overwrite_original \
+  -LensModel='Rokinon 85mm f/1.4' \
+  -FocalLength='85' \
+  -LongFocal='85' \
+  -ShortFocal='85' 
+  filename.dng
 ```
 
 ## Average photos
