@@ -196,7 +196,7 @@ mco rpc package status package=openssh-client --discovery-timeout 60 --json
 This upgrades, but does not install if the package is not already present.
 
 ```
-mco package upgrade 'nginx' -I '/web/' --limit=10
+mco package update 'nginx' -I '/web/' --limit=10
 ```
 
 ### Show breakdown of hosts by OS version by role
