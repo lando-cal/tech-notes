@@ -134,34 +134,40 @@ sort -n -k1 |
 column -t
 ```
 
+### Find machines where a fact is true
+
+```
+mco find is_ec2
+```
+
+Which is the same as
+
+```
+mco find -W is_ec2=true
+```
+
+### Find machines that have a certain fact value
+
+```
+mco find --with-fact lsbdistcodename=lucid
+```
+
+### Show a fact on machines that have a specific fact value
+
+```
+mco facts role --with-fact lsbdistcodename=lucid -v
+```
+
 ### Find ec2 hosts with low uptime
 
 ```
 mco find -W 'is_ec2=true uptime_seconds<7200'
 ```
 
-### Find machines that have a certain fact
-
-```
-mco find --with-fact lsbdistcodename=lucid
-```
-
-### Show a fact on machines that have a specific fact
-
-```
-mco facts role --with-fact lsbdistcodename=lucid -v
-```
-
 ### Show detailed info about a node
 
 ```
 mco inventory fqdn.example.com
-```
-
-### Find nodes with certain facts
-
-```
-mco find --with-fact lsbdistdescription="Ubuntu 10.04.1 LTS"
 ```
 
 ### Find nodes that match a config management class
