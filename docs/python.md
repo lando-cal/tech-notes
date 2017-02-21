@@ -104,7 +104,7 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 
 # Various links
 
-- [A gallery of interesting IPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks)
+- [A gallery of interesting Jupyter and IPython Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-and-IPython-Notebooks)
 - [Code Like a Pythonista: Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
 - [Dive Into Python 3](http://www.diveintopython3.net/)
 - [Google's Python Class](https://developers.google.com/edu/python/?csw=1)
