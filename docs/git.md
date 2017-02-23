@@ -84,6 +84,12 @@ git commit -m "Initial commit"
 git commit -a -m "Improve the README file"
 ```
 
+### Skip git commit hooks
+
+```
+git commit --no-verify
+```
+
 ## git config
 
 `git config` interacts with configs. There are three scopes: --local, --global, --system.

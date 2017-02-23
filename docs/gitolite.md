@@ -1,2 +1,5 @@
 # Get info about available repositories
-    ssh git@gitserver info
+
+```
+ssh git@gitserver info
+```
