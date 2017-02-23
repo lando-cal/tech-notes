@@ -108,3 +108,32 @@ exiftool -P -d '%F-%H-%M-%S' \
   '-filename<${CreateDate} - ${Make;} - ${Model;} - ${ShutterCount}.%e' \
   *.dng
 ```
+
+## Use TestFile tag target to test what files would be renamed to
+
+This block builds an array of possible tags to use as a filename, creates an exiftool argument string from that array, then tests what files would be named to. This is useful when dealing with files from various sources that don't all use the same tag to store the original media creation time. By using TestFile instead of FileName as the target, we observe what would occur, essentially a dry-run, instead of actually renaming the files.
+
+This assumes GNU xargs for the `-r` flag.
+
+```
+#!/usr/bin/env bash
+set -x
+
+# The last valid variable from this list is used as the filename source
+create_date_sources=(
+  TrackCreateDate
+  RIFF:DateTimeOriginal
+  MediaCreateDate
+  FileModifyDate
+  DateTimeOriginal
+  CreateDate
+)
+
+for opt in "${create_date_sources[@]}" ; do
+  args+=( "-TestName<${opt}" ) ;
+done ;
+
+args+=( '-d' './%Y/%m/%Y%m%d-%H-%M-%S%%-c.%%le' )
+
+find . -maxdepth 1 -type f ! -name '*.sh' -print0 | xargs -0 -r exiftool "${args[@]}"
+```
