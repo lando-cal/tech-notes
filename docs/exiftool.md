@@ -111,7 +111,9 @@ exiftool -P -d '%F-%H-%M-%S' \
 
 ## Use TestFile tag target to test what files would be renamed to
 
-This block builds an array of possible tags to use as a filename, creates an exiftool argument string from that array, then tests what files would be named to. This is useful when dealing with files from various sources that don't all use the same tag to store the original media creation time. By using TestFile instead of FileName as the target, we observe what would occur, essentially a dry-run, instead of actually renaming the files.
+This block builds an array of possible tags to use as a filename, creates an exiftool argument string from that array, then tests what files would be named to. This is useful when dealing with files from various sources that don't all use the same tag to store the original media creation time. By using `TestFile` instead of `FileName` as the target, we observe what would occur, essentially a dry-run, instead of actually renaming the files.
+
+There is a funky behavior of %-c when you operate on a file that should ideally not be renamed. Exiftool will toggle back and forth each run appending and removing `-1`.
 
 This assumes GNU xargs for the `-r` flag.
 
