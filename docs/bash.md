@@ -296,5 +296,6 @@ set completion-ignore-case on
 
 - Command Line Quicksheet: <http://www.pixelbeat.org/cmdline.html>
 - Tons of BASH examples: <http://mywiki.wooledge.org/BashFAQ>
+- [Bash Manual: Bash Variables](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html)
 - Bash pitfalls: <http://mywiki.wooledge.org/BashPitfalls>
 - Bash prompt howto, including colors: <http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html>
