@@ -19,7 +19,7 @@ exiftool -S filename.jpg
 ## Expanded basic usage
 
 ```
-exiftool -a -u -G1 filename
+exiftool -a -u -G:1:2 filename
 ```
 
 ## Add missing lens data on Rokinon 85mm
