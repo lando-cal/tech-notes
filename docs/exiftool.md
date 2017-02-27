@@ -139,3 +139,14 @@ args+=( '-d' './%Y/%m/%Y%m%d-%H-%M-%S%%-c.%%le' )
 
 find . -maxdepth 1 -type f ! -name '*.sh' -print0 | xargs -0 -r exiftool "${args[@]}"
 ```
+
+## Rename music files in a directory
+
+There is a big gotcha here, which is that slashes will create directories where they appear, which can cause serious problems. The `${Tag;s/\//_/}` syntax replaces `/` with `_`, but there may be other characters that can cause unexpected results. This is a great place to use `-TestFile` to inspect what would change before using `-FileName` to make the changes.
+
+```
+exiftool \
+  '-FileName<${Artist;s/\//_/} - ${Title;s/\//_/}.%e' \
+  '-FileName<${Artist;s/\//_/} - ${Album;s/\//_/} - ${Title;s/\//_/}.%e' \
+  *.mp3 *.m4a
+```
