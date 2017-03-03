@@ -3,6 +3,7 @@
 ## DD-WRT
 
 - <https://www.myopenrouter.com/downloads/dd-wrt-r7000>
+- <http://www.desipro.de/ddwrt/K3-AC-Arm/>
 
 ### v3.0-r28598
 
