@@ -9,7 +9,7 @@
 
 - Cannot edit DHCP reservations. Only can push and pop from the list, but cannot edit the added entries.
 
-### 2015-12-03 1v3.0-r28600M kongac
+### 2015-12-03 v3.0-r28600M kongac
 
 - No observed differences from v3.0-r28598
 
