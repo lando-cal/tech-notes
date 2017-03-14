@@ -17,3 +17,7 @@
 
 - General instability. Periodic lockups requiring power cycle to fix.
 - Potential weirdness playing with other wifi access points, unable to roam from this to Airport AC as I used to.
+
+# Netgear GSS116E
+
+- <https://www.netgear.com/support/product/GSS116E>
