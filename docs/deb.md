@@ -1,6 +1,7 @@
 Notes and tips about working with the .deb package format
 
 # Examples
+
 ## Show installed package versions
 
 ```
@@ -61,11 +62,35 @@ apt-cache show coreutils
 apt-cache rdepends ec2-api-tools
 ```
 
-### Show reverse dependencies of installed package
+## Show reverse dependencies of installed package
 
 ```
 aptitude why openjdk-7-jre-headless
 ```
 
+## Re-install many packages and validate that they were re-installed
+
+When `apt-get install --reinstall` isn't good enough, this is the next option. This **should not** be done unless you're willing to reload the system if it fails.
+
+```
+# Generate a list of packages
+dpkg -l | grep 'python-' > dpkg-l-python ;
+
+# Remove and re-install each individual package one at a time
+awk '{print $2,$3}' dpkg-l-python |
+  while read -r p v ; do
+    echo "Working on $p version $v" ;
+    sudo dpkg --purge --force-depends "$p" ;
+    sudo apt-get install "${p}=${v}" ;
+  done ;
+
+# Validate that all packages are re-installed with the right version
+awk '{print $2,$3}' dpkg-l-python |
+  while read -r p v ; do
+    dpkg -l "$p" | grep "$v" || echo "ERROR: Problem with $p $v" ;
+  done ;
+```
+
 # Links
-- [https://wiki.debian.org/RPM](https://wiki.debian.org/RPM)
+
+- <https://wiki.debian.org/RPM>
