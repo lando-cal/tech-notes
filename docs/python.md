@@ -26,6 +26,14 @@ pip install -r requirements.txt
 deactivate
 ```
 
+### Use venv to work around missing pip
+
+This is mostly useful for installing for your user, since if you can't install pip you won't be able to install into system-wide locations.
+
+```
+virtualenv venv --system-site-packages && venv/bin/pip install --user $PACKAGENAME && rm -rf venv
+```
+
 ## Upgrade pip packages:
 
 ```
