@@ -157,9 +157,10 @@ In /etc/ssh/sshd_config: PermitRootLogin without-password
 
 # See Also
 
-- sshuttle - IP network router over ssh
-- sslh - lets one accept both HTTPS and SSH connections on the same port. It makes it possible to connect to an SSH server on port 443 (e.g. from inside a corporate firewall)
-- Corkscrew - a tool for tunneling SSH through HTTP proxies
-- Putty - An SSH client for windows.
-- <http://www.hackinglinuxexposed.com/articles/20021226.html> Passwordless SSH logins
-- SSH server for Windows - <http://www.freesshd.com>
+- [sshuttle](https://github.com/apenwarr/sshuttle) - IP network router over ssh
+- [sslh](https://github.com/yrutschle/sslh) - lets one accept both HTTPS and SSH connections on the same port. It makes it possible to connect to an SSH server on port 443 (e.g. from inside a corporate firewall)
+- [Corkscrew](http://agroman.net/corkscrew/) - a tool for tunneling SSH through HTTP proxies
+- [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/) - An SSH (and telnet) client for windows.
+- [Passwordless SSH logins](http://www.hackinglinuxexposed.com/articles/20021226.html)
+- [SSH server for Windows](http://www.freesshd.com)
+- [SSH jump hosts](https://wiki.gentoo.org/wiki/SSH_jump_host)
