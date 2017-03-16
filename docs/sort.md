@@ -1,0 +1,72 @@
+sort is a command to sort lines of data.
+
+# GNU Syntax Examples
+
+In OS X, this is `gsort`.
+
+## Randomly sort a file
+
+Beware that this will put duplicate lines right next to each other. If you need better file shuffling use `shuf`.
+
+```
+sort -R foo
+```
+
+## Sort by two fields, first dictionary, second reverse numeric
+
+```
+# -k defines the sort key as starting position, sort style, ending position
+# -r is included in the second key to reverse numeric sort
+
+gsort -k1d,1 -k2nr,2
+```
+
+# BSD Syntax Examples
+
+GNU sort and BSD sort behave differently, which is mostly lame.
+
+## Sort by the third column
+
+```
+sort -k 3 filename
+```
+
+## Sort dates by the day
+
+This example shows how to sort dates in ISO Year format by date. (EG: 2017-01-19). Assumes use of `bash` 4 to generate the example dates.
+
+```
+# -n for numeric sort
+# -k3 for column 3
+# -t- to use - as a column delimiter
+
+for X in {2016..2017}-{01..12..03}-{01..19..06} ; do echo ${X} ; done |
+
+sort -n -k3 -t-
+```
+
+## Sort the /etc/passwd by UID
+
+Also works on /etc/group file and GID
+
+```
+sort -n -t: -k 3 /etc/passwd
+```
+
+## Some weird Airport thing I did
+
+Print out two rows signifying column numbers, then run a command and sort by column numbers. This assumes you're on macOS.
+
+```
+perl -e '
+foreach ( 1 .. 9 ) {
+    foreach ( 1 .. 9 ) { print " "; }
+    print $_;
+}
+print "\n";
+foreach ( 1 .. 9 ) {
+    foreach ( 1 .. 9, 0 ) { print $_; }
+}
+print "\n";' ; \
+airport --scan | sort -k 1.52,1.54
+```
