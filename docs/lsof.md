@@ -24,7 +24,8 @@ lsof -iTCP -sTCP:LISTEN -P | sort -k2 -t: -n
 
 ```
 # -n makes lsof not resolve hostnames from ip addresses
-# -P makes lsof not resolve service names for port numbers. -iTCP shows IP TCP sockets.
+# -P makes lsof not resolve service names for port numbers.
+# -iTCP shows IP TCP sockets.
 lsof -nP -iTCP:1900
 ```
 
