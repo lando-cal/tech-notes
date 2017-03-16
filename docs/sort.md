@@ -53,9 +53,9 @@ Also works on /etc/group file and GID
 sort -n -t: -k 3 /etc/passwd
 ```
 
-## Some weird Airport thing I did
+## Scan for airport and sort by columns
 
-Print out two rows signifying column numbers, then run a command and sort by column numbers. This assumes you're on macOS.
+Print out two rows signifying column numbers, which makes it easier to find which columns you want to sort by, then run a command and sort by column numbers. This assumes you're on macOS.
 
 ```
 perl -e '
