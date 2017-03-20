@@ -18,6 +18,10 @@
 - General instability. Periodic lockups requiring power cycle to fix.
 - Potential weirdness playing with other wifi access points, unable to roam from this to Airport AC as I used to.
 
+### 2017-03-10 v3.0-r31520M kongac
+
+- Installed 2017-03-20
+
 # Netgear GSS116E
 
 - <https://www.netgear.com/support/product/GSS116E>
