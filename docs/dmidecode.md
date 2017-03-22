@@ -33,4 +33,12 @@ dmidecode -t 39
 
 # See Also
 
+## Show all keywords and their values:
+
+```
+# -s without a keyword lists all keywords
+# -s with a keyword shows only the value of that keyword
+dmidecode -s |& grep '^  ' | while read -r X ; do echo $X: $(sudo dmidecode -s $X) ; done ;
+```
+
 - [lshw](lshw) - list hardware
