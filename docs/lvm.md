@@ -21,12 +21,12 @@ mkfs.ext4 /dev/vg_scratch/lv_scratch
 ## Show a bunch of info
 
 ```
-pvdisplay -v \
-pvs -v \
-pvs -a \
-pvs --segments \
-vgdisplay -v \
-vgs -v \
+pvdisplay -v
+pvs -v
+pvs -a
+pvs --segments
+vgdisplay -v
+vgs -v
 vgs -a -o +devices
 ```
 
