@@ -80,13 +80,12 @@ export PYTHONINSPECT=1
 sudo python -i ./ps_mem.py
 ```
 
-## Enter a command prompt arbitrarily
+## Enter a python terminal arbitrarily
 
 <https://docs.python.org/3/library/pdb.html>
 
 ```
-import pdb
-pdb.set_trace()
+import pdb; pdb.set_trace()
 ```
 
 After inspecting...
