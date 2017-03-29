@@ -1,5 +1,6 @@
-- https://www.reddit.com/r/robotics/wiki/index
+- http://botbench.com
+- http://www.andymark.com
 - http://www.vexrobotics.com/vexpro/all
 - https://www.adafruit.com
-- http://www.andymark.com
-- http://botbench.com
+- https://www.reddit.com/r/robotics/wiki/index
+- https://www.sparkfun.com/
