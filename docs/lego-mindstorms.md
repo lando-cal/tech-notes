@@ -47,3 +47,7 @@ link                                          | description
 <https://youtu.be/A_mA72r3ZiQ> | Time Twister - mechanical digital clock
 <https://youtu.be/O9Ha6cM0RjI> | Time Twister 3 - mechanical digital clock
 <https://youtu.be/staapsj3eRQ> | World Record Rubik's Cube solver
+
+# See also
+
+- [Robotics](robotics)
