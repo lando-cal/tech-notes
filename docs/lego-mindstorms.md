@@ -17,9 +17,9 @@ Lego Mindstorms
 
 # Videos
 
-link                                          | description
---------------------------------------------- | ------------------------------------------------------------------------------------------------------------
-<https://youtu.be/Ii4ElBLvp6Q>                | Active differential system for RWD traction control
+link                           | description
+------------------------------ | ------------------------------------------------------------------------------------------------------------
+<https://youtu.be/Ii4ElBLvp6Q> | Active differential system for RWD traction control
 <https://youtu.be/t-c6ktfzwW0> | Arm robot
 <https://youtu.be/961IdKfa5rI> | Arm robot - 3 axis, 360 degree motion, lightweight
 <https://youtu.be/yAtmdyyIRbE> | Arm robot on treads
@@ -28,10 +28,11 @@ link                                          | description
 <https://youtu.be/2zbBCmNoaXs> | BrickPi walkthrough
 <https://youtu.be/cETV5WGB6kQ> | Bridge layer
 <https://youtu.be/bFgO-C2TAV8> | Clash of Clans player
-<https://youtu.be/np3qWZVyvIU>                | Coin sorter
+<https://youtu.be/np3qWZVyvIU> | Coin sorter
 <https://youtu.be/oUJ4L4kmbHw> | Complicated bridge layer
 <https://youtu.be/GOQENxeL4nY> | Convert rotation into [reciprocating motion](https://en.wikipedia.org/wiki/Reciprocating_motion) of a piston
-<https://youtu.be/cPfPGh0yUos>                | Differential gearing demonstrated with lego
+<https://youtu.be/cPfPGh0yUos> | Differential gearing demonstrated with lego
+<https://youtu.be/9pjpQoZoW6E> | EV3 Print3rbot
 <https://youtu.be/-tXY_Hf3fvU> | Gopro 3 axis pan/tilt/slide
 <https://youtu.be/qHQZcRPqUkY> | Great Ball Contraption
 <https://youtu.be/d7jXaffklVg> | Line Follower
