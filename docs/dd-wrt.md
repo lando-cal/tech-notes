@@ -22,6 +22,11 @@
 - Installed 2017-03-20
 - Experienced hard lock within 24 hours, had to power cycle to fix. Found posts in dd-wrt forum about other folks experiencing the same issue.
 
-## 2017-03-21 v3.0-r31575M kongac
+## 2017-03-26 v3.0-r31575M kongac
 
 - Installed on 2017-03-21 via `ddup --flash-latest`
+- Appears to have fixed the hard lock-ups
+
+## 2017-03-26 v3.0-r31780M kongac
+
+- Installed on 2017-03-31 via `ddup --flash-latest`. First attempt failed. Rebooted, and second attempt worked.
