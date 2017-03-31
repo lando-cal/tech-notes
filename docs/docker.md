@@ -121,9 +121,9 @@ Remove `-r` from `xargs` on non-GNU systems.
 docker ps -a --format="{{.ID}} {{.Status}}" | awk '$2 == "Exited" && $5 ~ /(days|weeks|months)/ {print $1}' | xargs -r docker rm
 ```
 
-For more managed environmnets there is [Docker Custodian](https://github.com/Yelp/docker-custodian)
+A more systematic approach is to use [Docker Custodian](https://github.com/Yelp/docker-custodian).
 
-## delete old images
+## Delete old images
 
 This is safe to run as long as valuable containers are running, as it won't delete any images that are attached to running containers.
 
@@ -132,6 +132,8 @@ docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
 ```
 
 <https://docs.docker.com/reference/commandline/cli/#rmi>
+
+A more systematic approach is to use [Docker Custodian](https://github.com/Yelp/docker-custodian).
 
 ## Show processes running inside all docker containers
 
@@ -147,4 +149,3 @@ pgrep docker | xargs -n1 pstree
 - <http://dockerfile.github.io> - Trusted builds of FOSS software
 - <https://registry.hub.docker.com> - Public docker images
 - <https://docs.docker.com/reference/builder/> - How to build Dockerfiles
-- Shipyard - web based docker container management
