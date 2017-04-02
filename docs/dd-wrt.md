@@ -30,3 +30,8 @@
 ## 2017-03-26 v3.0-r31780M kongac
 
 - Installed on 2017-03-31 via `ddup --flash-latest`. First attempt failed. Rebooted, and second attempt worked.
+- Never had any problems with this
+
+## 2017-03-31 v3.0-r31800M kongac
+
+- Installed on 2017-04-01 via `ddup --flash-latest`
