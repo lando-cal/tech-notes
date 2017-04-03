@@ -112,6 +112,7 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 # Various links
 
 - [A gallery of interesting Jupyter and IPython Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-and-IPython-Notebooks)
+- [Drag'n'drop Pivot Tables and Charts in Jupyter](http://nicolas.kruchten.com/content/2015/09/jupyter_pivottablejs/)
 - [Code Like a Pythonista: Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
 - [Dive Into Python 3](http://www.diveintopython3.net/)
 - [Google's Python Class](https://developers.google.com/edu/python/?csw=1)
