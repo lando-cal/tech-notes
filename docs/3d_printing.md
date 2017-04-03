@@ -1,2 +1,3 @@
-- <http://meshlab.sourceforge.net/>
-- <https://www.thingiverse.com/>
+- <https://www.makerbot.com>
+- <http://www.meshlab.net>
+- <https://www.thingiverse.com>
