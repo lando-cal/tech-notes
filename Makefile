@@ -9,10 +9,12 @@ deploy: clean
 hooks:
 	cp -f git-hooks/* .git/hooks/
 
+ORIGIN=git@opal-dhopho:dho/tech-notes.git
+GITHUB=git@github.com:danielhoherd/tech-notes.git
 remotes:
-	git remote add origin git@opal-dhopho:dho/tech-notes.git 2> /dev/null || \
-		git remote set-url origin git@opal-dhopho:dho/tech-notes.git
-	git remote add github git@github.com:danielhoherd/tech-notes.git 2> /dev/null || \
-		git remote set-url github git@github.com:danielhoherd/tech-notes.git
+	git remote add origin $(ORIGIN) 2> /dev/null || \
+		git remote set-url origin $(ORIGIN)
+	git remote add github $(GITHUB) 2> /dev/null || \
+		git remote set-url github $(GITHUB)
 
 .PHONY: remotes hooks deploy clean all
