@@ -43,4 +43,4 @@ $ figlet -f 3-d hello
 
 # See Also
 
-- cowsay
+- [cowsay](cowsay)
