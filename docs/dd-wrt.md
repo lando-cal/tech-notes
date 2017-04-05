@@ -35,4 +35,5 @@
 ## 2017-03-31 v3.0-r31800M kongac
 
 - Installed on 2017-04-01 via `ddup --flash-latest`
-- router lockup after 3 days
+- 1 router lockup 3 days after installation
+- 2 router lockups on day 4
