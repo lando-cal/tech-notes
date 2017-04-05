@@ -13,6 +13,7 @@ ghostbusters gnu head-in hellokitty kiss kitty koala kosh luke-koala
 mech-and-cow meow milk moofasa moose mutilated pony pony-smaller ren sheep
 skeleton snowman sodomized-sheep stegosaurus stimpy suse three-eyes turkey
 turtle tux unipony unipony-smaller vader vader-koala www
+```
 
 ## cowsay
 
