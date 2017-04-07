@@ -76,22 +76,26 @@ ipmitool -H 10.5.8.30 -U ADMIN -P ADMIN chassis bootdev none options=help
 
 # Common Local Commands
 
+These commands require root access in most environments.
+
 ## View all configured LAN parameters
 
 ```
-sudo ipmitool lan print
+ipmitool lan print
 ```
 
 You can view individual "channels" which are logical interfaces by giving the number:
 
 ```
-sudo ipmitool lan print 1
+ipmitool lan print 1
 ```
 
-## If a host loses it's IPMI (iLO, etc) IP connectivity issue this command from the host itself
+## Reset the BMC
+
+If a host loses it's IPMI (iLO, etc.) IP connectivity, issue this command from the host itself
 
 ```
-sudo ipmitool mc reset cold
+ipmitool mc reset cold
 ```
 
 ## How to fix /dev/ipmi errors
