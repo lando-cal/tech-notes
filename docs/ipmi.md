@@ -1,29 +1,111 @@
 The Intelligent Platform Management Interface (IPMI) is a set of computer interface specifications for an autonomous computer subsystem that provides management and monitoring capabilities independently of the host system's CPU, firmware (BIOS or UEFI) and operating system.
 
-# CLI Examples
+# Managing servers with IPMI
 
-`ipmitool` is the most common way to interface with ipmi.
+## Default Users
 
-## Reset a BMC
+The default users are 'Administrator' for HPs, 'root' for Dells, and 'ADMIN' for Silicon Mechanics.
 
-From the local machine
+## Server Setup
 
-```
-ipmitool mc reset cold
-```
+IPMI uses COM2 aka ttyS1 for the serial port on Dells and HPs, COM3 aka ttyS2 on Silicon Mechanics.
 
-## Get information about a BMC's network
+# Common Remote Commands
 
-The following command is issued on the local machine to inspect channel 1. There may be multiple "channels" which are logical network interfaces that may be a unique physical interface or may be combined with one of the host's ethernet interfaces.
+## See if a server is on
 
 ```
-ipmitool lan print 1
+ipmitool -I lanplus -U $USER -P $PASSWORD -H $IPMI_IP chassis power status
 ```
 
-## Attach to the serial console
-
-This is obviously most useful when connecting remotely
+## Turn a server on
 
 ```
-ipmitool mc sol activate
+ipmitool -I lanplus -U $USER -P $PASSWORD -H $IPMI_IP chassis power on
 ```
+
+## Turn a server off
+
+```
+ipmitool -I lanplus -U $USER -P $PASSWORD -H $IPMI_IP chassis power off
+```
+
+## Tell a server to PXEBoot
+
+```
+ipmitool -I lanplus -U $USER -P $PASSWORD -H $IPMI_IP chassis power off
+ipmitool -I lanplus -U $USER -P $PASSWORD -H $IPMI_IP chassis bootdev pxe
+ipmitool -I lanplus -U $USER -P $PASSWORD -H $IPMI_IP chassis power on
+```
+
+## Connect to the serial console
+
+```
+ipmitool -I lanplus -U $USER -P $PASSWORD -H $IPMI_IP sol activate
+```
+
+## Display the system event log
+
+```
+ipmitool -I lanplus -U $USER -P $PASSWORD -H $IPMI_IP sel list
+```
+
+## Clear the system event log
+
+```
+ipmitool -I lanplus -U $USER -P $PASSWORD -H $IPMI_IP sel clear
+```
+
+## Display sensor information
+
+```
+ipmitool -I lanplus -U $USER -P $PASSWORD -H $IPMI_IP sdr list
+```
+
+## Disconnect another serial console session
+
+```
+ipmitool -I lanplus -U $USER -P $PASSWORD -H $IPMI_IP sol deactivate
+```
+
+## Show bootdev help
+
+```
+ipmitool -H 10.5.8.30 -U ADMIN -P ADMIN chassis bootdev none options=help
+```
+
+# Common Local Commands
+
+## View all configured LAN parameters
+
+```
+sudo ipmitool lan print
+```
+
+You can view individual "channels" which are logical interfaces by giving the number:
+
+```
+sudo ipmitool lan print 1
+```
+
+## If a host loses it's IPMI (iLO, etc) IP connectivity issue this command from the host itself
+
+```
+sudo ipmitool mc reset cold
+```
+
+## How to fix /dev/ipmi errors
+
+For errors like
+
+`Could not open device at /dev/ipmi0 or /dev/ipmi/0 or /dev/ipmidev/0`
+
+```
+modprobe ipmi_msghandler
+modprobe ipmi_devintf
+modprobe ipmi_si
+```
+
+# See Also
+
+- <http://www.intel.com/design/servers/ipmi/>
