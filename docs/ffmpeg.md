@@ -7,7 +7,7 @@ ffmpeg is a tool for editing movie files.
 ## Convert container format
 
 ```
-for X in *.mov ; do ffmpeg -i ${X} -c copy -map 0 ${X%.mov}.mp4 ; done ;
+for X in *.mov ; do ffmpeg -i "${X}" -c copy -map 0 "${X%.mov}.mp4" ; done ;
 ```
 
 ## Time Lapse
