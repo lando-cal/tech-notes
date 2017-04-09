@@ -30,11 +30,11 @@ find . -type f |
 
 ### Sample some of the middle of the time-lapse
 
-`ffmpeg -pattern_type sequence -start_number 3000 -r 30 -i %06d.jpg -s 1440x1080 -frames 120 $(date +%Y%m%d).mp4`
+`ffmpeg -pattern_type sequence -start_number 3000 -r 30 -i %06d.jpg -s 1440x1080 -frames 120 "$(date +%F_%T).mp4"`
 
 ### Turn these images into a video
 
-`ffmpeg -pattern_type sequence -r 30 -i %06d.jpg -s 1440x1080 $(date +%Y%m%d).mp4`
+`ffmpeg -pattern_type sequence -r 30 -i %06d.jpg -s 1440x1080 "$(date +%F_%T).mp4"`
 
 ## Audio Replace
 
