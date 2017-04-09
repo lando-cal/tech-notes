@@ -37,3 +37,7 @@
 - Installed on 2017-04-01 via `ddup --flash-latest`
 - 1 router lockup 3 days after installation
 - 2 router lockups on day 4
+
+## 2017-04-08 v3.0-r31830M kongac
+
+- Installed on 2017-04-07 via `ddup --flash-latest`
