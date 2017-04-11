@@ -35,3 +35,15 @@ Or several in batches, similar to how xargs handles things:
 ## Correctly handle spaces when piping to xargs
 
 `find /Applications -mindepth 1 -maxdepth 1 -type d -name '* *' -print0 | xargs -0 -n1 echo`
+
+## Find executable files
+
+This finds all files where an executable bit is set.
+
+With BSD find:
+
+`find . -type f -perm +111`
+
+With GNU find:
+
+`find . -type f -executable`
