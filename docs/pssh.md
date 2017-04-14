@@ -29,30 +29,32 @@ grep -r . $o
 ## Install a package on many hosts
 
 ```
-pssh -h \
-  <(awk '$3 == "alive" {print $1}' fping.txt | \
-  egrep '[0-9]+1[^0-9]') \
--o out_dir \
--l root \
-yum -y localinstall ~danielh/rpms/cfengine-community-3.6.2-1.x86_64.rpm
+fping < hosts.txt | awk '$3 == "alive" {print $1}' > alive.txt
+pssh \
+  -h alive.txt \
+  -o out_dir \
+  -l root \
+  yum -y localinstall ~danielh/rpms/cfengine-community-3.6.2-1.x86_64.rpm
 ```
 
 or directly from a db query and fping...
 
 ```
-pssh -h \
-  <(invdb -d sjc-z-01opsdbw 'select hostname from servers where colo = "sjc";' | \
-  sort -u | \
-  egrep '[0-9]+6[^0-9]' | \
-  fping 2> /dev/null | \
-  awk '$3 == "alive" {print $1}') \
--o out_dir \
--l root \
-yum -y localinstall ~danielh/rpms/cfengine-community-3.6.2-1.x86_64.rpm
+pssh \
+  -h <(
+    invdb -d sjc-z-01opsdbw 'select hostname from servers where colo = "sjc";' |
+    sort -u |
+    egrep '[0-9]+6[^0-9]' |
+    fping 2> /dev/null |
+    awk '$3 == "alive" {print $1}'
+  ) \
+  -o out_dir \
+  -l root \
+  yum -y localinstall ~danielh/rpms/cfengine-community-3.6.2-1.x86_64.rpm
 ```
 
 or from mco...
 
 ```
-o=$(date +pssh-%T) ; pssh -h <(mco find) -o $o apt-get install -y silversearcher-ag
+o=$(date +pssh-%T) ; pssh -t300 -p10 -h <(mco find -C role::devbox) -o "$o" 'sudo apt-get install -y silversearcher-ag' ; grep -r . "$o" ;
 ```
