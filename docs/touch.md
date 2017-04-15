@@ -10,4 +10,4 @@
 
 bash's random only goes up to 32767, so this only randomizes within the last ~9 hours.
 
-`touch -t $(gdate -d @$(echo $(date +%s) - $((RANDOM)) | bc) "+%Y%m%d%H%M.%S") somefile`
+`touch -t $(gdate -d @$(( $(date +%s) - RANDOM)) "+%Y%m%d%H%M.%S") somefile`
