@@ -10,4 +10,16 @@
 
 bash's random only goes up to 32767, so this only randomizes within the last ~9 hours.
 
-`touch -t $(gdate -d @$(( $(date +%s) - RANDOM)) "+%Y%m%d%H%M.%S") somefile`
+```
+randomize-mtime() {
+  touch -t "$(gdate -d @$(( $(date +%s) - RANDOM)) "+%Y%m%d%H%M.%S")" "$@"
+}
+
+# change mtime of all files to the same random mtime
+randomize-mtime test-foo{1..3} ;
+
+# change mtime of each file to a different random mtime
+for F in test-bar{1..3} ; do
+  randomize-mtime "$F"
+done
+```
