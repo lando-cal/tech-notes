@@ -8,11 +8,14 @@
 
 ## Randomize the mtime for a given file
 
-bash's random only goes up to 32767, so this only randomizes within the last ~9 hours.
+bash's random only goes up to 32767, which is about 9 hours. With RANDOM * 32767 + RANDOM we can get this up to just over 34 years.
 
 ```
 randomize-mtime() {
-  touch -t "$(gdate -d @$(( $(date +%s) - RANDOM)) "+%Y%m%d%H%M.%S")" "$@"
+  seconds="$(( $(date +%s) - $(( RANDOM * 32767 )) - RANDOM))"
+  new_mtime="$(gdate -d @"${seconds}" "+%Y%m%d%H%M.%S")"
+  echo "${new_mtime} $*" 1>&2
+  touch -t "${new_mtime}" "$@"
 }
 
 # change mtime of all files to the same random mtime
