@@ -42,3 +42,7 @@
 
 - Installed on 2017-04-07 via `ddup --flash-latest`
 - Locked up after 10 days
+
+## 2017-04-16 v3.0-r31870M kongac
+
+- Installed on 2017-04-17 via `ddup --flash-latest`
