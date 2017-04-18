@@ -1,6 +1,9 @@
-ddrescue is a replacement for dd and dcfldd with a bunch of additional features.  There are actually two tools called ddrescue: dd_rescue and gddrescue.  gddrescue is the best.
-- Software home page - [http://www.gnu.org/software/ddrescue/](http://www.gnu.org/software/ddrescue/)
-- Instruction Manual - [http://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html](http://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html)
+"GNU ddrescue - Data recovery tool.  Copies data from one file or block device to another, trying to rescue the good parts first in case of read errors." – `man ddrescue`
+
+There are actually two tools called ddrescue: dd_rescue and gddrescue.  gddrescue is the best.
+
+- Software home page - <http://www.gnu.org/software/ddrescue/>
+- Instruction Manual - <http://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html>
 
 # Examples
 ## Attempt to mirror an entire hard disk
@@ -21,3 +24,9 @@ This requires a valid rescue log file mapping out the good sectors that were rec
 ```
 ddrescue --fill=+ --force /dev/zero /dev/bad_drive ~/bad_drive_wipe.log
 ```
+
+# See Also
+
+- [dcfldd]<dcfldd>
+- [dd]<dd>
+- [pv]<pv>
