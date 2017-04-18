@@ -27,6 +27,6 @@ ddrescue --fill=+ --force /dev/zero /dev/bad_drive ~/bad_drive_wipe.log
 
 # See Also
 
-- [dcfldd]<dcfldd>
-- [dd]<dd>
-- [pv]<pv>
+- [dcfldd](dcfldd)
+- [dd](dd)
+- [pv](pv)
