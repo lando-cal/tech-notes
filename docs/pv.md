@@ -18,3 +18,8 @@ This can be used in place of `dd if=file of=/dev/disk`
 # As root
 pv ~hoherd/Downloads/ubuntu-16.04.1-desktop-amd64.iso > /dev/rdisk4
 ```
+
+# See Also
+- [dcfldd](dcfldd)
+- [dd](dd)
+- [ddrescue](ddrescue)
