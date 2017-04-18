@@ -4,7 +4,7 @@ clean:
 	git clean -fdX
 
 deploy: clean
-	mkdocs gh-deploy --remote-name github
+	mkdocs gh-deploy --remote-name github --force
 
 hooks:
 	cp -f git-hooks/* .git/hooks/
