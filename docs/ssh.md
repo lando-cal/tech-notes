@@ -31,13 +31,13 @@ This is useful for troubleshooting ssh_config matching.
 This will only listen on localhost, not ethernet interfaces. Use -g to listen on all interfaces
 
 ```
-ssh -L localport:destination:destinationport
+ssh -L LocalPort:Destination:DestinationPort
 ```
 
 ## Tunnel from remote port through the local machine to destination
 
 ```
-ssh -R remoteport:destination:destinationport
+ssh -R RemotePort:Destination:DestinationPort
 ```
 
 ## Create a socks 5 proxy on a local port
