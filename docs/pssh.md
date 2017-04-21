@@ -56,5 +56,5 @@ pssh \
 or from mco...
 
 ```
-o=$(date +pssh-%T) ; pssh -t300 -p10 -h <(mco find -C role::devbox) -o "$o" 'sudo apt-get install -y silversearcher-ag' ; grep -r . "$o" ;
+o=$(date +pssh-%T) ; pssh -O StrictHostKeyChecking=no -t300 -p10 -h <(mco find -C role::devbox) -o "$o" 'sudo apt-get install -y silversearcher-ag' ; grep -r . "$o" ;
 ```
