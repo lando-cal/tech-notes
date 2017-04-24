@@ -46,3 +46,4 @@
 ## 2017-04-16 v3.0-r31870M kongac
 
 - Installed on 2017-04-17 via `ddup --flash-latest`
+- Router locked up after 4 days
