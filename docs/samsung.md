@@ -9,4 +9,4 @@
 # TV links
 
 - [UN55D6000 specs](http://www.samsung.com/us/video/tvs/UN55D6000SFXZA-specs)
-- [UN65KS8000 specs](http://www.samsung.com/us/video/tvs/UN65C8000XFXZA-specs)
+- [UN65KS8000 specs](http://www.samsung.com/us/support/owners/product/2016-suhd-smart-tv-ks8-series)
