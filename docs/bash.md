@@ -26,11 +26,20 @@ The following can be seen by running: `stty -a`
 
 ## Remove leading zeroes
 
-`for X in 00{1..50} ; do echo $((10#${X})) ; done ;`
+```
+for X in 00{1..20..2} ; do
+  echo "$X == $((10#${X}))" ;
+done ;
+```
 
 Or...
 
-`for X in {1..50} ; do Y=00${X} ; echo $(echo ${Y} | bc) is ${X} is ${Y} ; done ;`
+```
+for X in {1..50..5} ; do
+  Y=00${X} ;
+  echo "${X} with zeroes is ${Y} and removed with bc is $(echo ${Y} | bc)" ;
+done ;
+```
 
 ## Convert base 36 to decimal
 
@@ -42,7 +51,7 @@ This converts the base 36 number z to a decimal value
 
 `ping -f & sleep 5 ; kill %1`
 
-Alternatively, use the timeout command if it's available
+Alternatively, use the timeout command if it's available. In macOS this can be installed through `homebrew install coreutils` and accessed with `gtimeout`.
 
 `timeout 300 cmd`
 
@@ -56,8 +65,13 @@ For date stuff, see date, because it's different depending on platform.
 
 ## Show RANDOM statistics
 
-`for X in {0..9999} ; do echo $(($RANDOM % 5 + 1)) ; done | sort | uniq -c`
-
+```
+for X in {0..9999} ; do
+  echo $(($RANDOM % 5)) ;
+done |
+sort |
+uniq -c
+```
 ## named pipes
 
 `mkfifo baz ; ps aux > baz` then in another terminal `cat baz`
@@ -83,8 +97,8 @@ date "+%F %T%z $0 This is stderr" >&2
 ## Show size of each user's home folder
 
 ```
-getent passwd \
-| while IFS=: read -r user _ uid _ _ home _ ; do
+getent passwd |
+while IFS=: read -r user _ uid _ _ home _ ; do
   if [[ $uid -ge 500 ]] ; then
     printf "$user " ;
     sudo du -sh $home ;
@@ -96,9 +110,7 @@ done
 
 `mkdir temp ; cd !!:*`
 
-Be aware of the location of the tokens. eg: `mkdir -p {foo,bar}/{a,b,c} ; stat !!:*` creates a problem because you can't `stat -p` so you must:
-
-`stat -p !!:2*`
+Be aware of the location of the tokens. eg: `mkdir -p {foo,bar}/{a,b,c} ; stat !!:*` creates a problem because you can't `stat -p` so you must `stat -p !!:2*`
 
 ## Debug a script
 
@@ -112,11 +124,49 @@ Or debug with a function:
 
 ## Find where all the inodes are
 
-`find ~/ -type d -print0 | xargs -I %% -0 bash -c "echo -n %% ; ls -a '%%' | wc -l" >> ~/inodes.txt`
+```
+find ~/ -type d -print0 |
+xargs -I %% -0 bash -c "echo -n %% ; ls -a '%%' | wc -l" >> ~/inodes.txt
+```
 
 ## Build and print an array
 
-`array=("one"); array+=("two" "three"); echo "${array[@]}"`
+```
+array=("one is the first element");
+array+=("two is the second element" "three is the third");
+echo "${array[@]}"
+```
+
+This is useful for building command line strings. For example, `gpsbabel` requires each input file to be prepended with `-f`. The following script takes a list of files and uses a bash array to create a command line in the form of `gpsbabel -i gpx -f input_file_1.gpx -f input_file_2.gpx -o gpx -F output.gpx`
+
+```
+#!/usr/bin/env bash
+
+# Check for at least one argument, print usage if fail
+if [ $# -lt 2 ] ; then
+    echo "This script merges gpx files and requires at least two gpx files passed as arguments. Output is output.gpx";
+    echo "Usage:    $0 <gpx file> <gpx file> [...<gpx file>]";
+    exit 1;
+fi
+
+# Create an array of arguments to pass to gpsbabel
+args=();
+for f in "$@" ; do
+    if [ -f "$f" ] || [ -h "$f" ] ; then
+        args+=( "-f" "$f" );
+    else
+        echo "Skipping $f, it's not a file or symlink."
+    fi
+done;
+
+### Verify we have at least two files to work with
+if [ "${#args[@]}" -lt 4 ] ; then
+    echo "We don't have enough actual files to work with. Exiting."
+    exit 1
+fi
+
+gpsbabel -i gpx "${args[@]}" -o gpx -F output.gpx
+```
 
 ## Build and print an associative array (dict, hash)
 
