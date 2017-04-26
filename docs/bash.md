@@ -118,6 +118,19 @@ Or debug with a function:
 
 `array=("one"); array+=("two" "three"); echo "${array[@]}"`
 
+## Build and print an associative array (dict, hash)
+
+```
+declare -A animals=(
+  ["cow"]="moo"
+  ["dog"]="woof woof"
+  ["cat"]="meow"
+) ;
+for animal in "${!animals[@]}" ; do
+  echo "The $animal says '${animals[$animal]}'" ;
+done ;
+```
+
 ## Show permissions in rwx and octal format
 
 - Linux: `stat -c '%A %a %n' filename`
