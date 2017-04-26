@@ -151,11 +151,11 @@ fi
 
 # Create an array of arguments to pass to gpsbabel
 args=();
-for f in "$@" ; do
-    if [ -f "$f" ] || [ -h "$f" ] ; then
-        args+=( "-f" "$f" );
+for item in "$@" ; do
+    if [ -f "$item" ] || [ -h "$item" ] ; then
+        args+=( "-f" "$item" );
     else
-        echo "Skipping $f, it's not a file or symlink."
+        echo "Skipping $item, it's not a file or symlink."
     fi
 done;
 
