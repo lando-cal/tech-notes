@@ -1,10 +1,12 @@
-#
-
 launchd is MacOS X's init system.
 
 # Example
 
-We have to specify `/bin/bash` as the first arg so OS X doesn't complain about DRM or mach-o executable shizz.
+## Watch Folder
+
+This user LaunchAgent would be placed into `$HOME/Library/LaunchAgents/`.
+
+We have to specify `/bin/bash` as the first ProgramArgument so OS X doesn't complain about DRM or mach-o executable shizz. This effectively limits us to bash 3.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
