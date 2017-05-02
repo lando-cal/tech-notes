@@ -47,3 +47,7 @@
 
 - Installed on 2017-04-17 via `ddup --flash-latest`
 - Router locked up after 4 days
+
+## 2017-04-30 v3.0-r31920M kongac
+
+- Installed on 2017-05-02 via `ddup --flash-latest`
