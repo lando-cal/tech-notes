@@ -5,3 +5,8 @@
 
 - 3DSXL screen is ~ 9x11 Lego units
 - 3DSXL outside is 20x12 Lego units
+
+# Emulation
+
+- [Citra 3DS emulator](https://citra-emu.org)
+- [Dumping cartridges](https://citra-emu.org/wiki/dumping-game-cartridges/)

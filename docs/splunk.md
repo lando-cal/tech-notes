@@ -11,6 +11,12 @@ Enterprise log consumption and analysis.
 | REST /services/data/indexes | dedup title | table title
 ```
 
+## Get a list of sourcetypes
+
+```
+| metadata type=sourcetypes index=* OR index=_*
+```
+
 ## CFEngine runs per hour by version
 
 ```
