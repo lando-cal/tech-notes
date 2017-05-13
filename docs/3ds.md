@@ -3,4 +3,5 @@
 
 # Lego + 3DS notes
 
-- 3DSXL screen is ~ 9x11 lego units
+- 3DSXL screen is ~ 9x11 Lego units
+- 3DSXL outside is 20x12 Lego units
