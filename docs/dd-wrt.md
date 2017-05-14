@@ -24,7 +24,7 @@
 
 ## 2017-03-26 v3.0-r31575M kongac
 
-- Installed on 2017-03-21 via `ddup --flash-latest`
+- Installed on 2017-03-21
 - Appears to have fixed the hard lock-ups
 
 ## 2017-03-26 v3.0-r31780M kongac
@@ -34,20 +34,25 @@
 
 ## 2017-03-31 v3.0-r31800M kongac
 
-- Installed on 2017-04-01 via `ddup --flash-latest`
+- Installed on 2017-04-01
 - 1 router lockup 3 days after installation
 - 2 router lockups on day 4
 
 ## 2017-04-08 v3.0-r31830M kongac
 
-- Installed on 2017-04-07 via `ddup --flash-latest`
+- Installed on 2017-04-07
 - Locked up after 10 days
 
 ## 2017-04-16 v3.0-r31870M kongac
 
-- Installed on 2017-04-17 via `ddup --flash-latest`
+- Installed on 2017-04-17
 - Router locked up after 4 days
 
 ## 2017-04-30 v3.0-r31920M kongac
 
-- Installed on 2017-05-02 via `ddup --flash-latest`
+- Installed on 2017-05-02
+- Had periodic lockups
+
+## 2017-05-11 v3.0-r31980M kongac
+
+- Installed on 2017-05-14
