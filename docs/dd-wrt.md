@@ -56,3 +56,4 @@
 ## 2017-05-11 v3.0-r31980M kongac
 
 - Installed on 2017-05-14
+- Experienced wifi and dhcp problems within 24 hours
