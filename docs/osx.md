@@ -12,11 +12,19 @@ From [http://krypted.com/mac-security/command-line-firewall-management-in-os-x-1
 - /usr/libexec/ApplicationFirewall/socketfilterfw
 
 ## Tricks
+### Show hardware info
+
+```
+system_profiler SPHardwareDataType
+```
+
 ### Install package from CLI
 
 ```
 sudo installer -pkg /Volumes/ExifTool-9.16/ExifTool-9.16.pkg -target /
 ```
+
+See also: <https://brew.sh/>
 
 ### Start FTP server
 
