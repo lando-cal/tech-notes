@@ -175,34 +175,43 @@ alter table raw_flickr_data CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_uni
 ### Select values and don't show duplicates
 
 ```
-select col from servers group by col ;
+SELECT col from servers group by col ;
 ```
 
 ### Select photo_id and discard duplicates (uniq)
 
 ```
-select photo_id from photo_sizes group by photo_id ;
+SELECT photo_id from photo_sizes group by photo_id ;
 ```
 
 ### Select and count unique pairs of columns
 
 ```
-select model, unit, count(*) as n from servers group by model, unit having n > 1 order by model asc ;
+SELECT model, unit, count(*) as n from servers group by model, unit having n > 1 order by model asc ;
 ```
 
 ### Select the count of rows in a table
 
 ```
-select count(*) from flixplor where o_height > 100 ;
+SELECT count(*) from flixplor where o_height > 100 ;
 ```
 
 ### Do some math to create a new column during a select
 
 ```
-select photo_id,last_retrieval,o_height,o_width,(o_height * o_width) as pixels from flixplor
+SELECT photo_id,last_retrieval,o_height,o_width,(o_height * o_width) as pixels from flixplor
 where last_reposted < from_unixtime('1384268667') or last_reposted is NULL
 order by (o_height * o_width) limit 10 ;
 ```
+
+### Transform datetime into a date diff
+This selects the number of hours since the given datestamp instead of the datestamp itself.
+
+```
+SELECT TIMESTAMPDIFF(HOUR, date_taken, NOW()) from photos ;
+```
+
+See also DATEDIFF.
 
 ## Statement explanations
 
@@ -211,7 +220,7 @@ The EXPLAIN statement can give you additional info about how complex your statem
 ### Explain select
 
 ```
-mysql> explain select *,(rating_sum / rating_count) as average from images where (rating_sum / rating_count) > 20 or rating_count=0 ORDER BY RAND() LIMIT 1 ;
+mysql> explain SELECT *,(rating_sum / rating_count) as average from images where (rating_sum / rating_count) > 20 or rating_count=0 ORDER BY RAND() LIMIT 1 ;
 +----+-------------+--------+------+---------------+------+---------+------+--------+----------------------------------------------+
 | id | select_type | table  | type | possible_keys | key  | key_len | ref  | rows   | Extra                                        |
 +----+-------------+--------+------+---------------+------+---------+------+--------+----------------------------------------------+
