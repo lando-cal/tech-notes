@@ -123,6 +123,7 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 - [The Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 - [The Python IAQ: Infrequently Answered Questions](http://norvig.com/python-iaq.html)
 - [Why I use py.test and you probably should too](http://halfcooked.com/presentations/pyconau2013/why_I_use_pytest.html)
+- [PyCon 2017 videos](https://www.youtube.com/channel/UCrJhliKNQ8g0qoE_zvL8eVg)
 
 ## Decorator links
 
