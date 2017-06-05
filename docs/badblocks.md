@@ -11,7 +11,7 @@ badblocks is a program to test storage devices for bad blocks. - <https://wiki.a
 # -b 4096 byte blocks
 # -t random test pattern
 # -o output file containing list of bad blocks, which can be passed back to badblocks, fsck or mke2fs
-adblocks -v -s -w -b 4096 -t random -o ~/sdc.txt /dev/sdc
+badblocks -v -s -w -b 4096 -t random -o ~/sdc.txt /dev/sdc
 ```
 
 # See also
