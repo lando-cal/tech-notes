@@ -59,3 +59,7 @@
 - Experienced wifi problem, dhcp problem, and routing problems within 24 hours
 - Experienced the same problems within 12 hours after reboot
 - Uptime peak is 9 days
+
+## 2017-06-03 v3.0-r32170M kongac
+
+- Installed on 2017-06-08
