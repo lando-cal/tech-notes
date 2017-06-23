@@ -26,3 +26,7 @@ smartctl -A -f brief /dev/sda
 ```
 smartctl -x /dev/sda
 ```
+
+# See Also
+
+- <https://www.backblaze.com/blog/what-smart-stats-indicate-hard-drive-failures/>
