@@ -63,3 +63,5 @@
 ## 2017-06-03 v3.0-r32170M kongac
 
 - Installed on 2017-06-08
+- Sometimes wireless clients are unable to connect to the network.
+- Sometimes the router becomes inaccessable to clients even though it is still up.

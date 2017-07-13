@@ -49,3 +49,9 @@ vagrant box outdated --machine-readable | \
 awk -F, '$4 == "warn" {print; exit 1}' || \
 vagrant box update
 ```
+
+## Show status of all running Vagrant boxes, not just the one in the CWD
+
+```
+vagrant global-status
+```
