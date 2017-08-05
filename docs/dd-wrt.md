@@ -65,3 +65,7 @@
 - Installed on 2017-06-08
 - Sometimes wireless clients are unable to connect to the network.
 - Sometimes the router becomes inaccessable to clients even though it is still up.
+
+## 2017-08-02 DD-WRT v3.0-r33000M kongac
+
+- Installed on 2017-08-05
