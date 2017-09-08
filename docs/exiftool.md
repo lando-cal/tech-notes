@@ -156,12 +156,13 @@ exiftool \
 In iOS, if you have Live Photo enabled it creates little movies each time you take a photo. While these can be very interesting context around photos, they can be quite irritating if you're playing through a collection of videos where these are mixed with videos of more moderate duration. The following code snip separates videos with a duration of more than 10 seconds from those with equal or lesser duration.
 
 ```
-# -TestName is used here so it does not destroy data. Replace this with FileName to make this actually work
-# $Duration# has the # sign appended to make this tag machine readable so it can be accurately compared
-# exiftool does not support if else syntax, so for the else condition you must run a second command
+# -TestName is used here so it does not destroy data. Replace this with FileName to make this actually work.
+# $Duration# has the # sign appended to make this tag machine readable so it can accurately be compared.
+# We must use perl's numeric comparisons (>, <=), not string comparisons (gt, le)
+# exiftool does not support if else syntax, so for the else condition you must run a second command.
 
-long_args=(  "-TestName<${opt}" '-d' "${working_path}/long/%Y/%m/%Y%m%d-%H-%M-%S%%-c.%%le"  '-if' '$Duration# gt 10' )
-short_args=( "-TestName<${opt}" '-d' "${working_path}/short/%Y/%m/%Y%m%d-%H-%M-%S%%-c.%%le" '-if' '$Duration# le 10' )
+long_args=(  "-TestName<${opt}" '-d' "${working_path}/long/%Y/%m/%Y%m%d-%H-%M-%S%%-c.%%le"  '-if' '${Duration#} >  10' )
+short_args=( "-TestName<${opt}" '-d' "${working_path}/short/%Y/%m/%Y%m%d-%H-%M-%S%%-c.%%le" '-if' '${Duration#} <= 10' )
 
 find "${PWD}" -maxdepth 1 -type f -print0 | xargs -0 -r exiftool "${long_args[@]}"
 find "${PWD}" -maxdepth 1 -type f -print0 | xargs -0 -r exiftool "${short_args[@]}"
