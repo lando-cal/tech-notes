@@ -24,6 +24,7 @@ Machine learning is the subfield of computer science that, according to Arthur S
 - [FastML: Machine Learning Made Easy](http://fastml.com)
 - [Tensorflow](https://www.tensorflow.org/)
 - [My Neural Network isn't working! What should I do?](http://theorangeduck.com/page/neural-network-not-working)
+- [Machine Learning Recipes with Josh Gordon - Google Developers](https://www.youtube.com/watch?v=cKxRvEZd3Mw&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal)
 
 # See Also
 
