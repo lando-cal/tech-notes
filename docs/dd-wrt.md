@@ -69,3 +69,9 @@
 ## 2017-08-02 DD-WRT v3.0-r33000M kongac
 
 - Installed on 2017-08-05
+- Quite stable
+
+## 2017-10-22 DD-WRT v3.0-r33575M kongac
+
+- Installed on 2017-10-22
+- Seeing lock-ups and wifi unavailability after 24 hours
