@@ -75,3 +75,4 @@
 
 - Installed on 2017-10-22
 - Seeing lock-ups and wifi unavailability after 24 hours
+- Seeing more lock-ups and wifi unavailability hours after restart
