@@ -32,7 +32,7 @@ diskutil apfs <verb> with no options will provide help on that verb
 
 # File clones
 
-APFS supports deduplicated file copies, which it calls clones. Copying a file by option-dragging it in Finder creates a file clone, but copying a file using `cp` does not, which is unfortunate. Creating clones of any size file instantaneous because no file data is actually being copied. This differs from hard links because if you modify the clone, only the new blocks will be written to disk, and the source of the cloned file will not be modified.
+APFS supports deduplicated file copies, which it calls clonefiles. Copying a file by option-dragging it in Finder creates a clonefile. To create a clonefile on the CLI use `cp -c src dst`. Creating clonefiless of any size file is instantaneous because no file data is actually being copied. This differs from hard links because if you modify the clone, only the new blocks will be written to disk, and the source of the cloned file will not be modified.
 
 # Snapshots
 
