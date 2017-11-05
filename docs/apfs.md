@@ -60,6 +60,7 @@ com.apple.TimeMachine.2017-11-04-182813
 ```
 $ mkdir snap_test
 $ sudo mount_apfs -s com.apple.TimeMachine.2017-11-04-192829 / "${PWD}/snap_test"
+```
 
 ## Delete a snapshot
 
