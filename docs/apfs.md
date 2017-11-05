@@ -28,25 +28,47 @@ Usage:  diskutil [quiet] ap[fs] <verb> <options>
 diskutil apfs <verb> with no options will provide help on that verb
 ```
 
+# Snapshots
+
+Snapshots appear to be tied pretty directly to Time Machine, and do not appear to be general purpose. There appear to be many limitations in how they can be used, and what information you can get about them.
+
 ## Create a snapshot
 
-`sudo tmutil localsnapshot`
+```
+$ sudo tmutil localsnapshot
+Created local snapshot with date: 2017-11-04-183728
+```
 
 ## Show snapshots
 
-`sudo tmutil listlocalsnapshots /`
+```
+$ sudo tmutil listlocalsnapshots /
+com.apple.TimeMachine.2017-11-01-161748
+com.apple.TimeMachine.2017-11-02-100755
+com.apple.TimeMachine.2017-11-03-084837
+com.apple.TimeMachine.2017-11-04-182813
+```
 
 ## Delete a snapshot
 
 You can only delete snapshots based off of their date
 
-`sudo tmutil deletelocalsnapshots 2017-11-04-182713`
+```
+$ sudo tmutil deletelocalsnapshots 2017-11-04-183813
+Deleted local snapshot '2017-11-04-183813'
+```
 
 ## Thin out snapshots
 
-On the given drive, reclaim the given space by thinning out snapshots.
+On the given drive, reclaim the given space by thinning out snapshots. As of tmutil 4.0.0, you cannot use any data unit other than bytes. (EG: 1G or 1GB will not work)
 
-`sudo tmutil thinlocalsnapshots / 1G`
+```
+$ sudo tmutil thinlocalsnapshots / 250000000
+Thinned local snapshots:
+2017-11-04-184425
+2017-11-04-184433
+2017-11-04-184440
+```
 
 # Links
 - [Apple File System](https://en.wikipedia.org/wiki/Apple_File_System)
