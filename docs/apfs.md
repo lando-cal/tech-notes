@@ -34,6 +34,8 @@ diskutil apfs <verb> with no options will provide help on that verb
 
 Snapshots appear to be tied pretty directly to Time Machine, and do not appear to be general purpose. There appear to be many limitations in how they can be used, and what information you can get about them.
 
+There was previously a tool called `apfs_snapshot` but it was removed before macOS 10.13 was released.
+
 ## Create a snapshot
 
 You cannot choose a name for your snapshot, it is tied to the date the snapshot was taken in the form of YYYY-MM-DD-HHMMSS.
@@ -52,6 +54,12 @@ com.apple.TimeMachine.2017-11-02-100755
 com.apple.TimeMachine.2017-11-03-084837
 com.apple.TimeMachine.2017-11-04-182813
 ```
+
+## Mount a snapshot
+
+```
+$ mkdir snap_test
+$ sudo mount_apfs -s com.apple.TimeMachine.2017-11-04-192829 / "${PWD}/snap_test"
 
 ## Delete a snapshot
 
@@ -74,6 +82,17 @@ Thinned local snapshots:
 2017-11-04-184440
 ```
 
+# See also
+
+```
+/System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.util
+/System/Library/Filesystems/apfs.fs/Contents/Resources/apfs_invert
+/System/Library/Filesystems/apfs.fs/Contents/Resources/apfs_preflight_converter
+/System/Library/Filesystems/apfs.fs/Contents/Resources/apfs_stats
+```
+
 # Links
 - [Apple File System](https://en.wikipedia.org/wiki/Apple_File_System)
 - [Rich Trouton - Storing our digital lives - Mac filesystems from MFS to APFS](https://youtu.be/VUXUECpIGR0)
+- [Apple File System Guide](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html)
+- [Russ Bishop - Apple File System](http://www.russbishop.net/apple-file-system)
