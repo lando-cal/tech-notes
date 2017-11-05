@@ -76,3 +76,11 @@
 - Installed on 2017-10-22
 - Seeing lock-ups and wifi unavailability after 24 hours
 - Seeing more lock-ups and wifi unavailability hours after restart
+
+## 2017-11-03 DD-WRT v3.0-r33655M kongac
+
+- No confirmed issues, though wifi and wan instability was suspected
+
+## 2017-11-03 DD-WRT v3.0-r33655M kongac
+
+- Installed on 2017-11-04
