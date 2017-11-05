@@ -1,3 +1,5 @@
+Notes here are current as of macOS 10.13, and don't apply specifically to any other devices that run APFS.
+
 # Usage
 
 ```
@@ -34,6 +36,8 @@ Snapshots appear to be tied pretty directly to Time Machine, and do not appear t
 
 ## Create a snapshot
 
+You cannot choose a name for your snapshot, it is tied to the date the snapshot was taken in the form of YYYY-MM-DD-HHMMSS.
+
 ```
 $ sudo tmutil localsnapshot
 Created local snapshot with date: 2017-11-04-183728
@@ -51,7 +55,7 @@ com.apple.TimeMachine.2017-11-04-182813
 
 ## Delete a snapshot
 
-You can only delete snapshots based off of their date
+You can only delete snapshots based off of their date.
 
 ```
 $ sudo tmutil deletelocalsnapshots 2017-11-04-183813
