@@ -84,3 +84,4 @@
 ## 2017-11-03 DD-WRT v3.0-r33655M kongac
 
 - Installed on 2017-11-04
+- WiFi instability observed within hours
