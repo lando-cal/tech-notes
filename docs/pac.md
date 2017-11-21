@@ -1,2 +1,2 @@
-- http://findproxyforurl.com/official-toolset/
-- https://github.com/pacparser/pacparser
+- <http://findproxyforurl.com/official-toolset>
+- <https://github.com/pacparser/pacparser>
