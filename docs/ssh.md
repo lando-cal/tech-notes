@@ -6,7 +6,7 @@ The secure shell itself, very useful for administering remote systems, tunneling
 
 # scp
 
-scp is like cp, but it happens securely and allows host-to-host transfers. Very handy when used with #ssh config|ssh config and #key-based authentication|key-based authentication.
+scp is like cp, but it happens securely and allows host-to-host transfers over ssh. Very handy when used with <ssh_config> and <key-based authentication>.
 
 # sftp
 
