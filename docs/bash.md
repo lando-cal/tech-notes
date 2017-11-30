@@ -333,13 +333,36 @@ These files can change the behavior of bash.
 
 ## .bash_profile
 
-`~/.bash_profile` is executed every time you log into the system or initiate a shell. Inclusion of things that write to stdout is allowed here.
+`~/.bash_profile` is executed every time you log into the system or initiate a login shell. Inclusion of things that write to stdout is allowed here.
 
 If you want to write scripts that change your interactive shell environment, such as changing your CWD, define functions here instead of using stand-alone scripts.
 
+### Example .bash_profile
+
+The `~/.bash_profile` file can be quite long and complicated. The following example is an incomplete sample:
+
 ```
-PS1="\u@\h:\w$ "
-TMOUT="1800" # timeout variable
+export EDITOR=/usr/bin/vim
+export GZIP='-9'
+export HISTSIZE=5000
+export HISTTIMEFORMAT='%F %T%z '
+export PS1="\u@\h:\w$ "
+export TERM=xterm-256color
+export TMOUT="1800"  # log out after this many seconds of shell inactivity
+
+alias ll='ls -la'
+alias temp='tempdate=$(date +%F) ; mkdir -p ~/temp/$tempdate 2>/dev/null ; cd ~/temp/$tempdate'
+
+sprunge() { curl -F 'sprunge=<-' http://sprunge.us < "${1:-/dev/stdin}"; } # usage: sprunge FILE # or some_command | sprunge
+
+# Don't record some commands
+export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
+
+# Avoid duplicate entries
+HISTCONTROL="erasedups:ignoreboth"
+
+# Perform file completion in a case insensitive fashion
+bind "set completion-ignore-case on"
 ```
 
 ## .bashrc
