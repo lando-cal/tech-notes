@@ -1,4 +1,4 @@
-Official Amazon AWS command-line interface - https://aws.amazon.com/cli
+Official Amazon AWS command-line interface - <https://aws.amazon.com/cli>
 
 # Example usage
 
