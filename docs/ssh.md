@@ -56,14 +56,6 @@ cat hostnames.txt | while read -r host ; do
 done
 ```
 
-## Create or change a password for an ssh identity
-
-This will update the password used to unlock an ssh identity.
-
-```
-ssh-keygen -p -f ~/.ssh/id_ed25519
-```
-
 # ssh_config
 
 The user ssh config file, `~/.ssh/config`, lets you override default options. This makes it handy for command line stuff where the syntax is funky such as using non-standard ports.
@@ -155,6 +147,14 @@ If you require backwards compatibility, use 4096 bit RSA keys.
 
 ```
 ssh-keygen -b 4096 -t rsa -c "Daniel Hoherd <danielhoherd@xyzhost>"
+```
+
+## Create or change a password for an ssh identity
+
+This will update the password used to unlock an ssh identity.
+
+```
+ssh-keygen -p -f ~/.ssh/id_ed25519
 ```
 
 # Limit root login to key based auth
