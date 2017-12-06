@@ -1,10 +1,10 @@
-"Upstart is an event-based replacement for the `/sbin/init` daemon which handles starting of tasks and services during boot, stopping them during shutdown and supervising them while the system is running." - http://upstart.ubuntu.com
+"Upstart is an event-based replacement for the `/sbin/init` daemon which handles starting of tasks and services during boot, stopping them during shutdown and supervising them while the system is running." - <http://upstart.ubuntu.com>
 
 # Examples
 
 ## Start multiple instances of the same services
 
-http://upstart.ubuntu.com/cookbook/#instance
+<http://upstart.ubuntu.com/cookbook/#instance>
 
 ### Master
 ```
@@ -61,4 +61,4 @@ end script
 
 # Links
 
-- http://upstart.ubuntu.com/cookbook
+- <http://upstart.ubuntu.com/cookbook>
