@@ -36,10 +36,74 @@ For more specific versions:
 salt --versions
 ```
 
+## Show all minions
+
+### Show all responding minions
+
+```
+salt-run manage.up
+```
+
+### Show all minions in lists for up and down
+
+```
+salt-run manage.status
+```
+
+## Show the version of an installed package on all hosts
+
+```
+salt '*' pkg.version bash
+```
+
+## Install / Upgrade a package on many hosts
+
+This should be done in salt state, but sometimes you have to do a one-off.
+
+```
+salt '*dev*' pkg.install pre-commit
+```
+
 ## Run a command on a subset of hosts
 
 Check ntp stats on hadoop hosts.
 
 ```
 salt "*hadoop*" cmd.run "ntpq -p"
+```
+
+## Show IP addresses
+
+```
+salt '*itni*' network.ip_addrs
+```
+
+## Show available grains
+
+This just lists the grain keys, not the values
+
+```
+salt '*dorks*' grains.ls
+```
+
+## Show grain data for a subset of hosts
+
+This lists the keys and values
+
+```
+salt '*dorks*' grains.items
+```
+
+## Show all OS versions
+
+```
+salt '*' grains.item os
+```
+
+## Perform operation only on a given OS
+
+<https://docs.saltstack.com/en/latest/topics/targeting/compound.html>
+
+```
+salt -C 'G@lsb_distrib_codename:trusty' pkg.install cmatrix
 ```
