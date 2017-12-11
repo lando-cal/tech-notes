@@ -82,7 +82,10 @@ show GRANTS ;
 
 ## Create a new user
 
-`CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'some_pass';`\ `GRANT ALL PRIVILEGES ON databasename.* TO 'newuser'@'localhost' WITH GRANT OPTION;`
+```
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'some_pass';
+GRANT ALL PRIVILEGES ON databasename.* TO 'newuser'@'localhost' WITH GRANT OPTION;
+```
 
 ## Delete a user
 
