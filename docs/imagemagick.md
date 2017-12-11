@@ -1,5 +1,7 @@
 # ImageMagick
 
+# Overview
+
 "ImageMagick is a free and open-source software suite for displaying, converting, and editing raster image and vector image files. It can read and write over 200 image file formats." - <https://en.wikipedia.org/wiki/ImageMagick>
 
 ImageMagick is a framework for manipulating images. `convert` is the CLI front-end for it, and there are other modules/libraries for php, perl, etc..
