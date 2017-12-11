@@ -8,7 +8,7 @@ ImageMagick is a framework for manipulating images. `convert` is the CLI front-e
 
 # Limitations
 
-* Does '''NOT''' handle DNG files. In [[OS X]] use [[sips]] to do this.
+* Does '''NOT''' handle DNG files. In OS X use [sips](sips) to do this.
 
 # Techniques
 
@@ -79,7 +79,7 @@ convert *.jpg -background white -compose darken -flatten minimum.jpg
 convert *.jpg -background black -compose lighten -flatten maximum.jpg
 ```
 
-## Swap red and blue channels (for [[IR]] photos)
+## Swap red and blue channels (for IR photos)
 
 ```
 convert infile.jpg -separate -swap 0,2 -combine swapped.jpg
