@@ -1,17 +1,14 @@
 The `top` interface is a common pattern in the CLI tool world. Here are some top style tools.
 
-# Links
+# top style tools
 
-* top - The original
-* [glances](glances) - A better `top` which shows more aspects of the system.
-* htop - Top, but different.  Perhaps better.
-* iftop - Top for network interfaces
-* innotop - Top for database connections
-* iotop - Top for IO
-* nethogs - Network top that shows usage by pid.
-* ntop - Top for networking
-* powertop - Top for power usage
-
-# See also
-
-- [Top variant list](top-variant-list)
+- [atop](atop) - Linux top tool that catches short-lived processes.
+- [glances](glances) - A better `top` which shows more aspects of the system.
+- [htop](htop) - Top, but different.  Perhaps better.
+- [iftop](iftop) - Top for network interfaces.
+- [innotop](innotop) - Top for database connections.
+- [iotop](iotop) - Top for IO.
+- [nethogs](nethogs) - Network top that shows usage by pid.
+- [ntop](ntop) - Top for networking.
+- [powertop](powertop) - Top for power usage.
+- [top](top) - The original.
