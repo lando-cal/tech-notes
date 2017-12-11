@@ -44,10 +44,20 @@ salt --versions
 salt-run manage.up
 ```
 
-### Show all minions in lists for up and down
+### Show all minions, listed by hostst that are up and hosts that are down
 
 ```
 salt-run manage.status
+```
+
+Example output:
+
+```
+down:
+    - hadoop4.chn1.example
+up:
+    - appserver1.chn1.example
+    - backups1.chn1.example
 ```
 
 ## Show the version of an installed package on all hosts
