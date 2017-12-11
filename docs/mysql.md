@@ -91,6 +91,7 @@ GRANT ALL PRIVILEGES ON databasename.* TO 'newuser'@'localhost' WITH GRANT OPTIO
 
 ```
 DROP USER 'user_name'@'localhost';
+DELETE from mysql.db where User = 'user_name';
 ```
 
 ## Grant Privileges
