@@ -1,4 +1,4 @@
-# The `date` shell command
+The `date` shell command
 
 date behaves differently between gnu and bsd. In OS X you can install gnu date by doing `brew install coreutils`
 

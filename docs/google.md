@@ -1,3 +1,5 @@
+"Google LLC is an American multinational technology company that specializes in Internet-related services and products." - <https://en.wikipedia.org/wiki/Google>
+
 # Links
 
 - [Google App Script](https://developers.google.com/apps-script)

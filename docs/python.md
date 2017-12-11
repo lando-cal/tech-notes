@@ -1,3 +1,5 @@
+"Python is a programming language that lets you work more quickly and integrate your systems more effectively." - <https://www.python.org/>
+
 # Tips and techniques
 
 ## Virtual Environments

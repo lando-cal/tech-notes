@@ -1,3 +1,5 @@
+"A secret word or phrase that must be used to gain admission to something." - <https://en.oxforddictionaries.com/definition/password>
+
 # Generation
 
 ## pwgen
@@ -21,3 +23,4 @@ zni6VC3 zulu-november-india-SIX-Victor-Charlie-THREE
 # Links
 
 - <https://nakedsecurity.sophos.com/2016/08/18/nists-new-password-rules-what-you-need-to-know/>
+- <https://pages.nist.gov/800-63-3/sp800-63-3.html>
