@@ -98,17 +98,20 @@ GRANT ALL ON database.* TO 'newuser'@'localhost';
 
 ## Change root password
 
-`/usr/bin/mysqladmin -u root password 'new-password'`\ `/usr/bin/mysqladmin -u root -h hostname password 'new-password'`
+```
+/usr/bin/mysqladmin -u root password 'new-password'
+/usr/bin/mysqladmin -u root -h hostname password 'new-password'
+```
 
 or...
 
 ```
-UPDATE mysql.user SET Password=PASSWORD('password') WHERE User='user_name' AND Host='localhost';
+UPDATE mysql.user SET Password=PASSWORD('SomeNewPassword') WHERE User='user_name' AND Host='localhost';
 ```
 
 ## Create statements
 
-### Create an index on table images for column rating\_count
+### Create an index on table images for column rating_count
 
 ```
 create index rating_count on images (rating_count) ;
