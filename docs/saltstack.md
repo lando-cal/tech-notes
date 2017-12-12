@@ -22,6 +22,15 @@ Hierarchical data to be interpolated into variables in state files. Similar to h
 
 # Examples
 
+## Configure output options
+
+Unfortunately this only applies to the `salt` command, not `salt-run`, `salt-key`, etc..
+
+```
+$ cat ~/.saltrc
+output: yaml
+```
+
 ## View salt versions
 
 For simple salt version:
@@ -58,6 +67,14 @@ down:
 up:
     - appserver1.chn1.example
     - backups1.chn1.example
+```
+
+## Show any host that has had salt applied at some point
+
+This shows only accepted keys. Without the `jq` part, rejected and denied keys would also show up in this list.
+
+```
+sudo salt-key --out json | jq '.minions[]'
 ```
 
 ## Show the version of an installed package on all hosts
