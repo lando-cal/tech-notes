@@ -56,10 +56,18 @@ CREATE TABLE `photo_sizes` (
 show processlist;
 ```
 
-## Dump a database
+## Dump databases to sql files
+
+All databases
 
 ```
-mysqldump -u root -p --all-databases | gzip -9 > ~/$(date +%Y%m%d-%H%m).sql.gz
+mysqldump -u root -phunter2 --all-databases | gzip -9 > ~/$(date +%F-%H%m).sql.gz
+```
+
+Or just a single database
+
+```
+mysqldump -u root -phunter2 my_favorite_db | gzip -9 > ~/my_favorite_db-$(date +%F-%H%m).sql.gz
 ```
 
 ## Duplicate a database
