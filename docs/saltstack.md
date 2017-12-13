@@ -8,6 +8,16 @@
 
 - Glossary: <https://docs.saltstack.com/en/latest/glossary.html>
 
+## Common commands
+
+- `salt`: Salt allows for commands to be executed across a swath of remote systems in parallel. This means that remote systems can be both controlled and queried with ease.
+- `salt-call`: The salt-call  command is used to run module functions locally on a minion instead of executing them from the master. Salt-call is used to run a Standalone Minion, and was originally created for troubleshooting.
+- `salt-cloud`: Salt Cloud is the system used to provision virtual machines on various public clouds via a cleanly controlled profile and mapping system.
+- `salt-cp`: Salt copy copies a local file out to all of the Salt minions matched by the given target.
+- `salt-key`: Salt-key executes simple management of Salt server public keys used for authentication.
+- `salt-run`: salt-run is the frontend command for executing Salt Runners.  Salt runners are simple modules used to execute convenience functions on the master.
+- `salt-ssh`: Salt SSH allows for salt routines to be executed using only SSH for transport.
+
 ## State files
 
 These are *desired* state files, not the view of the current state. These are where you describe how you want the system to be
