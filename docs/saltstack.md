@@ -144,3 +144,11 @@ salt '*' grains.item os
 ```
 salt -C 'G@lsb_distrib_codename:trusty' pkg.install cmatrix
 ```
+
+## Look up grain data while logged into a minion
+
+While logged into a minion, you can view what pillar data would be applied:
+
+```
+salt-call pillar.get users
+```
