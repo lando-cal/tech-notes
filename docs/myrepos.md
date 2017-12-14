@@ -5,9 +5,7 @@
 
 ```
 for repo in ~/code/* ; do
-  if [ -d "$repo/.git" ] ; then
-    mr register "$repo"
-  fi
+  mr register "$repo"
 done
 ```
 
