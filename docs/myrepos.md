@@ -4,10 +4,14 @@
 ## Register a bunch of repos
 
 ```
-for X in ~/code/* ; do mr register "${X}" ; done ;
+for repo in ~/code/* ; do
+  if [ -d "$repo/.git" ] ; then
+    mr register "$repo"
+  fi
+done
 ```
 
-## Update all of your ~/code/ repos
+## Update all of your registered repos
 
 ```
 mr up
