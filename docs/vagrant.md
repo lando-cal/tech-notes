@@ -45,9 +45,10 @@ vagrant box remove ubuntu/trusty64 --box-version 20151201.0.0
 This may fail in some circumstances, I haven't tested it exhaustively.
 
 ```
-vagrant box outdated --machine-readable | \
-awk -F, '$4 == "warn" {print; exit 1}' || \
-vagrant box update
+vagrant box outdated --machine-readable --global |
+  awk -F, '$4 == "warn" {print $5; exit 1}' |
+  awk -F"'" '{print $2}' |
+  xargs -n1 vagrant box update --box
 ```
 
 ## Show status of all running Vagrant boxes, not just the one in the CWD
