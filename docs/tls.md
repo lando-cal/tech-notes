@@ -1,4 +1,4 @@
-SSL is the secure sockets layer, encrypted IP traffic and stuff stuff.
+TLS is Transport Layer Security. It used to be called SSL: the Secure Sockets Layer. It has to do with encrypted IP traffic and stuff stuff.
 
 # Apache SSL steps
 
