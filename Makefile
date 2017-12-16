@@ -3,7 +3,7 @@ all: deploy
 clean:
 	git clean -fdX
 
-deploy: clean
+deploy:
 	mkdocs gh-deploy --remote-name github --force
 
 hooks:
