@@ -3,7 +3,11 @@ all: deploy
 clean:
 	git clean -fdX
 
-deploy:
+requirements:
+	pip3 install --user --upgrade mkdocs || \
+	pip install --user --upgrade mkdocs
+
+deploy: requirements
 	mkdocs gh-deploy --remote-name github --force
 
 hooks:
