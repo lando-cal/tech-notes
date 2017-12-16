@@ -34,7 +34,7 @@ Or
 
 ```
 diff <(openssl rsa -in my.key -modulus | grep Modulus) <(openssl x509 -in my.crt -modulus | grep Modulus)
-````
+```
 
 Or as a function:
 
