@@ -1,0 +1,3 @@
+- <http://geojson.org>
+- <https://tools.ietf.org/html/rfc7946>
+- <https://www.gpsbabel.org>
