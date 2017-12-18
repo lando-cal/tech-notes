@@ -87,6 +87,14 @@ This shows only accepted keys. Without the `jq` part, rejected and denied keys w
 sudo salt-key --out json | jq '.minions[]'
 ```
 
+## Accept a key that has not yet been accepted
+
+After finding the hostname in the Unaccepted list returned by `salt-key`:
+
+```
+salt-key -a hostname.example.com
+```
+
 ## Show the version of an installed package on all hosts
 
 ```
