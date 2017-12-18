@@ -2,6 +2,8 @@
 
 # Tips and techniques
 
+- Don't use `assert` statements for regular validation. `assert` statements can be disabled at the interpreter level, which would vastly change the flow of your code if they were used widespread.
+
 ## Virtual Environments
 
 Virtual environments isolate your project away from the system's python interpreter and modules, so you can have full control over what code is available to your project. This makes it easy to develop, debug, and deploy to a new system. It's basically always a good idea to use a virtual environment. You will thank yourself later by learning this one up front.
