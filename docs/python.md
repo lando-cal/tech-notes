@@ -4,11 +4,18 @@
 
 - Don't use `assert` statements for regular validation. `assert` statements can be disabled at the interpreter level, which would vastly change the flow of your code if they were used widespread.
 
+## Variable names
+
+- `_varname` - Semi-private. Basically a convention that developers use to indicate that the scope of a variable is local, but this locality is not enforced by the interpreter.
+- `__varname` - Private variable in name, but not in logic or security. The interpreter mangles the name of the var to make it globally unique, but it is still globally accessible.
+
 ## Virtual Environments
 
 Virtual environments isolate your project away from the system's python interpreter and modules, so you can have full control over what code is available to your project. This makes it easy to develop, debug, and deploy to a new system. It's basically always a good idea to use a virtual environment. You will thank yourself later by learning this one up front.
 
-### Creating a venv
+### Virtual environments using venv
+
+#### Creating a venv
 
 ```
 echo "venv" >> .gitignore
@@ -20,7 +27,7 @@ pip freeze > requirements.txt
 deactivate
 ```
 
-### Recreating a venv
+#### Recreating a venv
 
 ```
 virtualenv venv
@@ -30,7 +37,7 @@ pip install -r requirements.txt
 deactivate
 ```
 
-### Use venv to work around missing pip
+#### Use venv to work around missing pip
 
 This is mostly useful for installing for your user, since if you can't install pip you won't be able to install into system-wide locations.
 
@@ -38,11 +45,32 @@ This is mostly useful for installing for your user, since if you can't install p
 virtualenv venv --system-site-packages && venv/bin/pip install --user $PACKAGENAME && rm -rf venv
 ```
 
-## Upgrade pip packages:
+### Virtual environments with pipenv
+
+"Pipenv — the officially recommended Python packaging tool from Python.org, free (as in freedom). Pipenv is a tool that aims to bring the best of all packaging worlds (bundler, composer, npm, cargo, yarn, etc.) to the Python world. Windows is a first–class citizen, in our world." - <https://docs.pipenv.org>
+
+`pipenv` is the new-school 2017 way of doing virtual environments. pipenv creates a file called `Pipfile` whenever you install packages using the `pipenv` command. Once you have created a pipenv for the CWD, any subdirs will use that pipenv and not create new environments when you issue pipenv commands. This is a more robust system, but as of 2017 is not widely used.
+
+When using pipenv, any packages using `pip install` are not included in the virtual environment. You must use `pipenv install`.
+
+#### Creating a virtual environment using pipenv
 
 ```
-pip install pip-tools
-pip-review --interactive
+cd project_dir
+pipenv --three  # to create a python 3 virtual environment
+pipenv install bpython boto3
+pipenv shell  # this spawns a subshell with the new python environment
+# interact with your python environment
+exit
+```
+
+#### Recreate a pipenv
+
+```
+cd project_dir
+pipenv shell  # This automatically enforces the environment described in Pipfile
+# interact with your python environment
+exit
 ```
 
 ## Import module from absolute path
