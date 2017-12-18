@@ -8,6 +8,8 @@
 
 - `_varname` - Semi-private. Basically a convention that developers use to indicate that the scope of a variable is local, but this locality is not enforced by the interpreter.
 - `__varname` - Private variable in name, but not in logic or security. The interpreter mangles the name of the var to make it globally unique, but it is still globally accessible.
+- `var_` - Used to get around shadowing built-in variable names. EG: `list_` won't conflict with `list()`
+- `__magic_method__` - See <http://www.diveintopython3.net/special-method-names.html>
 
 ## Virtual Environments
 
