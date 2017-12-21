@@ -15,7 +15,7 @@ randomize-mtime() {
   seconds="$(( $(date +%s) - $(( RANDOM * 32767 )) - RANDOM))"
   new_mtime="$(gdate -d @"${seconds}" "+%Y%m%d%H%M.%S")"
   echo "${new_mtime} $*" 1>&2
-  touch -t -m "${new_mtime}" "$@"
+  touch -m -t "${new_mtime}" "$@"
 }
 
 # change mtime of all files to the same random mtime
