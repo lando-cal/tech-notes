@@ -15,6 +15,7 @@
 - `salt-cloud`: Salt Cloud is the system used to provision virtual machines on various public clouds via a cleanly controlled profile and mapping system.
 - `salt-cp`: Salt copy copies a local file out to all of the Salt minions matched by the given target.
 - `salt-key`: Salt-key executes simple management of Salt server public keys used for authentication.
+- `salt-minion`: The Salt minion daemon, receives commands from a remote Salt master.
 - `salt-run`: salt-run is the frontend command for executing Salt Runners.  Salt runners are simple modules used to execute convenience functions on the master.
 - `salt-ssh`: Salt SSH allows for salt routines to be executed using only SSH for transport.
 
@@ -103,7 +104,7 @@ salt '*' pkg.version bash
 
 ## Install / Upgrade a package on many hosts
 
-This should be done in salt state, but sometimes you have to do a one-off.
+This should be done in salt state, but sometimes you have to do a one-off. More info on glob matching is here: <https://docs.saltstack.com/en/latest/topics/targeting/globbing.html>
 
 ```
 salt '*dev*' pkg.install pre-commit
@@ -159,4 +160,12 @@ While logged into a minion, you can view what pillar data would be applied:
 
 ```
 salt-call pillar.get users
+```
+
+## Append a username to the user grain and apply the users saltstate
+
+```
+salt '*searchstring*' grains.append users user-to-add
+salt '*searchstring*' state.sls users
+salt '*searchstring*' user.list_users --out yaml > list_users.yaml
 ```
