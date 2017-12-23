@@ -88,3 +88,10 @@ convert infile.jpg -separate -swap 0,2 -combine swapped.jpg
 ```
 convert -delay 20 -loop 0 *.jpg animation.gif
 ```
+
+# See Also
+
+- [exiftool](exiftool)
+- [graphicsmagick](graphicsmagick)
+- [jpeginfo](jpeginfo)
+- [sips](sips)

@@ -24,3 +24,10 @@ In the following example it is important to leave off the trailing slash on the 
 ```
 find . -type f -exec sips --resampleHeightWidthMax 800 --setProperty format jpeg {} --out /Volumes/B-Tron/all-jpgs \;
 ```
+
+# See Also
+
+- [exiftool](exiftool)
+- [graphicsmagick](graphicsmagick)
+- [imagemagick](imagemagick)
+- [jpeginfo](jpeginfo)

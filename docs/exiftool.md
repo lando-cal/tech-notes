@@ -167,3 +167,10 @@ short_args=( "-TestName<${opt}" '-d' "${working_path}/short/%Y/%m/%Y%m%d-%H-%M-%
 find "${PWD}" -maxdepth 1 -type f -print0 | xargs -0 -r exiftool "${long_args[@]}"
 find "${PWD}" -maxdepth 1 -type f -print0 | xargs -0 -r exiftool "${short_args[@]}"
 ```
+
+# See Also
+
+- [graphicsmagick](graphicsmagick)
+- [imagemagick](imagemagick)
+- [jpeginfo](jpeginfo)
+- [sips](sips)
