@@ -8,7 +8,7 @@
 jpeginfo -c *
 ```
 
-## Test integrity of fiels and delete any corrupt files
+## Test integrity of files and delete any corrupt files
 
 ```
 jpeginfo -c -d *
