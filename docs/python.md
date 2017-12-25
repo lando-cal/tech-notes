@@ -174,3 +174,4 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 - <https://pypi.python.org/pypi/watchdog> - cross-platform filesystem events API
 - <https://github.com/giampaolo/psutil/> - system information
 - <https://github.com/timothycrosley/hug> - simplified web API creation
+- <http://python-future.org> - "python-future is the missing compatibility layer between Python 2 and Python 3. It allows you to use a single, clean Python 3.x-compatible codebase to support both Python 2 and Python 3 with minimal overhead."
