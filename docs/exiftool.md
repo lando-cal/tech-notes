@@ -55,14 +55,24 @@ exiftool -alldates='1900:01:01 01:01:01' *
 
 ## Rename GPX files based on the capture time
 
+You will end up with a filename like `2013-09-30-23-35-40.gpx` based off of the _first_ trkpt timestamp.
+
 ```
-exiftool "-FileName<GpxTrkTrksegTrkptTime" *.gpx ; prename 's/$/.gpx/' *Z
+exiftool -d '%Y%m%d-%H-%M-%S' '-FileName<${GpxTrkTrksegTrkptTime;tr/ /-/;tr/:/-/;tr(/Z/)()d;}%-c.gpx' *.gpx
 ```
 
 ## Rename files to their original date and time using a lower case file extension
 
 ```
 exiftool "-FileName<CreateDate" -d "%Y%m%d-%H-%M-%S%%-c.%%le" *.jpg
+```
+
+## Rename files using a combination of tags
+
+The '%-c' string here adds a '-1' if there are two of the same target filename, and increments if there are more, but is null for unique filenames.
+
+```
+exiftool -d '%Y%m%d-%H-%M-%S' '-FileName<${CreateDate;}_${Headline;}%-c.%e'
 ```
 
 ## Set file modify time to image capture time
