@@ -72,3 +72,9 @@ while sleep $(date "+60 - %S.%N" | bc) 240 ; do date "+%F %T.%N" ; done ;
 date -v-2m # two months ago
 date -v+1H # one hour in the future
 ```
+
+### Convert epoch seconds to string date
+
+```
+date -r 1514308711
+```
