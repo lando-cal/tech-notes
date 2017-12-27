@@ -129,7 +129,7 @@ salt '*itni*' network.ip_addrs
 This just lists the grain keys, not the values
 
 ```
-salt '*dorks*' grains.ls
+salt '*minecraft*' grains.ls
 ```
 
 ## Show grain data for a subset of hosts
@@ -165,7 +165,7 @@ salt-call pillar.get users
 ## Append a username to the user grain and apply the users saltstate
 
 ```
-salt '*searchstring*' grains.append users user-to-add
+salt '*searchstring*' grains.append accounts user-to-add
 salt '*searchstring*' state.sls users
 salt '*searchstring*' user.list_users --out yaml > list_users.yaml
 ```
