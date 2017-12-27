@@ -150,6 +150,7 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 - [Code Like a Pythonista: Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
 - [Dive Into Python 3](http://www.diveintopython3.net/)
 - [Google's Python Class](https://developers.google.com/edu/python/?csw=1)
+- [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
 - [How to Think Like a Computer Scientist](http://interactivepython.org/courselib/static/thinkcspy/index.html) - iPython notebook on python data science
 - [Intermediate and Advanced Software Carpentry in Python](http://ivory.idyll.org/articles/advanced-swc/)
 - [Learn Python dot org](http://www.learnpython.org/)
