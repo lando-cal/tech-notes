@@ -129,7 +129,7 @@ salt '*itni*' network.ip_addrs
 This just lists the grain keys, not the values
 
 ```
-salt '*dorks*' grains.ls
+salt '*minecraft*' grains.ls
 ```
 
 ## Show grain data for a subset of hosts
@@ -162,10 +162,22 @@ While logged into a minion, you can view what pillar data would be applied:
 salt-call pillar.get users
 ```
 
-## Append a username to the user grain and apply the users saltstate
+## Append a username to the accounts grain and apply the users saltstate
 
 ```
-salt '*searchstring*' grains.append users user-to-add
+salt '*searchstring*' grains.append accounts user-to-add
 salt '*searchstring*' state.sls users
 salt '*searchstring*' user.list_users --out yaml > list_users.yaml
+```
+
+Or as a function to run locally
+
+```
+add_user_via_salt_grains() {
+  new_user=$1
+  id "${new_user}" && return 0
+  sudo salt-call grains.append accounts "$new_user" && \
+  sudo salt-call state.sls users
+  id "$new_user"
+}
 ```
