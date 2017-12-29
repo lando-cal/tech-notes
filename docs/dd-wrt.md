@@ -79,9 +79,9 @@
 
 ## 2017-11-03 DD-WRT v3.0-r33655M kongac
 
-- No confirmed issues, though wifi and wan instability was suspected
-
-## 2017-11-03 DD-WRT v3.0-r33655M kongac
-
 - Installed on 2017-11-04
 - WiFi instability observed within hours
+
+## 2017-11-03 DD-WRT v3.0-r33675M kongac
+
+- 2017-12-25: Discovered this firmware had been installed
