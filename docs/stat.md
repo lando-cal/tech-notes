@@ -8,7 +8,13 @@ show filesystem metadata about a file
 stat -c "%a/%A  %y %G(%g):%U(%u) %N" /srv/log/apache2/
 ```
 
-# -c variables
+## Sum file sizes
+
+```
+stat -c '%s' *2016* | awk '{sum += $1} END {print sum}'
+```
+
+# GNU stat -c variables
 
 The valid format sequences for files (without --filesystem):
 
