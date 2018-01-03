@@ -185,6 +185,7 @@ git whatchanged --since="18 hours ago" --until="6 hours ago" -p
 
 ```
 git blame <filename>
+```
 
 ### Show non-whitespace changes in blame
 
