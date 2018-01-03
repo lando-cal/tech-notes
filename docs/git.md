@@ -177,6 +177,22 @@ or...
 ```
 git whatchanged --since="18 hours ago" --until="6 hours ago" -p
 ```
+## git blame
+
+`git blame` shows information about the commit associated with each line of a file.
+
+### Simple usage
+
+```
+git blame <filename>
+
+### Show non-whitespace changes in blame
+
+When somebody has reformatted code but didn't make any code changes, this will show the prior commits where something more than whitespace changed.
+
+```
+git blame -w <filename>
+```
 
 ## git log
 
