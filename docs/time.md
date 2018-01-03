@@ -77,7 +77,27 @@ RFC 3339 is considered a profile of ISO 8601\. It defines a profile of ISO 8601 
 
 - <https://tools.ietf.org/html/rfc3339>
 
-# Examples
+# Leap Seconds
+
+"A leap second is a one-second adjustment that is occasionally applied to [Coordinated Universal Time (UTC)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) in order to keep its time of day close to the mean solar time, or [UT1](https://en.wikipedia.org/wiki/Universal_Time#Versions)." - <https://en.wikipedia.org/wiki/Leap_second>
+
+Leap seconds are scheduled by the [international earth rotation and reference systems service](https://www.iers.org) (See also: <https://en.wikipedia.org/wiki/International_Earth_Rotation_and_Reference_Systems_Service>) Leap seconds cause a variety of problems in computer systems, and complicate time tracking in general.
+
+## Public time servers
+
+- Google time servers do leap second smearing - <https://developers.google.com/time/>
+- AWS time servers do leap second smearing - <https://aws.amazon.com/about-aws/whats-new/2017/11/introducing-the-amazon-time-sync-service>
+- ntp.org servers do not leap smear: "Leap Second Smearing MUST NOT be used for public servers, e.g. servers provided by metrology institutes, or servers participating in the NTP pool project." - <https://docs.ntpsec.org/latest/leapsmear.html>
+
+## Leap Second Links
+
+- [Resolve Leap Second Issues in Red Hat Enterprise Linux](https://access.redhat.com/articles/15145)
+- [Google Public NTP: Leap Smear](https://developers.google.com/time/smear)
+- [Five different ways to handle leap seconds with NTP](https://developers.redhat.com/blog/2015/06/01/five-different-ways-handle-leap-seconds-ntp/)
+- [The Unix leap second mess](http://www.madore.org/~david/computers/unix-leap-seconds.html)
+- [ntp.org FAQ: What happens during a Leap Second?](http://www.ntp.org/ntpfaq/NTP-s-algo-real.htm#AEN2499)
+
+# Code snips and examples
 
 ## Quick and dirty time sync in Linux for when NTP is blocked.
 
@@ -102,11 +122,3 @@ date -s $(curl -s -D - google.com | sed '/Date:/s/.*Date: //p ; d')
 ## Videos
 
 - [The Problem with Time & Timezones - Computerphile](https://www.youtube.com/watch?v=-5wpm-gesOY)
-
-## Leap Seconds
-
-- [Resolve Leap Second Issues in Red Hat Enterprise Linux](https://access.redhat.com/articles/15145)
-- [Google Public NTP: Leap Smear](https://developers.google.com/time/smear)
-- [Five different ways to handle leap seconds with NTP](https://developers.redhat.com/blog/2015/06/01/five-different-ways-handle-leap-seconds-ntp/)
-- [The Unix leap second mess](http://www.madore.org/~david/computers/unix-leap-seconds.html)
-- [ntp.org FAQ: What happens during a Leap Second?](http://www.ntp.org/ntpfaq/NTP-s-algo-real.htm#AEN2499)
