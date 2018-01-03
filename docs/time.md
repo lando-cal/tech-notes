@@ -83,7 +83,7 @@ RFC 3339 is considered a profile of ISO 8601\. It defines a profile of ISO 8601 
 
 Leap seconds are scheduled by the [international earth rotation and reference systems service](https://www.iers.org) (See also: <https://en.wikipedia.org/wiki/International_Earth_Rotation_and_Reference_Systems_Service>) Leap seconds cause a variety of problems in computer systems, and complicate time tracking in general.
 
-## Public time servers
+## Public time server handling of leap seconds
 
 - Google time servers do leap second smearing - <https://developers.google.com/time/>
 - AWS time servers do leap second smearing - <https://aws.amazon.com/about-aws/whats-new/2017/11/introducing-the-amazon-time-sync-service>
