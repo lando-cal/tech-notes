@@ -91,6 +91,7 @@ Leap seconds are scheduled by the [international earth rotation and reference sy
 
 ## Leap Second Links
 
+- [When is the next leap second?](https://www.iers.org/SharedDocs/News/EN/BulletinC.html)
 - [Resolve Leap Second Issues in Red Hat Enterprise Linux](https://access.redhat.com/articles/15145)
 - [Google Public NTP: Leap Smear](https://developers.google.com/time/smear)
 - [Five different ways to handle leap seconds with NTP](https://developers.redhat.com/blog/2015/06/01/five-different-ways-handle-leap-seconds-ntp/)
