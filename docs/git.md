@@ -210,10 +210,18 @@ git log
 git log -1
 ```
 
-### Show log entries that contain a given string
+### Show git commits that contain a given string
+
+This searches the content of the diff, not the commit message.
 
 ```
 git log -S search_string
+```
+
+### Show commit messages that match a given regex
+
+```
+git log --grep='[Ww]hitespace'
 ```
 
 ### Show logs for a given dir in the last 3 days
