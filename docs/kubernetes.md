@@ -1,1 +1,22 @@
-Kubernetes is an open-source platform for automating deployment, scaling, and operations of application containers across clusters of hosts, providing container-centric infrastructure." - <https://kubernetes.io/docs/whatisk8s>
+"Kubernetes is an open-source platform for automating deployment, scaling, and operations of application containers across clusters of hosts, providing container-centric infrastructure." - <https://kubernetes.io/docs/whatisk8s>
+
+# cli usage
+
+## kubeadm
+
+"kubeadm: easily bootstrap a secure Kubernetes cluster." - `kubeadm --help`
+
+- <https://github.com/kubernetes/kubeadm>
+
+## kubectl
+
+"kubectl controls the Kubernetes cluster manager." - `kubectl --help`
+
+- <https://github.com/kubernetes/kubectl>
+
+- `kubectl get nodes`
+
+# Links
+
+- <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm>
+- <https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster>
