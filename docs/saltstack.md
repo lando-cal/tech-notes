@@ -110,6 +110,12 @@ This should be done in salt state, but sometimes you have to do a one-off. More 
 salt '*dev*' pkg.install pre-commit
 ```
 
+Matching with regex is more reliable
+
+```
+salt -b1 -E 'miner..-aws' cmd.run 'service miner restart'
+```
+
 ## Run a command on a subset of hosts
 
 Check ntp stats on hadoop hosts.
