@@ -5,8 +5,8 @@
 ## Format the Pagerduty incidents.csv to be more readable
 
 ```
-# -d, = comma delimited
-# -H  = use the headings found in the csv
+# -d, = comma delimited input
+# -H  = use the headings found in the input csv files
 # -T  = tab delimited output
 # -f  = python 2 format strings to be applied to 1-indexed output fields
 $ q -d, -H -T -f '1=https://pagerduty.com/incidents/%s,2=alerted at %s,3=Description: %s' 'select id,created_on,description from incidents.csv order by created_on asc limit 5'
