@@ -16,3 +16,16 @@ https://pagerduty.com/incidents/PT13M2B    alerted at 2017-12-04T06:48:14-08:00 
 https://pagerduty.com/incidents/P3RLOTT    alerted at 2017-12-04T08:56:07-08:00    Description: hadoop-c05: /srv Disk Usage: Disk Capacity met or exceeded 90%, increasing to 90% for 10 minutes at 08:50AM https://server.pingdom.com/a/3104929931
 https://pagerduty.com/incidents/PNOJZKC    alerted at 2017-12-04T09:02:21-08:00    Description: sjc-http2: HTTP 500 error Watcher: Occurrences met or exceeded 10.00 /min, increasing to 31.91 /min for 10 minutes at 09:00AM https://server.pingdom.com/a/3104941911
 ```
+
+## Format pagerduty events as HTML for pasting into confluence for issue response tracking
+
+`pagerduty-csv-download` opens your browser and downloads the csv file for the last week of events. You'll have to change companyname to whatever your company URL is.
+
+`pagerduty-csv-to-html` uses `q` to reformat the csv into HTML lists you can paste into the source editor of your HTML friendly CMS like Confluence.
+
+This uses BSD relative date syntax, you'll have to change it for linux.
+
+```
+alias pagerduty-csv-download='[ "${PWD}" == "${HOME}/Downloads" ] || cd "${HOME}/Downloads/" && rm -f incidents.csv ; past="$(date -v-7d "+%FT00:00:00")" ; open $(date "+https://companyname.pagerduty.com/api/v1/reports/raw/incidents.csv?since=${past}&until=%FT23:59:59&time_zone=America/Los_Angeles")'
+alias pagerduty-csv-to-html="q -d, -H -D' ' -f '1=<li>%s,2=<a href \"https://pagerduty.com/incidents/%s\">,3=%s</a>,4=%s<ul><li>...</li></ul></li>' 'select substr(created_on,12,5),id,id,description from incidents.csv order by created_on asc' | tail -n 15 | sed 's/href /href=/;s/> />/'"
+```
