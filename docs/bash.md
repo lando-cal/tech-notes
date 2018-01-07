@@ -385,3 +385,4 @@ set completion-ignore-case on
 - [Bash Manual: Bash Variables](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html)
 - Bash pitfalls: <http://mywiki.wooledge.org/BashPitfalls>
 - Bash prompt howto, including colors: <http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html>
+- [Bash Automated Test System](https://github.com/sstephenson/bats)
