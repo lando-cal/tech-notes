@@ -16,6 +16,19 @@
 
 - `kubectl get nodes`
 
+# Installation
+
+```
+sudo swapoff -a
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+sudo apt update
+sudo apt install -y kubelet kubeadm kubectl
+```
+
 # Links
 
 - <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm>
