@@ -26,6 +26,19 @@ https://pagerduty.com/incidents/PNOJZKC    alerted at 2017-12-04T09:02:21-08:00 
 This uses BSD relative date syntax, you'll have to change it for linux.
 
 ```
-alias pagerduty-csv-download='[ "${PWD}" == "${HOME}/Downloads" ] || cd "${HOME}/Downloads/" && rm -f incidents.csv ; past="$(date -v-7d "+%FT00:00:00")" ; open $(date "+https://companyname.pagerduty.com/api/v1/reports/raw/incidents.csv?since=${past}&until=%FT23:59:59&time_zone=America/Los_Angeles")'
-alias pagerduty-csv-to-html="q -d, -H -D' ' -f '1=<li>%s,2=<a href \"https://pagerduty.com/incidents/%s\">,3=%s</a>,4=%s<ul><li>...</li></ul></li>' 'select substr(created_on,12,5),id,id,description from incidents.csv order by created_on asc' | tail -n 15 | sed 's/href /href=/;s/> />/'"
+pagerduty-csv-download() {
+  rm -f incidents.csv
+  TZ=America/Los_Angeles
+  past="$(date -v-7d "+%FT00:00:00")"
+  present="$(date "+%FT00:00:00")"
+  open "$(date "+https://companyname.pagerduty.com/api/v1/reports/raw/incidents.csv?since=${past}&until=${present}&time_zone=${TZ}")"
+}
+pagerduty-csv-to-html() {
+  q \
+    -H \
+    -d',' \
+    -D' ' \
+    -f '1=<li>%s,2=<a href \"https://companyname.pagerduty.com/incidents/%s\">,3=%s</a>,4=%s<ul><li>...</li></ul></li>' \
+    'select substr(created_on,12,5),id,id,description from incidents.csv order by created_on asc' | tail -n 50 | sed 's/href /href=/;s/> />/'
+}
 ```
