@@ -54,7 +54,7 @@ sgdisk /dev/sdz --new=4:0:+50G
 ## Delete the 4th partition
 
 ```
-sgdisk /sdev/sdz -d 4
+sgdisk /dev/sdz -d 4
 ```
 
 ## Create a new partition number 4 that fills the biggest available section of the disk
