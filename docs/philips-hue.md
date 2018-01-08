@@ -2,4 +2,4 @@
 
 # Siri integration
 
-Siri knows the names of all of the [web colors](https://en.wikipedia.org/wiki/Web_colors#X11_color_names)
+Siri knows the names of all of the [X11 colors](https://en.wikipedia.org/wiki/X11_color_names#Color_name_chart)
