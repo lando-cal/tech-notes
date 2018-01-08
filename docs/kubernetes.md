@@ -19,7 +19,7 @@
 # Installation
 
 ```
-sudo swapoff -a
+sudo swapoff -a # https://github.com/kubernetes/kubernetes/issues/53533
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
