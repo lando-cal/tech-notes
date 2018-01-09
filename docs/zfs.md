@@ -43,12 +43,12 @@ Good explanation: <https://blogs.oracle.com/brendan/entry/test>
 
 # zdb
 
-## Show the potential savings of turning on dedupe on zpool bigdisk
+## Show the potential savings of turning on dedupe on zpool tank
 
 <http://hub.opensolaris.org/bin/view/Community+Group+zfs/dedup>
 
 ```
-zdb -S bigdisk
+zdb -S tank
 ```
 
 ## Show transactions and human readable dates in the zdb history
@@ -78,49 +78,55 @@ zpool create -f -o cachefile=/tmp/zpool.cache zpoolname /dev/ada1 #create a zpoo
 ## Add a cache device to a pool
 
 ```
-zpool add bigdisk cache ada0p3 # add ada0p3 as a cache device to the bigdisk zpool
+# add ada0p3 as a cache device to the tank zpool
+zpool add tank cache ada0p3
 ```
 
 ## Show all configured zpool options for a given zpool
 
 ```
-zpool get all z4 # get all configured zpool options
+zpool get all tank
 ```
 
 ## Show history of all operations on a given pool
 
 ```
-zpool history # show history of operations on the pool, eg: snapshots, attribute changes
+# show history of operations on the pool, eg: snapshots, attribute changes
+zpool history
 ```
 
 ## Show real time statistics on a given zpool
 
 ```
-zpool iostat -v 1 # show per-device statistics every 1 second
+# show per-device statistics every 1 second
+zpool iostat -v 1
 ```
 
 ## Show basic information about all imported zpools
 
 ```
-zpool list # show zpool space info, deduplication ratio and health
+# show zpool space info, deduplication ratio and health
+zpool list
 ```
 
 ## Show deduplication tables
 
 ```
-zpool status -D z2 # show deduplication table entries. Take entries * size / 1024 / 1024 to calculate DDT consumption
+# show deduplication table entries. Take entries * size / 1024 / 1024 to calculate DDT consumption
+zpool status -D z2
 ```
 
 ## Replace a disk in a zpool
 
 ```
-zpool replace -f z3 /dev/disk/by-id/ata-ST3000DM001-9YN166_W1F09CW9 /dev/disk/by-id/ata-ST3000DM001-9YN166_Z1F0N9S7 # Replace the first disk with the second in the z3 pool
+# Replace the first disk with the second in the tank pool
+zpool replace -f tank /dev/disk/by-id/ata-ST3000DM001-9YN166_W1F09CW9 /dev/disk/by-id/ata-ST3000DM001-9YN166_Z1F0N9S7 
 ```
 
 ### Real example
 
 ```
-$ zpool replace -f z6 /dev/disk/by-id/ata-HGST_HDN724040ALE640_PK1334PCJY9ASS /dev/disk/by-id/ata-HGST_HUH728080ALE600_VKHA6YDX
+$ zpool replace -f tank /dev/disk/by-id/ata-HGST_HDN724040ALE640_PK1334PCJY9ASS /dev/disk/by-id/ata-HGST_HUH728080ALE600_VKHA6YDX
 $ zpool status
   pool: home
  state: ONLINE
@@ -133,7 +139,7 @@ config:
 
 errors: No known data errors
 
-  pool: z6
+  pool: tank
  state: DEGRADED
 status: One or more devices is currently being resilvered.  The pool will
         continue to function, possibly in a degraded state.
@@ -144,7 +150,7 @@ action: Wait for the resilver to complete.
 config:
 
         NAME                                           STATE     READ WRITE CKSUM
-        z6                                             DEGRADED     0     0     0
+        tank                                           DEGRADED     0     0     0
           raidz1-0                                     DEGRADED     0     0     0
             replacing-0                                UNAVAIL      0     0     0
               ata-HGST_HDN724040ALE640_PK1334PCJY9ASS  UNAVAIL      0     1     0  corrupted data
@@ -158,88 +164,92 @@ errors: No known data errors
 
 # zfs
 
-## show differences between filesystem and snapshot
+## show differences between current filesystem state and snapshot state
 
 ```
-zfs diff z3 z3@snap # show the filesystem differences between the dataset and the snapshot
+zfs diff tank tank@snap
 ```
 
 ## Show configured properties for a filesystem
 
 ```
-zfs get all # show configured zfs properties
+zfs get all
 ```
 
 ## Show custom filesystem attributes
 
 ```
-zfs get all -s local z3 # show custom attributes that override inherited attributes
+# show custom attributes that override inherited attributes
+zfs get all -s local tank
 ```
 
 ## Show an overview of all mounted zfs filesystems
 
 ```
-zfs list # show disk space including free physical disk space and mount info
+# show disk space including free physical disk space and mount info
+zfs list
 ```
 
 ## Show specified fields of each filesystem
 
 ```
-zfs list -t all -o name,referenced,used,written,creation,userused@root # show the listed fields of all filesystems
+# show the listed fields of all filesystems
+zfs list -t all -o name,referenced,used,written,creation,userused@root
 ```
 
 ## Show only snapshots
 
 ```
-zfs list -t snapshot # list snapshots
+zfs list -t snapshot
 ```
 
 ## Show space consumed by file owner
 
 ```
-zfs userspace bigdisk # show space consumed by each user
+zfs userspace tank
 ```
 
 ## Disable atime updates for a filesystem
 
 ```
-zfs set atime=off bigdisk # disable atime updates
+zfs set atime=off tank
 ```
 
 ## Set compression to lz4 for a filesystem
 
 ```
-zfs set compression=lz4 z3 # enable compression
+zfs set compression=lz4 tank
 ```
 
 ## Set deduplication to enabled for a filesystem
 
 ```
-zfs set dedup=on exports # enable deduplication
+zfs set dedup=on tank
 ```
 
 ## Set a filesystem to readonly
 
 ```
-zfs set readonly=on zpoolname/dataset # set read-only attribute
+zfs set readonly=on zpoolname/dataset
 ```
 
 ## Set a filesystem to allow NFS sharing
 
 ```
-zfs set sharenfs=on zpoolname # enable NFS sharing of a zpool
+zfs set sharenfs=on tank
 ```
 
 ## Create a dataset
 
 ```
-zfs create z5/sole # create a dataset 'sole' on zpool 'z5'
+# create a dataset 'sole' on zpool 'tank'
+zfs create tank/sole
 ```
 
 ## Destroy multiple snapshots
 
 ```
-zfs destroy z3@20130413-weekly,20130420-weekly,20130428-weekly,20130505-weekly
+zfs destroy tank@20130413-weekly,20130420-weekly,20130428-weekly,20130505-weekly
 ```
 
 ## zfs send / receive
@@ -247,7 +257,7 @@ zfs destroy z3@20130413-weekly,20130420-weekly,20130428-weekly,20130505-weekly
 Replicate a zpool (use the latest snapshot name as the source) to a blank zpool:
 
 ```
-zfs send -v -D -R bigdisk@20120907-oldest | zfs receive -F -v z2
+zfs send -v -D -R tank@20120907-oldest | zfs receive -F -v z2
 ```
 
 - -D enables a deduplicated stream.
@@ -266,29 +276,29 @@ zfs send -v -D -R z1@20120907-oldest | ssh otherhost zfs receive -v z2/z1
 This shows an entire dataset up to the given snapshot
 
 ```
-zfs send -n -v -D -R z3@20140531-monthly
+zfs send -n -v -D -R tank@20140531-monthly
 ```
 
 ## Show the space differences between two snapshots
 
 ```
-zfs send -n -v -D -i z3@20140531-monthly z3@20141031-monthly
+zfs send -n -v -D -i tank@20140531-monthly tank@20141031-monthly
 ```
 
 ## Show the amount of new space consumed by each monthly
 
 ```
-zfs list -o name | grep 'z3@.*monthly' | while read -r X ; do [[ ! $a =~ .*monthly ]] && a=$X || zfs send -n -v -D -i $a $X && a=$X ; done 2>&1 | grep send
+zfs list -o name | grep 'tank@.*monthly' | while read -r X ; do [[ ! $a =~ .*monthly ]] && a=$X || zfs send -n -v -D -i $a $X && a=$X ; done 2>&1 | grep send
 ```
 
 # Complex examples
 
-## Create a raidz called z3
+## Create a raidz called tank
 
 Create a raidz pool from 4 disks and set some properties:
 
 ```
-pool=z3
+pool=tank
 zpool create -f "${pool}" raidz /dev/disk/by-id/scsi-SATA_HGST_HDN724040A_PK2338P4H*-part1 -o ashift=12
 zfs set dedup=on "${pool}"
 zpool set listsnapshots=on "${pool}"
