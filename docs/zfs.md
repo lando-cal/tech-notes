@@ -117,6 +117,45 @@ zpool status -D z2 # show deduplication table entries. Take entries * size / 102
 zpool replace -f z3 /dev/disk/by-id/ata-ST3000DM001-9YN166_W1F09CW9 /dev/disk/by-id/ata-ST3000DM001-9YN166_Z1F0N9S7 # Replace the first disk with the second in the z3 pool
 ```
 
+### Real example
+
+```
+$ zpool replace -f z6 /dev/disk/by-id/ata-HGST_HDN724040ALE640_PK1334PCJY9ASS /dev/disk/by-id/ata-HGST_HUH728080ALE600_VKHA6YDX
+$ zpool status
+  pool: home
+ state: ONLINE
+  scan: scrub repaired 0 in 0h0m with 0 errors on Sun Dec 10 00:24:07 2017
+config:
+
+        NAME                                             STATE     READ WRITE CKSUM
+        home                                             ONLINE       0     0     0
+          ata-M4-CT064M4SSD2_0000000012170908F759-part4  ONLINE       0     0     0
+
+errors: No known data errors
+
+  pool: z6
+ state: DEGRADED
+status: One or more devices is currently being resilvered.  The pool will
+        continue to function, possibly in a degraded state.
+action: Wait for the resilver to complete.
+  scan: resilver in progress since Mon Jan  8 19:57:45 2018
+    47.1M scanned out of 13.7T at 6.72M/s, 592h39m to go
+    11.5M resilvered, 0.00% done
+config:
+
+        NAME                                           STATE     READ WRITE CKSUM
+        z6                                             DEGRADED     0     0     0
+          raidz1-0                                     DEGRADED     0     0     0
+            replacing-0                                UNAVAIL      0     0     0
+              ata-HGST_HDN724040ALE640_PK1334PCJY9ASS  UNAVAIL      0     1     0  corrupted data
+              ata-HGST_HUH728080ALE600_VKHA6YDX        ONLINE       0     0     0  (resilvering)
+            ata-HGST_HDN724040ALE640_PK2334PEHG8LAT    ONLINE       0     0     0
+            ata-HGST_HDN724040ALE640_PK2334PEHGD37T    ONLINE       0     0     0
+            ata-HGST_HDN724040ALE640_PK2338P4H3TJPC    ONLINE       0     0     0
+
+errors: No known data errors
+```
+
 # zfs
 
 ## show differences between filesystem and snapshot
