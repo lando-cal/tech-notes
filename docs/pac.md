@@ -1,6 +1,7 @@
 # Example pac file
 
 The following pac file will
+
 - Redirect all traffic destined to `192.168.1.0/24` to a proxy running on `localhost:47000`, but only if we do not have an ip address in that subnet
 - Redirect all traffic destined to `172.16.0.0/16` to a proxy running on `localhost:33001`
 - All other traffic bypasses the proxy.
