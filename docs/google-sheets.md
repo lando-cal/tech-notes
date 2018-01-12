@@ -1,3 +1,7 @@
+# Links
+
+- [gspread](https://pypi.python.org/pypi/gspread) - Python module for interacting with google spreadsheets
+
 # Techniques
 
 - Function list - <https://support.google.com/docs/table/25273?hl=en>

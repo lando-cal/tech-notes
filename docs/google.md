@@ -7,5 +7,4 @@
 - [Document Service](https://developers.google.com/apps-script/reference/document)
 - [Web Store Developer Dashboard](https://chrome.google.com/webstore/developer/dashboard)
 - [Service Accounts](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#creatinganaccount)
-- [gspread](https://pypi.python.org/pypi/gspread) - Python module for interacting with google spreadsheets
 - [API Explorer](https://developers.google.com/apis-explorer)
