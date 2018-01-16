@@ -85,3 +85,10 @@
 ## 2017-11-03 DD-WRT v3.0-r33675M kongac
 
 - 2017-12-25: Discovered this firmware had been installed
+
+## 2018-01-03 DD-WRT v3.0-r34320M kongac (c) 2017 NewMedia-NET GmbH
+
+- Installed on 2018-01-16
+- DD-WRT v3.0-r34320M kongac (c) 2017 NewMedia-NET GmbH
+- Release: 01/03/18
+- http://www.desipro.de/ddwrt/K3-AC-Arm/TEST/dd-wrt.v24-K3_AC_ARM_STD.bin
