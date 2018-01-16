@@ -5,7 +5,8 @@ Notes and tips about working with the .deb package format
 ## Show installed package versions
 
 ```
-/usr/bin/dpkg-query -W --showformat '${Package} ${Version}\n'
+# -V = sort by version (GNU sort only)
+/usr/bin/dpkg-query -W --showformat '${Package} ${Version}\n' | sort -k2 -V | column -t
 ```
 
 ## List files in package that is installed
