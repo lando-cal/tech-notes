@@ -124,6 +124,8 @@ Check ntp stats on hadoop hosts.
 salt "*hadoop*" cmd.run "ntpq -p"
 ```
 
+Many more complicated examples: <https://docs.saltstack.com/en/latest/topics/execution/remote_execution.html>
+
 ## Show IP addresses
 
 ```
