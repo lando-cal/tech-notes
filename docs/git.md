@@ -255,7 +255,7 @@ git show f73f9ec7c07e
 
 ### Show a complete file as of a given sha
 
-This is an absolute path from the git root, not relative to CWD.
+This is an absolute path from the git root, not relative to CWD. This command will show the whole file as of the given sha.
 
 ```
 git show f73f9ec7c07e:dir/filename.yaml
