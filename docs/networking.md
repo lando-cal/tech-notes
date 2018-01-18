@@ -4,12 +4,14 @@
 
 # See also
 
-- [ip](ip) command for linux
-- [iptables](iptables) - linux firewall
-- [iperf](iperf) - network performance testing
+- [bind](bind) - DNS server
 - [iftop](iftop) - interface top
+- [ip](ip) command for linux
+- [iperf](iperf) - network performance testing
+- [iptables](iptables) - linux firewall
+- [linksys](linksys) - soho network hardware vendor
+- [netgear](netgear) - network hardware vendor
+- [networksetup](networksetup) - Mac OSX configuration tool for network settings in System Preferences
 - [ntop](ntop) - network top
 - [pac](pac) - dynamic proxy configuration
-- [bind](bind) - DNS server
-- [netgear](netgear) - network hardware vendor
-- [linksys](linksys) - soho network hardware vendor
+- [procurve](procurve) - HP managed networking
