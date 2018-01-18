@@ -136,6 +136,8 @@ Many more complicated examples of remote command execution: <https://docs.saltst
 
 ## Show IP addresses
 
+<https://docs.saltstack.com/en/latest/ref/modules/all/salt.modules.network.html>
+
 ```
 salt '*itni*' network.ip_addrs
 ```
