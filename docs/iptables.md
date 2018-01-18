@@ -2,7 +2,7 @@ iptables is the built-in linux firewall.
 
 # Examples
 
-- How to simulate a slow network link: http://blogs.kde.org/node/1878
+- How to simulate a slow network link: <http://blogs.kde.org/node/1878>
 
 ## Allow MySQL
 
