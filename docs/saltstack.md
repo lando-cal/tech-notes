@@ -102,18 +102,26 @@ salt-key -a hostname.example.com
 salt '*' pkg.version bash
 ```
 
-## Install / Upgrade a package on many hosts
+## Targeting hosts
 
-This should be done in salt state, but sometimes you have to do a one-off. More info on glob matching is here: <https://docs.saltstack.com/en/latest/topics/targeting/globbing.html>
+- <https://docs.saltstack.com/en/latest/topics/targeting/#advanced-targeting-methods>
+
+### Target using globs
 
 ```
 salt '*dev*' pkg.install pre-commit
 ```
 
-Matching with regex is more reliable
+### Target using regular expressions
 
 ```
 salt -b1 -E 'miner..-aws' cmd.run 'service miner restart'
+```
+
+### Target an IP subnet
+
+```
+salt -t 15 -S '172.21.5.0/24' cmd.run 'dpkg -l linux-image'
 ```
 
 ## Run a command on a subset of hosts
@@ -124,7 +132,7 @@ Check ntp stats on hadoop hosts.
 salt "*hadoop*" cmd.run "ntpq -p"
 ```
 
-Many more complicated examples: <https://docs.saltstack.com/en/latest/topics/execution/remote_execution.html>
+Many more complicated examples of remote command execution: <https://docs.saltstack.com/en/latest/topics/execution/remote_execution.html>
 
 ## Show IP addresses
 
