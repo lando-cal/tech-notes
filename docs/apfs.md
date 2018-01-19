@@ -75,6 +75,14 @@ $ sudo tmutil deletelocalsnapshots 2017-11-04-183813
 Deleted local snapshot '2017-11-04-183813'
 ```
 
+## Delete all snapshots
+
+```
+/usr/bin/tmutil listlocalsnapshots / | while read -r X ; do
+  tmutil deletelocalsnapshots "${X##*.}"
+done
+```
+
 ## Thin out snapshots
 
 On the given drive, reclaim the given space by thinning out snapshots. As of tmutil 4.0.0, you cannot use any data unit other than bytes. (EG: 1G or 1GB will not work)
