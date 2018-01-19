@@ -3,3 +3,4 @@
 # Links
 
 - <http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html>
+- [CloudFormer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-cloudformer.html) - CloudFormer is a template creation beta tool that creates an AWS CloudFormation template from existing AWS resources in your account. You select any supported AWS resources that are running in your account, and CloudFormer creates a template in an Amazon S3 bucket.
