@@ -1,3 +1,5 @@
+"command line tool and library for transferring data with URLs" - <https://curl.haxx.se>
+
 curl is a tool to transfer data from or to a server, using one of the supported protocols (DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP). The command is designed to work without user interaction.
 
 # Examples
@@ -49,3 +51,7 @@ This appears to have problems with some strings. For instance, this doesn't catc
 ```
 curl -s http://www.google.com | egrep -o '(((https?|ftp|gopher)://|(mailto|file|news):)[^’ <>\n"]+|(www|web|w3)\.[-a-z0-9.]+)[^’ .,;<>":]'
 ```
+
+# Links
+
+- [Release Notes](https://curl.haxx.se/dev/release-notes.html)

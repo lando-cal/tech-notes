@@ -10,6 +10,7 @@ baddass version control
 - <https://guides.github.com/introduction/flow/index.html>
 - <http://nvie.com/posts/a-successful-git-branching-model/>
 - <https://training.github.com/kit/intermediate/> - Training
+- <https://github.com/git/git/tree/master/Documentation/RelNotes> - Release Notes
 
 # Examples
 
