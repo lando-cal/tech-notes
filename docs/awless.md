@@ -13,3 +13,14 @@ $ awless list instances --sort=uptime
 | i-04ced9880586c009b | us-west-1a | hadoop07.foo            | running | m4.4xlarge |           | 172.27.37.100 | 8 days   | foo-ops |
 | i-0e583dcd3bc2444d8 | us-west-1a | db-na-historical06.foo  | running | m2.4xlarge |           | 172.19.48.79  | 12 days  | foo-ops |
 ```
+
+## Sum the amount of unattached disks in your environment
+
+```
+awless list volumes \
+    --filter state=available \
+    --sort created \
+    --format json |
+  jq .[].Size |
+  awk '{sum += $1 ; count += 1 ;} END {print sum "G in " count " volumes"}'
+```
