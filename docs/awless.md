@@ -5,7 +5,7 @@
 ## List ec2 instances sorted by uptime
 
 ```
-$ awless list instances --sort=uptime
+user@localhost:~/ $ awless list instances --sort=uptime
 |         ID          |    ZONE    |           NAME          |  STATE  |    TYPE    | PUBLIC IP |   PRIVATE IP  | UPTIME ▲ | KEYPAIR |
 |---------------------|------------|-------------------------|---------|------------|-----------|---------------|----------|---------|
 | i-050ad501b33c6ad07 | us-west-1a | faruko-nal              | running | m4.xlarge  |           | 172.19.15.172 | 85 mins  | foo-ops |
