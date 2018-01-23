@@ -19,7 +19,6 @@ $ awless list instances --sort=uptime
 ```
 awless list volumes \
     --filter state=available \
-    --sort created \
     --format json |
   jq .[].Size |
   awk '{sum += $1 ; count += 1 ;} END {print sum "G in " count " volumes"}'
