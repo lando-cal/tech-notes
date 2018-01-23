@@ -23,3 +23,11 @@ awless list volumes \
   jq .[].Size |
   awk '{sum += $1 ; count += 1 ;} END {print sum "G in " count " volumes"}'
 ```
+
+## Switch to a different AWS profile
+
+This uses the ~/.aws/credentials file for its profiles
+
+```
+awless config set aws.profile prod
+```
