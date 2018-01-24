@@ -4,7 +4,7 @@ launchd is MacOS X's init system.
 
 ## Watch Folder
 
-This user LaunchAgent would be placed into `$HOME/Library/LaunchAgents/`.
+This user LaunchAgent would be placed into `$HOME/Library/LaunchAgents/photo_processor.plist`.
 
 We have to specify `/bin/bash` as the first ProgramArgument so OS X doesn't complain about DRM or mach-o executable shizz. This effectively limits us to bash 3.
 
