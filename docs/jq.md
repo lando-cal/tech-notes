@@ -125,6 +125,16 @@ jq -S .
 jq '.[] | select(.data.ensure != "purged") | [.sender,.data.ensure]' $*
 ```
 
+## Output bare values for use as inputs
+
+```
+$ awless list instances --format json | jq -r '.[] | "\(.Name) \(.PrivateIP) \(.Launched)"' | sort -k3 | column -t
+salt-master       172.18.9.48   2015-04-10T21:28:03Z
+consul-server-01  172.18.9.116  2015-05-15T06:13:19Z
+consul-server-02  172.18.9.117  2015-05-15T06:13:19Z
+consul-server-03  172.18.9.118  2015-05-15T06:13:19Z
+```
+
 # See Also
 
 - [Tutorial](https://stedolan.github.io/jq/tutorial/)
