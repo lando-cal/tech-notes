@@ -31,3 +31,9 @@ This uses the ~/.aws/credentials file for its profiles
 ```
 awless config set aws.profile prod
 ```
+
+## Customize output columns
+
+```
+awless list instances --columns name,type,launched
+```
