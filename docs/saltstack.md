@@ -126,6 +126,14 @@ salt -b1 -E 'miner..-aws' cmd.run 'service miner restart'
 salt -t 15 -S '172.21.5.0/24' cmd.run 'dpkg -l linux-image'
 ```
 
+## Target a specific OS
+
+<https://docs.saltstack.com/en/latest/topics/targeting/compound.html>
+
+```
+salt -C 'G@lsb_distrib_codename:trusty' pkg.install cmatrix
+```
+
 ## Run a command on a subset of hosts
 
 Check ntp stats on hadoop hosts.
@@ -170,14 +178,6 @@ or...
 
 ```
 salt '*elk*' grains.item os
-```
-
-## Perform operation only on a given OS
-
-<https://docs.saltstack.com/en/latest/topics/targeting/compound.html>
-
-```
-salt -C 'G@lsb_distrib_codename:trusty' pkg.install cmatrix
 ```
 
 ## Look up grain data while logged into a minion
