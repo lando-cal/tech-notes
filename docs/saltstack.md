@@ -10,6 +10,8 @@
 
 ## Common commands
 
+All `salt*` commands require root access, so use sudo or log in as root.
+
 - `salt`: Salt allows for commands to be executed across a swath of remote systems in parallel. This means that remote systems can be both controlled and queried with ease.
 - `salt-call`: The salt-call  command is used to run module functions locally on a minion instead of executing them from the master. Salt-call is used to run a Standalone Minion, and was originally created for troubleshooting.
 - `salt-cloud`: Salt Cloud is the system used to provision virtual machines on various public clouds via a cleanly controlled profile and mapping system.
@@ -85,7 +87,7 @@ up:
 This shows only accepted keys. Without the `jq` part, rejected and denied keys would also show up in this list.
 
 ```
-sudo salt-key --out json | jq '.minions[]'
+salt-key --out json | jq '.minions[]'
 ```
 
 ## Accept a key that has not yet been accepted
@@ -158,10 +160,16 @@ This lists the keys and values
 salt '*dorks*' grains.items
 ```
 
-## Show all OS versions
+## Show one grain for a subset of hosts
 
 ```
-salt '*' grains.item os
+salt '*elk*' grains.fetch lsb_distrib_release
+```
+
+or...
+
+```
+salt '*elk*' grains.item os
 ```
 
 ## Perform operation only on a given OS
@@ -194,8 +202,8 @@ Or as a function to run locally
 add_user_via_salt_grains() {
   new_user=$1
   id "${new_user}" && return 0
-  sudo salt-call grains.append accounts "$new_user" && \
-  sudo salt-call state.sls users
+  salt-call grains.append accounts "$new_user" && \
+  salt-call state.sls users
   id "$new_user"
 }
 ```
