@@ -32,3 +32,7 @@ Body stored in: /var/folders/2t/rnzxpxd54y7832mx_xjvxl30bb2qzp/T/tmphVaBFx
                                       starttransfer:242ms            |
                                                                  total:243ms
 ```
+
+# See also
+
+- [curl](curl) - what httpstat wraps to get its stats
