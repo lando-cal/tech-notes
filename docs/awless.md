@@ -28,6 +28,14 @@ awless list volumes \
 
 This uses the ~/.aws/credentials file for its profiles
 
+Short way:
+
+```
+awless switch prod
+```
+
+Long way:
+
 ```
 awless config set aws.profile prod
 ```
