@@ -137,6 +137,17 @@ ls -la | awk -F" " '{print $NF}'
 ls -la | awk -F" " '{print $(NF - 1)}'
 ```
 
+## Print the previous line on string match
+
+This works by storing the previous line. If the current line matches the regex, the previous line is printed from the stored value.
+
+```
+$ awk '/32 host/ { print previous_line } {previous_line=$0}' /proc/net/fib_trie | column -t | sort -u
+|--  10.134.243.137
+|--  127.0.0.1
+|--  169.50.9.172
+```
+
 # See Also
 
 - <http://www.grymoire.com/Unix/Awk.html>
