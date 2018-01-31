@@ -45,3 +45,9 @@ awless config set aws.profile prod
 ```
 awless list instances --columns name,type,launched
 ```
+
+## Add a user to a group
+
+```
+awless --aws-profile govcloud --region us-gov-west-1 attach user group=SystemAdministrators name=SpaceGhost
+```
