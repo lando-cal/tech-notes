@@ -9,6 +9,14 @@
 - [s3toosl](http://s3tools.org) - Command Line S3 Client and Backup
 - [awless - awless is a powerful, innovative and small surface command line interface (CLI) to manage Amazon Web Services.](https://github.com/wallix/awless)
 
+# Tips
+
+## Reformat accessKeys.csv into .aws/credentials format
+
+```
+awk -F, 'BEGIN { print "[temp_name]" ; } !/Access/ {print "aws_access_key_id = "$1"\naws_secret_access_key = "$2}' ~/Downloads/accessKeys.csv
+```
+
 # See Also
 
 - [aws cli](awscli)
