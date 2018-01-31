@@ -49,5 +49,5 @@ awless list instances --columns name,type,launched
 ## Add a user to a group
 
 ```
-awless --aws-profile govcloud --region us-gov-west-1 attach user group=SystemAdministrators name=SpaceGhost
+awless --aws-profile govcloud --aws-region us-gov-west-1 attach user group=SystemAdministrators name=SpaceGhost
 ```
