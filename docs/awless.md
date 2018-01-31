@@ -51,3 +51,11 @@ awless list instances --columns name,type,launched
 ```
 awless --aws-profile govcloud --aws-region us-gov-west-1 attach user group=SystemAdministrators name=SpaceGhost
 ```
+
+## Create an access key for a user
+
+This creates an access key and saves it in `~/.aws/credentials`
+
+```
+awless --aws-profile govcloud --aws-region us-gov-west-1 create accesskey user=SpaceGhost save=true
+```
