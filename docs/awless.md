@@ -2,6 +2,8 @@
 
 # Examples
 
+- Example templates - <https://github.com/wallix/awless-templates>
+
 ## List ec2 instances sorted by uptime
 
 ```
