@@ -9,18 +9,6 @@ Notes and tips about working with the .deb package format
 /usr/bin/dpkg-query -W --showformat '${Package} ${Version} ${Status}\n' | sort -k2 -V | column -t
 ```
 
-## List files in package that is installed
-
-```
-dpkg-query -L klibc-utils
-```
-
-## List files in package that is not installed
-
-```
-dpkg -c package.deb
-```
-
 ## List files in packages that are available in configured repositories
 
 ```
@@ -33,7 +21,7 @@ apt-file list package_name
 apt-file find libmysqlclient.so
 ```
 
-## Show a list of installed packages
+## Show a list of packages that are installed or have left things on the filesystem
 
 ```
 dpkg --list
@@ -43,6 +31,18 @@ dpkg --list
 
 ```
 dpkg -S /bin/bash
+```
+
+## List files in package that is installed
+
+```
+dpkg-query -L klibc-utils
+```
+
+## List files in package that is not installed
+
+```
+dpkg -c package.deb
 ```
 
 ## List packages available in the repository
