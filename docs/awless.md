@@ -4,6 +4,8 @@
 
 - Example templates - <https://github.com/wallix/awless-templates>
 
+A lot of these syntax examples can be found by issuing the command, verb and entity but no parameters. Such as `awless create stack`, which will drop you into a prompt series to complete the necessary and optional parameters.
+
 ## List ec2 instances sorted by uptime
 
 ```
@@ -60,4 +62,16 @@ This creates an access key and saves it in `~/.aws/credentials`
 
 ```
 awless --aws-profile govcloud --aws-region us-gov-west-1 create accesskey user=SpaceGhost save=true
+```
+
+## Create a tag
+
+```
+awless create tag key=test_tag resource=i-9ba90158 value=true
+```
+
+## Delete a tag
+
+```
+awless delete tag key=test_tag_dhoherd resource=i-9ba90158
 ```
