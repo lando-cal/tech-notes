@@ -75,3 +75,9 @@ awless create tag key=test_tag resource=i-9ba90158 value=true
 ```
 awless delete tag key=test_tag_dhoherd resource=i-9ba90158
 ```
+
+## Create an instance
+
+```
+awless create instance count=1 image=ami-5ab82fa8 keypair=ops name=new-hostname securitygroup=[sg-c4321fd1,sg-c4321cb0] subnet=subnet-c4321c33 type=t2.medium
+```
