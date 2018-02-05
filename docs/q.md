@@ -42,3 +42,9 @@ pagerduty-csv-to-html() {
     'select substr(created_on,12,5),id,id,description from incidents.csv order by created_on asc' | tail -n 50 | sed 's/href /href=/;s/> />/'
 }
 ```
+
+## Select count of daily alerts by date from PagerDuty incidents.csv
+
+```
+q -H --delimiter=',' -O --output-delimiter=',' 'select substr(created_on,0,11) as date,count(substr(created_on,0,11)) as count from incidents.csv group by date'
+```
