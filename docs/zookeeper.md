@@ -2,6 +2,10 @@ ZooKeeper is a high-performance coordination service for distributed application
 
 # Examples
 
+## The four letter words
+
+"ZooKeeper responds to a small set of commands. Each command is composed of four letters. You issue the commands to ZooKeeper via telnet or nc, at the client port." - <https://zookeeper.apache.org/doc/r3.4.8/zookeeperAdmin.html#sc_zkCommands>
+
 ## Lists brief details for the server and connected clients
 
 `echo 'stat' | nc localhost 2181`
@@ -16,5 +20,4 @@ ZooKeeper is a high-performance coordination service for distributed application
 
 # Links
 
-- <https://zookeeper.apache.org/doc/trunk/zookeeperAdmin.html>
-- <https://zookeeper.apache.org/doc/trunk/zookeeperAdmin.html#The+Four+Letter+Words>
+- <https://zookeeper.apache.org/doc/r3.4.8/zookeeperAdmin.html>
