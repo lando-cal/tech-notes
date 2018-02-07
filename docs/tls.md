@@ -79,3 +79,4 @@ function decrypt_file() { openssl enc -aes-256-cbc -d -in "${1}" -out "${1}.dec"
 # Links
 
 - [An overview of the SSL or TLS handshake](https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10660_.htm)
+- The Transport Layer Security (TLS) Protocol Version 1.2 - <https://tools.ietf.org/html/rfc5246>

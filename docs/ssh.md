@@ -172,3 +172,6 @@ In /etc/ssh/sshd_config: PermitRootLogin without-password
 - [Passwordless SSH logins](http://www.hackinglinuxexposed.com/articles/20021226.html)
 - [SSH server for Windows](http://www.freesshd.com)
 - [SSH jump hosts](https://wiki.gentoo.org/wiki/SSH_jump_host)
+- The Secure Shell (SSH) Connection Protocol - <https://www.ietf.org/rfc/rfc4254.txt>
+- The Secure Shell (SSH) Authentication Protocol - <https://www.ietf.org/rfc/rfc4252.txt>
+- The Secure Shell (SSH) Transport Layer Protocol - https://www.ietf.org/rfc/rfc4253.txt
