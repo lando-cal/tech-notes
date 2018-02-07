@@ -75,3 +75,7 @@ openssl enc -aes-256-cbc -d -in encryptedfile.enc -out decryptedfile
 function encrypt_file() { openssl enc -aes-256-cbc -salt -in "${1}" -out "${1}.enc" ; }
 function decrypt_file() { openssl enc -aes-256-cbc -d -in "${1}" -out "${1}.dec" ; }
 ```
+
+# Links
+
+- [An overview of the SSL or TLS handshake](https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10660_.htm)
