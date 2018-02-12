@@ -11,7 +11,7 @@ Errors like this can cause the disk to fill up over long periods of time:
 [2535] 02 Jan 19:58:52.376 * Starting automatic rewriting of AOF on 7885% growth
 [2535] 02 Jan 19:58:52.376 # Can't rewrite append only file in background: fork: Cannot allocate memory
 ```
-This problem can bbe solved without restarting anything:
+This problem can be solved without restarting anything:
 
 ```
 # df -h .
