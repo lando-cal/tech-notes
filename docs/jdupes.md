@@ -9,3 +9,13 @@
 ```
 jdupes -r /path/to/dir
 ```
+
+## Create hard-links of any duplicate files
+
+```
+jdupes -r -L /path/
+```
+
+# Links
+
+- <https://github.com/jbruchon/jdupes>
