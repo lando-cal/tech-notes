@@ -48,6 +48,8 @@ rsync -aivv --link-dest="${HOME}/Dropbox" ${HOME}/Dropbox/some_dir ${HOME}/temp/
 
 This will create the directory `${HOME}/temp/some_dir` and hard link all the files from the source into the destination.  It should only take a few seconds.  Lines with 'hf' indicate a hard linked file.  Lines with 'cd' indicate 'created directory'.
 
+rsync can copy not only data, but also filesystem attributes, and if these differ between the link-dest and the src, a hard link may not be created but instead a copy of the file from the local filesystem is made and correct metadata is applied from the source.
+
 ## Move files to another server in small batches
 This is useful if you want to gradually clear up disk space rather than waiting until the end of a transfer of a large number of files to clear up disk space in one large operation.
 
