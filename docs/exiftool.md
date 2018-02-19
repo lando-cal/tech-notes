@@ -34,12 +34,6 @@ exiftool \
   filename.dng
 ```
 
-## Average photos
-
-```
-exiftool *.jpg -average outfile.jpg
-```
-
 ## Correct EXIF time, for instance to sync with GPS time
 
 ```
