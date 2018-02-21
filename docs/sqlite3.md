@@ -35,6 +35,16 @@ ALTER TABLE servers ADD os varchar(255);
 sqlite3 foo.db "insert into baz values ('50','some text');"
 ```
 
+## Add rows or update if the row already exists
+
+This syntax is different from other SQL implementations
+
+```
+insert or replace into tablename(filename, hash) values
+  ('/etc/hosts', 'somehash'),
+  ('/etc/resolv.conf', 'someotherhash');
+```
+
 ## Output rows via the unix shell
 
 This outputs as columns, but csv, html line, and list exist too.
