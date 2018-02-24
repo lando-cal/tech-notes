@@ -287,6 +287,39 @@ This can even be recursively done...
 
 `echo {a..z..5}`
 
+## Process all lines, but print out status about what line we are on every Nth line
+
+Sometimes during a series of long-running jobs you want to see the status of where you are at, or at least some indicator that things have not paused. when `ctrl-t` is not available (and even when it is) this pattern can help you monitor that things are still moving a long.
+
+```
+N=0
+find "/usr/bin" -type f |
+while read -r X ; do
+  N=$((N + 1))
+  [[ "$((N % 50))" -eq 0 ]] && date "+%F %T file number $N $X" >&2
+  shasum -a 512 "${X}" >> ~/usr_bin_shasums.txt
+done
+```
+
+Example terminal output from the above command, while all `shasum` output goes into `~/usr_bin_shasums.txt`:
+
+```
+$ find "/usr/bin" -type f |
+> while read -r X ; do
+>   N=$((N + 1))
+>   [[ "$((N % 50))" -eq 0 ]] && date "+%F %T file number $N $X" >&2
+>   shasum -a 512 "${X}" >> ~/usr_bin_shasums.txt
+> done
+2018-02-24 15:30:29 file number 50 /usr/bin/toe
+2018-02-24 15:30:30 file number 100 /usr/bin/db_hotbackup
+2018-02-24 15:30:32 file number 150 /usr/bin/host
+2018-02-24 15:30:33 file number 200 /usr/bin/groffer
+2018-02-24 15:30:35 file number 250 /usr/bin/mail
+2018-02-24 15:30:36 file number 300 /usr/bin/dbicadmin
+2018-02-24 15:30:38 file number 350 /usr/bin/fwkpfv
+2018-02-24 15:30:39 file number 400 /usr/bin/tab2space
+```
+
 ## Make a directory structure of every combination of /adjective/noun
 
 `mkdir -p {red,green,blue}/{fish,bird,flower}`
