@@ -7,7 +7,7 @@ requirements:
 	pip3 install --user --upgrade mkdocs || \
 	pip install --user --upgrade mkdocs
 
-deploy: requirements
+deploy: requirements remotes
 	mkdocs gh-deploy --remote-name github --force
 
 hooks:
