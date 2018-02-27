@@ -8,6 +8,7 @@ Lego Mindstorms
 
 - <http://www.lego.com/en-us/mindstorms>
 - [Community Gallery](http://www.us.lego.com/en-us/mindstorms/gallery) - Robot designs from lego mindstorm community.
+- [Robot Operating System for ev3](http://wiki.ros.org/Robots/EV3)
 - [BUILD A ROBOT](http://www.lego.com/en-us/mindstorms/build-a-robot) - "These robots give you the full EV3 experience, complete with building instructions, programming missions and the programming tool included in the new free EV3 Programmer App."
 - [LEGO MINDSTORMS EV3 source code](https://github.com/mindboards/ev3sources)
 - [BrickPi](https://github.com/DexterInd/BrickPi) - "This project combines the brains of a Raspberry Pi with the brawn of a LEGO MINDSTORMS NXT"
