@@ -99,3 +99,10 @@
 - Installed on 2018-02-16
 - DD-WRT v3.0-r34900M kongac (c) 2018 NewMedia-NET GmbH
 - Release: 02/11/18
+- Very unstable wifi
+
+## 2018-02-19 DD-WRT v3.0-r35030M kongac (c) 2018 NewMedia-NET GmbH
+
+- Installed on 2018-02-24 (?)
+- DD-WRT v3.0-r35030M kongac (c) 2018 NewMedia-NET GmbH
+- Release: 02/19/18
