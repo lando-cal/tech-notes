@@ -30,4 +30,5 @@ two: this is foo_two and it requires bar_a bar_b
 
 # Links
 
-- [Automatic Variables](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)
+- <https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html>
+- <https://www.gnu.org/software/make/manual/html_node/Standard-Targets.html>
