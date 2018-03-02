@@ -16,6 +16,7 @@ hooks:
 
 ORIGIN=git@opal-dhopho:dho/tech-notes.git
 GITHUB=git@github.com:danielhoherd/tech-notes.git
+remotes: .remotes
 .remotes:
 	git remote add origin $(ORIGIN) 2> /dev/null || \
 		git remote set-url origin $(ORIGIN)
