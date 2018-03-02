@@ -7,7 +7,6 @@
 *.key
 *.log
 *.pyc
-*.pyc
 *.svn
 *.swo
 *.swp
@@ -16,4 +15,6 @@
 .DS_Store
 .dropbox
 .idea
+.mkdocs
+.remotes
 site
