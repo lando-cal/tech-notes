@@ -99,7 +99,7 @@ fping -q google.com || {
 
 - 2017-12-25: Discovered this firmware had been installed
 
-### 2018-01-03 DD-WRT v3.0-r34320M kongac (c) 2017 NewMedia-NET GmbH
+### 2018-01-03 DD-WRT v3.0-r34320M kongac
 
 - Installed on 2018-01-16
 - DD-WRT v3.0-r34320M kongac (c) 2017 NewMedia-NET GmbH
@@ -107,14 +107,14 @@ fping -q google.com || {
 - http://www.desipro.de/ddwrt/K3-AC-Arm/TEST/dd-wrt.v24-K3_AC_ARM_STD.bin
 - Frequent lock-ups
 
-### 2018-02-11 DD-WRT v3.0-r34900M kongac (c) 2018 NewMedia-NET GmbH
+### 2018-02-11 DD-WRT v3.0-r34900M kongac
 
 - Installed on 2018-02-16
 - DD-WRT v3.0-r34900M kongac (c) 2018 NewMedia-NET GmbH
 - Release: 02/11/18
 - Very unstable wifi
 
-### 2018-02-19 DD-WRT v3.0-r35030M kongac (c) 2018 NewMedia-NET GmbH
+### 2018-02-19 DD-WRT v3.0-r35030M kongac
 
 - Installed on 2018-02-24 (?)
 - DD-WRT v3.0-r35030M kongac (c) 2018 NewMedia-NET GmbH
