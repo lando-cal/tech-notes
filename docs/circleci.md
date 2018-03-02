@@ -4,3 +4,4 @@
 
 - <https://circleci.com/docs/2.0/configuration-reference/>
 - <https://circleci.com/docs/2.0/sample-config/>
+- <https://circleci.com/docs/2.0/circleci-images/>
