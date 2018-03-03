@@ -15,6 +15,9 @@
 - <https://github.com/kubernetes/kubectl>
 
 - `kubectl get nodes`
+- `kubectl config get-contexts`
+- `kubectl config use-context foo`
+- `kubectl describe pod foo`
 
 # Installation
 
@@ -34,3 +37,4 @@ sudo apt install -y kubelet kubeadm kubectl
 - <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm>
 - <https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster>
 - <https://docs.projectcalico.org/v3.0/introduction/>
+- <https://kubernetes.io/docs/reference/glossary/>
