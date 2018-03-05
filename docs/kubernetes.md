@@ -17,9 +17,16 @@
 - `kubectl get nodes`
 - `kubectl config get-contexts`
 - `kubectl config use-context foo`
+- `kubectl get pods`
 - `kubectl describe pod foo`
 
-# Installation
+# Quick and dirty installations
+
+## kubespray
+
+- <https://github.com/kubernetes-incubator/kubespray>
+
+## Manually on Ubuntu 16
 
 ```
 sudo swapoff -a # https://github.com/kubernetes/kubernetes/issues/53533
