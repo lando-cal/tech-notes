@@ -45,3 +45,4 @@ sudo apt install -y kubelet kubeadm kubectl
 - <https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster>
 - <https://docs.projectcalico.org/v3.0/introduction/>
 - <https://kubernetes.io/docs/reference/glossary/>
+- <https://kubernetes.io/docs/getting-started-guides/minikube/>
