@@ -49,3 +49,7 @@ Replace the audio of DSC_4436.AVI with 01 Gymnopedie 1.mp3 and limit the duratio
 ## Extract two seconds worth of frames at 24fps starting at 15m
 
 `ffmpeg -i movie.mkv -r 24 -t 00:00:02.00 -ss 00:15:00 temp/movie-%4d.jpg`
+
+## Detect errors in files
+
+`ffmpeg -v error -i 20091024-08-46-00.mpg -f null - 2>> error.log`
