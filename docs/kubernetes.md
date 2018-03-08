@@ -20,7 +20,7 @@
 - `kubectl get pods`
 - `kubectl describe pod foo`
 
-# Quick and dirty installations
+# Installations
 
 ## kubespray
 
