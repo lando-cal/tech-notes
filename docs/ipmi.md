@@ -110,6 +110,12 @@ modprobe ipmi_devintf
 modprobe ipmi_si
 ```
 
+## Reset the ADMIN password to ADMIN on a Supermicro BMC
+
+```
+sudo ipmitool -I open user set password 2 ADMIN
+```
+
 # See Also
 
 - <http://www.intel.com/design/servers/ipmi/>
