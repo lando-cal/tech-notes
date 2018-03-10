@@ -26,7 +26,17 @@
 
 - <https://github.com/kubernetes-incubator/kubespray>
 
+## Ansible on Ubuntu 16
+
+<https://github.com/entercloudsuite/ansible-kubernetes>
+
+```
+ansible-galaxy install entercloudsuite.kubernetes
+```
+
 ## Manually on Ubuntu 16
+
+- <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#instructions>
 
 ```
 sudo swapoff -a # https://github.com/kubernetes/kubernetes/issues/53533
