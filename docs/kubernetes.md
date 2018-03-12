@@ -2,6 +2,14 @@
 
 # cli usage
 
+## Multiple configs
+
+The default config is `~/.kube/config`, but if you want to use multiple configs you can do this:
+
+```
+export KUBECONFIG="${HOME}/.kube/config:${HOME}/code/kubespray/artifacts/admin.conf"
+```
+
 ## kubeadm
 
 "kubeadm: easily bootstrap a secure Kubernetes cluster." - `kubeadm --help`
