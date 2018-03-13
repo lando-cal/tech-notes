@@ -7,8 +7,10 @@
 The default config is `~/.kube/config`, but if you want to use multiple configs you can do this:
 
 ```
-export KUBECONFIG="${HOME}/.kube/config:${HOME}/code/kubespray/artifacts/admin.conf"
+export KUBECONFIG="${HOME}/code/kubespray/artifacts/admin.conf:${HOME}/.kube/config"
 ```
+
+I have seen weird problems when the order of configs is changed, such as `certificate-authority-data` and `client-certificate-data` being missing.
 
 ## kubeadm
 
@@ -44,7 +46,8 @@ ansible-galaxy install entercloudsuite.kubernetes
 
 ## Manually on Ubuntu 16
 
-- <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#instructions>
+
+- First install Docker - <https://docs.docker.com/install/linux/docker-ce/ubuntu/>
 
 ```
 sudo swapoff -a # https://github.com/kubernetes/kubernetes/issues/53533
@@ -56,6 +59,8 @@ sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 sudo apt update
 sudo apt install -y kubelet kubeadm kubectl
 ```
+
+Then start at `kubeadm init` on this guide: <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#instructions>
 
 # Links
 
