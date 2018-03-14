@@ -1,3 +1,5 @@
+# chkconfig
+
 chkconfig is a tool to interact with sys-v init scripts on centos/rhel hosts.
 
 # Examples
@@ -13,4 +15,3 @@ chkconfig is a tool to interact with sys-v init scripts on centos/rhel hosts.
 # See Also
 
 - [update-rc.d](update-rc.d) - similar feature for ubuntu sysvinit
-

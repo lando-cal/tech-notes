@@ -1,4 +1,6 @@
-Apple Airport, discontinued as of November 2016.
+# Apple Airport
+
+Apple Airport hardware was discontinued in November 2016.
 
 # Using old Airport Utility apps with new versions of OS X
 

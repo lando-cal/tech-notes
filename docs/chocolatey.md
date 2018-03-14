@@ -1,4 +1,6 @@
-"The package manager for WIndows" - <https://chocolatey.org>
+# Choclatey
+
+"The package manager for Windows" - <https://chocolatey.org>
 
 # Examples
 

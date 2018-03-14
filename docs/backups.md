@@ -1,4 +1,6 @@
-Data backup notes.
+# Backups
+
+Notes about backing up data.
 
 # Links
 

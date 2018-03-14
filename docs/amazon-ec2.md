@@ -1,3 +1,5 @@
+# Amazon EC2
+
 "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers." - <https://aws.amazon.com/ec2/>
 
 # Techniques

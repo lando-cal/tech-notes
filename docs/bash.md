@@ -1,3 +1,5 @@
+# GNU bash
+
 This doc has been automatically converted and still needs some cleanup.
 
 Bash is the most common mainstream *nix shell.

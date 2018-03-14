@@ -1,3 +1,5 @@
+# CentOS
+
 # CentOS 7
 
 - Released 2014-07-07
@@ -31,7 +33,7 @@ systemctl start ntpd
 yum install -y ntp  
 chkconfig --levels 345 ntpd on && ntpdate time.apple.com && service ntpd start  
 yum upgrade -y  
-yum install -y arping avahi avahi-tools bc bind-utils curl elinks fping lsof net-snmp man mlocate mutt openssh openssh-clients openssh-server perl-Crypt-SSLeay perl-libwww-perl rsync strace vim wget yum-cron 
+yum install -y arping avahi avahi-tools bc bind-utils curl elinks fping lsof net-snmp man mlocate mutt openssh openssh-clients openssh-server perl-Crypt-SSLeay perl-libwww-perl rsync strace vim wget yum-cron
 ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime  
 chkconfig --levels 345 yum-cron on && service yum-cron start  
 yum install -y dcfldd nfs-utils smartmontools dmidecode lshw dstat htop iotop  
@@ -90,7 +92,7 @@ alias bond0 bonding
 options bond0 max_bonds=1 fail_over_mac=2 mode=1 num_grat_arp=2 primary=em1 primary_reselect=1 arp_validate=1 arp_interval=100 arp_ip_target=10.1.5.15,10.1.1.1
 ```
 
-# See Also 
+# See Also
 
 - [chkconfig](chkconfig)
 - [rpm](rpm)

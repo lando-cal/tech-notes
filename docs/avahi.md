@@ -1,3 +1,5 @@
+# Avahi
+
 The Avahi [mDNS/DNS-SD](https://en.wikipedia.org/wiki/Multicast_DNS) daemon implements Apple's Zeroconf architecture (also known as "Rendezvous" or "Bonjour").
 
 # Tips

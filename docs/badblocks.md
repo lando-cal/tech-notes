@@ -1,3 +1,5 @@
+# badblocks
+
 badblocks is a program to test storage devices for bad blocks. - <https://wiki.archlinux.org/index.php/badblocks>
 
 # Examples
@@ -16,7 +18,7 @@ badblocks -v -s -w -b 4096 -t random -o ~/sdc.txt /dev/sdc
 
 # See also
 
-- dcfldd
-- dd
-- ddrescue
-- pv
+- [dcfldd](dcfldd)
+- [dd](dd)
+- [ddrescue](ddrescue)
+- [pv](pv)

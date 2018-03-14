@@ -67,6 +67,8 @@ Then start at `kubeadm init` on this guide: <https://kubernetes.io/docs/setup/in
 - <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm>
 - <https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster>
 - <https://docs.projectcalico.org/v3.0/introduction/>
+- <https://kubernetes.io/docs/concepts/cluster-administration/addons/>
+- <https://github.com/kubernetes/dashboard#kubernetes-dashboard>
 - <https://kubernetes.io/docs/reference/glossary/>
 - <https://kubernetes.io/docs/getting-started-guides/minikube/>
 - <http://slack.kubernetes.io/>
