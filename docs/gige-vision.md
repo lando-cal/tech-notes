@@ -7,3 +7,7 @@
 - GigE Vision Control Protocol (GVCP)
 - GigE Vision Stream Protocol (GVSP)
 - GigE Device Discovery Mechanism
+
+# See also
+
+- <http://www.emva.org/standards-technology/genicam/>
