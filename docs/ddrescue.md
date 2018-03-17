@@ -12,6 +12,12 @@ There are actually two tools called ddrescue: dd_rescue and gddrescue.  gddrescu
 ddrescue -f -n --min-read-rate=500000 /dev/source_disk /dev/target_disk ~/ddrescue.log
 ```
 
+## Wipe a hard disk and log bad sectors
+
+```
+sudo ddrescue --force /dev/zero /dev/disk/by-id/ata-foo ~/ddrescue-ata-foo.log
+```
+
 ## Attempt to continue the mirror of a hard disk
 
 ```
