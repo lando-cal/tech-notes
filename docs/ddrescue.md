@@ -6,17 +6,22 @@ There are actually two tools called ddrescue: dd_rescue and gddrescue.  gddrescu
 - Instruction Manual - <http://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html>
 
 # Examples
+
 ## Attempt to mirror an entire hard disk
 
 ```
 ddrescue -f -n --min-read-rate=500000 /dev/source_disk /dev/target_disk ~/ddrescue.log
 ```
 
+This uses the minimum read rate to skip sctors that may be bad on the input device.
+
 ## Wipe a hard disk and log bad sectors
 
 ```
 sudo ddrescue --force /dev/zero /dev/disk/by-id/ata-foo ~/ddrescue-ata-foo.log
 ```
+
+You can re-run this exact same command to resume the wipe of a hard disk.
 
 ## Attempt to continue the mirror of a hard disk
 
