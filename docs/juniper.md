@@ -9,6 +9,34 @@
 - root:<empty>
 - admin:abc123
 
+## Load configuration from terminal
+
+I have experienced errors when pasting into `screen /dev/tty.usbserial`, but having iTerm2 paste at 256 bytes per second appears to fix them.
+
+```
+Amnesiac (ttyu0)
+
+login: root
+
+--- JUNOS 13.2X51-D35.3 built 2015-04-09 20:48:22 UTC
+root@:RE:0% cli
+{master:0}
+root> configure
+Entering configuration mode
+Users currently editing the configuration:
+  autodconfig (pid 1291) on since 2018-01-06 17:32:28 UTC
+      exclusive
+
+{master:0}[edit]
+root# load override terminal
+[Type ^D at a new line to end input]
+```
+
+Then:
+0. paste your config
+0. press `ctrl-d`
+0. run `commit`
+
 ## Some example terminal buffer
 
 ```
