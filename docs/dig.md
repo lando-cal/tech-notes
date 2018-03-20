@@ -21,3 +21,9 @@ This is the most accurate way to get a DNS record as it will appear to anybody e
 ```
 dig +trace yelp.com
 ```
+
+If this doesn't give you a trace you must specify an alternate DNS server
+
+```
+dig @8.8.8.8 +trace renovo.auto
+```
