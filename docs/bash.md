@@ -161,7 +161,7 @@ for item in "$@" ; do
     fi
 done;
 
-### Verify we have at least two files to work with
+# Verify we have at least two files to work with
 if [ "${#args[@]}" -lt 4 ] ; then
     echo "We don't have enough actual files to work with. Exiting."
     exit 1
