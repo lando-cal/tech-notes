@@ -93,5 +93,18 @@ auto-image-upgrade;
 {master:0}[edit]
 ```
 
+## EX4300 OS install
+
+- <https://kb.juniper.net/InfoCenter/index?page=content&id=KB20551&cat=SWITCHING&actp=LIST#USB>
+
+After copying the install image to a usb disk and inserting it into the EX4300
+
+```
+mount_msdosfs /dev/da1s1 /mnt
+cp /mnt/jinstall-ex-4300-14.1X53-D45.3-domestic-signed.tgz /var/tmp/
+cli
+request system software add /var/tmp/jinstall-ex-4300-14.1X53-D45.3-domestic-signed.tgz
+```
+
 # Links
 - <https://www.juniper.net/documentation/en_US/junos/topics/concept/junos-cli-overview.html>
