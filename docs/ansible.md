@@ -6,3 +6,17 @@
 - <https://galaxy.ansible.com>
 - <http://www.azavea.com/blogs/labs/2014/10/creating-ansible-roles-from-scratch-part-1>
 - <http://ryandlane.com/blog/2014/08/04/moving-away-from-puppet-saltstack-or-ansible/>
+
+# Examples
+
+## Run a playbook and prompt for sudo password
+
+```
+ansible-playbook --ask-become-pass -i inventory/hosts.yaml create_users.yaml
+```
+
+## Validate and inspect your inventory file
+
+```
+ansible-inventory -i inventory/hosts.yml --list
+```
