@@ -42,3 +42,11 @@ ip -o link show | awk -F: '{print $2}' | while read -r X ; do
   sudo ethtool ${X} | egrep 'Settings|Speed' | xargs echo
 done | column -t -s:
 ```
+
+## Set MTU for a specific route
+
+- <http://lartc.org/howto/lartc.cookbook.mtu-discovery.html>
+
+```
+ip route add default via 10.0.0.1 mtu 296
+```
