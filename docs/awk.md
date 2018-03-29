@@ -57,10 +57,16 @@ ls | awk 'NR % 2 != 0 { print $0 }'
 awk '{if (NR%2==0) { print $0 " " prev } else { prev=$0 }}'
 ```
 
-## Sum all the first columns of each line in a file
+## Print sum all the first columns of each line in a file
 
 ```
 awk '{sum += $1} END {print sum}' filename
+```
+
+## Print sum and average of the first column of a file
+
+```
+awk '{sum += $1} END {avg = sum/NR ; printf "Sum:     %s\nAverage: %s\n", sum, avg}' foo.txt
 ```
 
 ## Split file by recurring string
