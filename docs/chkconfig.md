@@ -6,11 +6,11 @@ chkconfig is a tool to interact with sys-v init scripts on centos/rhel hosts.
 
 ## List services and their runlevels
 
-`chkconfig --list`
+`chkconfig --list`
 
 ## Turn on mysql at runlevels 3 and 5
 
-`chkconfig --level 35 mysql on`
+`chkconfig --level 35 mysql on`
 
 # See Also
 

@@ -4,7 +4,7 @@ iotop tracks disk I/O by process, and prints a summary report that is refreshed 
 
 ## Show cumulative stats for processes actually using IO
 
-`iotop -oa`
+`iotop -oa`
 
 # See also
 

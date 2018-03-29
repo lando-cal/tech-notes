@@ -15,7 +15,7 @@ top is a CLI tool to show running processes.
 ## Start top sorted by cpu
 
 ```
-top -u
+top -u
 ```
 
 # See also

@@ -5,7 +5,7 @@
 ## Generate an html power report
 
 ```
-powertop --html=powertop.html
+powertop --html=powertop.html
 ```
 
 # See also

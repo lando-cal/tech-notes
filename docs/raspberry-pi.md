@@ -7,7 +7,7 @@ A small computer, good for running linux.
 
 ## Raspbian
 
-`dpkg-reconfigure locales`
+`dpkg-reconfigure locales`
 
 ## Hass.io
 

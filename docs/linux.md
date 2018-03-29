@@ -15,10 +15,10 @@ Most linux distros are built on GNU tools, and this article is relevant in disti
 These lines should be added to `sysctl.conf`
 
 ```
-# Reboot after 10 seconds if kernel panics
-kernel.panic = 10  
-# Treat all oopses as panics  
-kernel.panic_on_oops = 1
+# Reboot after 10 seconds if kernel panics
+kernel.panic = 10  
+# Treat all oopses as panics  
+kernel.panic_on_oops = 1
 ```
 
 ## Force reboot on corrupt system
@@ -26,8 +26,8 @@ kernel.panic_on_oops = 1
 For times that commands like [reboot](reboot "wikilink") and [shutdown](shutdown "wikilink") are not available.
 
 ```
-echo 1 > /proc/sys/kernel/sysrq
-echo b > /proc/sysrq-trigger
+echo 1 > /proc/sys/kernel/sysrq
+echo b > /proc/sysrq-trigger
 ```
 
 # See also

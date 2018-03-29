@@ -7,11 +7,11 @@
 ## Trace a running process
 
 ```
-strace -p 5789
+strace -p 5789
 ```
 
 ## Trace only exec calls of a command and all child processes
 
 ```
-strace -f -eexecve cf-agent -K
+strace -f -eexecve cf-agent -K
 ```

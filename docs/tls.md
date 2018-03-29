@@ -12,7 +12,7 @@ To set up VirtualHosts, follow this template: <http://wiki.apache.org/httpd/Name
 ### Show info about a pem file
 
 ```
-openssl x509 -noout -text -in foo.pem
+openssl x509 -noout -text -in foo.pem
 ```
 
 ## Show certificate options
@@ -26,8 +26,8 @@ openssl x509 -text -in foo.crt
 To validate that a particular key was used to generate a certificate, useful for testing https key/crt files, do the following and make sure the modulus sections match:
 
 ```
-openssl rsa  -noout -text -in server.key | grep -i -A9 modulus
-openssl x509 -noout -text -in server.crt | grep -i -A9 modulus
+openssl rsa  -noout -text -in server.key | grep -i -A9 modulus
+openssl x509 -noout -text -in server.crt | grep -i -A9 modulus
 ```
 
 Or
@@ -54,19 +54,19 @@ function cert-key-compare {
 ## See some information about a server's certificate
 
 ```
-openssl s_client -connect linuxforums.org:443
+openssl s_client -connect linuxforums.org:443
 ```
 
 ## Encrypt a file
 
 ```
-openssl enc -aes-256-cbc -salt -in yourfile -out yourfile.enc
+openssl enc -aes-256-cbc -salt -in yourfile -out yourfile.enc
 ```
 
 ## Decrypt a file
 
 ```
-openssl enc -aes-256-cbc -d -in encryptedfile.enc -out decryptedfile
+openssl enc -aes-256-cbc -d -in encryptedfile.enc -out decryptedfile
 ```
 
 ## Encrypt / Decrypt bash functions

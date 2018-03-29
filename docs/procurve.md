@@ -2,8 +2,8 @@
 
 # Copy config files
 
-`scp user@switch:cfg/startup-config ./`  
-`scp user@switch:cfg/running-config ./`
+`scp user@switch:cfg/startup-config ./`  
+`scp user@switch:cfg/running-config ./`
 
 # Firmware update
 
@@ -12,78 +12,78 @@
 
 Then on the switch...
 
-`system boot flash primary`
+`system boot flash primary`
 
 # Config Examples
 
 ### Set an IP# for the default VLAN
 
 ```
-interface vlan 1 ip address 172.28.115.234 255.255.255.0
-ip default-gateway 172.28.115.1
+interface vlan 1 ip address 172.28.115.234 255.255.255.0
+ip default-gateway 172.28.115.1
 ```
 
 ### Set up additional VLANs
 
 ```
-vlan 100 untagged 2  
-vlan 100 ip address 172.28.100.1  
-vlan 102 untagged 3  
-vlan 102 ip address 172.28.102.1
+vlan 100 untagged 2  
+vlan 100 ip address 172.28.100.1  
+vlan 102 untagged 3  
+vlan 102 ip address 172.28.102.1
 ```
 
 ### Enable routing between connected networks
 
-`ip routing`
+`ip routing`
 
 ### Set up SNTP clock
 
 ```
-sntp server 172.28.111.16   
-timesync sntp   
-sntp 120  
-sntp unicast
+sntp server 172.28.111.16  
+timesync sntp  
+sntp 120  
+sntp unicast
 ```
 
 ### Alter DST settings
 
-`time daylight-time-rule User-defined begin-date 3/8 end-date 11/1`
+`time daylight-time-rule User-defined begin-date 3/8 end-date 11/1`
 
 ### Enable SSH
 
 ```
-crypto key generate ssh  
-ip ssh  
-ip ssh version 2  
-ip ssh filetransfer
+crypto key generate ssh  
+ip ssh  
+ip ssh version 2  
+ip ssh filetransfer
 ```
 
 ### Disable telnet
 
-`no telnet-server`
+`no telnet-server`
 
 ### Set up snmp
 
-`snmp-server community "foobar" Operator`
+`snmp-server community "foobar" Operator`
 
 ### Set up a VLAN 112 port group
 
-`vlan 112 untagged 6-12`
+`vlan 112 untagged 6-12`
 
 ### Set two groups of ports as a trunks (eg: to use with VMware in static LACP)
 
 ```
-trunk 1-4 trk1 trunk  
-trunk 5-8 trk2 trunk
+trunk 1-4 trk1 trunk  
+trunk 5-8 trk2 trunk
 ```
 
 ### Set up VLAN multiplexing
 
 ```
-vlan 114 tagged 24  
-vlan 115 tagged 24  
-vlan 114 tagged Trk1  
-vlan 115 tagged Trk1
+vlan 114 tagged 24  
+vlan 115 tagged 24  
+vlan 114 tagged Trk1  
+vlan 115 tagged Trk1
 ```
 
 # See Also

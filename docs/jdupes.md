@@ -7,7 +7,7 @@
 ## Recursively find all duplicates in a dir
 
 ```
-jdupes -r /path/to/dir
+jdupes -r /path/to/dir
 ```
 
 ## Create hard-links of any duplicate files
