@@ -24,4 +24,5 @@
 
 - Ceph Intro & Architectural Overview - <https://youtu.be/7I9uxoEhUdY>
 - <http://docs.ceph.com/docs/master/start/quick-ceph-deploy/>
+- <http://docs.ceph.com/docs/master/rados/operations/operating/>
 - <http://docs.ceph.com/ceph-ansible/master/>
