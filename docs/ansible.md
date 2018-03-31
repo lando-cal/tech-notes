@@ -21,3 +21,37 @@ ansible-playbook --ask-become-pass -i inventory/hosts.yaml create_users.yaml
 ```
 ansible-inventory -i inventory/hosts.yml --list
 ```
+
+## Use arbitrary groups in static inventory file
+
+```
+$ nl -w 2 -s ' ' -ba inventory/example.yml
+ 1 all:
+ 2   hosts:
+ 3     client:
+ 4       ansible_host: 192.168.1.2
+ 5     server:
+ 6       ansible_host: 192.168.2.3
+ 7
+ 8 linux:
+ 9   hosts:
+10     server:
+11
+12 windows:
+13   hosts:
+14     client:
+15
+16 california:
+17   hosts:
+18     client:
+19     server:
+$ ansible-inventory -i inventory/example.yml --graph
+@all:
+  |--@california:
+  |  |--client
+  |  |--server
+  |--@linux:
+  |  |--server
+  |--@windows:
+  |  |--client
+```
