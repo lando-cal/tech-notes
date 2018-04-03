@@ -70,3 +70,9 @@ systemctl -n 20 status nodejs
 ```
 /etc/systemd/logind.conf
 ```
+
+## Show name resolution status
+
+```
+systemd-resolve --status
+```
