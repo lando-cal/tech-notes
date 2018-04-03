@@ -93,6 +93,29 @@ auto-image-upgrade;
 {master:0}[edit]
 ```
 
+## Remove virtual-chassis from an EX4300
+
+```
+request virtual-chassis vc-port delete pic-slot 1 port 0
+request virtual-chassis vc-port delete pic-slot 1 port 1
+request virtual-chassis vc-port delete pic-slot 1 port 2
+request virtual-chassis vc-port delete pic-slot 1 port 3
+```
+
+You can validate this by looking for the following interfaces. If you do not see the `et-0/1/{0..3}` interfaces then the virtual-chassis may still exist in full or in part.
+
+```
+root> show interfaces terse | match et-
+et-0/1/0                up    up
+et-0/1/0.0              up    up   eth-switch
+et-0/1/1                up    up
+et-0/1/1.0              up    up   eth-switch
+et-0/1/2                up    up
+et-0/1/2.0              up    up   aenet    --> ae0.0
+et-0/1/3                up    up
+et-0/1/3.0              up    up   aenet    --> ae0.0
+```
+
 ## EX4300 OS install
 
 - <https://kb.juniper.net/InfoCenter/index?page=content&id=KB20551&cat=SWITCHING&actp=LIST#USB>
@@ -108,3 +131,4 @@ request system software add /var/tmp/jinstall-ex-4300-14.1X53-D45.3-domestic-sig
 
 # Links
 - <https://www.juniper.net/documentation/en_US/junos/topics/concept/junos-cli-overview.html>
+- <https://www.juniper.net/documentation/en_US/junos/topics/task/configuration/virtual-chassis-mx-series-vc-ports-deleting.html>
