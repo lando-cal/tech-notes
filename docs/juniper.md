@@ -129,6 +129,27 @@ cli
 request system software add /var/tmp/jinstall-ex-4300-14.1X53-D45.3-domestic-signed.tgz
 ```
 
+## Clear a DHCP client lease
+
+```
+root@junos> show dhcp server binding
+IP address        Session Id  Hardware address   Expires     State      Interface
+10.8.52.6         2           00:1e:7c:f8:be:34  85166       BOUND      irb.100
+10.8.52.9         5           6c:c1:11:4e:52:8c  86299       BOUND      irb.100
+10.8.52.5         3           d8:fa:97:b8:1a:dd  85222       BOUND      irb.100
+
+{master:0}
+root@junos> clear dhcp server binding 2
+
+{master:0}
+root@junos> show dhcp server binding
+IP address        Session Id  Hardware address   Expires     State      Interface
+10.8.52.9         5           6c:c1:11:4e:52:8c  86275       BOUND      irb.100
+10.8.52.5         3           d8:fa:97:b8:1a:dd  85198       BOUND      irb.100
+
+{master:0}
+```
+
 # Links
 
 - <https://www.juniper.net/documentation/en_US/junos/topics/concept/junos-cli-overview.html>
