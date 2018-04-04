@@ -119,3 +119,9 @@ fping -q google.com || {
 - Installed on 2018-02-24 (?)
 - DD-WRT v3.0-r35030M kongac (c) 2018 NewMedia-NET GmbH
 - Release: 02/19/18
+- This version cannot seem to stay up for more than 12 hours without losing connectivity.
+
+### 2018-04-04 v3.0-r35550M kongac
+
+- Installed on 2018-04-04
+- DD-WRT v3.0-r35550M kongac (03/28/18)
