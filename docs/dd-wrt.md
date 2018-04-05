@@ -125,3 +125,4 @@ fping -q google.com || {
 
 - Installed on 2018-04-04
 - DD-WRT v3.0-r35550M kongac (03/28/18)
+- Still having stability problems, didn't make it 2h before needing a reboot.
