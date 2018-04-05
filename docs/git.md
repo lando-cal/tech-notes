@@ -9,8 +9,9 @@ baddass version control
 - <http://scottchacon.com/2011/08/31/github-flow.html>
 - <https://guides.github.com/introduction/flow/index.html>
 - <http://nvie.com/posts/a-successful-git-branching-model/>
-- <https://training.github.com/kit/intermediate/> - Training
-- <https://github.com/git/git/tree/master/Documentation/RelNotes> - Release Notes
+- <https://training.github.com/kit/intermediate/>
+- <https://github.com/git/git/tree/master/Documentation/RelNotes>
+- <https://www.gitignore.io/>
 
 # Examples
 
