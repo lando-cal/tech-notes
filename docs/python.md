@@ -159,6 +159,7 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 - [The Python IAQ: Infrequently Answered Questions](http://norvig.com/python-iaq.html)
 - [Why I use py.test and you probably should too](http://halfcooked.com/presentations/pyconau2013/why_I_use_pytest.html)
 - [PyCon 2017 videos](https://www.youtube.com/channel/UCrJhliKNQ8g0qoE_zvL8eVg)
+- [Cookiecutter: Better Project Templates](https://cookiecutter.readthedocs.io/en/latest/) / [A pantry full of cookiecutters](https://cookiecutter.readthedocs.io/en/latest/readme.html#a-pantry-full-of-cookiecutters)
 
 ## Decorator links
 
