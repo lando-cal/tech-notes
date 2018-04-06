@@ -1,3 +1,5 @@
+# ZFS
+
 ZFS is the Zetabyte File System.
 
 # Links
@@ -120,7 +122,7 @@ zpool status -D z2
 
 ```
 # Replace the first disk with the second in the tank pool
-zpool replace -f tank /dev/disk/by-id/ata-ST3000DM001-9YN166_W1F09CW9 /dev/disk/by-id/ata-ST3000DM001-9YN166_Z1F0N9S7 
+zpool replace -f tank /dev/disk/by-id/ata-ST3000DM001-9YN166_W1F09CW9 /dev/disk/by-id/ata-ST3000DM001-9YN166_Z1F0N9S7
 ```
 
 ### Real example

@@ -1,3 +1,5 @@
+# Wget
+
 "GNU Wget is a free software package for retrieving files using HTTP, HTTPS, FTP and FTPS the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc." - <https://www.gnu.org/software/wget>
 
 # Examples
@@ -24,7 +26,7 @@ wget --wait=2 --random-wait --tries=0 --waitretry=30 -np -N -r -A.jpg http://www
 Some servers that need referrers and cookies can be accessed by doing:
 
 ```
-wget --save-cookies="cookies.txt" “foo.html
+wget --save-cookies="cookies.txt" "foo.html
 wget --load-cookies="cookies.txt" --referer="foo.html" "foo.mp3"
 ```
 

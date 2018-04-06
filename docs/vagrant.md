@@ -1,4 +1,9 @@
-- Vagrantfile syntax is ruby
+# vagrant
+
+"Vagrant is a tool for building and managing virtual machine environments in a single workflow." - <https://www.vagrantup.com/intro/index.html>
+
+# Links
+
 - <https://www.vagrantup.com>
 - [https://docs.vagrantup.com/v2](http://docs.vagrantup.com/v2)
 - <https://atlas.hashicorp.com>

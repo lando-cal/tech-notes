@@ -48,7 +48,7 @@ chkconfig --levels 345 smartd on && service smartd start
 
 ### Enable DHCP Hostname for DNS resolution
 
-add “`DHCP_HOSTNAME=whatever`” to
+add "`DHCP_HOSTNAME=whatever`" to
 /etc/sysconfig/network-scripts/ifcfg-eth0
 
 ### Install OS from USB

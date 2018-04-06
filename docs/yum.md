@@ -1,6 +1,11 @@
-Redhat Package Manager is a format for software distribution.
+# yum
 
-# Tricks
+"yum - Yellowdog Updater Modified" - `man yum`
+
+"yum is an interactive, rpm based, package manager." - `man yum`
+
+# Examples
+
 ## Show a list of enabled repositories
 
 ```
