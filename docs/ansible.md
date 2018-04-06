@@ -12,6 +12,7 @@
 - <http://docs.ansible.com/ansible/latest/list_of_all_modules.html>
 - <http://docs.ansible.com/ansible/latest/modules/apt_module.html>
 - <http://docs.ansible.com/ansible/latest/modules/apt_repository_module.html>
+- <http://docs.ansible.com/ansible/latest/modules/sysctl_module.html>
 - <http://docs.ansible.com/ansible/latest/modules/user_module.html>
 
 # Examples
