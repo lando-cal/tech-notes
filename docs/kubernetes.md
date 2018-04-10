@@ -73,3 +73,4 @@ Then start at `kubeadm init` on this guide: <https://kubernetes.io/docs/setup/in
 - <https://kubernetes.io/docs/reference/glossary/>
 - <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm>
 - <http://slack.kubernetes.io/>
+- <https://kubernetes.io/docs/concepts/workloads/controllers/deployment/>
