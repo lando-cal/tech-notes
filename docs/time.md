@@ -110,7 +110,6 @@ date -s $(curl -s -D - google.com | sed '/Date:/s/.*Date: //p ; d')
 
 ## Reading
 
-- [Understanding and mitigating NTP-based DDoS attacks](https://blog.cloudflare.com/understanding-and-mitigating-ntp-based-ddos-attacks/)
 - [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 - [Date and Time on the Internet: Timestamps - RFC 3339](https://tools.ietf.org/html/rfc3339)
 - [Examples of date (GNU)](https://www.gnu.org/software/coreutils/manual/html_node/Examples-of-date.html)
@@ -123,3 +122,7 @@ date -s $(curl -s -D - google.com | sed '/Date:/s/.*Date: //p ; d')
 ## Videos
 
 - [The Problem with Time & Timezones - Computerphile](https://www.youtube.com/watch?v=-5wpm-gesOY)
+
+# See Also
+- [ntp](ntp) - Network Time Protocol
+- [ptp](ptp) - Precision Time Protocol
