@@ -12,3 +12,5 @@
 - [Five different ways to handle leap seconds with NTP](https://developers.redhat.com/blog/2015/06/01/five-different-ways-handle-leap-seconds-ntp/)
 - [The Unix leap second mess](http://www.madore.org/~david/computers/unix-leap-seconds.html)
 - [ntp.org FAQ: What happens during a Leap Second?](http://www.ntp.org/ntpfaq/NTP-s-algo-real.htm#AEN2499)
+- [The Raspberry Pi as a Stratum-1 NTP Server](http://www.satsignal.eu/ntp/Raspberry-Pi-NTP.html)
+- [NTP vs PTP: Network Timing Smackdown!](https://blog.meinbergglobal.com/2013/11/22/ntp-vs-ptp-network-timing-smackdown/)
