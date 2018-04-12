@@ -46,6 +46,6 @@ echo b > /proc/sysrq-trigger
 
 ## Filesystems
 
-- Filesystem Heirarchy Standards: <http://www.pathname.com/fhs/pub/fhs-2.3.html>
+- Filesystem Heirarchy Standards: <http://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html>
 - [LVM](lvm)
 - [ZFS](zfs)
