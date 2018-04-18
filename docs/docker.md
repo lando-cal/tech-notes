@@ -1,4 +1,6 @@
-"An open source project to pack, ship and run any application as a lightweight container."
+Title: docker
+
+"An open source project to pack, ship and run any application as a lightweight container." - <https://www.docker.com/>
 
 # Examples
 

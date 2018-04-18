@@ -1,3 +1,5 @@
+Title: Graphical Image Formats
+
 - arw - Sony Alpha raw format
 - cr2 - Canon raw format
 - dng - Adobe digital negative

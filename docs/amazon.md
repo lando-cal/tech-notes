@@ -1,4 +1,6 @@
-# Amazon
+Title: Amazon
+
+Mostly related to the technological offerings of Amazon, not the shopping experience or anything else they do.
 
 # Links
 

@@ -1,3 +1,5 @@
+Title: ldap
+
 Lightweight Directory Access Protocol
 
 # Acronyms and stuff

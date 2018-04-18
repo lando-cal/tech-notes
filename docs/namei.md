@@ -1,3 +1,5 @@
+Title: namei
+
 "follow a pathname until a terminal point is found" - `man namei`
 
 # Examples

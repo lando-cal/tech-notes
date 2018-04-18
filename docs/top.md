@@ -1,3 +1,5 @@
+Title: top
+
 top is a CLI tool to show running processes.
 
 # GNU top Usage

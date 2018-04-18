@@ -1,4 +1,4 @@
-# Gitlab
+Title: Gitlab
 
 "A single application for the complete DevOps lifecycle" - <https://about.gitlab.com>
 

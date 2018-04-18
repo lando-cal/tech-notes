@@ -1,4 +1,4 @@
-# Bind
+Title: BIND
 
 BIND, or named, is the most widely used Domain Name System (DNS) software on the Internet.
 

@@ -1,3 +1,5 @@
+Title: Handbrake
+
 [Handbrake](http://handbrake.m0k.org/) is a tool for ripping DVD's into MPEG or AVI files.
 
 # CLI Examples

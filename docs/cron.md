@@ -1,3 +1,5 @@
+Title: cron
+
 Per-user and system-wide scheduled tasks, handled by the cron daemon.
 
 # Locations

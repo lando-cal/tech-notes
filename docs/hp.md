@@ -1,3 +1,7 @@
+Title: HP
+
+Information about [HP Inc](https://en.wikipedia.org/wiki/HP_Inc.) and [Hewlett-Packard Company](https://en.wikipedia.org/wiki/Hewlett-Packard) hardware and software.
+
 # Links
 
 - <http://cciss.sourceforge.net> - RAID software for linux

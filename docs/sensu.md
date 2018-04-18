@@ -1,3 +1,5 @@
+Title: sensu
+
 "Monitor servers, services, application health, and business KPIs. Get notified about failures before your users do. Collect and analyze custom metrics. Give your business the competitive advantage it deserves." - <https://sensuapp.org>
 
 # Overview

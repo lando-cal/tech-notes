@@ -1,3 +1,5 @@
+Title: Cobbler
+
 "Cobbler is a Linux installation server that allows for rapid setup of network installation environments." -- <http://cobbler.github.io>
 
 # Notes

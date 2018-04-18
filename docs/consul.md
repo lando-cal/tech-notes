@@ -1,3 +1,5 @@
+Title: consul
+
 "Service Discovery and Configuration Made Easy" - <https://www.consul.io/>
 
 # Links

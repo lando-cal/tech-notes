@@ -1,3 +1,5 @@
+Title: Samsung
+
 # Android links relevant to Samsung
 
 - <http://www.sammobile.com/firmwares/database/SM-T700/>

@@ -1,3 +1,5 @@
+Title: shutdown
+
 a command to reboot a *nix server.
 
 # Examples

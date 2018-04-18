@@ -1,3 +1,5 @@
+Title: rsync
+
 Great way to sync one location to another, local or remote.  Note that this does not mean full synchronization, two commands with reversed source and destinations are required to accomplish that.
 
 # Syntax Examples

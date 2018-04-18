@@ -1,3 +1,5 @@
+Title: date
+
 The `date` shell command
 
 date behaves differently between gnu and bsd. In OS X you can install gnu date by doing `brew install coreutils`
@@ -78,3 +80,9 @@ date -v+1H # one hour in the future
 ```
 date -r 1514308711
 ```
+
+# See also
+
+- [ntp](ntp)
+- [ptp](ptp)
+- [time](time)

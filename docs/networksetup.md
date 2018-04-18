@@ -1,3 +1,5 @@
+Title: networksetup
+
 "networksetup -- configuration tool for network settings in System Preferences." - `man networksetup`
 
 `networksetup` is a standard tool on [osx](osx)

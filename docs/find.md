@@ -1,3 +1,5 @@
+Title: find
+
 The `find` util letes you search a filesystem for things that match filesystem attributes. Unfortunately this is one of those tools where BSD and GNU deviate syntactically and featurewise, and GNU mostly wins.
 
 # Examples

@@ -1,3 +1,5 @@
+Title: jpeginfo
+
 "jpeginfo - prints information and tests integrity of JPEG/JFIF files." - man jpeginfo
 
 # Example

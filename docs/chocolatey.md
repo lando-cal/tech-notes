@@ -1,4 +1,4 @@
-# Choclatey
+Title: Choclatey
 
 "The package manager for Windows" - <https://chocolatey.org>
 

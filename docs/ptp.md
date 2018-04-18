@@ -1,4 +1,4 @@
-# ptp
+Title: ptp
 
 "The Precision Time Protocol (PTP) is a protocol used to synchronize clocks throughout a computer network. On a local area network, it achieves clock accuracy in the sub-microsecond range, making it suitable for measurement and control systems." - <https://en.wikipedia.org/wiki/Precision_Time_Protocol>
 

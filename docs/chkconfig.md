@@ -1,4 +1,4 @@
-# chkconfig
+Title: chkconfig
 
 chkconfig is a tool to interact with sys-v init scripts on centos/rhel hosts.
 

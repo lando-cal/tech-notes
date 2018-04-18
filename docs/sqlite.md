@@ -1,3 +1,5 @@
+Title: sqlite
+
 - CLI Shell info: <http://www.sqlite.org/sqlite.html>
 - Better CLI tutorial: <http://souptonuts.sourceforge.net/readme_sqlite_tutorial.html>
 - FAQ - <http://www.sqlite.org/faq.html>

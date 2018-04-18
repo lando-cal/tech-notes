@@ -1,3 +1,5 @@
+Title: dns
+
 Domain Name System
 
 "The Domain Name System (DNS) is a hierarchical decentralized naming system for computers, services, or any resource connected to the Internet or a private network."

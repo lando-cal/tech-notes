@@ -1,4 +1,4 @@
-# winbind
+Title: winbind
 
 These examples may only work on Samba 3. See info about Winbindd here: <https://wiki.samba.org/index.php/Configuring_Winbindd_on_a_Samba_AD_DC>
 

@@ -1,3 +1,5 @@
+Title: httpstat
+
 "curl statistics made simple" - <https://github.com/reorx/httpstat>
 
 # Usage

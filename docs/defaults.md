@@ -1,3 +1,5 @@
+Title: defaults
+
 `defaults` allows users to read, write, and delete Mac OS X user defaults from a command-line shell.
 
 # Examples

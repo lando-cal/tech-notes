@@ -1,3 +1,5 @@
+Title: ps_mem
+
 "A utility to accurately report the in core memory usage for a program." - <https://github.com/pixelb/ps_mem>
 
 # Usage examples

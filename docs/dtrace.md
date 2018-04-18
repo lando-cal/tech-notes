@@ -1,4 +1,4 @@
-# dtrace
+Title: dtrace
 
 "dynamic tracing compiler and tracing utility" - `man dtrace`
 

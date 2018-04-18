@@ -1,3 +1,5 @@
+Title: sgdisk
+
 "sgdisk - Command-line GUID partition table (GPT) manipulator for Linux and Unix" - man sgdisk
 
 # Examples

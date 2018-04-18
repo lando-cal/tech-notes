@@ -1,3 +1,5 @@
+Title: IPMI
+
 The Intelligent Platform Management Interface (IPMI) is a set of computer interface specifications for an autonomous computer subsystem that provides management and monitoring capabilities independently of the host system's CPU, firmware (BIOS or UEFI) and operating system.
 
 # Managing servers with IPMI

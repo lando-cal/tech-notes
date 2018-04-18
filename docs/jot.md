@@ -1,3 +1,5 @@
+Title: jot
+
 jot is a BSD CLI tool to generate sequences or random data, usually numbers.
 
 # Tricks

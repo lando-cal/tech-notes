@@ -1,4 +1,4 @@
-# GNU bash
+Title: GNU bash
 
 This doc has been automatically converted and still needs some cleanup.
 

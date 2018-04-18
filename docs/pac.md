@@ -1,3 +1,7 @@
+Title: pac
+
+Information about proxy auto-config files.
+
 # Example pac file
 
 The following pac file will

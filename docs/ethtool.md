@@ -1,3 +1,5 @@
+Title: ethtool
+
 "ethtool - query or control network driver and hardware settings" - `man ethtool`
 
 # Examples

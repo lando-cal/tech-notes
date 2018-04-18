@@ -1,3 +1,5 @@
+Title: dmidecode
+
 tool for listing hardware information and decoding it into human readable form. This tool decodes the DMI information.
 
 # Examples

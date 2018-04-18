@@ -1,3 +1,5 @@
+Title: sed
+
 sed is the stream editor.
 
 # Tips

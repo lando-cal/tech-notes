@@ -1,4 +1,4 @@
-# vim
+Title: vim
 
 "Vim is a text editor that is upwards compatible to Vi." - `man vim`
 

@@ -1,4 +1,6 @@
-# CentOS
+Title: CentOS Linux
+
+"The CentOS Project is a community-driven free software effort focused on delivering a robust open source ecosystem." - <https://www.centos.org/>
 
 # CentOS 7
 

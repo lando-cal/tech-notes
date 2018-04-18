@@ -1,3 +1,5 @@
+Title: jargon
+
 - AMoD - Autonomous Mobility on Demand
 - [bikeshedding](https://en.wikipedia.org/wiki/Law_of_triviality) - The term was coined as a metaphor to illuminate Parkinson's Law of Triviality. Parkinson observed that a committee whose job is to approve plans for a nuclear power plant may spend the majority of its time on relatively unimportant but easy-to-grasp issues, such as what materials to use for the staff bikeshed, while neglecting the design of the power plant itself, which is far more important but also far more difficult to criticize constructively.
 - [cargo cult](https://en.wikipedia.org/wiki/Cargo_cult) - software containing elements that are included because of successful utilization elsewhere, unnecessary for the task at hand.

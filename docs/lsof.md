@@ -1,3 +1,5 @@
+Title: lsof
+
 lsof lists open files. This CLI tool is available on most *nix OSes.
 
 # Examples

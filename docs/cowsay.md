@@ -1,3 +1,5 @@
+Title: cowsay
+
 In Linux etc., print a cow that is saying something. Also works as `cowthink`, and a variety of other animals and artwork are available.
 
 # Examples

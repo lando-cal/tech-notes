@@ -1,3 +1,5 @@
+Title: osx
+
 Apple's Unix desktop operating system.
 
 # Nifty Commands

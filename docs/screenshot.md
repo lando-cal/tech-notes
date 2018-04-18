@@ -1,3 +1,7 @@
+Title: Screenshots
+
+Different methods for grabbing an graphical image of what is being displayed on a physical or virtual device.
+
 # Linux
 
 ## Grab all vt screenshots

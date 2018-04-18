@@ -1,4 +1,4 @@
-# Upstart
+Title: Upstart
 
 "Upstart is an event-based replacement for the `/sbin/init` daemon which handles starting of tasks and services during boot, stopping them during shutdown and supervising them while the system is running." - <http://upstart.ubuntu.com>
 

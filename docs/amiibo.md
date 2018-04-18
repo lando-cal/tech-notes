@@ -1,4 +1,4 @@
-# Nintendo Amiibo
+Title: Nintendo Amiibo
 
 Amiibo are NFC figurines that enable in-game features on Nintendo 3DS, Wii U and Switch platforms.
 

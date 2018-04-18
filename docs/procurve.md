@@ -1,3 +1,5 @@
+Title: procurve
+
 [Procurve](/wiki/Procurve "wikilink") switches from [HP](HP "wikilink") offer cheap layer 2 and layer 3 switching.
 
 # Copy config files

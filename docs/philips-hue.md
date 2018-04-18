@@ -1,3 +1,5 @@
+Title: philips-hue
+
 "Philips Hue is your personal wireless lighting system that lets you easily control your light and create the right ambiance for every moment." - <https://www2.meethue.com>
 
 # Siri integration

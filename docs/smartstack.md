@@ -1,3 +1,5 @@
+Title: smartstack
+
 [SmartStack is an automated service discovery and registration framework](http://nerds.airbnb.com/smartstack-service-discovery-cloud/).
 
 # Components

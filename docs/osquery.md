@@ -1,3 +1,5 @@
+Title: osquery
+
 "SQL powered operating system instrumentation, monitoring, and analytics."
 
 oquery runs locally and allows you to inspect your host using sql queries. Tables exist for a variety of useful data, such as file hashes, process list, last user login, etc..

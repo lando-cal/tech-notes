@@ -1,3 +1,5 @@
+Title: sips
+
 "scriptable image processing system." - `sip --help`
 
 # Examples

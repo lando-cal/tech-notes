@@ -1,3 +1,5 @@
+Title: fortune
+
 fortune is a unix command that displays a random fortune on the CLI.
 
 # Make a fortune file

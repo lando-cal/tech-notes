@@ -1,4 +1,4 @@
-# strace
+Title: strace
 
 `strace` is a tool to trace system calls and signals in Linux.
 

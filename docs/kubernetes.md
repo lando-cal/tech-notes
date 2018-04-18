@@ -1,3 +1,5 @@
+Title: kubernetes
+
 "Kubernetes is an open-source platform for automating deployment, scaling, and operations of application containers across clusters of hosts, providing container-centric infrastructure." - <https://kubernetes.io/docs/whatisk8s>
 
 # cli usage

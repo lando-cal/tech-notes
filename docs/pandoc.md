@@ -1,3 +1,5 @@
+Title: pandoc
+
 Convert between document formats.
 
 http://pandoc.org/

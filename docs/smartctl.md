@@ -1,3 +1,5 @@
+Title: smartctl
+
 Linux interface to SMART data for hard disks.
 
 # Examples

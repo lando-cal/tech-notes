@@ -1,3 +1,5 @@
+Title: ps
+
 `ps` shows a list of processes in a *nix system.
 
 # Examples

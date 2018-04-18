@@ -1,3 +1,5 @@
+Title: sysctl
+
 "sysctl - configure kernel parameters at runtime" - man sysctl
 
 `/etc/sysctl.conf` is for storing permanent changes, `sysctl` is used for making changes to the running system.

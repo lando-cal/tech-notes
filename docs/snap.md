@@ -1,3 +1,5 @@
+Title: snap
+
 "Package any app for every Linux desktop, server, cloud or device, and deliver updates directly." - <http://snapcraft.io/>
 
 > A snap is a fancy zip file containing an application together with its dependencies, and a description of how it should safely be run on your system, especially the different ways it should talk to other software.

@@ -1,3 +1,5 @@
+Title: touch
+
 `touch` is a command to modify the date of filesystem metadata for a given file.
 
 # Examples

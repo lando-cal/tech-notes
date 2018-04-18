@@ -1,4 +1,4 @@
-Nintendo 3DS
+Title: Nintendo 3DS
 
 - <https://yls8.mtheall.com/3dsbrowserhax.php>
 - <http://www.3dbrew.org/wiki/Homebrew_Applications>

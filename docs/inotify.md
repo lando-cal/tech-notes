@@ -1,3 +1,5 @@
+Title: inotify
+
 - "inotify - monitoring file system events" - `man inotify`
 - "inotifywatch - gather filesystem access statistics using inotify" - `man inotifywatch`
 - "The inotify cron daemon (incrond) is a daemon which monitors filesystem events and executes commands defined in system and user tables. It's (sic) use is generally similar to cron(8)." - `man incrond`

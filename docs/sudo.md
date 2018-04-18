@@ -1,3 +1,5 @@
+Title: sudo
+
 super user do
 
 # Examples

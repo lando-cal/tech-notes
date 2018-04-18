@@ -1,4 +1,4 @@
-# ImageMagick
+Title: ImageMagick
 
 "ImageMagick is a free and open-source software suite for displaying, converting, and editing raster image and vector image files. It can read and write over 200 image file formats." - <https://en.wikipedia.org/wiki/ImageMagick>
 

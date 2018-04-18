@@ -1,3 +1,5 @@
+Title: DHCP
+
 Dynamic Host Configuration Protocol
 
 # isc dhcpd

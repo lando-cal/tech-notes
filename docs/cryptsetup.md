@@ -1,3 +1,5 @@
+Title: cryptsetup
+
 "Cryptsetup is utility used to conveniently setup disk encryption based
 on DMCrypt kernel module." - <https://gitlab.com/cryptsetup/cryptsetup/blob/master/README.md>
 

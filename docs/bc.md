@@ -1,4 +1,4 @@
-# GNU bc
+Title: GNU bc
 
 [bc](bc "wikilink") is a tool that does math on the CLI.
 

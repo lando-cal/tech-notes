@@ -1,4 +1,4 @@
-# Apple Airport
+Title: Apple Airport
 
 Apple Airport hardware was discontinued in November 2016.
 

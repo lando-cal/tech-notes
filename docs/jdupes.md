@@ -1,3 +1,5 @@
+Title: jdupes
+
 "finds and performs actions upon duplicate files" - `man jdupes`
 
 `jdupes` is based on `fdupes` and is not written in java as the name may lead you to assume.

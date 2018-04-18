@@ -1,3 +1,5 @@
+Title: GNU make
+
 GNU make
 
 # Automatic variables

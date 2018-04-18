@@ -1,3 +1,5 @@
+Title: rpm
+
 Redhat Package Manager. "rpm is a powerful Package Manager, which can be used to build, install, query, verify, update, and erase individual software packages." - `man rpm`
 
 # Tricks

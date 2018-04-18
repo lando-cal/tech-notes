@@ -1,4 +1,4 @@
-# Juniper
+Title: Juniper
 
 "We bring simplicity to networking with products, solutions, and services that connect the world." - <https://www.juniper.net/us/en/company/>
 

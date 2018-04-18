@@ -1,3 +1,5 @@
+Title: sort
+
 sort is a command to sort lines of data.
 
 # GNU Syntax Examples

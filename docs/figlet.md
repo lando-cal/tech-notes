@@ -1,3 +1,5 @@
+Title: figlet
+
 Figlet prints horizontal text in ascii drawings.
 
 # Examples

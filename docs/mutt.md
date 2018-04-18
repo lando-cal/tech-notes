@@ -1,3 +1,5 @@
+Title: mutt
+
 CLI e-mail client
 
 # Usage

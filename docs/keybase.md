@@ -1,3 +1,5 @@
+Title: keybase
+
 Keybase is a free, open source security app. It's also a public directory of people.
 
 - [Keybase.io](https://keybase.io)

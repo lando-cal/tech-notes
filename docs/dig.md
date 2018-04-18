@@ -1,3 +1,5 @@
+Title: dig
+
 dig (domain information groper) is a flexible tool for interrogating DNS name servers. The syntax for this tool is a bit cryptic and is not standard.
 
 # Usage

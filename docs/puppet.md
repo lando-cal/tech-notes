@@ -1,4 +1,4 @@
-# Puppet
+Title: Puppet
 
 "Puppet is an open-source configuration management tool. It runs on many Unix-like systems as well as on Microsoft Windows, and includes its own declarative language to describe system configuration." - <https://en.wikipedia.org/wiki/Puppet_(software)>
 

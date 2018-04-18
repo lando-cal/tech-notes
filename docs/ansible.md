@@ -1,4 +1,4 @@
-# Ansible
+Title: Ansible
 
 - <https://docs.ansible.com/intro_inventory.html>
 - <https://docs.ansible.com/playbooks_best_practices.html>

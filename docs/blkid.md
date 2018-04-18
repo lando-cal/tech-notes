@@ -1,4 +1,4 @@
-# blkid
+Title: blkid
 
 "The blkid program is the command-line interface to working with the libblkid(3) library. It can determine the type of content (e.g. filesystem or swap) that a block device holds, and also attributes (tokens, NAME=value pairs) from the content metadata (e.g. LABEL or UUID fields). blkid has two main forms of operation: either searching for a device with a specific NAME=value pair, or displaying NAME=value pairs for one or more specified devices." - `man blkid`
 

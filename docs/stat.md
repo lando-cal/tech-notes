@@ -1,3 +1,5 @@
+Title: stat
+
 show filesystem metadata about a file
 
 # GNU stat examples
