@@ -18,7 +18,35 @@
 
 # Examples
 
-`sudo ceph-disk activate-all`
+## Activate all OSDs
+
+```
+sudo ceph-disk activate-all
+```
+
+## Start all ceph services
+
+```
+sudo systemctl start ceph.target
+```
+
+## Stop all ceph services
+
+```
+sudo systemctl stop ceph\*.service ceph\*.target
+```
+
+## Show the status of all osds in the cluster
+
+```
+ceph osd status
+```
+
+## Show metadata about all osds in the cluster
+
+```
+ceph osd metadata
+```
 
 # Links
 
