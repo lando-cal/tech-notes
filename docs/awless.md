@@ -83,3 +83,10 @@ awless delete tag key=test_tag_dhoherd resource=i-9ba90158
 ```
 awless create instance count=1 image=ami-5ab82fa8 keypair=ops name=new-hostname securitygroup=[sg-c4321fd1,sg-c4321cb0] subnet=subnet-c4321c33 type=t2.medium
 ```
+
+# See also
+
+- [amazon](amazon)
+- [amazon-ec2](amazon-ec2)
+- [aws-cloudformation](aws-cloudformation)
+- [awscli](awscli)
