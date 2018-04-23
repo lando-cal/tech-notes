@@ -69,3 +69,11 @@ $ ansible-inventory -i inventory/example.yml --graph
   |--@windows:
   |  |--client
 ```
+
+## Show all resolved variables for a given inventory host
+
+This will show all host vars, including variables resolved from [all the different variable locations](http://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable).
+
+```
+ansible -i inventory target_hostname -m debug -a "var=hostvars[inventory_hostname]"
+```
