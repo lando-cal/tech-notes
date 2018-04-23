@@ -45,6 +45,12 @@ ip -o link show | awk -F: '{print $2}' | while read -r X ; do
 done | column -t -s:
 ```
 
+## Add a static route
+
+```
+ip route add 192.168.100.0/24 via 0.0.0.0 dev eth0
+```
+
 ## Set MTU for a specific route
 
 - <http://lartc.org/howto/lartc.cookbook.mtu-discovery.html>
