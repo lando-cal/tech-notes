@@ -32,6 +32,8 @@ ansible-playbook --ask-become-pass -i inventory/hosts.yaml create_users.yaml
 
 ## Validate and inspect your inventory file
 
+This command parses your inventory and group_vars and outputs a json data structure if no syntax faults are found.
+
 ```
 ansible-inventory -i inventory/hosts.yml --list
 ```
