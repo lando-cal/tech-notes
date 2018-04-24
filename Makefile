@@ -11,8 +11,9 @@ deploy: .mkdocs .remotes
 clean:
 	git clean -fdX
 
-hooks:
+install-hooks:
 	cp -f git-hooks/* .git/hooks/
+	pre-commit install -f --install-hooks
 
 ORIGIN=git@opal-dhopho:dho/tech-notes.git
 GITHUB=git@github.com:danielhoherd/tech-notes.git
@@ -24,4 +25,4 @@ remotes: .remotes
 		git remote set-url github $(GITHUB)
 	date '+%F %T%z created remotes' >> .remotes
 
-.PHONY: remotes hooks deploy clean all
+.PHONY: remotes install-hooks deploy clean all
