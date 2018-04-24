@@ -23,6 +23,35 @@ sort -R foo
 gsort -k1d,1 -k2nr,2
 ```
 
+## Sort IP Addresses by first octet then last octet, showing which fields are sorted
+
+```
+ip neigh show | sort -k1,1n -k4,4n -t. --debug
+```
+
+Console example:
+```
+$ ip neigh show | sort -k1,1n -k4,4n -t. --debug
+sort: using ‘en_US.UTF-8’ sorting rules
+10.0.2.2 dev eth0 lladdr 52:54:00:12:35:02 REACHABLE
+__
+       _
+____________________________________________________
+10.0.2.3 dev eth0 lladdr 52:54:00:12:35:03 STALE
+__
+       _
+________________________________________________
+192.16.35.10 dev eth1 lladdr 08:00:27:7a:50:42 STALE
+___
+          __
+____________________________________________________
+192.16.35.11 dev eth1 lladdr 08:00:27:56:64:2f STALE
+___
+          __
+____________________________________________________
+```
+
+
 # BSD Syntax Examples
 
 GNU sort and BSD sort behave differently, which is mostly lame.
