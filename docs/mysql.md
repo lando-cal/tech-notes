@@ -260,3 +260,4 @@ mysql> explain SELECT *,(rating_sum / rating_count) as average from images where
 
 - <http://www.sqlalchemy.org/> - ORM, better for abstracting database in code
 - <http://www.mycli.net/> - A better CLI for MySQL
+- <https://modern-sql.com/blog/2018-04/mysql-8.0> - Good comparison of modern (as of 2018) SQL options
