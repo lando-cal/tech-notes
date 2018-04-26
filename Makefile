@@ -2,7 +2,7 @@
 
 all: deploy
 
-deploy: .mkdocs .remotes
+deploy: mkdocs remotes
 	mkdocs gh-deploy --remote-name github --force
 
 mkdocs:
@@ -26,4 +26,3 @@ remotes:
 		git remote set-url origin $(ORIGIN)
 	git remote add github $(GITHUB) 2> /dev/null || \
 		git remote set-url github $(GITHUB)
-	date '+%F %T%z created remotes' >> .remotes
