@@ -9,5 +9,11 @@ Title: shairport-sync
 This is a really easy way to get shairport-sync running on Linux. The container is 12mb.
 
 ```
-docker run --rm -d --net host --device /dev/snd -e AIRPLAY_NAME="shairport plata" kevineye/shairport-sync
+docker run \
+  --rm \
+  --detach \
+  --network=host \
+  --device /dev/snd \
+  -e AIRPLAY_NAME="shairport ${HOSTNAME}" \
+  kevineye/shairport-sync
 ```
