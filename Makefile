@@ -3,11 +3,8 @@
 all: deploy
 
 deploy: mkdocs remotes
-	mkdocs gh-deploy --remote-name github --force
-
-mkdocs:
-	pip3 install --user --upgrade mkdocs || \
-	pip install --user --upgrade mkdocs
+	pip install --upgrade pipenv
+	pipenv run mkdocs gh-deploy --remote-name github --force
 
 clean:
 	git clean -fdX
