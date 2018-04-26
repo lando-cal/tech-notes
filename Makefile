@@ -12,8 +12,10 @@ clean:
 	git clean -fdX
 
 install-hooks:
-	cp -f git-hooks/* .git/hooks/
+	pip3 install --user --upgrade pre-commit || \
+	pip install --user --upgrade pre-commit
 	pre-commit install -f --install-hooks
+	cp -f git-hooks/* .git/hooks/
 
 ORIGIN=git@opal-dhopho:dho/tech-notes.git
 GITHUB=git@github.com:danielhoherd/tech-notes.git
