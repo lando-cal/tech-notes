@@ -82,7 +82,24 @@ This will write 5 files 1 mb each and loop through them as the destination for w
 sudo tcpdump -C 1 -W 5 -w foo.cap
 ```
 
+## Print out a list of observed src ip addresses every 5 seconds
+
+This is limited to 192.168.1 matches
+
+```
+while true ; do
+  date '+%F %T%z'
+  sudo timeout 5 tcpdump -n 2>/dev/null |
+  awk '$3 ~ /10.8/ {
+    print gensub(/([0-9]*\.[0-9]*\.[0-9]*\.[0-9]*)(\.[0-9]*)?/, "ip address: \\1", "g", $3) ;
+  }' |
+  sort -t. -k4n |
+  uniq -c
+done
+```
+
 You can reassemble these files chronologically with `mergecap -w merged.cap foo.cap*`
 
 # Links
-- [http://www.danielmiessler.com/study/tcpdump/](http://www.danielmiessler.com/study/tcpdump/)
+- <http://www.danielmiessler.com/study/tcpdump/>
+- <https://www.rationallyparanoid.com/articles/tcpdump.html
