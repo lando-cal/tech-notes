@@ -82,3 +82,5 @@ Then start at `kubeadm init` on this guide: <https://kubernetes.io/docs/setup/in
 - <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm>
 - <http://slack.kubernetes.io/>
 - <https://kubernetes.io/docs/concepts/workloads/controllers/deployment/>
+- <http://on-demand.gputechconf.com/gtc/2018/video/S8893/>
+- <http://on-demand.gputechconf.com/gtc/2018/presentation/s8893-the-path-to-gpu-as-a-service-in-kubernetes.pdf>
