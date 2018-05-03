@@ -1,6 +1,6 @@
 Title: ddrescue
 
-"GNU ddrescue - Data recovery tool.  Copies data from one file or block device to another, trying to rescue the good parts first in case of read errors." – `man ddrescue`
+"GNU ddrescue - Data recovery tool.  Copies data from one file or block device to another, trying to rescue the good parts first in case of read errors." - `man ddrescue`
 
 There are actually two tools called ddrescue: dd_rescue and gddrescue.  gddrescue is the best.
 

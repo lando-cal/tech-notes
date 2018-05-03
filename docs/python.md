@@ -51,7 +51,7 @@ virtualenv venv --system-site-packages && venv/bin/pip install --user $PACKAGENA
 
 ### Virtual environments with pipenv
 
-"Pipenv — the officially recommended Python packaging tool from Python.org, free (as in freedom). Pipenv is a tool that aims to bring the best of all packaging worlds (bundler, composer, npm, cargo, yarn, etc.) to the Python world. Windows is a first–class citizen, in our world." - <https://docs.pipenv.org>
+"Pipenv — the officially recommended Python packaging tool from Python.org, free (as in freedom). Pipenv is a tool that aims to bring the best of all packaging worlds (bundler, composer, npm, cargo, yarn, etc.) to the Python world. Windows is a first-class citizen, in our world." - <https://docs.pipenv.org>
 
 `pipenv` is the new-school 2017 way of doing virtual environments. pipenv creates a file called `Pipfile` whenever you install packages using the `pipenv` command. Once you have created a pipenv for the CWD, any subdirs will use that pipenv and not create new environments when you issue pipenv commands. This is a more robust system, but as of 2017 is not widely used.
 

@@ -15,7 +15,7 @@ Title: Puppet
 - [Vagrant Docs - Puppet Apply Provisioner](https://docs.vagrantup.com/v2/provisioning/puppet_apply.html)
 - [Downloads](https://puppetlabs.com/misc/download-options-get)
 - [PuppetConf 2015](https://www.youtube.com/playlist?list=PLV86BgbREluUDlJW_jAqnWPj0THx7eXBA)
-- [Designing Puppet: Roles/Profiles Pattern](https://www.youtube.com/watch?v=ZpHtOnlSGNY) - based on the blog post [Designing Puppet – Roles and Profiles](http://www.craigdunn.org/2012/05/239/)
+- [Designing Puppet: Roles/Profiles Pattern](https://www.youtube.com/watch?v=ZpHtOnlSGNY) - based on the blog post [Designing Puppet - Roles and Profiles](http://www.craigdunn.org/2012/05/239/)
 - [Building a Functional Puppet Workflow Part 2: Roles and Profiles](http://garylarizza.com/blog/2014/02/17/puppet-workflow-part-2/)
 - [Configuration Management as Legos](http://sysadvent.blogspot.com/2012/12/day-13-configuration-management-as-legos.html)
 

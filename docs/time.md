@@ -4,7 +4,7 @@ Notes about time technologies.
 
 # [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
-ISO 8601 Data elements and interchange formats – Information interchange – Representation of dates and times is an international standard covering the exchange of date and time-related data.
+ISO 8601 Data elements and interchange formats - Information interchange - Representation of dates and times is an international standard covering the exchange of date and time-related data.
 
 ## ISO 8601 format examples
 
