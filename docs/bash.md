@@ -422,3 +422,4 @@ set completion-ignore-case on
 - Bash prompt howto, including colors: <http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html>
 - [Bash Automated Test System](https://github.com/sstephenson/bats)
 - <http://www.kfirlavi.com/blog/2012/11/14/defensive-bash-programming/>
+- <https://google.github.io/styleguide/shell.xml>
