@@ -39,6 +39,16 @@ The hostname shows up to the OS. The docker name can be used to interact with th
 docker ps host1
 ```
 
+## Show a complete vertically oriented list of docker processes
+
+`docker ps` has no `--json` flag, but you can work around that with golang style formatting.
+
+```
+docker ps --no-trunc --format='{{ . | json }}' | jq -S .
+```
+
+This trick also works with `docker images`, which also lacks a `--json` arg.
+
 ## Run a container with a tcp port map
 
 This maps port 18022 of the host to 22 of the guest.
