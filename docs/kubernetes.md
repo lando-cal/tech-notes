@@ -78,6 +78,7 @@ Then start at `kubeadm init` on this guide: <https://kubernetes.io/docs/setup/in
 - <https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster>
 - <https://docs.projectcalico.org/v3.0/introduction/>
 - <https://github.com/kelseyhightower/kubernetes-the-hard-way> - "The target audience for this tutorial is someone planning to support a production Kubernetes cluster and wants to understand how everything fits together."
+- <https://github.com/kinvolk/kubernetes-the-hard-way-vagrant> - "A port of Kelsey Hightower's 'Kubernetes the Hard Way' tutorial to Vagrant."
 - <https://github.com/kubernetes/dashboard#kubernetes-dashboard>
 - <https://kubernetes.io/docs/concepts/cluster-administration/addons/>
 - <https://kubernetes.io/docs/concepts/cluster-administration/logging/>
