@@ -145,6 +145,12 @@ for var in dir():
 ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 ```
 
+## Create an http server using PWD as document root
+
+```
+python3 -m http.server 9980
+```
+
 # Various links
 
 - [A gallery of interesting Jupyter and IPython Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-and-IPython-Notebooks)
