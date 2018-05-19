@@ -16,6 +16,14 @@ Title: Google Cloud
 
 `gcloud docker -- pull gcr.io/project-id/hello-world`
 
+## Control access to registries
+
+"Container Registry uses a Cloud Storage bucket as the backend for serving container images. You can control who has access to your Container Registry images by adjusting permissions for the Cloud Storage bucket.
+
+Caution: Container Registry only recognizes permissions set on the Cloud Storage bucket. Container Registry will ignore permissions set on individual objects within the Cloud Storage bucket.
+
+You manage access control in Cloud Storage by using the GCP Console or the `gsutil` command-line tool. Refer to the `gsutil acl` and `gsutil defacl` documentation for more information." - <https://cloud.google.com/container-registry/docs/access-control>
+
 # Links
 
 - <https://cloud.google.com/container-registry/docs/quickstart>
