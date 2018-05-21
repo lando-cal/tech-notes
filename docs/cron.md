@@ -70,4 +70,9 @@ logger -t cron Running `basename $PWD`
 ```
 
 # Troubleshooting
+
 Having junk files like temp vim files in /var/cron/tabs can make cron go to 100% cpu usage.  Remove all non crontab files and kill cron to fix it.
+
+# Links
+
+- <https://crontab.guru/> - Online crontab linter and explainer
