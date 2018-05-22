@@ -4,6 +4,24 @@ Title: Google Cloud
 
 # gcloud CLI Examples
 
+## List google cloud projects
+
+```
+gcloud projects list
+```
+
+## Switch to a different project
+
+```
+gcloud config set project <project_name>
+```
+
+## Grant a user permission to a docker registry
+
+```
+gsutil iam ch 'user:user@example.com:objectViewer' 'gs://artifacts.example.appspot.com/'
+```
+
 ## List google compute zones
 
 `gcloud compute zones list`
