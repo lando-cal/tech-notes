@@ -80,6 +80,7 @@ Then start at `kubeadm init` on this guide: <https://kubernetes.io/docs/setup/in
 - <https://github.com/kelseyhightower/kubernetes-the-hard-way> - "The target audience for this tutorial is someone planning to support a production Kubernetes cluster and wants to understand how everything fits together."
 - <https://github.com/kinvolk/kubernetes-the-hard-way-vagrant> - "A port of Kelsey Hightower's 'Kubernetes the Hard Way' tutorial to Vagrant."
 - <https://github.com/kubernetes/dashboard#kubernetes-dashboard>
+- <https://github.com/kubernetes/kompose> - Compose to Kubernetes
 - <https://kubernetes.io/docs/concepts/cluster-administration/addons/>
 - <https://kubernetes.io/docs/concepts/cluster-administration/logging/>
 - <https://kubernetes.io/docs/concepts/workloads/controllers/deployment/>
