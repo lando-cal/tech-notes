@@ -5,6 +5,12 @@ This is about the ip command in Linux.
 # Examples
 The commands here can be shortened like cisco or other network device commands.
 
+## Get the default interface
+
+```
+ip route get 8.8.8.8
+```
+
 ## Show IP neighbors
 
 ```
