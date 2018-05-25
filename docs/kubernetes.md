@@ -9,6 +9,7 @@ More terms in the k8s glossary: <https://kubernetes.io/docs/reference/glossary/>
 - Container Network Interface (CNI) - https://github.com/containernetworking/cni
 - Container Runtime Interface (CRI) - https://github.com/containerd/cri/
 - Container Storage Interface (CSI) - https://github.com/container-storage-interface/spec
+- Horizontal Pod Autoscaling (HPA)
 
 # cli usage
 
@@ -57,10 +58,12 @@ See `sudo kubeadm token -h` for more usage.
 - `kubectl get nodes` - show the nodes in the k8s cluster.
 - `kubectl get pods` - show deployed pods. there can be many pods per deployment.
 - `kubectl get pods -n kube-system` - show pods in a specific namespace.
+- `kubectl get pods,hpa,deployment --all-namespaces` - get several resource types at once, from all namespaces
 - `kubectl describe pod foo`
 - `kubectl get deployment`
 - `kubectl describe deployment foo`
 - `kubectl get ns` - show namespaces.
+- `kubectl get pv` - show physical volumes.
 - `kubectl get svc -n kube-system` - show a table of important details about running services in the kube-system namespace.
 - `kubectl get pods -o yaml` - show the yaml configs for the currently running status of every pod.
 - `kubectl explain pods.spec` - show documentation about pod specifications.
@@ -126,7 +129,11 @@ Then start at `kubeadm init` on this guide: <https://kubernetes.io/docs/setup/in
 - <https://github.com/kubernetes/kompose> - Compose to Kubernetes
 - <https://kubernetes.io/docs/concepts/cluster-administration/addons/>
 - <https://kubernetes.io/docs/concepts/cluster-administration/logging/>
+- <https://kubernetes.io/docs/concepts/workloads/pods/pod/index.html>
 - <https://kubernetes.io/docs/concepts/workloads/controllers/deployment/>
 - <https://kubernetes.io/docs/getting-started-guides/minikube/>
 - <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm>
 - <https://www.cncf.io/certification/expert/CKA/>
+- <https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#hook-details>
+- <https://github.com/ClusterHQ/flocker> - Flocker is an open-source Container Data Volume Manager for your Dockerized applications.
+- <https://cloudplatform.googleblog.com/2018/05/Beyond-CPU-horizontal-pod-autoscaling-comes-to-Google-Kubernetes-Engine.html>
