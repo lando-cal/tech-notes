@@ -25,3 +25,4 @@ build github.com/solarkennedy/uq
 
 - <https://golang.org/cmd/go/>
 - <https://gopkg.in>
+- <https://play.golang.org/>
