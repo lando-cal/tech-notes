@@ -151,6 +151,12 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 python3 -m http.server 9980
 ```
 
+## Discover the location for pip --user installs
+
+```
+echo $(python -m site --user-base)/bin
+```
+
 # Various links
 
 - [A gallery of interesting Jupyter and IPython Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-and-IPython-Notebooks)
