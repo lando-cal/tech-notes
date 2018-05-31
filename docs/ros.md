@@ -8,3 +8,4 @@ Title: ros
 - ROS Turtle Example - <http://wiki.ros.org/turtlesim/Tutorials>
 - Autoware built on top of ROS for Self-driving cars - <https://github.com/CPFL/Autoware>
 - Robot Operating System for ev3 - <http://wiki.ros.org/Robots/EV3>
+- A Gentle Introduction to ROS - <https://www.cse.sc.edu/~jokane/agitr/>
