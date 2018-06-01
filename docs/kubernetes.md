@@ -97,20 +97,21 @@ ansible-galaxy install entercloudsuite.kubernetes
 
 ## Manually on Ubuntu 16
 
-
-- First install Docker - <https://docs.docker.com/install/linux/docker-ce/ubuntu/>
-
 ```
 # as root
 swapoff -a # https://github.com/kubernetes/kubernetes/issues/53533
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+cat <<EOF >/etc/apt/sources.list.d/docker.list
+deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+EOF
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
 cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt update
 apt install -y apt-transport-https ca-certificates curl software-properties-common
+apt install -y docker-ce
 apt install -y kubelet kubeadm kubectl
 ```
 

@@ -27,3 +27,7 @@ done
 # so we append '[no ci]' to commit message to skip CI in Gitlab
 echo "[no ci]" >> "$1"
 ```
+
+# Links
+
+- <https://docs.gitlab.com/ce/administration/>

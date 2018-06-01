@@ -78,3 +78,27 @@ systemctl -n 20 status nodejs
 ```
 systemd-resolve --status
 ```
+
+## Show boot performance
+
+```
+systemd-analyze blame
+```
+
+## Show cgroup contexts
+
+```
+systemd-cgls
+```
+
+## Show top control groups by their resource usage
+
+```
+systemd-cgtop
+```
+
+## Detect if you are running in a container or on a VM
+
+```
+systemd-detect-virt
+```
