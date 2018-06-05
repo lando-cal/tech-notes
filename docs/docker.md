@@ -10,6 +10,12 @@ Title: docker
 docker help run
 ```
 
+## Show the history of an image, and count its layers
+
+```
+docker history ubuntu:bionic | nl -ba -v0
+```
+
 ## Run a docker image in an interactive shell
 
 ```
