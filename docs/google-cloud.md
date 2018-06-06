@@ -42,6 +42,32 @@ Caution: Container Registry only recognizes permissions set on the Cloud Storage
 
 You manage access control in Cloud Storage by using the GCP Console or the `gsutil` command-line tool. Refer to the `gsutil acl` and `gsutil defacl` documentation for more information." - <https://cloud.google.com/container-registry/docs/access-control>
 
+
+## Authenticate a private GCR registry in kubernetes
+
+This is likely not copy/paste material, but the flow is generally correct.
+
+```
+PARTNER=other_company
+PROJECT="our_company-$PARTNER"
+USER=service-account-user-for-$PARTNER
+EMAIL="$USER@$PROJECT.iam.gserviceaccount.com"
+gcloud iam service-accounts create $USER
+gcloud iam service-accounts keys create --display-name "$USER" --iam-account="$EMAIL" key.json
+for PERM in legacyBucketOwner objectCreator objectViewer ; do
+  gcloud projects add-iam-policy-binding "$PROJECT" \
+    --member "serviceAccount:$EMAIL" \
+    --role "roles/storage.$PERM"
+done
+kubectl create secret docker-registry "$PROJECT" \
+  --docker-server "https://gcr.io" \
+  --docker-username _json_key \
+  --docker-email "$EMAIL" \
+  --docker-password="$(cat key.json)"
+  ```
+
+Then use the value of `"$PROJECT"` as your `ImagePullSecret`.
+
 # Links
 
 - <https://cloud.google.com/container-registry/docs/quickstart>
