@@ -102,20 +102,17 @@ ansible-galaxy install entercloudsuite.kubernetes
 swapoff -a # https://github.com/kubernetes/kubernetes/issues/53533
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-cat <<EOF >/etc/apt/sources.list.d/docker.list
-deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
-EOF
-add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
-cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
-deb http://apt.kubernetes.io/ kubernetes-xenial main
-EOF
+echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable" > /etc/apt/sources.list.d/docker.list
+echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
 apt update
+apt dist-upgrade -y
 apt install -y apt-transport-https ca-certificates curl software-properties-common
 apt install -y docker-ce
 apt install -y kubelet kubeadm kubectl
+kubeadm init
 ```
 
-Then start at `kubeadm init` on this guide: <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#instructions>
+`kubeadm init` guide: <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#instructions>
 
 # Links
 
