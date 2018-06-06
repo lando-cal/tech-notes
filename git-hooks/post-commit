@@ -5,4 +5,4 @@ set -e
 
 git diff-tree -r --name-only --no-commit-id HEAD | sort -u | grep -o '^docs\/'
 
-make
+make deploy
