@@ -79,3 +79,25 @@ This will show all host vars, including variables resolved from [all the differe
 ```
 ansible -i inventory target_hostname -m debug -a "var=hostvars[inventory_hostname]"
 ```
+
+## Simple ansible playbook
+
+This may be useful for testing syntax and experimenting with ansible modules.
+
+`foo.yml`:
+```
+---
+- name: A local play
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: Run date
+    shell: /bin/date
+    register: date_out
+
+  - debug:
+      var: date_out.stdout
+```
+
+`ansible-playbook -i localhost foo.yml`
