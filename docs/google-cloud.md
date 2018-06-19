@@ -64,7 +64,7 @@ kubectl create secret docker-registry "$PROJECT" \
   --docker-username _json_key \
   --docker-email "$EMAIL" \
   --docker-password="$(cat key.json)"
-  ```
+```
 
 Then use the value of `"$PROJECT"` as your `ImagePullSecret`.
 
