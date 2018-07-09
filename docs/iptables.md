@@ -36,3 +36,15 @@ iptables -A SSH -m recent --name SSH --set -j ACCEPT
 iptables -A INPUT -m state --state NEW -p tcp -m tcp --dport 22 -j SSH
 iptables -L
 ```
+
+## Show all tables
+
+Not all tables are shown by default. To view all, issue the following commands as root:
+
+```
+iptables -vL -t filter
+iptables -vL -t nat
+iptables -vL -t mangle
+iptables -vL -t raw
+iptables -vL -t security
+```
