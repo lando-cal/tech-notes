@@ -2,7 +2,10 @@ Title: Cradlepoint
 
 "Founded in 2006, Cradlepoint has grown to become the industry leader in cloud-delivered 4G LTE network solutions for business, service providers, and government organizations, and we are committed to extending our leadership into the emerging 5G space." - <https://cradlepoint.com/company/about>
 
-## Cradlepoint IBR900 CLI
+## Cradlepoint IBR900
+
+- <https://cradlepoint.com/products/cor-ibr900-series>
+- <https://cradlepoint.com/sites/default/files/upload-file/cradlepoint_ibr900_manual_0.pdf>
 
 The CLI is not a normal shell, but is a minimal appliance type UI.
 
