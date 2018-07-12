@@ -135,3 +135,4 @@ kubeadm init
 - <https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#hook-details>
 - <https://github.com/ClusterHQ/flocker> - Flocker is an open-source Container Data Volume Manager for your Dockerized applications.
 - <https://cloudplatform.googleblog.com/2018/05/Beyond-CPU-horizontal-pod-autoscaling-comes-to-Google-Kubernetes-Engine.html>
+- <https://github.com/vapor-ware/ksync> - Sync local filesystem with a target container
