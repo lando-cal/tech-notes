@@ -120,15 +120,16 @@ kubeadm init
 - <http://on-demand.gputechconf.com/gtc/2018/video/S8893/>
 - <http://slack.kubernetes.io/>
 - <https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster>
-- <https://docs.projectcalico.org/v3.0/introduction/>
+- <https://docs.projectcalico.org/latest/introduction/>
 - <https://github.com/kelseyhightower/kubernetes-the-hard-way> - "The target audience for this tutorial is someone planning to support a production Kubernetes cluster and wants to understand how everything fits together."
 - <https://github.com/kinvolk/kubernetes-the-hard-way-vagrant> - "A port of Kelsey Hightower's 'Kubernetes the Hard Way' tutorial to Vagrant."
 - <https://github.com/kubernetes/dashboard#kubernetes-dashboard>
 - <https://github.com/kubernetes/kompose> - Compose to Kubernetes
 - <https://kubernetes.io/docs/concepts/cluster-administration/addons/>
 - <https://kubernetes.io/docs/concepts/cluster-administration/logging/>
-- <https://kubernetes.io/docs/concepts/workloads/pods/pod/index.html>
+- <https://kubernetes.io/docs/concepts/services-networking/network-policies/>
 - <https://kubernetes.io/docs/concepts/workloads/controllers/deployment/>
+- <https://kubernetes.io/docs/concepts/workloads/pods/pod/index.html>
 - <https://kubernetes.io/docs/getting-started-guides/minikube/>
 - <https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm>
 - <https://www.cncf.io/certification/expert/CKA/>
