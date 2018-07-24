@@ -53,7 +53,10 @@ PROJECT="our_company-$PARTNER"
 USER=service-account-user-for-$PARTNER
 EMAIL="$USER@$PROJECT.iam.gserviceaccount.com"
 gcloud iam service-accounts create $USER
-gcloud iam service-accounts keys create --display-name "$USER" --iam-account="$EMAIL" key.json
+gcloud iam service-accounts keys create \
+  --display-name "$USER" \
+  --iam-account "$EMAIL" \
+  key.json
 gcloud projects add-iam-policy-binding "$PROJECT" \
   --member "serviceAccount:$EMAIL" \
   --role "roles/storage.objectAdmin"
@@ -62,7 +65,7 @@ kubectl create secret "docker-pull-$PROJECT" "$PROJECT" \
   --docker-server "https://gcr.io" \
   --docker-username _json_key \
   --docker-email "$EMAIL" \
-  --docker-password="$(cat key.json)"
+  --docker-password "$(cat key.json)"
 ```
 
 Then use the value of `docker-pull-${PROJECT}` as your `ImagePullSecret`.
