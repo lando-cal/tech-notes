@@ -151,6 +151,12 @@ ArgSpec(args=['func'], varargs=None, keywords=None, defaults=None)
 python3 -m http.server 9980
 ```
 
+or...
+
+```
+python2 -m SimpleHTTPServer 9980
+```
+
 ## Discover the location for pip --user installs
 
 ```
