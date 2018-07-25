@@ -22,6 +22,14 @@ data contains foo
 ip.addr == 10.57.8.244/30
 ```
 
+### Display data within a port range
+
+To see all ceph-osd data
+
+```
+tcp.port >= 6800 and tcp.port <= 7300
+```
+
 # See also
 
 - [tcpdump](tcpdump)
