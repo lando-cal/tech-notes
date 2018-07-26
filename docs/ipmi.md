@@ -92,6 +92,17 @@ You can view individual "channels" which are logical interfaces by giving the nu
 ipmitool lan print 1
 ```
 
+## Configure IP information for the BMC
+
+```
+ipmitool lan set 1 ipsrc static
+ipmitool lan set 1 ipaddr 192.168.1.250
+ipmitool lan set 1 netmask 255.255.255.0
+ipmitool lan set 1 defgw ipaddr 192.168.1.1
+ipmitool lan set 1 defgw macaddr 00:01:02:aa:bb:cc
+ipmitool lan set 1 arp respond on
+```
+
 ## Reset the BMC
 
 If a host loses it's IPMI (iLO, etc.) IP connectivity, issue this command from the host itself
@@ -102,9 +113,7 @@ ipmitool mc reset cold
 
 ## How to fix /dev/ipmi errors
 
-For errors like
-
-`Could not open device at /dev/ipmi0 or /dev/ipmi/0 or /dev/ipmidev/0`
+For errors like `Could not open device at /dev/ipmi0 or /dev/ipmi/0 or /dev/ipmidev/0`:
 
 ```
 modprobe ipmi_msghandler

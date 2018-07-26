@@ -93,6 +93,14 @@ auto-image-upgrade;
 {master:0}[edit]
 ```
 
+## Show forwarding table
+
+This is exactly the same as typing `netstat -nr` at the system shell.
+
+```
+show route forwarding-table detail
+```
+
 ## Remove virtual-chassis from an EX4300
 
 ```
