@@ -92,7 +92,7 @@ You can view individual "channels" which are logical interfaces by giving the nu
 ipmitool lan print 1
 ```
 
-## Configure IP information for the BMC
+## Configure IPMI IP information
 
 ```
 ipmitool lan set 1 ipsrc static
@@ -101,6 +101,15 @@ ipmitool lan set 1 netmask 255.255.255.0
 ipmitool lan set 1 defgw ipaddr 192.168.1.1
 ipmitool lan set 1 defgw macaddr 00:01:02:aa:bb:cc
 ipmitool lan set 1 arp respond on
+```
+
+## Configure IPMI admin user
+
+```
+USERNAME=admin
+PASSWORD=hunter2
+ipmitool user set name 2 "$USERNAME"
+ipmitool user set password 2 "$PASSWORD"
 ```
 
 ## Reset the BMC
