@@ -136,6 +136,14 @@ modprobe ipmi_si
 sudo ipmitool -I open user set password 2 ADMIN
 ```
 
+## Reset all settings to defaults
+
+This may not work with your BMC, but has been known to work with some supermicro BMCs.
+
+```
+ipmitool raw 0x30 0x40
+```
+
 # See Also
 
 - <http://www.intel.com/design/servers/ipmi/>
