@@ -15,6 +15,7 @@ Title: Ceph
 - RADOS: Reliable Autonomic Distributed Object Store.
 - RBD: The block storage component of Ceph.
 - RGW: The S3/Swift gateway component of Ceph.
+- PG: Placement Group. <http://docs.ceph.com/docs/master/rados/operations/placement-groups/>
 
 # Examples
 
