@@ -33,6 +33,7 @@ root# load override terminal
 ```
 
 Then:
+
 0. paste your config
 0. press `ctrl-d`
 0. run `commit`
