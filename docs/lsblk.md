@@ -26,6 +26,20 @@ sda
 sdb    iso9660 cidata          2017-08-15-16-47-34-00
 ```
 
+## Show some chosen fields
+
+To see a list of available columns, run `lsblk -o`.
+
+```
+$ lsblk -do NAME,SIZE,TYPE,VENDOR,MODEL,SERIAL
+NAME   SIZE TYPE VENDOR   MODEL            SERIAL
+sdd    1.8T disk ATA      Micron_5100_MTFD 18211C914753
+sdb    1.8T disk ATA      Micron_5100_MTFD 18211C914736
+sde    1.8T disk ATA      Micron_5100_MTFD 171216897B54
+sdc    1.8T disk ATA      Micron_5100_MTFD 171216897B63
+sda  223.6G disk ATA      INTEL SSDSC2KB24 BTYS815301VG245AGN
+```
+
 ## Show all available information
 
 The output here is really wide, but reformatting it through JSON makes it easier to read. Thankfully `lsblk` has a JSON output option, unlike many unix CLI tools.
