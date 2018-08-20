@@ -163,4 +163,4 @@ IP address        Session Id  Hardware address   Expires     State      Interfac
 
 - <https://www.juniper.net/documentation/en_US/junos/topics/concept/junos-cli-overview.html>
 - <https://www.juniper.net/documentation/en_US/junos/topics/task/configuration/virtual-chassis-mx-series-vc-ports-deleting.html>
-- <http://junos-ansible-modules.readthedocs.io/en/1.3.1/junos_cli.html>
+- <https://junos-ansible-modules.readthedocs.io/en/2.1.0/>
