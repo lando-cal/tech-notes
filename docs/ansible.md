@@ -101,3 +101,7 @@ This may be useful for testing syntax and experimenting with ansible modules.
 ```
 
 `ansible-playbook -i localhost foo.yml`
+
+# Links
+
+- Ansible Tests with Molecule - <https://molecule.readthedocs.io/en/latest/> / <https://www.digitalocean.com/community/tutorials/how-to-test-ansible-roles-with-molecule>
