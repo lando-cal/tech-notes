@@ -159,6 +159,28 @@ IP address        Session Id  Hardware address   Expires     State      Interfac
 {master:0}
 ```
 
+## Show config diff before commit
+
+You can view the changes that will be committed, which is useful when the commit is invalid and you need to inspect it.
+
+```
+root# show | compare
+[edit access address-assignment pool p1 family inet]
+        host server1-ipmi { ... }
++       host server2 {
++           hardware-address 00:11:22:33:44:33;
++           ip-address 172.17.1.6;
++       }
++       host server3 {
++           hardware-address 00:11:22:33:44:35;
++           ip-address 172.17.1.7;
++       }
++       host server4 {
++           hardware-address 00:11:22:33:44:1d;
++           ip-address 172.17.1.8;
++       }
+```
+
 # Links
 
 - <https://www.juniper.net/documentation/en_US/junos/topics/concept/junos-cli-overview.html>
