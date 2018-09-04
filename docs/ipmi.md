@@ -92,14 +92,18 @@ You can view individual "channels" which are logical interfaces by giving the nu
 ipmitool lan print 1
 ```
 
-## Configure IPMI IP information
+## Configure IPMI static IP information
 
 ```
+IPMI_IP_ADDR=192.168.1.250
+IPMI_IP_NETMASK=255.255.255.0
+IPMI_IP_GW_IP_ADDR=192.168.1.1
+IPMI_IP_GW_MAC_ADDR=00:01:02:aa:bb:cc
 ipmitool lan set 1 ipsrc static
-ipmitool lan set 1 ipaddr 192.168.1.250
-ipmitool lan set 1 netmask 255.255.255.0
-ipmitool lan set 1 defgw ipaddr 192.168.1.1
-ipmitool lan set 1 defgw macaddr 00:01:02:aa:bb:cc
+ipmitool lan set 1 ipaddr "${IPMI_IP_ADDR}"
+ipmitool lan set 1 netmask "${IPMI_IP_NETMASK}"
+ipmitool lan set 1 defgw ipaddr "${IPMI_IP_GW_IP_ADDR}"
+ipmitool lan set 1 defgw macaddr "{IPMI_IP_GW_MAC_ADDR}"
 ipmitool lan set 1 arp respond on
 ```
 
