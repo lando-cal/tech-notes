@@ -103,7 +103,7 @@ ipmitool lan set 1 ipsrc static
 ipmitool lan set 1 ipaddr "${IPMI_IP_ADDR}"
 ipmitool lan set 1 netmask "${IPMI_IP_NETMASK}"
 ipmitool lan set 1 defgw ipaddr "${IPMI_IP_GW_IP_ADDR}"
-ipmitool lan set 1 defgw macaddr "{IPMI_IP_GW_MAC_ADDR}"
+ipmitool lan set 1 defgw macaddr "${IPMI_IP_GW_MAC_ADDR}"
 ipmitool lan set 1 arp respond on
 ```
 
