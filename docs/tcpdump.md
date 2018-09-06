@@ -100,6 +100,12 @@ done
 
 You can reassemble these files chronologically with `mergecap -w merged.cap foo.cap*`
 
+## Show WPA 4-way handshakes
+
+```
+tcpdump -n -i en0 "ether proto 0x888e"
+```
+
 # Links
 - <http://www.danielmiessler.com/study/tcpdump/>
 - <https://www.rationallyparanoid.com/articles/tcpdump.html>
