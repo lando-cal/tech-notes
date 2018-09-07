@@ -12,3 +12,9 @@ See Also: [dd-wrt](dd-wrt)
 # Netgear GSS116E
 
 - <https://www.netgear.com/support/product/GSS116E>
+
+# Netgear M4300-8X8F
+
+"Stackable Managed Switch with 16x10G including 8x10GBASE-T and 8xSFP+ Layer 3"
+
+- <https://www.netgear.com/support/product/M4300-8X8F>
