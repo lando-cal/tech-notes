@@ -30,6 +30,21 @@ ansible-doc --list
 ansible-playbook --ask-become-pass -i inventory/hosts.yaml create_users.yaml
 ```
 
+## Run an ad-hoc command
+
+You can run one-off [ad-hoc commands](https://docs.ansible.com/ansible/2.6/user_guide/intro_adhoc.html) by passing a module and args to the module.
+
+```
+ansible localhost \
+  -m get_url \
+  -a "mode=755
+    url=https://github.com/bcicen/ctop/releases/download/v0.7.1/ctop-0.7.1-linux-amd64
+    dest=/usr/local/bin/ctop
+    checksum=sha256:38cfd92618ba2d92e0e1262c0c43d7690074b4b8dc77844b654f8e565166b577
+    owner=root
+    group=root"
+```
+
 ## Validate and inspect your inventory file
 
 This command parses your inventory and group_vars and outputs a json data structure if no syntax faults are found.
