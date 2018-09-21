@@ -30,3 +30,7 @@ Retired.
 ## Homepass
 
 "Nintendo 3DS homepass resources and software." - <https://github.com/danielhoherd/homepass/tree/master/RaspberryPi>
+
+# Links
+
+- Raspberry Pi SD benchmarking blog post with script linked within: <https://www.jeffgeerling.com/blog/2018/raspberry-pi-microsd-card-performance-comparison-2018>
