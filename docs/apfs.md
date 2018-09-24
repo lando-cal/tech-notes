@@ -111,3 +111,4 @@ Thinned local snapshots:
 - [Rich Trouton - Storing our digital lives - Mac filesystems from MFS to APFS](https://youtu.be/VUXUECpIGR0)
 - [Apple File System Guide](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html)
 - [Russ Bishop - Apple File System](http://www.russbishop.net/apple-file-system)
+- [A ZFS developer’s analysis of the good and bad in Apple’s new APFS file system](https://arstechnica.com/gadgets/2016/06/a-zfs-developers-analysis-of-the-good-and-bad-in-apples-new-apfs-file-system/)
