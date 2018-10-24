@@ -25,6 +25,12 @@ Title: Ceph
 sudo ceph-disk activate-all
 ```
 
+Starting with ceph 13, use:
+
+```
+ceph-volume lvm activate --all
+```
+
 ## Start all ceph services
 
 ```
@@ -33,8 +39,10 @@ sudo systemctl start ceph.target
 
 ## Stop all ceph services
 
+Unfortunately there's not a single service or target to stop, so you have to use globs
+
 ```
-sudo systemctl stop ceph\*.service ceph\*.target
+sudo systemctl stop '*ceph*'
 ```
 
 ## Show the status of all osds in the cluster
