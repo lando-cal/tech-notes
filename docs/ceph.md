@@ -57,6 +57,18 @@ ceph osd status
 ceph osd metadata
 ```
 
+## Show all pools
+
+```
+ceph osd lspools
+```
+
+## Monitor existing operations
+
+```
+ceph daemon mon.$MON_HOSTNAME ops
+```
+
 # Links
 
 - Ceph Intro & Architectural Overview - <https://youtu.be/7I9uxoEhUdY>
