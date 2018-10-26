@@ -83,6 +83,7 @@ systemd-resolve --status
 
 ```
 systemd-analyze blame
+systemd-analyze critical-chain
 ```
 
 ## Show cgroup contexts
