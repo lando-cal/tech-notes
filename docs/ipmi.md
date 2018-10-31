@@ -148,6 +148,23 @@ This may not work with your BMC, but has been known to work with some supermicro
 ipmitool raw 0x30 0x40
 ```
 
+## Conigure sol on a systemd server
+
+```
+# cat /lib/systemd/system/ttyS1.service
+[Unit]
+Description=Serial Console Service: ttyS1
+
+[Service]
+ExecStart=/sbin/getty -L 115200 ttyS1 vt102
+Restart=always
+
+[Install]
+WantedBy=system.target
+# systemctl enable ttyS1.service
+# systemctl start ttyS1.service
+```
+
 # See Also
 
 - <http://www.intel.com/design/servers/ipmi/>
