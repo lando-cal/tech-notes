@@ -95,13 +95,28 @@ This will show all host vars, including variables resolved from [all the differe
 ansible -i inventory target_hostname -m debug -a "var=hostvars[inventory_hostname]"
 ```
 
+## Generate an idempotent random number
+
+This is similar to the Puppet `fqdn_rand()` function, which is really useful in cron jobs
+
+```
+---
+# defaults/main.yml
+
+demo_cron_minute: "{{ 59 | random(seed=inventory_hostname) }}"
+demo_cron_hour: "{{ 23 | random(seed=inventory_hostname) }}"
+```
+
+See also: <https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html#random-number-filter>
+
 ## Simple ansible playbook
 
 This may be useful for testing syntax and experimenting with ansible modules.
 
-`foo.yml`:
 ```
 ---
+# playbook.yml
+
 - name: A local play
   hosts: localhost
   connection: local
@@ -115,7 +130,7 @@ This may be useful for testing syntax and experimenting with ansible modules.
       var: date_out.stdout
 ```
 
-`ansible-playbook -i localhost foo.yml`
+`ansible-playbook -i localhost playbook.yml`
 
 # Links
 
