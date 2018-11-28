@@ -10,3 +10,7 @@ Title: devops
 - Deploy - Puppet, Chef, Ansible, Saltstack
 - Operate - Linux, Chrome, iOS
 - Monitor - Sensu, Splunk, Nagios
+
+# Links
+
+- [The 9 Circles of Deployment Hell](https://medium.com/@mli/the-9-circles-of-deployment-hell-ebb8a5fd084)
