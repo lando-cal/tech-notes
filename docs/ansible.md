@@ -122,12 +122,12 @@ This may be useful for testing syntax and experimenting with ansible modules.
   connection: local
   gather_facts: no
   tasks:
-  - name: Run date
-    shell: /bin/date
-    register: date_out
+    - name: Run date
+      shell: /bin/date
+      register: date_out
 
-  - debug:
-      var: date_out.stdout
+    - debug:
+        var: date_out.stdout
 ```
 
 `ansible-playbook -i localhost playbook.yml`
