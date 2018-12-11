@@ -181,6 +181,7 @@ echo $(python -m site --user-base)/bin
 - [PyCon 2017 videos](https://www.youtube.com/channel/UCrJhliKNQ8g0qoE_zvL8eVg)
 - [PyCon 2018 videos](https://www.youtube.com/channel/UCsX05-2sVSH7Nx3zuk3NYuQ)
 - [Cookiecutter: Better Project Templates](https://cookiecutter.readthedocs.io/en/latest/) / [A pantry full of cookiecutters](https://cookiecutter.readthedocs.io/en/latest/readme.html#a-pantry-full-of-cookiecutters)
+- <https://caremad.io/posts/2013/07/setup-vs-requirement/> - Hard vs abstract dependencies in requirements.txt (and by extension Pipfile) vs setup.py
 
 ## Decorator links
 
@@ -198,4 +199,3 @@ echo $(python -m site --user-base)/bin
 - <https://github.com/giampaolo/psutil/> - system information
 - <https://github.com/timothycrosley/hug> - simplified web API creation
 - <http://python-future.org> - "python-future is the missing compatibility layer between Python 2 and Python 3. It allows you to use a single, clean Python 3.x-compatible codebase to support both Python 2 and Python 3 with minimal overhead."
-- <https://caremad.io/posts/2013/07/setup-vs-requirement/> - Hard vs abstract dependencies in requirements.txt (and by extension Pipfile) vs setup.py
