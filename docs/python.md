@@ -198,3 +198,4 @@ echo $(python -m site --user-base)/bin
 - <https://github.com/giampaolo/psutil/> - system information
 - <https://github.com/timothycrosley/hug> - simplified web API creation
 - <http://python-future.org> - "python-future is the missing compatibility layer between Python 2 and Python 3. It allows you to use a single, clean Python 3.x-compatible codebase to support both Python 2 and Python 3 with minimal overhead."
+- <https://caremad.io/posts/2013/07/setup-vs-requirement/> - Hard vs abstract dependencies in requirements.txt (and by extension Pipfile) vs setup.py
