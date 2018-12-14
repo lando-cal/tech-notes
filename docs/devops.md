@@ -14,4 +14,4 @@ Title: devops
 # Links
 
 - [The 9 Circles of Deployment Hell](https://medium.com/@mli/the-9-circles-of-deployment-hell-ebb8a5fd084)
-- [Raft: Understandable distributed consensus](http://thesecretlivesofdata.com/raft)
+- [Raft: Understandable distributed consensus](http://thesecretlivesofdata.com/raft) - Good visualization of the [Raft](https://raft.github.io/) algorithm.
