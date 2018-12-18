@@ -81,19 +81,25 @@ See `sudo kubeadm token -h` for more usage.
 watch kubectl get pods --all-namespaces -o wide
 ```
 
+## Show logs for a given pod since N hours ago
+
+```
+kubectl logs <podname> --since=12h
+```
+
+The `--since` arg can take [s]econds, [m]inutes and [h]ours. Longer durations should use `--since-time=<rfc3339 timestamp>`
+
+## Show logs for a given pod since a given date
+
+The `--since-time` arg takes [RFC3339](https://tools.ietf.org/html/rfc3339) datetime. EG: `1991-08-03T13:31:46-07:00`. This format requirement is strict, and is incompatible with the GNU date `--rfc-3339=seconds` output, which uses a space instead of a T to separate the full date from the full time, and `+%FT%F%z`, which does not include a colon between hours and minutes.
+
+```
+kubectl logs <pod_name> --since-time="$(date --iso-8601=seconds -d '-5 weeks')"
+```
+
 # Installations
 
-## kubespray
-
-- <https://github.com/kubernetes-incubator/kubespray>
-
-## Ansible on Ubuntu 16
-
-<https://github.com/entercloudsuite/ansible-kubernetes>
-
-```
-ansible-galaxy install entercloudsuite.kubernetes
-```
+The standard way to install k8s by yourself is to use `kubeadm`.
 
 ## Manually on Ubuntu 16
 
