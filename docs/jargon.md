@@ -5,12 +5,14 @@ Title: jargon
 - [cargo cult](https://en.wikipedia.org/wiki/Cargo_cult) - software containing elements that are included because of successful utilization elsewhere, unnecessary for the task at hand.
 - [Conway's Law](https://en.wikipedia.org/wiki/Conway%27s_law) - "organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations."
 - [Cunningham's law](https://en.wikipedia.org/wiki/Ward_Cunningham) - The best way to get the right answer on the Internet is not to ask a question, it's to post the wrong answer.
+- [cybernetics](http://www.pangaro.com/definition-cybernetics.html) - "Cybernetics" comes from a Greek word meaning "the art of steering". Cybernetics is about having a goal and taking action to achieve that goal.
 - [deterministic] - In mathematics and physics, a deterministic system is a system in which no randomness is involved in the development of future states of the system. A deterministic model will thus always produce the same output from a given starting condition or initial state.
 - [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) - Don't Repeat Yourself. "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system"
 - [idempotent](https://en.wikipedia.org/wiki/Idempotence) - Idempotence is the property of certain operations in mathematics and computer science, that they can be applied multiple times without changing the result beyond the initial application.
 - [KISS](https://en.wikipedia.org/wiki/KISS_principle) - Keep It Simple, Stupid!
 - [martian packet](https://en.wikipedia.org/wiki/Martian_packet) - A Martian packet is an IP packet which specifies a source or destination address that is reserved for special-use by Internet Assigned Numbers Authority.
 - [monotonic](https://en.wikipedia.org/wiki/Monotonic_function) - A function or set of values that always increases or always decreases.
+- [teleology](https://en.wikipedia.org/wiki/Teleology) - Teleology or finality is a reason or explanation for something in function of its end, purpose, or goal.
 - [warrant canary](https://en.wikipedia.org/wiki/Warrant_canary) - Text on a website that states the company or person has never been served with a secret government subpoena. Once the statement is removed, the users can assume the company or person has been served and has been told not to talk about it.
 - [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) - a principle that states a programmer should not add functionality until deemed necessary.
 - [yak shaving](https://en.wiktionary.org/wiki/yak_shaving) - Any apparently useless activity which, by allowing you to overcome intermediate difficulties, allows you to solve a larger problem.
