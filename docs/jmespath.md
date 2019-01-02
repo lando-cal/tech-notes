@@ -4,8 +4,10 @@ Title: jmespath
 
 # Links
 
-- <https://github.com/jmespath/jp>
+- <http://jmespath.org/examples.html>
+- <http://jmespath.org/tutorial.html>
 - <https://github.com/jmespath/jmespath.terminal>
+- <https://github.com/jmespath/jp>
 
 # Examples
 
