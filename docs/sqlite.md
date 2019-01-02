@@ -1,9 +1,12 @@
 Title: sqlite
 
+# Links
+
 - CLI Shell info: <http://www.sqlite.org/sqlite.html>
 - Better CLI tutorial: <http://souptonuts.sourceforge.net/readme_sqlite_tutorial.html>
 - FAQ - <http://www.sqlite.org/faq.html>
 - When to use SQLite - https://www.sqlite.org/whentouse.html
+- [https://www.gaia-gis.it/fossil/libspatialite/index](SpatiaLite) - "SpatiaLite is an open source library intended to extend the SQLite core to support fully fledged Spatial SQL capabilities."
 
 # Syntax Examples
 
