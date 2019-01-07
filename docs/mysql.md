@@ -183,9 +183,31 @@ alter table raw_flickr_data CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_uni
 
 ### Update if key exists
 
-- <http://dev.mysql.com/doc/refman/5.0/en/insert-on-duplicate.html>
+For unique fields, you cannot insert, so you need to have an `on duplicate key` section in your statement.
 
-### Update some fields in a record
+```
+INSERT INTO photo_sizes (
+  photo_id,
+  format,
+  height,
+  width,
+  url,
+  source
+) values (
+  '32704962848',
+  'Medium 640',
+  '427',
+  '640',
+  'https://www.flickr.com/photos/warzauwynn/32704962848/sizes/z/',
+  'https://farm5.staticflickr.com/4855/32704962848_3a96b4c635_z.jpg'
+) ON DUPLICATE KEY UPDATE
+  height='427',
+  width='640',
+  url='https://www.flickr.com/photos/warzauwynn/32704962848/sizes/z/',
+  source='https://farm5.staticflickr.com/4855/32704962848_3a96b4c635_z.jpg'
+```
+
+- <http://dev.mysql.com/doc/refman/5.0/en/insert-on-duplicate.html>
 
 ### Update a datetime column with a random datetime
 
