@@ -187,6 +187,17 @@ alter table raw_flickr_data CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_uni
 
 ### Update some fields in a record
 
+### Update a datetime column with a random datetime
+
+```
+UPDATE flixplor
+SET last_retrieval = subtime(
+  concat_ws(' ','2019-01-01' - interval rand() * 10000 day ,'00:00:00'), -- create a random YYYY-MM-DD within 10k days of given datetime
+  sec_to_time(floor(0 + (rand() * 86401))) -- create a random HH:MM:SS within a 24 hour period
+)
+WHERE last_retrieval < '2019-01-01 00:00:00';
+```
+
 ## Table Selects
 
 ### Select values and don't show duplicates
