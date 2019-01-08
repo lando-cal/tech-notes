@@ -36,6 +36,7 @@ link                           | description
 <https://youtu.be/GOQENxeL4nY> | Convert rotation into [reciprocating motion](https://en.wikipedia.org/wiki/Reciprocating_motion) of a piston
 <https://youtu.be/cPfPGh0yUos> | Differential gearing demonstrated with lego
 <https://youtu.be/9pjpQoZoW6E> | EV3 Print3rbot
+<https://youtu.be/dargOslomMA> | Ghost in the Shell Tachikoma (walking and driving quadruped bot)
 <https://youtu.be/-tXY_Hf3fvU> | Gopro 3 axis pan/tilt/slide
 <https://youtu.be/qHQZcRPqUkY> | Great Ball Contraption
 <https://youtu.be/d7jXaffklVg> | Line Follower
