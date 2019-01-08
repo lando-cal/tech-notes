@@ -120,7 +120,10 @@ GRANT ALL ON database.* TO 'newuser'@'localhost';
 or...
 
 ```
-UPDATE mysql.user SET Password=PASSWORD('SomeNewPassword') WHERE User='user_name' AND Host='localhost';
+UPDATE mysql.user
+  SET Password=PASSWORD('hunter2')
+  WHERE User='leroy_jenkins'
+  AND Host='localhost' ;
 ```
 
 ## Create statements
